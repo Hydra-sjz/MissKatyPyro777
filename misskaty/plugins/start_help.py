@@ -24,22 +24,22 @@ from misskaty.vars import COMMAND_HANDLER
 home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Commands ❓", callback_data="bot_commands"),
+            InlineKeyboardButton(text="📚 Commands", callback_data="bot_commands"),
             InlineKeyboardButton(
-                text="Source Code 🛠",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                text="📢 Channel",
+                url="t.me/xbots_x",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 🖥",
+                text="📊 Stats",
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
         ],
         [
             InlineKeyboardButton(
-                text="Add Me To Your Group 🎉",
+                text="➕Add Me To Your Group➕",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -53,13 +53,13 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
             InlineKeyboardButton(
-                text="Source Code �",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                text="📢 Channel",
+                url="t.me/xbots_x",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
+                text="📊 Stats",
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
@@ -90,7 +90,7 @@ async def start(self, ctx: Message, strings):
         nama = ctx.from_user.mention if ctx.from_user else ctx.sender_chat.title
         try:
             return await ctx.reply_photo(
-                photo="https://img.yasirweb.eu.org/file/90e9a448bc2f8b055b762.jpg",
+                photo="https://telegra.ph/file/6fca05772ed444f1913bc.jpg",
                 caption=strings("start_msg").format(kamuh=nama),
                 reply_markup=keyboard,
             )
@@ -114,7 +114,7 @@ async def start(self, ctx: Message, strings):
                     text=text,
                     reply_markup=FED_MARKUP,
                     disable_web_page_preview=True,
-                    message_effect_id=5104841245755180586,
+                    message_effect_id=5107584321108051014,
                 )
             await ctx.reply(
                 text,
@@ -132,11 +132,11 @@ async def start(self, ctx: Message, strings):
     else:
         await self.send_photo(
             ctx.chat.id,
-            photo="https://img.yasirweb.eu.org/file/90e9a448bc2f8b055b762.jpg",
+            photo="https://telegra.ph/file/6fca05772ed444f1913bc.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
             reply_to_message_id=ctx.id,
-            message_effect_id=5104841245755180586,
+            message_effect_id=5046509860389126442,
         )
 
 
@@ -147,7 +147,7 @@ async def commands_callbacc(_, cb: CallbackQuery):
         cb.message.chat.id,
         text=text,
         reply_markup=keyb,
-        message_effect_id=5104841245755180586,
+        message_effect_id=5046509860389126442,
     )
     await cb.message.delete_msg()
 
@@ -202,7 +202,7 @@ async def help_command(_, ctx: Message, strings):
                 text,
                 reply_markup=help_keyboard,
                 disable_web_page_preview=True,
-                message_effect_id=5104841245755180586,
+                message_effect_id=5046509860389126442,
             )
     else:
         text, help_keyboard = await help_parser(ctx.from_user.first_name)
@@ -218,16 +218,14 @@ async def help_parser(name, keyb=None):
     if not keyb:
         keyb = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a bot with some useful features. You can change language bot using /setlang command, but it's still in beta stage.
+        """Hey 👋 {first_name}, I am {bot_name}.
+🍃I'm a bot with some useful features. You can change language bot using /setlang command, but it's still in beta stage.
 You can choose an option below, by clicking a button.
 
 Send command /privacy if you want know data collected by this bot.
-
-If you want give coffee to my owner you can send /donate command for more info.
 """.format(
             first_name=name,
-            bot_name="MissKaty",
+            bot_name="Gojo_Saturo",
         ),
         keyb,
     )
