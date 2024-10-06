@@ -35,7 +35,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="📊 Stats",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="🪅 Stickers", url="https://t.me/stickers_collections_X"),
         ],
         [
             InlineKeyboardButton(
@@ -46,7 +46,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
     ]
 )
 
-home_text_pm = f"Hey there! My name is {BOT_NAME}. I have many useful features for you, feel free to add me to your group.\n\nIf you want give coffee to my owner you can send /donate command for more info."
+home_text_pm = f"Hey there! My name is {BOT_NAME}. I have many useful features for you, feel free to add me to your group.\n\nUse /help to find out more about how to use me to my full potential.."
 
 keyboard = InlineKeyboardMarkup(
     [
@@ -62,7 +62,7 @@ keyboard = InlineKeyboardMarkup(
                 text="📊 Stats",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="🪅 Stickers", url="https://t.me/stickers_collections_X"),
         ],
     ]
 )
@@ -70,11 +70,11 @@ keyboard = InlineKeyboardMarkup(
 FED_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Fed Owner Commands", callback_data="fed_owner"),
-            InlineKeyboardButton("Fed Admin Commands", callback_data="fed_admin"),
+            InlineKeyboardButton("👮‍♂️Fed Owner Commands", callback_data="fed_owner"),
+            InlineKeyboardButton("👷‍♀️Fed Admin Commands", callback_data="fed_admin"),
         ],
         [
-            InlineKeyboardButton("User Commands", callback_data="fed_user"),
+            InlineKeyboardButton("🧒User Commands", callback_data="fed_user"),
         ],
         [
             InlineKeyboardButton("Back", callback_data="help_back"),
@@ -218,9 +218,10 @@ async def help_parser(name, keyb=None):
     if not keyb:
         keyb = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hey 👋 {first_name}, I am {bot_name}.
+        """Hey there👋 {first_name}, I am {bot_name}.
 🍃I'm a bot with some useful features. You can change language bot using /setlang command, but it's still in beta stage.
 You can choose an option below, by clicking a button.
+Use /help to find out more about how to use me to my full potential.
 
 Send command /privacy if you want know data collected by this bot.
 """.format(
