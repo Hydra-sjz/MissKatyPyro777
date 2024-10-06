@@ -2,7 +2,7 @@
     "newgroup_log": "#NewGroup\nGroup = {jdl}(<code>{id}</code>)\nMembers Count = <code>{c}</code>",
     "newuser_log": "#NewUser\nID - <code>{id}</code>\nName - {nm}",
     "help_name": "Here is the help for **{mod}**:\n",
-    "help_txt": "Hello {kamuh}, My name is {bot}.\nI'm a pyrogram bot that developed by kind owner with some useful features.\nYou can look by clicking a button below.\n\nGeneral command are:\n - /start: Start the bot\n - /help: Give this message\n - /setlang: Change bot language [BETA]",
+    "help_txt": "Hey👋 {kamuh}, My name is {bot}.\n🍃I'm a pyrogram bot that developed by kind owner with some useful features.\nYou can look by clicking a button below.\n\nGeneral command are:\n - /start: Start the bot\n - /help: Give this message\n🇨🇦 /setlang: Change bot language [BETA]",
     "click_me": "Click Me",
     "back_btn": "Back",
     "click_btn": "Click on the below button to get help about {nm}",
