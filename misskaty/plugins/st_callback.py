@@ -67,7 +67,7 @@ BUTTONS_HP = [
 
 
 @Bot.on_message(filters.command("help2") & filters.private)
-async def hp_handler(bot, message):
+async def hp_hagndler(bot, message):
     await message.reply_text(
         text=TEXT_HP.format(message.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
@@ -76,7 +76,7 @@ async def hp_handler(bot, message):
 
 
 @Bot.on_callback_query(filters.regex("^settings$"))
-async def help_cb_handler(bot, query):
+async def help_cb_handler1(bot, query):
     await query.message.edit(
         text=TEXT_HP.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
@@ -119,7 +119,7 @@ BUTTONS_HP2 = [
 
 
 @Bot.on_callback_query(filters.regex("^settings2$"))
-async def help_cb_handler(bot, query):
+async def help_cb_handler2(bot, query):
     await query.message.edit(
         text=TEXT_HP2.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP2),
@@ -162,7 +162,7 @@ BUTTONS_HP3 = [
 
 
 @Bot.on_callback_query(filters.regex("^settings3$"))
-async def help_cb_handler(bot, query):
+async def help_cb_handler3(bot, query):
     await query.message.edit(
         text=TEXT_HP3.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP3),
@@ -205,7 +205,7 @@ BUTTONS_HP4 = [
 
 
 @Bot.on_callback_query(filters.regex("^settings4$"))
-async def help_cb_handler(bot, query):
+async def help_cb_handler4(bot, query):
     await query.message.edit(
         text=TEXT_HP4.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP4),
@@ -248,7 +248,7 @@ BUTTONS_HP5 = [
 
 
 @Bot.on_callback_query(filters.regex("^settings5$"))
-async def help_cb_handler(bot, query):
+async def help_cb_handler5(bot, query):
     await query.message.edit(
         text=TEXT_HP5.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP5),
@@ -279,7 +279,7 @@ buttons_act = [
 
 
 @Bot.on_callback_query(filters.regex("^act$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handler6(bot, query):
     await query.message.edit(
         text=text_act,
         reply_markup=InlineKeyboardMarkup(buttons_act),
@@ -314,7 +314,7 @@ buttons_adm = [
 
 
 @Bot.on_callback_query(filters.regex("^adm$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handler7(bot, query):
     await query.message.edit(
         text=text_adm,
         reply_markup=InlineKeyboardMarkup(buttons_adm),
@@ -342,7 +342,7 @@ buttons_aut = [
 
 
 @Bot.on_callback_query(filters.regex("^aut$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handler8(bot, query):
     await query.message.edit(
         text=text_aut,
         reply_markup=InlineKeyboardMarkup(buttons_aut),
@@ -365,7 +365,7 @@ buttons_adv = [
 
 
 @Bot.on_callback_query(filters.regex("^adv$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handler9(bot, query):
     await query.message.edit(
         text=text_adv,
         reply_markup=InlineKeyboardMarkup(buttons_adv),
@@ -397,7 +397,7 @@ buttons_apr = [
 
 
 @Bot.on_callback_query(filters.regex("^apr$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handler10(bot, query):
     await query.message.edit(
         text=text_apr,
         reply_markup=InlineKeyboardMarkup(buttons_apr),
@@ -429,7 +429,7 @@ buttons_blt = [
 
 
 @Bot.on_callback_query(filters.regex("^blt$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlerh(bot, query):
     await query.message.edit(
         text=text_blt,
         reply_markup=InlineKeyboardMarkup(buttons_blt),
@@ -468,7 +468,7 @@ buttons_bt = [
 
 
 @Bot.on_callback_query(filters.regex("^bt$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlersv(bot, query):
     await query.message.edit(
         text=text_bt,
         reply_markup=InlineKeyboardMarkup(buttons_bt),
@@ -514,7 +514,7 @@ buttons_bn = [
 
 
 @Bot.on_callback_query(filters.regex("^bn$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlufer(bot, query):
     await query.message.edit(
         text=text_bn,
         reply_markup=InlineKeyboardMarkup(buttons_bn),
@@ -538,7 +538,7 @@ buttons_bts = [
 
 
 @Bot.on_callback_query(filters.regex("^bts$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlgguer(bot, query):
     await query.message.edit(
         text=text_bts,
         reply_markup=InlineKeyboardMarkup(buttons_bts),
@@ -579,7 +579,7 @@ buttons_bsk = [
 
 
 @Bot.on_callback_query(filters.regex("^bsk$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hangidler(bot, query):
     await query.message.edit(
         text=text_bsk,
         reply_markup=InlineKeyboardMarkup(buttons_bsk),
@@ -604,7 +604,7 @@ buttons_ai = [
 
 
 @Bot.on_callback_query(filters.regex("^ai$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_ughandler(bot, query):
     await query.message.edit(
         text=text_ai,
         reply_markup=InlineKeyboardMarkup(buttons_ai),
@@ -637,7 +637,7 @@ buttons_dv = [
 
 
 @Bot.on_callback_query(filters.regex("^dv$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handpcler(bot, query):
     await query.message.edit(
         text=text_dv,
         reply_markup=InlineKeyboardMarkup(buttons_dv),
@@ -672,7 +672,7 @@ buttons_flt = [
 
 
 @Bot.on_callback_query(filters.regex("^flt$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlehcr(bot, query):
     await query.message.edit(
         text=text_flt,
         reply_markup=InlineKeyboardMarkup(buttons_flt),
@@ -694,7 +694,7 @@ buttons_fgl = [
 
 
 @Bot.on_callback_query(filters.regex("^fgl$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handhjler(bot, query):
     await query.message.edit(
         text=text_fgl,
         reply_markup=InlineKeyboardMarkup(buttons_fgl),
@@ -716,7 +716,7 @@ buttons_fk = [
 
 
 @Bot.on_callback_query(filters.regex("^fk$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handbiler(bot, query):
     await query.message.edit(
         text=text_fk,
         reply_markup=InlineKeyboardMarkup(buttons_fk),
@@ -738,7 +738,7 @@ buttons_fon = [
 
 
 @Bot.on_callback_query(filters.regex("^fon$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hanipdler(bot, query):
     await query.message.edit(
         text=text_fon,
         reply_markup=InlineKeyboardMarkup(buttons_fon),
@@ -768,7 +768,7 @@ buttons_fn = [
 
 
 @Bot.on_callback_query(filters.regex("^fn$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlsser(bot, query):
     await query.message.edit(
         text=text_fn,
         reply_markup=InlineKeyboardMarkup(buttons_fn),
@@ -803,7 +803,7 @@ buttons_gt = [
 
 
 @Bot.on_callback_query(filters.regex("^gt$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlpnner(bot, query):
     await query.message.edit(
         text=text_gt,
         reply_markup=InlineKeyboardMarkup(buttons_gt),
@@ -826,7 +826,7 @@ buttons_gl = [
 
 
 @Bot.on_callback_query(filters.regex("^gl$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handllnver(bot, query):
     await query.message.edit(
         text=text_gl,
         reply_markup=InlineKeyboardMarkup(buttons_gl),
@@ -857,7 +857,7 @@ buttons_gli = [
 
 
 @Bot.on_callback_query(filters.regex("^gli$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handviler(bot, query):
     await query.message.edit(
         text=text_gli,
         reply_markup=InlineKeyboardMarkup(buttons_gli),
@@ -879,7 +879,7 @@ buttons_src = [
 
 
 @Bot.on_callback_query(filters.regex("^src$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlevior(bot, query):
     await query.message.edit(
         text=text_src,
         reply_markup=InlineKeyboardMarkup(buttons_src),
@@ -921,7 +921,7 @@ buttons_gdy = [
 
 
 @Bot.on_callback_query(filters.regex("^gdy$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlesnr(bot, query):
     await query.message.edit(
         text=text_gdy,
         reply_markup=InlineKeyboardMarkup(buttons_gdy),
@@ -958,7 +958,7 @@ buttons_hsr = [
 
 
 @Bot.on_callback_query(filters.regex("^hsr$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handihoer(bot, query):
     await query.message.edit(
         text=text_hsr,
         reply_markup=InlineKeyboardMarkup(buttons_hsr),
@@ -982,7 +982,7 @@ buttons_htg = [
 
 
 @Bot.on_callback_query(filters.regex("^htg$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handluvjker(bot, query):
     await query.message.edit(
         text=text_htg,
         reply_markup=InlineKeyboardMarkup(buttons_htg),
@@ -1017,7 +1017,7 @@ buttons_hg = [
 
 
 @Bot.on_callback_query(filters.regex("^hg$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hvivandler(bot, query):
     await query.message.edit(
         text=text_hg,
         reply_markup=InlineKeyboardMarkup(buttons_hg),
@@ -1040,7 +1040,7 @@ buttons_lv = [
 
 
 @Bot.on_callback_query(filters.regex("^lv$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handlstver(bot, query):
     await query.message.edit(
         text=text_lv,
         reply_markup=InlineKeyboardMarkup(buttons_lv),
@@ -1086,7 +1086,7 @@ buttons_mt = [
 
 
 @Bot.on_callback_query(filters.regex("^mt$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handvippler(bot, query):
     await query.message.edit(
         text=text_mt,
         reply_markup=InlineKeyboardMarkup(buttons_mt),
@@ -1109,7 +1109,7 @@ buttons_mog = [
 
 
 @Bot.on_callback_query(filters.regex("^mog$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hajjvvindler(bot, query):
     await query.message.edit(
         text=text_mog,
         reply_markup=InlineKeyboardMarkup(buttons_mog),
@@ -1136,7 +1136,7 @@ buttons_not = [
 
 
 @Bot.on_callback_query(filters.regex("^not$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hanbkodler(bot, query):
     await query.message.edit(
         text=text_not,
         reply_markup=InlineKeyboardMarkup(buttons_not),
@@ -1167,7 +1167,7 @@ buttons_ps = [
 
 
 @Bot.on_callback_query(filters.regex("^ps$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handguugler(bot, query):
     await query.message.edit(
         text=text_ps,
         reply_markup=InlineKeyboardMarkup(buttons_ps),
@@ -1200,7 +1200,7 @@ buttons_ply = [
 
 
 @Bot.on_callback_query(filters.regex("^ply$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_haydyriindler(bot, query):
     await query.message.edit(
         text=text_ply,
         reply_markup=InlineKeyboardMarkup(buttons_ply),
@@ -1223,7 +1223,7 @@ buttons_sg = [
 
 
 @Bot.on_callback_query(filters.regex("^sg$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_handhigler(bot, query):
     await query.message.edit(
         text=text_sg,
         reply_markup=InlineKeyboardMarkup(buttons_sg),
@@ -1252,7 +1252,7 @@ buttons_pyp = [
 
 
 @Bot.on_callback_query(filters.regex("^pyp$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hgugandler(bot, query):
     await query.message.edit(
         text=text_pyp,
         reply_markup=InlineKeyboardMarkup(buttons_pyp),
@@ -1280,7 +1280,7 @@ buttons_pay = [
 
 
 @Bot.on_callback_query(filters.regex("^pay$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hanibibbdler(bot, query):
     await query.message.edit(
         text=text_pay,
         reply_markup=InlineKeyboardMarkup(buttons_pay),
@@ -1302,7 +1302,7 @@ buttons_qr = [
 
 
 @Bot.on_callback_query(filters.regex("^qr$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_habibjndler(bot, query):
     await query.message.edit(
         text=text_qr,
         reply_markup=InlineKeyboardMarkup(buttons_qr),
@@ -1324,7 +1324,7 @@ buttons_qz = [
 
 
 @Bot.on_callback_query(filters.regex("^qz$"))
-async def abot_cb_handler(bot, query):
+async def abot_cb_hanbibondler(bot, query):
     await query.message.edit(
         text=text_qz,
         reply_markup=InlineKeyboardMarkup(buttons_qz),
