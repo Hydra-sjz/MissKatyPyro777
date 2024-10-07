@@ -61,6 +61,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings2"),
     ],
 ]
@@ -113,6 +114,7 @@ BUTTONS_HP2 = [
     [
         InlineKeyboardButton("❮", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings3"),
     ],
 ]
@@ -156,6 +158,7 @@ BUTTONS_HP3 = [
     [
         InlineKeyboardButton("❮", callback_data="settings2"),
         InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings4"),
     ],
 ]
@@ -199,6 +202,7 @@ BUTTONS_HP4 = [
     [
         InlineKeyboardButton("❮", callback_data="settings3"),
         InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="setting5"),
     ],
 ]
@@ -242,6 +246,7 @@ BUTTONS_HP5 = [
     [
         InlineKeyboardButton("❮", callback_data="settings4"),
         InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings"),
     ],
 ]
@@ -1337,7 +1342,7 @@ async def abot_cb_hanbibondler(bot, query):
 
 
 # ==============CLOSE===================
-@Bot.on_callback_query(filters.regex("^close$"))
+@Bot.on_callback_query(filters.regex("^close2$"))
 async def close_cb(bot, callback):
     await callback.answer("❌Closed the Module❌")
     await callback.message.delete()
