@@ -48,33 +48,33 @@ reply_markup = InlineKeyboardMarkup(
 
 # Check calculate how long it will take to Ramadhan
 def puasa():
-    now = datetime.now(pytz.timezone("Asia/Jakarta"))
-    tahun = now.strftime("%Y")
-    bulan = now.strftime("%m")
-    tgl = now.strftime("%d")
+    now = datetime.now(pytz.timezone("Asia/Kolkata"))
+    year = now.strftime("%Y")
+    month = now.strftime("%m")
+    date = now.strftime("%d")
     jam = now.strftime("%H")
-    menit = now.strftime("%M")
-    detik = now.strftime("%S")
-    x = datetime(int(tahun), int(bulan), int(tgl), int(jam), int(menit), int(detik))
+    minute = now.strftime("%M")
+    second = now.strftime("%S")
+    x = datetime(int(year), int(month), int(date), int(jam), int(minute), int(second))
     y = datetime(2022, 4, 2, 0, 0, 0)
     return y - x
 
 
 def tglsekarang():
-    now = datetime.now(pytz.timezone("Asia/Jakarta"))
-    days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+    now = datetime.now(pytz.timezone("Asia/Kolkata"))
+    days = ["Monday", "Tuesday", "Wednesday", "Tuesday", "Friday", "Saturday", "Sunday"]
     month = [
         "Unknown",
-        "Januari",
-        "Februari",
-        "Maret",
+        "January",
+        "February",
+        "March",
         "April",
-        "Mei",
-        "Juni",
+        "Mey",
+        "June",
         "Juli",
-        "Agustus",
+        "August",
         "September",
-        "Oktober",
+        "October",
         "November",
         "Desember",
     ]
