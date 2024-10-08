@@ -72,11 +72,11 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_GP = [
     [
-        InlineKeyboardButton("Admin", callback_data="act"),
-        InlineKeyboardButton("Afk", callback_data="adm"),
+        InlineKeyboardButton("Admin", callback_data="admi"),
+        InlineKeyboardButton("Afk", callback_data="afk"),
     ],
     [
-        InlineKeyboardButton("Blacklist", callback_data="adv"),
+        InlineKeyboardButton("Bans", callback_data="ban"),
         InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
     ],
     [
@@ -103,7 +103,7 @@ async def hp_hagndjvler(bot, message):
     )
     
 text_admi = """
-**Admin**
+**Here is the help for Admin**
 
 Make it easy to promote and demote users with the admin module!
 
@@ -128,14 +128,72 @@ buttons_admi = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^adv$"))
+@Bot.on_callback_query(filters.regex("^admi$"))
 async def abvijdv(bot, query):
     await query.message.edit(
         text=text_admi,
         reply_markup=InlineKeyboardMarkup(buttons_admi),
         disable_web_page_preview=True,
     )
+    
+text_afk = """
+**Here is the help for AFK:**
 
+/afk [Reason > Optional] - Tell others that you are AFK (Away From Keyboard), so that your boyfriend or girlfriend won't look for you 💔.
+/afk [reply to media] - AFK with media.
+/afkdel - Enable auto delete AFK message in group (Only for group admin). Default is Enable.
+
+Just type something in group to remove AFK Status.
+"""
+buttons_afk = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^afk$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_afk,
+        reply_markup=InlineKeyboardMarkup(buttons_afk),
+        disable_web_page_preview=True,
+    )
+
+text_ban = """
+**Here is the help for Bans**
+
+Some people need to be publicly banned; spammers, annoyances, or just trolls.
+This module allows you to do that easily, by exposing some common actions, so everyone will see!
+
+**Admin commands:**
+/ban - Ban A User From A Group
+/dban - Delete the replied message banning its sender
+/tban - Ban A User For Specific Time
+/unban - Unban A User
+/listban - Ban a user from groups listed in a message
+/listunban - Unban a user from groups listed in a message
+/dkick - Delete the replied message kicking its sender
+
+**Examples:**
+- Mute a user for two hours.
+-> /tmute @username 2h
+"""
+buttons_ban = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^ban$"))
+async def abanv(bot, query):
+    await query.message.edit(
+        text=text_ban,
+        reply_markup=InlineKeyboardMarkup(buttons_ban),
+        disable_web_page_preview=True,
+    )
 #===================
 
 TEXT_HP = """
