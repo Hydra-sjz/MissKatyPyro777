@@ -24,7 +24,7 @@ from misskaty.vars import COMMAND_HANDLER
 home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📚 Commands", callback_data="settings"),
+            InlineKeyboardButton(text="📚 Commands", callback_data="set_ge"),
             InlineKeyboardButton(
                 text="📢 Channel",
                 url="t.me/xbots_x",
