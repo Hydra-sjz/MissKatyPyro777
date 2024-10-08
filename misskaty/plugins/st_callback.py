@@ -77,15 +77,15 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("Bans", callback_data="ban"),
-        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
+        InlineKeyboardButton("Warns", callback_data="war"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
+        InlineKeyboardButton("Purges", callback_data="prg"),
+        InlineKeyboardButton("Ghost", callback_data="gst"),
     ],
     [
-        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
-        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
+        InlineKeyboardButton("Reports", callback_data="rpt"),
+        InlineKeyboardButton("Mention all", callback_data="mall"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
@@ -192,6 +192,135 @@ async def abanv(bot, query):
     await query.message.edit(
         text=text_ban,
         reply_markup=InlineKeyboardMarkup(buttons_ban),
+        disable_web_page_preview=True,
+    )
+
+text_war = """
+**Here is the help for Warnings**
+
+Keep your members in check with warnings; stop them getting out of control!
+
+/warn <reason>: - Warn A User
+/dwarn <reason>: - Delete the replied message warning its sender
+/rmwarns - Remove All Warning of A User
+/warns - Show Warning Of A User.
+"""
+buttons_war = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^war$"))
+async def abvivwar(bot, query):
+    await query.message.edit(
+        text=text_war,
+        reply_markup=InlineKeyboardMarkup(buttons_war),
+        disable_web_page_preview=True,
+    )
+
+text_prg = """
+**Here is the help for Purges**
+
+Need to delete lots of messages? That's what purges are for!
+
+/purge - Delete all messages from the replied to message, to the current message.
+/purge [n] - Purge "n" number of messages from replied message
+/del - Delete Replied Message
+
+**Examples:**
+- Delete all messages from the replied to message, until now.
+---> /purge
+"""
+buttons_prg = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^prg$"))
+async def abvprviv(bot, query):
+    await query.message.edit(
+        text=text_prg,
+        reply_markup=InlineKeyboardMarkup(buttons_prg),
+        disable_web_page_preview=True,
+    )
+
+text_gst = """
+**Here is the help for Ghost**
+
+/ban_ghosts Remove deleted Ghosts accounts from group 
+
+note:
+- ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ʙᴇsᴛ ᴇғғᴇᴄᴛ. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.
+"""
+buttons_gst = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^gst$"))
+async def abvgstiv(bot, query):
+    await query.message.edit(
+        text=text_gst,
+        reply_markup=InlineKeyboardMarkup(buttons_gst),
+        disable_web_page_preview=True,
+    )
+
+text_rpt = """
+**Here is the help for Reports**
+
+We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
+
+Presenting reports; if someone in your group thinks someone needs reporting, they now have an easy way to call all admins.
+
+/report | @admins | @admin - Report A Message To Admins.
+- /report: Reply to a message to report it for admins to review.
+- admin: Same as /report
+
+Note that the report commands do not work when admins use them; or when used to report an admin. Rose assumes that admins don't need to report, or be reported!
+"""
+buttons_rpt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^rpt$"))
+async def abvivrpt(bot, query):
+    await query.message.edit(
+        text=text_rpt,
+        reply_markup=InlineKeyboardMarkup(buttons_rpt),
+        disable_web_page_preview=True,
+    )
+
+text_mal = """
+**Here is the help for Mention all**
+
+/mentionall - Mention all members in a groups in one click.
+"""
+buttons_mal = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^mall$"))
+async def abvmaliv(bot, query):
+    await query.message.edit(
+        text=text_mal,
+        reply_markup=InlineKeyboardMarkup(buttons_mal),
         disable_web_page_preview=True,
     )
 #===================
