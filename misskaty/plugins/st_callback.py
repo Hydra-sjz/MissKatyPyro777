@@ -13,15 +13,15 @@ BUTTONS_ST = [
     [
         InlineKeyboardButton("➕Add Me To Your Group➕", url=f"http://t.me/{BOT_USERNAME}?startgroup=new",),
         ],[
-        InlineKeyboardButton("📚 Commands ", callback_data="settings"),
+        InlineKeyboardButton("📚 Commands ", callback_data="set_ge"),
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
+        ],[
         InlineKeyboardButton("📊 Status", callback_data="stats_callback"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
     [InlineKeyboardButton("❌", callback_data="close")],
 ]
 
-#InlineKeyboardButton("Sudo 👥", callback_data="sudo"),
 @Bot.on_callback_query(filters.regex("^home$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
@@ -32,9 +32,85 @@ async def st_cb_handler(bot, query):
 
 
 # =======================f=======MAIN_HELP_CMD====================
-TEXT_HP = """
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+TEXT_GE = """
+Hey {} 👋
+Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. 
+"""
+BUTTONS_GE = [
+    [
+        InlineKeyboardButton("👮‍♂️ ɢʀᴏᴜᴘ", callback_data="group"),
+        InlineKeyboardButton("➕ ᴇxᴛʀᴀ", callback_data="settings"),
+    ],
+    [
+        InlineKeyboardButton("👥 sᴜᴅᴏ ᴜsᴇʀs", callback_data="sudo"),
+    ],
+    [
+        InlineKeyboardButton("❮", callback_data="home"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ],
+]
+@Bot.on_callback_query(filters.regex("^set_ge$"))
+async def help_cb_handler1(bot, query):
+    await query.message.edit(
+        text=TEXT_GE.format(query.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
+        disable_web_page_preview=True,
+    )
+@Bot.on_message(filters.command("help2") & filters.private)
+async def hp_hagndler(bot, message):
+    await message.reply_text(
+        text=TEXT_GE.format(message.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
+        quote=True,
+    )
+#================GROUP_CMD=================
+TEXT_GP = """
+Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
+Send command /privacy if you want know data collected by this bot.
+Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
+"""
+BUTTONS_GP = [
+    [
+        InlineKeyboardButton("Admin", callback_data="act"),
+        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
+        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+    ],
+    [
+        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
+        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
+        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
+    ],
+    [
+        InlineKeyboardButton("Boᴛ", callback_data="bt"),
+        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
+        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+    ],
+    [
+        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
+        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
+        InlineKeyboardButton("Deᴠ", callback_data="dv"),
+    ],
+    [
+        InlineKeyboardButton("❮", callback_data="settings5"),
+        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("🏠", callback_data="home"),
+        InlineKeyboardButton("❯", callback_data="settings2"),
+    ],
+]
+@Bot.on_message(filters.command("group") & filters.private)
+async def hp_hagndler(bot, message):
+    await message.reply_text(
+        text=TEXT_GP.format(message.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
+        quote=True,
+    )
+#===================
+
+TEXT_HP = """
+Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+
+Send command /privacy if you want know data collected by this bot.
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP = [
@@ -64,17 +140,7 @@ BUTTONS_HP = [
         InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings2"),
     ],
-]
-
-
-@Bot.on_message(filters.command("help2") & filters.private)
-async def hp_hagndler(bot, message):
-    await message.reply_text(
-        text=TEXT_HP.format(message.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
-        quote=True,
-    )
-
+] 
 
 @Bot.on_callback_query(filters.regex("^settings$"))
 async def help_cb_handler1(bot, query):
@@ -86,7 +152,7 @@ async def help_cb_handler1(bot, query):
 
 
 TEXT_HP2 = """
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
@@ -130,7 +196,7 @@ async def help_cb_handler2(bot, query):
 
 
 TEXT_HP3 = """
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
@@ -174,7 +240,7 @@ async def help_cb_handler3(bot, query):
 
 
 TEXT_HP4 = """
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
