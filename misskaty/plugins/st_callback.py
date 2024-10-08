@@ -111,10 +111,9 @@ BUTTONS_GP = [
         
     ],
     [
-        InlineKeyboardButton("❮", callback_data="settings5"),
+        InlineKeyboardButton("❮", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings2"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^group$"))
