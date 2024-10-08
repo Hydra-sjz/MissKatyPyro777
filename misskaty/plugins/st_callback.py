@@ -117,13 +117,13 @@ BUTTONS_GP = [
         InlineKeyboardButton("❯", callback_data="settings2"),
     ],
 ]
-@Bot.on_message(filters.command("group") & filters.private)
-async def hp_hagndjvler(bot, message):
-    await message.reply_text(
-        text=TEXT_GP.format(message.from_user.first_name),
+@Bot.on_callback_query(filters.regex("^group$"))
+async def abvigjdv(bot, query):
+    await query.message.edit(
+        text=TEXT_GP,
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
-        quote=True,
-    )
+        disable_web_page_preview=True,
+)
     
 text_admi = """
 **Here is the help for Admin**
