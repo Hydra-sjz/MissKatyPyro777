@@ -68,7 +68,9 @@ TEXT_GP = """
 Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Send command /privacy if you want know data collected by this bot.
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
+General command are:
+ - /start: Start the bot
+ - /help: Give this message
 """
 BUTTONS_GP = [
     [
@@ -95,7 +97,17 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("Federation", callback_data="fed"),
-        InlineKeyboardButton("Blacklist", callback_data="bal"),
+        InlineKeyboardButton("Filters", callback_data="flt"),
+        
+    ],
+    [
+        InlineKeyboardButton("Locks", callback_data="lok"),
+        InlineKeyboardButton("Notes", callback_data="not"),
+        
+    ],
+    [
+        InlineKeyboardButton("Night Mod", callback_data="nm"),
+        InlineKeyboardButton("SangMata", callback_data="sm"),
         
     ],
     [
@@ -264,6 +276,7 @@ async def abvprviv(bot, query):
 text_gst = """
 **Here is the help for Ghost**
 
+/instatus - View member status in group
 /ban_ghosts Remove deleted Ghosts accounts from group 
 
 note:
@@ -499,10 +512,170 @@ buttons_fdu = [
 
 
 @Bot.on_callback_query(filters.regex("^fdu$"))
-async def abvfduiv(bot, query):
+async def ajbvfduiv(bot, query):
     await query.message.edit(
         text=text_fdu,
         reply_markup=InlineKeyboardMarkup(buttons_fdu),
+        disable_web_page_preview=True,
+    )
+
+text_flt = """
+**Here is the help for Filters:**
+
+Make your chat more lively with filters; The bot will reply to certain words!
+
+Filters are case insensitive; every time someone says your trigger words, Rose will reply something else! can be used to create your own commands, if desired.
+
+/filters To Get All The Filters In The Chat.
+/filter [FILTER_NAME] or /addfilter [FILTER_NAME] To Save A Filter(reply to a message).
+
+Supported filter types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+
+To use more words in a filter use.
+/filter Hey_there or /addfilter Hey_there To filter "Hey there".
+/stop [FILTER_NAME] or /stopfilter [FILTER_NAME] To Stop A Filter.
+/stopall To delete all the filters in a chat (permanently).
+
+You can use markdown or html to save text too.
+"""
+buttons_flt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^flt$"))
+async def afilbviv(bot, query):
+    await query.message.edit(
+        text=text_flt,
+        reply_markup=InlineKeyboardMarkup(buttons_flt),
+        disable_web_page_preview=True,
+    )
+
+text_lok = """
+**Here is the help for Locks:**
+
+Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!
+
+The locks module allows you to lock away some common items in the Telegram world; the bot will automatically delete them!
+
+- /lock | /unlock | /locks [No Parameters Required]
+
+Parameters:
+    messages | sticker | gif | media | games | polls
+
+    inline  | url | group_info | user_add | pin | photo
+
+    voice | video | audio | docs | plain
+
+You can only pass the "all" parameter with /lock, not with /unlock
+
+Example:
+    /lock all
+"""
+buttons_lok = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^lok$"))
+async def lokkabviv(bot, query):
+    await query.message.edit(
+        text=text_lok,
+        reply_markup=InlineKeyboardMarkup(buttons_lok),
+        disable_web_page_preview=True,
+    )
+
+text_not = """
+**Here is the help for Notes:**
+
+Save data for future users with notes!
+Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!
+
+/notes To Get All The Notes In The Chat.
+
+/save [NOTE_NAME] or /addnote [NOTE_NAME] To Save A Note.
+
+Supported note types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+
+To change caption of any files use.
+/save [NOTE_NAME] or /addnote [NOTE_NAME] [NEW_CAPTION].
+
+#NOTE_NAME To Get A Note.
+
+/delete [NOTE_NAME] or delnote [NOTE_NAME] To Delete A Note.
+/deleteall To delete all the notes in a chat (permanently).
+"""
+buttons_not = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^not$"))
+async def notabviv(bot, query):
+    await query.message.edit(
+        text=text_not,
+        reply_markup=InlineKeyboardMarkup(buttons_not),
+        disable_web_page_preview=True,
+    )
+
+text_nm = """
+**Here is the help for NightMode:**
+
+Enable or disable nightmode (locks the chat at specified intervals everyday)
+Flags:
+'-s': "Specify starting time in 24hr format."
+'-e': "Specify duration in hours / minute"
+'-d': "Disable nightmode for chat."
+
+Examples:
+/nightmode -s=23:53 -e=6h
+/nightmode -s=23:50 -e=120m
+/nightmode -d
+"""
+buttons_nm = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^nm$"))
+async def abvnmmiv(bot, query):
+    await query.message.edit(
+        text=text_nm,
+        reply_markup=InlineKeyboardMarkup(buttons_nm),
+        disable_web_page_preview=True,
+    )
+
+text_sm = """
+**Here is the help for SangMata:**
+
+This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
+/sangmata_set [on/off] - Enable/disable sangmata in groups.
+"""
+buttons_sm = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^sm$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_sm,
+        reply_markup=InlineKeyboardMarkup(buttons_sm),
         disable_web_page_preview=True,
     )
 #===================
