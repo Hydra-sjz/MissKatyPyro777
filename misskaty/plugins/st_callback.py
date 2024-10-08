@@ -50,14 +50,14 @@ BUTTONS_GE = [
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
-async def help_cb_handler1(bot, query):
+async def help_cb_handlerj1(bot, query):
     await query.message.edit(
         text=TEXT_GE.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
         disable_web_page_preview=True,
     )
 @Bot.on_message(filters.command("help2") & filters.private)
-async def hp_hagndler(bot, message):
+async def hp_hagndlery(bot, message):
     await message.reply_text(
         text=TEXT_GE.format(message.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
@@ -73,23 +73,19 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 BUTTONS_GP = [
     [
         InlineKeyboardButton("Admin", callback_data="act"),
-        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+        InlineKeyboardButton("Afk", callback_data="adm"),
     ],
     [
-        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
+        InlineKeyboardButton("Blacklist", callback_data="adv"),
         InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
     ],
     [
         InlineKeyboardButton("Boᴛ", callback_data="bt"),
         InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
     ],
     [
         InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
         InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
-        InlineKeyboardButton("Deᴠ", callback_data="dv"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
@@ -99,12 +95,47 @@ BUTTONS_GP = [
     ],
 ]
 @Bot.on_message(filters.command("group") & filters.private)
-async def hp_hagndler(bot, message):
+async def hp_hagndjvler(bot, message):
     await message.reply_text(
         text=TEXT_GP.format(message.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         quote=True,
     )
+    
+text_admi = """
+**Admin**
+
+Make it easy to promote and demote users with the admin module!
+
+Admin commands:
+- /promote <reply/username/mention/userid>: Promote a user.
+- /demote <reply/username/mention/userid>: Demote a user.
+- /fullpromote Promote A Member With All Rights.
+
+**To Admins.**
+/set_chat_title - Change The Name Of A Group/Channel.
+/set_chat_photo - Change The PFP Of A Group/Channel.
+/set_user_title - Change The Administrator Title Of An Admin.
+
+Sometimes, you promote or demote an admin manually, and gojo doesn't realise it immediately.
+This is because to avoid spamming telegram servers, admin status is cached locally.
+"""
+buttons_admi = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^adv$"))
+async def abvijdv(bot, query):
+    await query.message.edit(
+        text=text_admi,
+        reply_markup=InlineKeyboardMarkup(buttons_admi),
+        disable_web_page_preview=True,
+    )
+
 #===================
 
 TEXT_HP = """
