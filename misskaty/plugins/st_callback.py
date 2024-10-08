@@ -86,6 +86,17 @@ BUTTONS_GP = [
     [
         InlineKeyboardButton("Reports", callback_data="rpt"),
         InlineKeyboardButton("Mention all", callback_data="mall"),
+        
+    ],
+    [
+        InlineKeyboardButton("Auto Approve", callback_data="aap"),
+        InlineKeyboardButton("Blacklist", callback_data="bal"),
+        
+    ],
+    [
+        InlineKeyboardButton("Federation", callback_data="fed"),
+        InlineKeyboardButton("Blacklist", callback_data="bal"),
+        
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
@@ -317,10 +328,181 @@ buttons_mal = [
 
 
 @Bot.on_callback_query(filters.regex("^mall$"))
-async def abvmaliv(bot, query):
+async def abvmaggliv(bot, query):
     await query.message.edit(
         text=text_mal,
         reply_markup=InlineKeyboardMarkup(buttons_mal),
+        disable_web_page_preview=True,
+    )
+
+text_aap = """
+**Here is the help for Autoapprove:**
+
+- /autoapprove just type in group.
+
+This module helps to automatically accept chat join request send by a user through invitation link of your group
+"""
+buttons_aap = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^aap$"))
+async def aaapbviv(bot, query):
+    await query.message.edit(
+        text=text_aap,
+        reply_markup=InlineKeyboardMarkup(buttons_aap),
+        disable_web_page_preview=True,
+    )
+
+text_bal = """
+**Here is the help for Blacklist:**
+
+Want to stop people asking stupid questions? or ban anyone saying censored words? Blocklists is the module for you!
+From blocking rude words, filenames/extensions, to specific emoji, everything is possible.
+
+/blacklisted - Get All The Blacklisted Words In The Chat.
+/blacklist [WORD|SENTENCE] - Blacklist A Word Or A Sentence.
+/whitelist [WORD|SENTENCE] - Whitelist A Word Or A Sentence.
+"""
+buttons_bal = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^bal$"))
+async def abvbaliv(bot, query):
+    await query.message.edit(
+        text=text_bal,
+        reply_markup=InlineKeyboardMarkup(buttons_bal),
+        disable_web_page_preview=True,
+    )
+
+#============FEDERATION==============
+text_fed = """
+**Here is the help for Federation:**
+
+Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
+But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?
+
+No longer! With Federation, you can make a ban in one chat overlap with all other chats.
+
+You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.
+"""
+buttons_fed = [
+    [
+        InlineKeyboardButton("👮‍♂️Fed Owner Commands", callback_data="fdo"),
+        InlineKeyboardButton("👷‍♀️Fed Admin Commands", callback_data="fdm"),
+        ],
+        [
+        InlineKeyboardButton("🧒User Commands", callback_data="fdu"),
+        ],
+        [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^fed$"))
+async def abfdviv(bot, query):
+    await query.message.edit(
+        text=text_fed,
+        reply_markup=InlineKeyboardMarkup(buttons_fed),
+        disable_web_page_preview=True,
+    )
+text_fdo = """
+👑 **Fed Owner Only:**
+
+These are the list of available fed owner commands. To run these, you have to own the current federation. 
+
+**Owner Commands:**
+ • /newfed <fed_name>: Creates a Federation, One allowed per user
+ • /renamefed <fed_id> <new_fed_name>: Renames the fed id to a new name
+ • /delfed <fed_id>: Delete a Federation, and any information related to it. Will not cancel blocked users
+ • /myfeds: To list the federations that you have created
+ • /fedtransfer <new_owner> <fed_id>:To transfer fed ownership to another person
+ • /fpromote <user>: Assigns the user as a federation admin. Enables all commands for the user under Fed Admins
+ • /fdemote <user>: Drops the User from the admin Federation to a normal User
+ • /setfedlog <fed_id>: Sets the group as a fed log report base for the federation
+ • /unsetfedlog <fed_id>: Removed the group as a fed log report base for the federation
+ • /fbroadcast : Broadcasts a messages to all groups that have joined your fed
+"""
+buttons_fdo = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="fed"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^fdo$"))
+async def afdobviv(bot, query):
+    await query.message.edit(
+        text=text_fdo,
+        reply_markup=InlineKeyboardMarkup(buttons_fdo),
+        disable_web_page_preview=True,
+    )
+
+text_fdm = """
+🔱 **Fed Admins:**
+
+The following is the list of all fed admin commands. To run these, you have to be a federation admin in the current federation.
+
+ • /fban <user> <reason>: Fed bans a user
+ • /sfban: Fban a user without sending notification to chats
+ • /unfban <user> <reason>: Removes a user from a fed ban
+ • /sunfban: Unfban a user without sending a notification
+ • /fedadmins: Show Federation admin
+ • /fedchats <FedID>: Get all the chats that are connected in the Federation
+ • /fbroadcast : Broadcasts a messages to all groups that have joined your fed
+"""
+buttons_fdm = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="fed"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^fdm$"))
+async def abvifdmv(bot, query):
+    await query.message.edit(
+        text=text_fdm,
+        reply_markup=InlineKeyboardMarkup(buttons_fdm),
+        disable_web_page_preview=True,
+    )
+
+text_fdu = """
+**User Commands:**
+
+These commands do not require you to be admin of a federation. These commands are for general commands, such as looking up information on a fed, or checking a user's fbans.
+
+• /fedinfo <FedID>: Information about a federation.
+• /fedadmins <FedID>: List the admins in a federation.
+• /joinfed <FedID>: Join the current chat to a federation. A chat can only join one federation. Chat owners only.
+• /leavefed: Leave the current federation. Only chat owners can do this.
+• /fedstat <FedID>: Gives information about your ban in a federation.
+• /fedstat <user ID> <FedID>: Gives information about a user's ban in a federation.
+• /chatfed: Information about the federation the current chat is in.
+"""
+buttons_fdu = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="fed"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^fdu$"))
+async def abvfduiv(bot, query):
+    await query.message.edit(
+        text=text_fdu,
+        reply_markup=InlineKeyboardMarkup(buttons_fdu),
         disable_web_page_preview=True,
     )
 #===================
