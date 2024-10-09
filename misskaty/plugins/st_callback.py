@@ -129,7 +129,9 @@ BUTTONS_GP = [
     [
         InlineKeyboardButton("Night Mod", callback_data="nm"),
         InlineKeyboardButton("SangMata", callback_data="sm"),
-        
+    ],
+    [
+        InlineKeyboardButton("Pin", callback_data="pn"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="set_ge"),
@@ -699,6 +701,33 @@ async def abviv(bot, query):
     await query.message.edit(
         text=text_sm,
         reply_markup=InlineKeyboardMarkup(buttons_sm),
+        disable_web_page_preview=True,
+    )
+
+text_pn = """
+**Here is the help for Pin**
+
+All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!
+
+Admin commands:
+- /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
+- /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
+- /unpinall: Unpins all pinned messages.
+"""
+
+buttons_pn = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^pn$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_pn,
+        reply_markup=InlineKeyboardMarkup(buttons_pn),
         disable_web_page_preview=True,
     )
 #===================
