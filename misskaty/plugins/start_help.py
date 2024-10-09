@@ -46,7 +46,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
     ]
 )
 
-home_text_pm = f"Hey there! My name is {BOT_NAME}. I have many useful features for you, feel free to add me to your group.\n\nUse /help to find out more about how to use me to my full potential.."
+home_text_pm = f"Hey 👋 there! My name is {BOT_NAME}❣️. I have many useful features for you, feel free to add me to your group.\n\nUse /help to find out more about how to use me to my full potential.."
 
 keyboard = InlineKeyboardMarkup(
     [
