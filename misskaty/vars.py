@@ -61,7 +61,7 @@ SUDO = list(
         ).split()
     }
 )
-OWNER_ID = int(environ.get("OWNER_ID", 784589736)
+OWNER_ID = int(environ.get("OWNER_ID", 784589736))
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "xbots_x")
 AUTO_RESTART = environ.get("AUTO_RESTART", False)
 OPENAI_KEY = environ.get("OPENAI_KEY")
