@@ -2,7 +2,18 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from misskaty import app as Bot, BOT_USERNAME
+from misskaty.vars import SUDO_USERS
 
+#============SUDO===≠===
+
+@Bot.on_callback_query(filters.regex("^sudo$"))
+async def botCallbacks(_, CallbackQuery: CallbackQuery):
+    clicker_user_id = CallbackQuery.from_user.id
+    if clicker_user_id not in SUDO_USERS:
+        return await CallbackQuery.answer(
+            "You are not in the sudo user list.", show_alert=True)              
+    await CallbackQuery.edit_message_text(
+        SUDO_TEXT, reply_markup=InlineKeyboardMarkup(buttons_st))
 # =============START_CMD====================
 TEXT_ST = (
     "👋__Hello there {},__\n\n"
