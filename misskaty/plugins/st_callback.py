@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import app as Bot, BOT_USERNAME
+from misskaty import app as Bot, BOT_USERNAME, BOT_NAME
 from misskaty.vars import SUDO_USERS
 
 #============SUDO===≠===
@@ -24,10 +24,10 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
             "You are not in the sudo user list.", show_alert=True)              
     await CallbackQuery.edit_message_text(
         SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
-# =============START_CMD====================
+# =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡
 TEXT_ST = (
     "👋__Hello there {},__\n\n"
-    "<blockquote> Welcome to the 🎈𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡! This is a powerful⚡🌪️ bot for Telegram, I have many useful features for you, feel free to add me to your group.</blockquote>\n\n"
+    "<blockquote> Welcome to the 🎈{}! This is a powerful⚡🌪️ bot for Telegram, I have many useful features for you, feel free to add me to your group.</blockquote>\n\n"
     "**__Click /help to find out more about how to use me to my full potential!__**"
 )
 BUTTONS_ST = [
@@ -46,7 +46,7 @@ BUTTONS_ST = [
 @Bot.on_callback_query(filters.regex("^home$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
-        text=TEXT_ST.format(query.from_user.first_name),
+        text=TEXT_ST.format(query.from_user.first_name, BOT_NAME),
         reply_markup=InlineKeyboardMarkup(BUTTONS_ST),
         disable_web_page_preview=True,
     )
@@ -86,7 +86,7 @@ async def hp_hagndlery(bot, message):
     )
 #================GROUP_CMD=================
 TEXT_GP = """
-Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+Hey 👋{}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Send command /privacy if you want know data collected by this bot.
 General command are:
@@ -140,7 +140,7 @@ BUTTONS_GP = [
 @Bot.on_callback_query(filters.regex("^group$"))
 async def abvigjdv(bot, query):
     await query.message.edit(
-        text=TEXT_GP,
+        text=TEXT_GP.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         disable_web_page_preview=True,
 )
