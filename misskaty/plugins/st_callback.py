@@ -7,7 +7,25 @@ from misskaty.vars import SUDO_USERS
 #============SUDO===≠===
 #=================
 SUDO_TEXT = """
-Hi Sudo Bro 🤡🤣
+Hi there sudo user👮‍♂️
+Here is the help for DevCommand:
+
+For Owner Bot Only.
+/run [args] - Run eval CMD
+/logs [int] - Check logs bot
+/shell [args] - Run Exec/Terminal CMD
+/download [link/reply_to_telegram_file] - Download file from Telegram
+/disablechat [chat id] - Remove blacklist group
+/enablechat [chat id] - Add Blacklist group
+/banuser [chat id] - Ban user and block user so cannot use bot
+/unbanuser [chat id] - Unban user and make their can use bot again
+/gban - To Ban A User Globally.
+/ungban - To remove ban user globbaly.
+/restart - update and restart bot.
+
+For Public Use
+/stats - Check statistic bot
+/json - Send structure message Telegram in JSON using Pyrogram Style.
 """
 BUTTON_SUDO = [
     [
