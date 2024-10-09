@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from misskaty import app as Bot, BOT_USERNAME, BOT_NAME
-from misskaty.vars import SUDO_USERS
+from misskaty.vars import SUDO as SUDO_USERS
 
 #============SUDO===≠===
 #=================
