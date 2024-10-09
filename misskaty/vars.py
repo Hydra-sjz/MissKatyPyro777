@@ -49,19 +49,20 @@ else:
 LOG_GROUP_ID = environ.get("LOG_GROUP_ID")
 USER_SESSION = environ.get("USER_SESSION")
 DATABASE_NAME = environ.get("DATABASE_NAME", "MissKatyDB")
-TZ = environ.get("TZ", "Asia/Jakarta")
+TZ = environ.get("TZ", "Asia/Kolkata")
 PORT = environ.get("PORT", 80)
 COMMAND_HANDLER = environ.get("COMMAND_HANDLER", "! /").split()
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "784589736").split()))
 SUDO = list(
     {
         int(x)
         for x in environ.get(
             "SUDO",
-            "617426792 2024984460",
+            "784589736",
         ).split()
     }
 )
-OWNER_ID = int(environ.get("OWNER_ID", 2024984460))
+OWNER_ID = int(environ.get("OWNER_ID", 784589736)
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "xbots_x")
 AUTO_RESTART = environ.get("AUTO_RESTART", False)
 OPENAI_KEY = environ.get("OPENAI_KEY")
