@@ -153,6 +153,7 @@ text_admi = """
 Make it easy to promote and demote users with the admin module!
 
 Admin commands:
+- /adminlist: List the admins in the current chat.
 - /promote <reply/username/mention/userid>: Promote a user.
 - /demote <reply/username/mention/userid>: Demote a user.
 - /fullpromote Promote A Member With All Rights.
@@ -215,12 +216,21 @@ User commands:
 - /kickme: Users that use this, kick themselves.
 
 **Admin commands:**
+**Ban**
 /ban - Ban A User From A Group
 /dban - Delete the replied message banning its sender
 /tban - Ban A User For Specific Time
 /unban - Unban A User
 /listban - Ban a user from groups listed in a message
 /listunban - Unban a user from groups listed in a message
+
+**Mute:**
+/mute: Mute a user.
+/tmute: Temporarily mute a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
+/unmute: Unmute a user.
+
+**Kick**
+/kick: Kick a user.
 /dkick - Delete the replied message kicking its sender
 
 **Examples:**
@@ -697,7 +707,7 @@ buttons_sm = [
 
 
 @Bot.on_callback_query(filters.regex("^sm$"))
-async def abviv(bot, query):
+async def abvivmfg(bot, query):
     await query.message.edit(
         text=text_sm,
         reply_markup=InlineKeyboardMarkup(buttons_sm),
@@ -724,12 +734,14 @@ buttons_pn = [
 
 
 @Bot.on_callback_query(filters.regex("^pn$"))
-async def abviv(bot, query):
+async def abvivpn(bot, query):
     await query.message.edit(
         text=text_pn,
         reply_markup=InlineKeyboardMarkup(buttons_pn),
         disable_web_page_preview=True,
     )
+
+
 #===================
 
 TEXT_HP = """
