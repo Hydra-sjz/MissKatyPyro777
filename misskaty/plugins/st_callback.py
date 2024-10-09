@@ -209,6 +209,9 @@ text_ban = """
 Some people need to be publicly banned; spammers, annoyances, or just trolls.
 This module allows you to do that easily, by exposing some common actions, so everyone will see!
 
+User commands:
+- /kickme: Users that use this, kick themselves.
+
 **Admin commands:**
 /ban - Ban A User From A Group
 /dban - Delete the replied message banning its sender
