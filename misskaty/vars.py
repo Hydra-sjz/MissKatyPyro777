@@ -52,7 +52,6 @@ DATABASE_NAME = environ.get("DATABASE_NAME", "MissKatyDB")
 TZ = environ.get("TZ", "Asia/Kolkata")
 PORT = environ.get("PORT", 80)
 COMMAND_HANDLER = environ.get("COMMAND_HANDLER", "! /").split()
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "784589736").split()))
 SUDO = list(
     {
         int(x)
