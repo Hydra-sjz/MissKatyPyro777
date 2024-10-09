@@ -24,11 +24,11 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
             "You are not in the sudo user list.", show_alert=True)              
     await CallbackQuery.edit_message_text(
         SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
-# =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡
+# =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡</blockquote>
 TEXT_ST = (
     "👋__Hello there {},__\n\n"
-    "<blockquote> Welcome to the 🎈{}! This is a powerful⚡🌪️ bot for Telegram, I have many useful features for you, feel free to add me to your group.</blockquote>\n\n"
-    "**__Click /help to find out more about how to use me to my full potential!__**"
+    "Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.\n\n"
+    "**__Click /help to find out more about how to use me to me full potential!__**"
 )
 BUTTONS_ST = [
     [
