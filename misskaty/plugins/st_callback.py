@@ -5,6 +5,16 @@ from misskaty import app as Bot, BOT_USERNAME
 from misskaty.vars import SUDO_USERS
 
 #============SUDO===≠===
+#=================
+SUDO_TEXT = """
+Hi Sudo Bro 🤡🤣
+"""
+BUTTON_SUDO = [
+    [
+        InlineKeyboardButton("❮", callback_data="set_ge"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
 
 @Bot.on_callback_query(filters.regex("^sudo$"))
 async def botCallbacks(_, CallbackQuery: CallbackQuery):
@@ -13,7 +23,7 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
         return await CallbackQuery.answer(
             "You are not in the sudo user list.", show_alert=True)              
     await CallbackQuery.edit_message_text(
-        SUDO_TEXT, reply_markup=InlineKeyboardMarkup(buttons_st))
+        SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
 # =============START_CMD====================
 TEXT_ST = (
     "👋__Hello there {},__\n\n"
