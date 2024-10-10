@@ -38,25 +38,6 @@ def circle(pfp, size=(450, 450)):
     pfp.putalpha(mask)
     return pfp
 
-"""
-def draw_multiple_line_text(image, text, font, text_start_height):
-    """
-    #From unutbu on [python PIL draw multiline text on image](https://stackoverflow.com/a/7698300/395857)
-    """
-    draw = ImageDraw.Draw(image)
-    image_width, _ = image.size
-    y_text = text_start_height
-    lines = textwrap.wrap(text, width=50)
-    for line in lines:
-        text_bbox = font.getbbox(line)
-        (left, top, right, bottom) = text_bbox
-        line_width = abs(right - left)
-        line_height = abs(top - bottom)
-        draw.text(
-            ((image_width - line_width) / 2, y_text), line, font=font, fill="black"
-        )
-        y_text += line_height
-"""
 
 @asyncify
 def welcomepic(pic, user, chat, id, uname):
