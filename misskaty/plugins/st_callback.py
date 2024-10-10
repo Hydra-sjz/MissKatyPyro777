@@ -1,5 +1,5 @@
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 
 from misskaty import app as Bot, BOT_USERNAME, BOT_NAME
 from misskaty.vars import SUDO as SUDO_USERS
