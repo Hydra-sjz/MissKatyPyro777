@@ -75,7 +75,7 @@ async def approve_chat(c, q):
     _, chat = q.data.split("_")
     try:
         await q.message.edit(
-            "🎉 Congratulations\n\n🔅 Now your Request for <b>♣️Music🎵Galaxy♣️</b> Group is Successfully Accepted✅\nNow you can request your song's in Group\n🎧 https://t.me/songdownload_group"
+            "🎉 Congratulations\n\n🔅 Now your Request for Group is Successfully Accepted✅\nNow you can join my Chat!"
         )
         await c.approve_chat_join_request(chat, q.from_user.id)
     except UserAlreadyParticipant:
@@ -96,7 +96,7 @@ async def decline_chat(c, q):
         await c.decline_chat_join_request(chat, q.from_user.id)
     except UserAlreadyParticipant:
         await q.message.edit(
-            "You are already in the Music Galaxy group, so no need to press the button below."
+            "You are already in my group, so no need to press the button below."
         )
     except Exception as err:
         await q.message.edit(err)
