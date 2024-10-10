@@ -10,20 +10,22 @@ SUDO_TEXT = """
 Hi there sudo user👮‍♂️
 Here is the help for DevCommand:
 
-For Owner Bot Only.
+**For Owner Bot Only:**
+/restart - update and restart bot.
 /run [args] - Run eval CMD
 /logs [int] - Check logs bot
 /shell [args] - Run Exec/Terminal CMD
-/download [link/reply_to_telegram_file] - Download file from Telegram
+**Blacklist chat:**
 /disablechat [chat id] - Remove blacklist group
 /enablechat [chat id] - Add Blacklist group
+/leave
+**BanUsers:**
 /banuser [chat id] - Ban user and block user so cannot use bot
 /unbanuser [chat id] - Unban user and make their can use bot again
 /gban - To Ban A User Globally.
 /ungban - To remove ban user globbaly.
-/restart - update and restart bot.
 
-For Public Use
+**For Public Use**
 /stats - Check statistic bot
 /json - Send structure message Telegram in JSON using Pyrogram Style.
 """
