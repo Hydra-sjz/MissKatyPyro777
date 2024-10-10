@@ -183,7 +183,7 @@ async def leave_a_chat(bot, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text="<b>Hai kawan, \nOwner aku bilang saya harus pergi! Jika kamu ingin menambahkan bot ini lagi silahkan kontak owner bot ini.</b>",
+            text="<b>Hi guys, \nOwner I said I have to go! If you want to add this bot again please contact the owner of this bot.</b>",
             reply_markup=reply_markup,
         )
         await bot.leave_chat(chat)
@@ -217,7 +217,7 @@ async def gen_invite(bot, message):
 @capture_err
 async def adminlist(_, message):
     if message.chat.type == enums.ChatType.PRIVATE:
-        return await message.reply("Perintah ini hanya untuk grup")
+        return await message.reply("This command is for groups only")
     try:
         msg = await message.reply_msg(f"Getting admin list in {message.chat.title}..")
         administrators = []
@@ -243,13 +243,13 @@ async def kickme(_, message):
         reason = message.text.split(None, 1)[1]
     try:
         await message.chat.ban_member(message.from_user.id)
-        txt = f"Pengguna {message.from_user.mention} menendang dirinya sendiri. Mungkin dia sedang frustasi 😕"
+        txt = f"User {message.from_user.mention} kicked himself. Maybe he's frustrated 😕"
         txt += f"\n<b>Alasan</b>: {reason}" if reason else "-"
         await message.reply_text(txt)
         await message.chat.unban_member(message.from_user.id)
     except RPCError as ef:
         await message.reply_text(
-            f"Sepertinya ada error, silahkan report ke owner saya. \nERROR: {str(ef)}"
+            f"It seems there is an error, please report it to my owner. \nERROR: {str(ef)}"
         )
     except Exception as err:
         await message.reply(f"ERROR: {err}")
