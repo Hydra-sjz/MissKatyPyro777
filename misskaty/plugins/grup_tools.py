@@ -3,6 +3,7 @@ import textwrap
 import time
 from datetime import datetime, timedelta
 from logging import getLogger
+from unidecode import unidecode
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 from pyrogram import Client, enums, filters
