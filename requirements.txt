@@ -37,3 +37,4 @@ lxml_html_clean
 fastapi
 uvicorn
 python-multipart
+unidecode
