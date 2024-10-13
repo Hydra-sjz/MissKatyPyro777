@@ -2,9 +2,8 @@ import os
 import asyncio
 import PIL.Image
 from pathlib import Path
-import google-generativeai as genai
+import google.generativeai as genai
 from pyrogram import Client, filters, enums
-
 
 import html
 import privatebinapi
