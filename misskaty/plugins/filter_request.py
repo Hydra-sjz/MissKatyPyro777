@@ -21,7 +21,7 @@ from .pypi_search import PYPI_DICT
 from .web_scraper import SCRAP_DICT, data_kuso
 from .ytdl_plugins import YT_DB
 
-chat = [-1001128045651, -1001255283935, -1001455886928]
+chat = [-1001128045651, -1001954979279]
 REQUEST_DB = {}
 
 
@@ -37,7 +37,7 @@ async def salamregex(_, message):
 @app.on_message(
     filters.regex(r"#request|#req", re.I)
     & (filters.text | filters.photo)
-    & filters.chat(-1001255283935)
+    & filters.chat(-1001954979279)
     & ~filters.channel
 )
 @capture_err
@@ -439,6 +439,6 @@ async def callbackaft_dahada(_, q):
     )
 
 
-scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
+scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
 scheduler.add_job(clear_reqdict, trigger="cron", hour=2, minute=0)
 scheduler.start()
