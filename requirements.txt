@@ -38,3 +38,4 @@ fastapi
 uvicorn
 python-multipart
 unidecode
+google-generativeai
