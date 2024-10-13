@@ -772,24 +772,24 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP = [
     [
-        InlineKeyboardButton("Acᴛɪᴠᴇ", callback_data="act"),
-        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+        InlineKeyboardButton(".", callback_data="act"),
+        InlineKeyboardButton("Ai", callback_data="ai"),
+        InlineKeyboardButton(".", callback_data="aut"),
     ],
     [
-        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
-        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
+        InlineKeyboardButton(".", callback_data="adv"),
+        InlineKeyboardButton(".", callback_data="apr"),
+        InlineKeyboardButton(".", callback_data="blt"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+        InlineKeyboardButton("Bypass", callback_data="byp"),
+        InlineKeyboardButton(".", callback_data="bn"),
+        InlineKeyboardButton(".", callback_data="bts"),
     ],
     [
-        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
-        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
-        InlineKeyboardButton("Deᴠ", callback_data="dv"),
+        InlineKeyboardButton(".", callback_data="bsk"),
+        InlineKeyboardButton(".", callback_data="ai"),
+        InlineKeyboardButton(".", callback_data="dv"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
@@ -815,24 +815,24 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP2 = [
     [
-        InlineKeyboardButton("Filters", callback_data="flt"),
-        InlineKeyboardButton("Fɪɢʟᴇᴛ", callback_data="fgl"),
-        InlineKeyboardButton("Fᴀᴋᴇ", callback_data="fk"),
+        InlineKeyboardButton(".", callback_data="flt"),
+        InlineKeyboardButton(".", callback_data="fgl"),
+        InlineKeyboardButton(".", callback_data="fk"),
     ],
     [
-        InlineKeyboardButton("Fᴏɴᴛ", callback_data="fon"),
-        InlineKeyboardButton("Fᴜɴ", callback_data="fn"),
-        InlineKeyboardButton("G-ᴄᴀsᴛ", callback_data="gt"),
+        InlineKeyboardButton(".", callback_data="fon"),
+        InlineKeyboardButton(".", callback_data="fn"),
+        InlineKeyboardButton(".", callback_data="gt"),
     ],
     [
-        InlineKeyboardButton("Gʀᴏᴜᴘ Lɪɴᴋ", callback_data="gl"),
-        InlineKeyboardButton("Gᴀʟɪ", callback_data="gli"),
-        InlineKeyboardButton("sᴇᴀʀᴄʜ", callback_data="src"),
+        InlineKeyboardButton(".", callback_data="gl"),
+        InlineKeyboardButton(".", callback_data="gli"),
+        InlineKeyboardButton(".", callback_data="src"),
     ],
     [
-        InlineKeyboardButton("Gᴏᴏᴅʙʏᴇ", callback_data="gdy"),
-        InlineKeyboardButton("Hɪsᴛᴏʀʏ", callback_data="hsr"),
-        InlineKeyboardButton("Hᴀsʜᴛᴀɢ", callback_data="htg"),
+        InlineKeyboardButton(".", callback_data="gdy"),
+        InlineKeyboardButton(".", callback_data="hsr"),
+        InlineKeyboardButton(".", callback_data="htg"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings"),
@@ -859,24 +859,24 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP3 = [
     [
-        InlineKeyboardButton("Hᴜɢ", callback_data="hg"),
-        InlineKeyboardButton("Lᴏᴠᴇ", callback_data="lv"),
-        InlineKeyboardButton("Mᴀᴛʜ", callback_data="mt"),
+        InlineKeyboardButton(".", callback_data="hg"),
+        InlineKeyboardButton(".", callback_data="lv"),
+        InlineKeyboardButton(".", callback_data="mt"),
     ],
     [
-        InlineKeyboardButton("Mᴏɴɢᴏᴅʙ", callback_data="mog"),
-        InlineKeyboardButton("Nᴏᴛᴇs", callback_data="not"),
-        InlineKeyboardButton("Pᴀᴜsᴇ", callback_data="ps"),
+        InlineKeyboardButton(".", callback_data="mog"),
+        InlineKeyboardButton(".", callback_data="not"),
+        InlineKeyboardButton(".", callback_data="ps"),
     ],
     [
-        InlineKeyboardButton("Plᴀʏ", callback_data="ply"),
-        InlineKeyboardButton("SᴀɴɢMᴀᴛᴀ", callback_data="sg"),
-        InlineKeyboardButton("Pʏᴘɪ", callback_data="pyp"),
+        InlineKeyboardButton(".", callback_data="ply"),
+        InlineKeyboardButton(".", callback_data="sg"),
+        InlineKeyboardButton(".", callback_data="pyp"),
     ],
     [
-        InlineKeyboardButton("Pʟᴀʏʟɪsᴛ", callback_data="pay"),
-        InlineKeyboardButton("Qʀɢᴇɴ", callback_data="qr"),
-        InlineKeyboardButton("Deᴠ", callback_data="dv"),
+        InlineKeyboardButton(".", callback_data="pay"),
+        InlineKeyboardButton(".", callback_data="qr"),
+        InlineKeyboardButton(".", callback_data="dv"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings2"),
@@ -903,30 +903,30 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP4 = [
     [
-        InlineKeyboardButton("Qᴜᴏᴛᴇ", callback_data="quo"),
-        InlineKeyboardButton("Rᴀᴅɪᴏ", callback_data="rd"),
-        InlineKeyboardButton("Resume", callback_data="rsm"),
+        InlineKeyboardButton(".", callback_data="quo"),
+        InlineKeyboardButton(".", callback_data="rd"),
+        InlineKeyboardButton(".", callback_data="rsm"),
     ],
     [
-        InlineKeyboardButton("Rᴇᴘᴏ", callback_data="rep"),
-        InlineKeyboardButton("Speed", callback_data="spd"),
-        InlineKeyboardButton("Tag", callback_data="tag"),
+        InlineKeyboardButton(".", callback_data="rep"),
+        InlineKeyboardButton(".", callback_data="spd"),
+        InlineKeyboardButton(".", callback_data="tag"),
     ],
     [
-        InlineKeyboardButton("Sʟᴀᴘ", callback_data="sl"),
-        InlineKeyboardButton("Sᴛɪᴄᴋᴇʀ", callback_data="stk"),
-        InlineKeyboardButton("Tʀᴜᴛʜ", callback_data="trt"),
+        InlineKeyboardButton(".", callback_data="sl"),
+        InlineKeyboardButton(".", callback_data="stk"),
+        InlineKeyboardButton(".", callback_data="trt"),
     ],
     [
-        InlineKeyboardButton("Tᴀɢᴀʟʟ", callback_data="tgl"),
-        InlineKeyboardButton("Tᴇʟᴇɢʀᴀᴘʜ", callback_data="tgr"),
-        InlineKeyboardButton("Tᴛs", callback_data="tt"),
+        InlineKeyboardButton(".", callback_data="tgl"),
+        InlineKeyboardButton(".", callback_data="tgr"),
+        InlineKeyboardButton(".", callback_data="tt"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings3"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="setting5"),
+        InlineKeyboardButton("❯", callback_data="settings5"),
     ],
 ]
 
@@ -947,24 +947,24 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP5 = [
     [
-        InlineKeyboardButton("Usᴇʀ Iɴғᴏ", callback_data="ui"),
-        InlineKeyboardButton("Usᴇʀɪᴅ", callback_data="ud"),
-        InlineKeyboardButton("Wʀɪᴛᴇ", callback_data="wr"),
+        InlineKeyboardButton(".", callback_data="ui"),
+        InlineKeyboardButton(".", callback_data="ud"),
+        InlineKeyboardButton(".", callback_data="wr"),
     ],
     [
-        InlineKeyboardButton("Wʜᴏɪs", callback_data="wh"),
-        InlineKeyboardButton("Wᴀʟʟ", callback_data="wl"),
-        InlineKeyboardButton("Wᴇʙᴅʟ", callback_data="wd"),
+        InlineKeyboardButton(".", callback_data="wh"),
+        InlineKeyboardButton(".", callback_data="wl"),
+        InlineKeyboardButton(".", callback_data="wd"),
     ],
     [
-        InlineKeyboardButton("Yᴛʜᴜᴍʙ", callback_data="yh"),
-        InlineKeyboardButton("Zᴏᴍʙɪᴇs", callback_data="zm"),
-        InlineKeyboardButton("...", callback_data=""),
+        InlineKeyboardButton(".", callback_data="yh"),
+        InlineKeyboardButton(".", callback_data="zm"),
+        InlineKeyboardButton(".", callback_data=""),
     ],
     [
-        InlineKeyboardButton("...", callback_data="f"),
-        InlineKeyboardButton("...", callback_data="d"),
-        InlineKeyboardButton("...", callback_data="d"),
+        InlineKeyboardButton(".", callback_data="f"),
+        InlineKeyboardButton(".", callback_data="d"),
+        InlineKeyboardButton(".", callback_data="d"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings4"),
@@ -1016,22 +1016,15 @@ async def abot_cb_handler6(bot, query):
 
 
 text_adm = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Adᴍɪɴ:
-c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
-
-々 /pause ᴏʀ /cpause - Pᴀᴜsᴇ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
-々 /resume ᴏʀ /cresume - Rᴇsᴜᴍᴇ ᴛʜᴇ ᴘᴀᴜsᴇᴅ ᴍᴜsɪᴄ.
-々 /mute ᴏʀ /cmute - Mᴜᴛᴇ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
-々 /unmute ᴏʀ /cunmute - Uɴᴍᴜᴛᴇ ᴛʜᴇ ᴍᴜᴛᴇᴅ ᴍᴜsɪᴄ.
-々 /skip ᴏʀ /cskip - Sᴋɪᴘ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
-々 /stop ᴏʀ /cstop - Sᴛᴏᴘ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
-々 /shuffle ᴏʀ /cshuffle - Rᴀɴᴅᴏᴍʟʏ sʜᴜғғʟᴇs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴘʟᴀʏʟɪsᴛ.
-々 /seek ᴏʀ /cseek - Fᴏʀᴡᴀʀᴅ Sᴇᴇᴋ ᴛʜᴇ ᴍᴜsɪᴄ ᴛᴏ ʏᴏᴜʀ ᴅᴜʀᴀᴛɪᴏɴ.
-々 /seekback ᴏʀ /cseekback - Bᴀᴄᴋᴡᴀʀᴅ Sᴇᴇᴋ ᴛʜᴇ ᴍᴜsɪᴄ ᴛᴏ ʏᴏᴜʀ ᴅᴜʀᴀᴛɪᴏɴ.
-々 /reboot - Rᴇʙᴏᴏᴛ ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ.
-
-々 /skip ᴏʀ /cskip [Nᴜᴍʙᴇʀ (ᴇxᴀᴍᴘʟᴇ: 𝟹)] - Sᴋɪᴘs ᴍᴜsɪᴄ ᴛᴏ ᴀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ǫᴜᴇᴜᴇᴅ ɴᴜᴍʙᴇʀ. Exᴀᴍᴘʟᴇ: /skip 𝟹 ᴡɪʟʟ sᴋɪᴘ ᴍᴜsɪᴄ ᴛᴏ ᴛʜɪʀᴅ ǫᴜᴇᴜᴇᴅ ᴍᴜsɪᴄ ᴀɴᴅ ᴡɪʟʟ ɪɢɴᴏʀᴇ 𝟷 ᴀɴᴅ 𝟸 ᴍᴜsɪᴄ ɪɴ ǫᴜᴇᴜᴇ.
-々 /loop ᴏʀ /cloop [ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ] ᴏʀ [Nᴜᴍʙᴇʀs ʙᴇᴛᴡᴇᴇɴ 𝟷-𝟷𝟶] - Wʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, ʙᴏᴛ ʟᴏᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴛᴏ 𝟷-𝟷𝟶 ᴛɪᴍᴇs ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ. Dᴇғᴀᴜʟᴛ ᴛᴏ 𝟷𝟶 ᴛɪᴍᴇs.
+Use /askai or /mai Ask questions using ai for responding to user queries feom Gamini.
+Use /aii Reply to image to containing text that you want transcripts, and  I'll process the image and provide you with the transcribed text.
+Use /aicook Reply to image To get cooking instruction of the food in it.
+Use /aiseller Reply to image and create you product desc.
+Use /imagine Generate ai image from text
+Use /gptai /gpt2 /iri /assis Ask anything to gpt ai.
+Use /bard Ask anything to Bard ai.
+Use /deep ask questions to Deep Ai.
+Use /bing2 search any from Bing browser.
 """
 buttons_adm = [
     [
@@ -1041,7 +1034,7 @@ buttons_adm = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^adm$"))
+@Bot.on_callback_query(filters.regex("^ai$"))
 async def abot_cb_handler7(bot, query):
     await query.message.edit(
         text=text_adm,
@@ -1134,19 +1127,14 @@ async def abot_cb_handler10(bot, query):
 
 
 text_blt = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ B-ʟɪsᴛ:
+/directurl [Link] - Bypass URL.
 
-々 /blacklistchat [ᴄʜᴀᴛ ɪᴅ] - Bʟᴀᴄᴋʟɪsᴛ ᴀɴʏ ᴄʜᴀᴛ ғʀᴏᴍ ᴜsɪɴɢ Mᴜsɪᴄ Bᴏᴛ
-々 /whitelistchat [ᴄʜᴀᴛ ɪᴅ] - Wʜɪᴛᴇʟɪsᴛ ᴀɴʏ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛ ғʀᴏᴍ ᴜsɪɴɢ Mᴜsɪᴄ Bᴏᴛ
-々 /blacklistedchat - Cʜᴇᴄᴋ ᴀʟʟ ʙʟᴏᴄᴋᴇᴅ ᴄʜᴀᴛs.
+Supported Link:
+- Pling and all aliases.
+- Wetransfer
+- Other link soon...
 
-々 /block [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] - Pʀᴇᴠᴇɴᴛs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴜsɪɴɢ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs.
-々 /unblock [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ Bᴏᴛ's Bʟᴏᴄᴋᴇᴅ Lɪsᴛ.
-々 /blockedusers - Cʜᴇᴄᴋ ʙʟᴏᴄᴋᴇᴅ Usᴇʀs Lɪsᴛs
-
-ⓘ /gban [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] - Gʙᴀɴ ᴀ ᴜsᴇʀ ғʀᴏᴍ ʙᴏᴛ's sᴇʀᴠᴇᴅ ᴄʜᴀᴛ ᴀɴᴅ sᴛᴏᴘ ʜɪᴍ ғʀᴏᴍ ᴜsɪɴɢ ʏᴏᴜʀ ʙᴏᴛ.
-ⓘ /ungban [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ Bᴏᴛ's ɢʙᴀɴɴᴇᴅ Lɪsᴛ ᴀɴᴅ ᴀʟʟᴏᴡ ʜɪᴍ ғᴏʀ ᴜsɪɴɢ ʏᴏᴜʀ ʙᴏᴛ
-ⓘ /gbannedusers - Cʜᴇᴄᴋ Gʙᴀɴɴᴇᴅ Usᴇʀs Lɪsᴛs
+This feature is deprecated..
 """
 buttons_blt = [
     [
@@ -1156,7 +1144,7 @@ buttons_blt = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^blt$"))
+@Bot.on_callback_query(filters.regex("^byp$"))
 async def abot_cb_handlerh(bot, query):
     await query.message.edit(
         text=text_blt,
