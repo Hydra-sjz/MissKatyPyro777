@@ -825,14 +825,14 @@ BUTTONS_HP2 = [
         InlineKeyboardButton("Ocr", callback_data="oc"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="gl"),
-        InlineKeyboardButton(".", callback_data="gli"),
+        InlineKeyboardButton("Sticker", callback_data="str"),
+        InlineKeyboardButton("Paste", callback_data="pst"),
         InlineKeyboardButton(".", callback_data="src"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="gdy"),
+        InlineKeyboardButton("WebScraper", callback_data="web"),
         InlineKeyboardButton("Karma", callback_data="kr"),
-        InlineKeyboardButton(".", callback_data="htg"),
+        InlineKeyboardButton("Nulis", callback_data="nui"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings"),
@@ -1234,11 +1234,20 @@ async def abot_cb_handlufer(bot, query):
 
 
 text_bts = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Bᴏᴛs:
+Here is the help for WebScraper:
 
-ʙᴏᴛs
-
-々 /bots - ɢᴇᴛ ᴀ ʟɪsᴛ ᴏғ ʙᴏᴛs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+/webss [URL] - Take A Screenshot Of A Webpage.
+/melongmovie [query ] - Scrape website data from MelongMovie Web.
+/lk21 [query ] - Scrape website data from LayarKaca21.
+/pahe [query ] - Scrape website data from Pahe.li.
+/terbit21 [query ] - Scrape website data from Terbit21.
+/savefilm21 [query ] - Scrape website data from Savefilm21.
+/movieku [query ] - Scrape website data from Movieku.cc
+/kusonime [query ] - Scrape website data from Kusonime
+/lendrive [query ] - Scrape website data from Lendrive
+/klikxxi [query ] - Scrape website data from Klikxxi aka GoMov.
+/samehadaku [query ] - Scrape website data from Samehadaku.
+/nodrakor [query ] - Scrape website data from NoDrakor
 """
 buttons_bts = [
     [
@@ -1248,7 +1257,7 @@ buttons_bts = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^bts$"))
+@Bot.on_callback_query(filters.regex("^web$"))
 async def abot_cb_handlgguer(bot, query):
     await query.message.edit(
         text=text_bts,
@@ -1344,20 +1353,10 @@ async def abot_cb_ughandler(bot, query):
 
 
 text_dv = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Deᴠ:
+**Here is the help for nulis:**
 
-🔰Aᴅᴅ Aɴᴅ Rᴇᴍᴏᴠᴇ Sᴜᴅᴏ Usᴇʀ's:
-々 /addsudo [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ]
-々 /delsudo [Usᴇʀɴᴀᴍᴇ ᴏʀ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ]
-
-🤖Bᴏᴛ Cᴏᴍᴍᴀɴᴅs:
-ⓘ /restart - Rᴇsᴛᴀʀᴛ ʏᴏᴜʀ Bᴏᴛ. 
-ⓘ /update , /gitpull - Uᴘᴅᴀᴛᴇ Bᴏᴛ.
-ⓘ /speedtest - Cʜᴇᴄᴋ sᴇʀᴠᴇʀ sᴘᴇᴇᴅs
-ⓘ /maintenance [ᴇɴᴀʙʟᴇ / ᴅɪsᴀʙʟᴇ]
-ⓘ /logger [ᴇɴᴀʙʟᴇ / ᴅɪsᴀʙʟᴇ] - Bᴏᴛ ʟᴏɢs ᴛʜᴇ sᴇᴀʀᴄʜᴇᴅ ǫᴜᴇʀɪᴇs ɪɴ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ.
-ⓘ /get_log [Nᴜᴍʙᴇʀ ᴏғ Lɪɴᴇs] - Gᴇᴛ ʟᴏɢ ᴏғ ʏᴏᴜʀ ʙᴏᴛ ғʀᴏᴍ ʜᴇʀᴏᴋᴜ ᴏʀ ᴠᴘs. Wᴏʀᴋs ғᴏʀ ʙᴏᴛʜ.
-ⓘ /autoend [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ] - Eɴᴀʙʟᴇ Aᴜᴛᴏ sᴛʀᴇᴀᴍ ᴇɴᴅ ᴀғᴛᴇʀ 𝟹 ᴍɪɴs ɪғ ɴᴏ ᴏɴᴇ ɪs ʟɪsᴛᴇɴɪɴɢ.
+Command: /nulis [reply to msg or after cmd]
+Desc: For those of you who are lazy to write.
 """
 buttons_dv = [
     [
@@ -1367,7 +1366,7 @@ buttons_dv = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^dv$"))
+@Bot.on_callback_query(filters.regex("^nui$"))
 async def abot_cb_handpcler(bot, query):
     await query.message.edit(
         text=text_dv,
@@ -1613,29 +1612,12 @@ async def abot_cb_handlevior(bot, query):
 
 
 text_gdy = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gᴏᴏᴅʙʏᴇ:
+**Here is the help for Stickers:**
 
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ɢᴏᴏᴅʙʏᴇ:
-/setgoodbye - Rᴇᴘʟʏ ᴛʜɪs ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴄᴏɴᴛᴀɪɴɪɴɢ ᴄᴏʀʀᴇᴄᴛ
-ғᴏʀᴍᴀᴛ ғᴏʀ ᴀ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ, ᴄʜᴇᴄᴋ ᴇɴᴅ ᴏғ ᴛʜɪs ᴍᴇssᴀɢᴇ.
-/goodbye - Tᴏ ɢᴇᴛ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ
-/goodbye  [ᴏɴ, ʏ, ᴛʀᴜᴇ, ᴇɴᴀʙʟᴇ, ᴛ] - ᴛᴏ ᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs
-/goodbye [ᴏғғ, ɴ, ғᴀʟsᴇ, ᴅɪsᴀʙʟᴇ, ғ, ɴᴏ] - ᴛᴏ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs
-/delgoodbye ᴏʀ /deletegoodbye ᴛᴏ ᴅᴇʟᴛᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴛᴜʀɴ ᴏғғ ɢᴏᴏᴅʙʏᴇ
-SetoodBye ->
-
-Tᴏ sᴇᴛ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ ᴀs ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ. Aᴅᴅ ʏᴏᴜʀ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ᴀs ᴄᴀᴘᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴘʜᴏᴛᴏ ᴏʀ ɢɪғ. Tʜᴇ ᴄᴀᴘᴛɪᴏɴ ᴍᴜsᴇ ʙᴇ ɪɴ ᴛʜᴇ ғᴏʀᴍᴀᴛ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.
-Fᴏʀ ᴛᴇxᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ Jᴜsᴛ sᴇɴᴅ ᴛʜᴇ ᴛᴇxᴛ. Tʜᴇɴ ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ
-Tʜᴇ ғᴏʀᴍᴀᴛ sʜᴏᴜʟᴅ ʙᴇ sᴏᴍᴇᴛʜɪɴɢ ʟɪᴋᴇ ʙᴇʟᴏᴡ.
-Hɪ {NAME} [{ID}] Wᴇʟᴄᴏᴍᴇ ᴛᴏ {GROUPNAME}
-
-~ Tʜɪs sᴇᴘᴀʀᴀᴛᴇʀ (~) sʜᴏᴜʟᴅ ʙᴇ ᴛʜᴇʀᴇ ʙᴇᴛᴡᴇᴇɴ ᴛᴇxᴛ ᴀɴᴅ ʙᴜᴛᴛᴏɴs, ʀᴇᴍᴏᴠᴇ ᴛʜɪs ᴄᴏᴍᴍᴇɴᴛ ᴀʟsᴏ
-
-Button=[Dᴜᴄᴋ, ʜᴛᴛᴘs://ᴅᴜᴄᴋᴅᴜᴄᴋɢᴏ.ᴄᴏᴍ]
-Button2=[Gɪᴛʜᴜʙ, ʜᴛᴛᴘs://ɢɪᴛʜᴜʙ.ᴄᴏᴍ]
-NOTES ->
-
-Cʜᴇᴄᴋᴏᴜᴛ /markdownhelp ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ғᴏʀᴍᴀᴛᴛɪɴɢs ᴀɴᴅ ᴏᴛʜᴇʀ sʏɴᴛᴀx.
+/kang [Reply to sticker] - Add sticker to your pack.
+/unkang [Reply to sticker] - Remove sticker from your pack (Only can remove sticker that added by this bot.).
+/getsticker - Convert sticker to png.
+/stickerid - View sticker ID
 """
 buttons_gdy = [
     [
@@ -1645,7 +1627,7 @@ buttons_gdy = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^gdy$"))
+@Bot.on_callback_query(filters.regex("^str$"))
 async def abot_cb_handlesnr(bot, query):
     await query.message.edit(
         text=text_gdy,
@@ -1680,11 +1662,14 @@ async def abot_cb_handihoer(bot, query):
 
 
 text_htg = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Hᴀsʜᴛᴀɢ:
+**Here is the help for Paste:**
 
-ʜᴀsʜᴛᴀɢ ɢᴇɴᴇʀᴀᴛᴏʀ:
-
-々 /hashtag [text]: Gᴇɴᴇʀᴀᴛᴇ ʜᴀsʜᴛᴀɢs ғᴏʀ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
+/paste [Text/Reply To Message] - Post text to My Pastebin.
+/sbin [Text/Reply To Message] - Post text to Spacebin.
+/neko [Text/Reply To Message] - Post text to Nekobin.
+/tgraph [Text/Reply To Message] - Post text to Telegraph.
+/imgbb [Images] - Upload image to ImgBB.
+/rentry [Text/Reply To Message] - Post text to Rentry using markdown style.
 """
 buttons_htg = [
     [
@@ -1694,7 +1679,7 @@ buttons_htg = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^htg$"))
+@Bot.on_callback_query(filters.regex("^pst$"))
 async def abot_cb_handluvjker(bot, query):
     await query.message.edit(
         text=text_htg,
