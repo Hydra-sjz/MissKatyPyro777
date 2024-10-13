@@ -1016,15 +1016,10 @@ async def abot_cb_handler6(bot, query):
 
 
 text_adm = """
-Use /askai or /mai Ask questions using ai for responding to user queries feom Gamini.
-Use /aii Reply to image to containing text that you want transcripts, and  I'll process the image and provide you with the transcribed text.
-Use /aicook Reply to image To get cooking instruction of the food in it.
-Use /aiseller Reply to image and create you product desc.
-Use /imagine Generate ai image from text
-Use /gptai /gpt2 /iri /assis Ask anything to gpt ai.
-Use /bard Ask anything to Bard ai.
-Use /deep ask questions to Deep Ai.
-Use /bing2 search any from Bing browser.
+**Here is the help for ChatBot:**
+
+/ai - Generate text response from AI using Gemini AI By Google.
+/ask - Generate text response from AI using OpenAI.
 """
 buttons_adm = [
     [
