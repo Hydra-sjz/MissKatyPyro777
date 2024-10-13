@@ -788,7 +788,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton(".", callback_data="bsk"),
-        InlineKeyboardButton(".", callback_data="ai"),
+        InlineKeyboardButton("CodeTester", callback_data="ct"),
         InlineKeyboardButton(".", callback_data="dv"),
     ],
     [
@@ -1304,12 +1304,51 @@ async def abot_cb_hangidler(bot, query):
 
 
 text_ai = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Cʜᴀᴛ Ai:
+**Here is the help for CodeTester:**
 
-々 /advice - ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴠɪᴄᴇ ʙʏ ʙᴏᴛ
-々 /ai [ǫᴜᴇʀʏ] - ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴡɪᴛʜ ᴄʜᴀᴛɢᴘᴛ's ᴀɪ
-々 /gemini [ǫᴜᴇʀʏ] - ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴡɪᴛʜ ɢᴏᴏɢʟᴇ's ɢᴇᴍɪɴɪ ᴀɪ
-々 /bard [ǫᴜᴇʀʏ] -ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇsᴛɪᴏɴ ᴡɪᴛʜ ɢᴏᴏɢʟᴇ's ʙᴀʀᴅ ᴀɪ
+This feature allows you to run multiple programming languages through this bot via the Glot.io api.  The following is a list of supported languages, for temporary commands only support with a "!"  like the example below.
+
+List of Supported Programming Languages:
+~> assembly
+~> ats
+~> bash
+~> c
+~> clojure
+~> cobol
+~> coffeescript
+~> cpp
+~> crystal
+~> csharp
+~> d
+~> elixir
+~> elm
+~> erlang
+~> fsharp
+~> go
+~> groovy
+~> haskell
+~> idris
+~> java
+~> javascript
+~> julia
+~> kotlin
+~> lua
+~> mercury
+~> nim
+~> nix
+~> ocaml
+~> perl
+~> php
+~> python
+~> raku
+~> ruby
+~> rust
+~> scala
+~> swift
+~> typescript
+
+Example:
+~> !python print("Hai aku Gojo x satuto")
 """
 buttons_ai = [
     [
@@ -1319,7 +1358,7 @@ buttons_ai = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^ai$"))
+@Bot.on_callback_query(filters.regex("^ct$"))
 async def abot_cb_ughandler(bot, query):
     await query.message.edit(
         text=text_ai,
