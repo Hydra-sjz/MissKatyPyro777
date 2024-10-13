@@ -48,4 +48,4 @@ PrivateBinAPI
 uvicorn
 python-multipart
 unidecode
-google-generativeai
+generative-ai-python
