@@ -787,7 +787,7 @@ BUTTONS_HP = [
         InlineKeyboardButton(".", callback_data="bts"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="bsk"),
+        InlineKeyboardButton("Currency", callback_data="crc"),
         InlineKeyboardButton("CodeTester", callback_data="ct"),
         InlineKeyboardButton(".", callback_data="dv"),
     ],
@@ -815,14 +815,14 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP2 = [
     [
-        InlineKeyboardButton(".", callback_data="flt"),
-        InlineKeyboardButton(".", callback_data="fgl"),
-        InlineKeyboardButton(".", callback_data="fk"),
+        InlineKeyboardButton("Fun", callback_data="fn"),
+        InlineKeyboardButton("MediaExtract", callback_data="mdx"),
+        InlineKeyboardButton("MediaTool", callback_data="med"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="fon"),
-        InlineKeyboardButton(".", callback_data="fn"),
-        InlineKeyboardButton(".", callback_data="gt"),
+        InlineKeyboardButton("Inline", callback_data="ini"),
+        InlineKeyboardButton("Misc", callback_data="mc"),
+        InlineKeyboardButton("Ocr", callback_data="oc"),
     ],
     [
         InlineKeyboardButton(".", callback_data="gl"),
@@ -831,7 +831,7 @@ BUTTONS_HP2 = [
     ],
     [
         InlineKeyboardButton(".", callback_data="gdy"),
-        InlineKeyboardButton(".", callback_data="hsr"),
+        InlineKeyboardButton("Karma", callback_data="kr"),
         InlineKeyboardButton(".", callback_data="htg"),
     ],
     [
@@ -1258,28 +1258,9 @@ async def abot_cb_handlgguer(bot, query):
 
 
 text_bsk = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Bᴏᴛsᴄʜᴋ:
+**Here is the help for Currency:**
 
-Dᴇsᴄʀɪᴘᴛɪᴏɴ:
-Cʜᴇᴄᴋs ᴛʜᴇ ᴏɴɪɴᴇ sᴛᴀᴛᴜs ᴏғ ᴀ sᴘᴇᴄɪғɪᴇᴅ ʙᴏᴛ ʙʏ sᴇɴᴅɪɴɢ ɪᴛ ᴀ /start ᴍᴇssᴀɢᴇ.
-
-Usᴀɢᴇ:
-/botschk Bᴏᴛ_Usᴇʀɴᴀᴍᴇ
-
-Dᴇᴛᴀɪs:
-々 Sᴇɴᴅs /start ᴛᴏ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ʙᴏᴛ ᴀɴᴅ ᴄʜᴇᴄᴋs ɪғ ɪᴛ ʀᴇsᴘᴏɴᴅs.
-々 Dɪsᴘᴀʏs ᴛʜᴇ ʙᴏᴛ's sᴛᴀᴛᴜs ᴀs ᴇɪᴛʜᴇʀ ᴏɴɪɴᴇ ᴏʀ ᴏғғɪɴᴇ.
-
-Exᴀᴍᴘᴇs:
-々 /botschk @YᴏᴜʀBᴏᴛUsᴇʀɴᴀᴍᴇ: Cʜᴇᴄᴋs ɪғ @YᴏᴜʀBᴏᴛUsᴇʀɴᴀᴍᴇ ɪs ᴏɴɪɴᴇ ᴏʀ ᴏғғɪɴᴇ.
-
-Nᴏᴛᴇs:
-々 Tʜᴇ ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇ ᴍᴜsᴛ ʙᴇ ᴘʀᴏᴠɪᴅᴇᴅ ᴀs ᴀɴ ᴀʀɢᴜᴍᴇɴᴛ.
-々 Tʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴡɪ ᴅɪsᴘᴀʏ ᴀɴ ᴇʀʀᴏʀ ᴍᴇssᴀɢᴇ ɪғ ᴛʜᴇ ᴜsᴇʀɴᴀᴍᴇ ɪs ɪɴᴄᴏʀʀᴇᴄᴛ ᴏʀ ɪғ ᴛʜᴇʀᴇ ᴀʀᴇ ɪᴍɪᴛᴀᴛɪᴏɴs.
-
-Oᴜᴛᴘᴜᴛ:
-々 Dɪsᴘᴀʏs ᴛʜᴇ ʙᴏᴛ's ᴍᴇɴᴛɪᴏɴ ᴀɴᴅ ɪᴛs ᴏɴɪɴᴇ sᴛᴀᴛᴜs.
-々 Sʜᴏᴡs ᴛʜᴇ ᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴛɪᴍᴇ.
+/currency - Send structure message Telegram in JSON using Pyrogram Style.
 """
 buttons_bsk = [
     [
@@ -1289,7 +1270,7 @@ buttons_bsk = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^bsk$"))
+@Bot.on_callback_query(filters.regex("^crc$"))
 async def abot_cb_hangidler(bot, query):
     await query.message.edit(
         text=text_bsk,
@@ -1396,22 +1377,17 @@ async def abot_cb_handpcler(bot, query):
 
 
 text_flt = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Filters:
+**Here is the help for Fun:**
 
-々 /filters To Get All The Filters In The Chat.
-々 /filter [FILTER_NAME] To Save A Filter(reply to a message).
-
-Supported filter types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
-
-To use more words in a filter use.
-々 /filter Hey_there To filter "Hey there".
-
-々 /stop [FILTER_NAME] To Stop A Filter.
-々 /stopall To delete all the filters in a chat (permanently).
-
-You can use markdown or html to save text too.
-
-Checkout /markdownhelp to know more about formattings and other syntax.
+/q [int] - Generate quotly from message
+/memify [text] - Reply to sticker to give text on sticker.
+/react [emoji | list of emoji] - React to any message (Sudo and Owner only)
+/beri [pesan] - Giving false hope to someone hehehe
+/dice - Randomly roll the dice
+/tebakgambar - Play "Tebak Gambar" in any room chat
+/tebaklontong - Play "Tebak Lontong" in any room chat
+/tebakkata - Play "Tebak Kata" in any room chat
+/tebaktebakan - Play "Tebak Tebakan" in any room chat
 """
 buttons_flt = [
     [
@@ -1421,7 +1397,7 @@ buttons_flt = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^flt$"))
+@Bot.on_callback_query(filters.regex("^fn$"))
 async def abot_cb_handlehcr(bot, query):
     await query.message.edit(
         text=text_flt,
@@ -1431,9 +1407,11 @@ async def abot_cb_handlehcr(bot, query):
 
 
 text_fgl = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fɪɢʟᴇᴛ:
+**Here is the help for MediaExtract:**
 
-々 /figlet  - ᴄʀᴇᴀᴛᴇs ᴀ ғɪɢʟᴇᴛ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
+/extractmedia [URL] - Extract subtitle or audio from video using link. (Not support TG File to reduce bandwith usage.)
+/converttosrt [Reply to .ass or .vtt TG File] - Convert from .ass or .vtt to srt
+/converttoass [Reply to .srt or .vtt TG File] - Convert from .srt or .vtt to srt
 """
 buttons_fgl = [
     [
@@ -1443,7 +1421,7 @@ buttons_fgl = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^fgl$"))
+@Bot.on_callback_query(filters.regex("^mdx$"))
 async def abot_cb_handhjler(bot, query):
     await query.message.edit(
         text=text_fgl,
@@ -1453,9 +1431,10 @@ async def abot_cb_handhjler(bot, query):
 
 
 text_fk = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴀᴋᴇ:
+**Here is the help for MediaTool:**
 
-々 /fake [ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ] - ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴅʀᴇss
+/genss [reply to video] - Generate Screenshot From Video. (Support TG Media and Direct URL)
+/mediainfo [link/reply to TG Video] - Get Mediainfo From File.
 """
 buttons_fk = [
     [
@@ -1465,7 +1444,7 @@ buttons_fk = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^fk$"))
+@Bot.on_callback_query(filters.regex("^mde$"))
 async def abot_cb_handbiler(bot, query):
     await query.message.edit(
         text=text_fk,
@@ -1475,9 +1454,14 @@ async def abot_cb_handbiler(bot, query):
 
 
 text_fon = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴏɴᴛ:
+**Here is the help for InlineFeature:**
 
-々 /font [text] - ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
+To use this feature, just type bot username with following args below.
+~ imdb [query] - Search movie details in IMDb.com.
+~ pypi [query] - Search package from Pypi.
+~ git [query] - Search in Git.
+~ google [query] - Search in Google.
+~ info [user id/username] - Check info about a user.
 """
 buttons_fon = [
     [
@@ -1487,7 +1471,7 @@ buttons_fon = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^fon$"))
+@Bot.on_callback_query(filters.regex("^ini$"))
 async def abot_cb_hanipdler(bot, query):
     await query.message.edit(
         text=text_fon,
@@ -1497,17 +1481,22 @@ async def abot_cb_hanipdler(bot, query):
 
 
 text_fn = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴜɴ:
+**Here is the help for Misc:**
 
-ʜᴀᴠɪɴɢ ꜰᴜɴ:
-々 /dice: Rᴏʟʟs ᴀ ᴅɪᴄᴇ.
-々 /ludo: Pʟᴀʏ Lᴜᴅᴏ.
-々 /dart: Tʜʀᴏᴡs ᴀ ᴅᴀʀᴛ.
-々 /basket ᴏʀ /basketball: Pʟᴀʏs ʙᴀsᴋᴇᴛʙᴀʟʟ.
-々 /football: Pʟᴀʏs ғᴏᴏᴛʙᴀʟʟ.
-々 /slot ᴏʀ /jackpot: Pʟᴀʏs ᴊᴀᴄᴋᴘᴏᴛ.
-々 /bowling: Pʟᴀʏs ʙᴏᴡʟɪɴɢ.
-々 /bored: Gᴇᴛs ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
+/carbon [text or reply to text or caption] - Make beautiful snippet code on carbon from text.
+/removebg [Reply to image] - Remove background from image.
+/calc - Simple math calculator using inline buttons.
+/kbbi [keyword] - Search definition on KBBI (For Indonesian People)
+/sof [query] - Search your problem in StackOverflow.
+/google [query] - Search using Google Search.
+(/tr, /trans, /translate) [lang code] - Translate text using Google Translate.
+/tts - Convert Text to Voice.
+/imdb [query] - Find Movie Details From IMDB.com (Available in English and Indonesia version).
+/readqr [reply to photo] - Read QR Code From Photo.
+/createqr [text] - Convert Text to QR Code.
+/anime [query] - Search title in myanimelist.
+/info - Get info user with Pic and full description if user set profile picture.
+/id - Get simple user ID.
 """
 buttons_fn = [
     [
@@ -1517,7 +1506,7 @@ buttons_fn = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^fn$"))
+@Bot.on_callback_query(filters.regex("^mc$"))
 async def abot_cb_handlsser(bot, query):
     await query.message.edit(
         text=text_fn,
@@ -1527,22 +1516,8 @@ async def abot_cb_handlsser(bot, query):
 
 
 text_gt = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ G-ᴄᴀsᴛ:
-
-々 /broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ] » ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
-ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴍᴏᴅᴇs:
-
--pin » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
-
--pinloud » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴇᴍʙᴇʀs.
-
--user » ʙʀᴏᴀᴅᴄᴀsᴛs ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴜsᴇʀs ᴡʜᴏ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.
-
--assistant » ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴀssɪᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
-
--nobot » ғᴏʀᴄᴇs ᴛʜᴇ ʙᴏᴛ ᴛᴏ ɴᴏᴛ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇ.
-
-ᴇxᴀᴍᴩʟᴇ: /broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ
+**Here is the help for OCR:**
+/ocr [reply to photo] - Read Text From Image
 """
 buttons_gt = [
     [
@@ -1552,7 +1527,7 @@ buttons_gt = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^gt$"))
+@Bot.on_callback_query(filters.regex("^oc$"))
 async def abot_cb_handlpnner(bot, query):
     await query.message.edit(
         text=text_gt,
@@ -1564,7 +1539,7 @@ async def abot_cb_handlpnner(bot, query):
 text_gl = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gʀᴏᴜᴘ Lɪɴᴋ:
 
-々 /ɢɪᴠᴇɪɴᴋ: Gᴇᴛ ᴛʜᴇ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ.
+々 /ɢᴇɪɴᴋ: Gᴇᴛ ᴛʜᴇ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ.
 々 /ɪɴᴋ ɢʀᴏᴜᴘ_ɪᴅ: Gᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀɴᴅ ɢᴇɴᴇʀᴀᴛᴇ ᴀɴ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ɢʀᴏᴜᴘ ID.
 """
 buttons_gl = [
@@ -1680,24 +1655,12 @@ async def abot_cb_handlesnr(bot, query):
 
 
 text_hsr = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Hɪsᴛᴏʀʏ: 
+**Here is the help for Karma:**
 
-1. /sg ᴏʀ /history 
-Dᴇsᴄʀɪᴘᴛɪᴏɴ:
-Fᴇᴛᴄʜᴇs ᴀ ʀᴀɴᴅᴏᴍ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ʜɪsᴛᴏʀʏ.
+Give reputation to other people in group.
 
-Usᴀɢᴇ:
-々 /sg [ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ/ʀᴇᴘʏ]
-
-Dᴇᴛᴀɪs:
-- Fᴇᴛᴄʜᴇs ᴀ ʀᴀɴᴅᴏᴍ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇssᴀɢᴇ ʜɪsᴛᴏʀʏ ᴏғ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ᴜsᴇʀ.
-- Cᴀɴ ʙᴇ ᴜsᴇᴅ ʙʏ ᴘʀᴏᴠɪᴅɪɴɢ ᴀ ᴜsᴇʀɴᴀᴍᴇ, ᴜsᴇʀ ID, ᴏʀ ʀᴇᴘʏɪɴɢ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴜsᴇʀ.
-- Aᴄᴄᴇssɪʙᴇ ᴏɴʏ ʙʏ ᴛʜᴇ ʙᴏᴛ's ᴀssɪsᴛᴀɴᴛs.
-
-Exᴀᴍᴘᴇs:
-- /sg ᴜsᴇʀɴᴀᴍᴇ
-- /sg ᴜsᴇʀ_ɪᴅ
-- /sg [ʀᴇᴘʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]
+/karma_toggle [enable/disable] - Enable/Disable Karma.
+/karma - View all karma from member group.
 """
 buttons_hsr = [
     [
@@ -1707,7 +1670,7 @@ buttons_hsr = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^hsr$"))
+@Bot.on_callback_query(filters.regex("^kr$"))
 async def abot_cb_handihoer(bot, query):
     await query.message.edit(
         text=text_hsr,
