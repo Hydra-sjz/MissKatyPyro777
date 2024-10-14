@@ -138,7 +138,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("Federation", callback_data="fed"),
-        InlineKeyboardButton("Filters", callback_data="flt"),
+        InlineKeyboardButton("Filters", callback_data="filt"),
         
     ],
     [
@@ -601,7 +601,7 @@ buttons_flt = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^flt$"))
+@Bot.on_callback_query(filters.regex("^filt$"))
 async def afilbviv(bot, query):
     await query.message.edit(
         text=text_flt,
