@@ -789,10 +789,11 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Currency", callback_data="crc"),
         InlineKeyboardButton("CodeTester", callback_data="ct"),
-        InlineKeyboardButton(".", callback_data="dv"),
+        InlineKeyboardButton("UrbanDictionary", callback_data="bt"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings5"),
+        InlineKeyboardButton("Back", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
         InlineKeyboardButton("❯", callback_data="settings2"),
@@ -811,6 +812,7 @@ async def help_cb_handler1(bot, query):
 TEXT_HP2 = """
 Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
+Send command /privacy if you want know data collected by this bot
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP2 = [
@@ -855,6 +857,7 @@ async def help_cb_handler2(bot, query):
 TEXT_HP3 = """
 Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
+Send command /privacy if you want know data collected by this bot
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP3 = [
@@ -864,13 +867,13 @@ BUTTONS_HP3 = [
         InlineKeyboardButton(".", callback_data="mt"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="mog"),
+        InlineKeyboardButton("Quotly", callback_data="q"),
         InlineKeyboardButton(".", callback_data="not"),
-        InlineKeyboardButton(".", callback_data="ps"),
+        InlineKeyboardButton("PyPi Search", callback_data="pyi"),
     ],
     [
         InlineKeyboardButton(".", callback_data="ply"),
-        InlineKeyboardButton(".", callback_data="sg"),
+        InlineKeyboardButton("SangMata", callback_data="sg"),
         InlineKeyboardButton(".", callback_data="pyp"),
     ],
     [
@@ -899,6 +902,7 @@ async def help_cb_handler3(bot, query):
 TEXT_HP4 = """
 Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
+Send command /privacy if you want know data collected by this bot
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP4 = [
@@ -909,7 +913,7 @@ BUTTONS_HP4 = [
     ],
     [
         InlineKeyboardButton(".", callback_data="rep"),
-        InlineKeyboardButton(".", callback_data="spd"),
+        InlineKeyboardButton("SessionGen", callback_data="sng"),
         InlineKeyboardButton(".", callback_data="tag"),
     ],
     [
@@ -943,6 +947,7 @@ async def help_cb_handler4(bot, query):
 TEXT_HP5 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
+Send command /privacy if you want know data collected by this bot
 Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP5 = [
@@ -1090,19 +1095,9 @@ async def abot_cb_handler9(bot, query):
 
 
 text_apr = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Aᴘᴘʀᴏᴠᴇ:
+**SessionGen**
 
-Tʜɪs ᴍᴏᴅᴜʟᴇ ʜᴇʟᴘs ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀᴄᴄᴇᴘᴛ ᴄʜᴀᴛ ɪᴏɪɴ ʀᴇǫᴜᴇsᴛ sᴇɴᴅ ʙʏ ᴀ ᴜsᴇʀ ᴛʜʀᴏᴜɢʜ ɪɴᴠɪᴛᴀᴛɪᴏɴ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘ
-
-Mᴏᴅᴇs:
-ᴡʜᴇɴ ʏᴏᴜ sᴇɴᴅ /autoapprove ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʏᴏᴜ sᴇᴇ ᴛᴜʀɴ ᴏɴ ʙᴜᴛᴛᴏɴ ɪғ ᴀᴜᴛᴛᴏᴘʀᴏᴠᴇ ɴᴏᴛ ᴇɴᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ ɪғ ᴀʟʀᴇᴅʏ ᴛᴜʀɴᴇᴅ ᴏɴ ʏᴏᴜ ᴡɪʟʟ sᴇ ᴛᴡᴏ ᴍᴏᴅᴇs ᴛʜᴀᴛ's ᴀʀᴇ ʙᴇʟᴏᴡ ᴀɴᴅ ʜɪs ᴜsᴀsɢᴇ
-
-
-々 Automatic - ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀᴄᴄᴇᴘᴛs ᴄʜᴀᴛ ᴊᴏɪɴ ʀᴇǫᴜᴇsᴛ.
-
-々 Manual - ᴀ ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ sᴇɴᴅ ᴛᴏ ᴛʜᴇ ᴄʜᴀᴛ ʙʏ ᴛᴀɢɢɪɴɢ ᴛʜᴇ ᴀᴅᴍɪɴs. ᴛʜᴇ ᴀᴅᴍɪɴs ᴄᴀɴ ᴀᴄᴄᴇᴘᴛ ᴏʀ ᴅᴇᴄʟɪɴᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛs.
-
-々 /clearpending ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀʟʟ ᴘᴇɴᴅɪɴɢ ᴜsᴇʀ ɪᴅ ғʀᴏᴍ ᴅʙ. ᴛʜɪs ᴡɪʟʟ ᴀʟʟᴏᴡ ᴛʜᴇ ᴜsᴇʀ ᴛᴏ sᴇɴᴅ ʀᴇǫᴜᴇsᴛ ᴀɢᴀɪɴ.
+/genstring - Generate string session using this bot. Only support Pyrogram v2 and Telethon.
 """
 buttons_apr = [
     [
@@ -1112,7 +1107,7 @@ buttons_apr = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^apr$"))
+@Bot.on_callback_query(filters.regex("^sng$"))
 async def abot_cb_handler10(bot, query):
     await query.message.edit(
         text=text_apr,
@@ -1149,26 +1144,9 @@ async def abot_cb_handlerh(bot, query):
 
 
 text_bt = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Boᴛ:
+**Urban Dictionary**
 
-々 c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
-
-々 /stats - Gᴇᴛ Tᴏᴘ 𝟷𝟶 Tʀᴀᴄᴋs Gʟᴏʙᴀʟ Sᴛᴀᴛs, Tᴏᴘ 𝟷𝟶 Usᴇʀs ᴏғ ʙᴏᴛ, Tᴏᴘ 𝟷𝟶 Cʜᴀᴛs ᴏɴ ʙᴏᴛ, Tᴏᴘ 𝟷𝟶 Pʟᴀʏᴇᴅ ɪɴ ᴀ ᴄʜᴀᴛ ᴇᴛᴄ ᴇᴛᴄ.
-
-々 /sudolist - Cʜᴇᴄᴋ Sᴜᴅᴏ Usᴇʀs ᴏғ Bᴏᴛ
-
-々 /lyrics [Mᴜsɪᴄ Nᴀᴍᴇ] - Sᴇᴀʀᴄʜᴇs Lʏʀɪᴄs ғᴏʀ ᴛʜᴇ ᴘᴀʀᴛɪᴄᴜʟᴀʀ Mᴜsɪᴄ ᴏɴ ᴡᴇʙ.
-
-々 /player - Gᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ Pʟᴀʏɪɴɢ Pᴀɴᴇʟ.
-
-々 /queue ᴏʀ /cqueue - Cʜᴇᴄᴋ Qᴜᴇᴜᴇ Lɪsᴛ ᴏғ Mᴜsɪᴄ.
-
-    ⚡️Pʀɪᴠᴀᴛᴇ Bᴏᴛ:  
-ⓘ /authorize [CHAT_ID] - Aʟʟᴏᴡ ᴀ ᴄʜᴀᴛ ғᴏʀ ᴜsɪɴɢ ʏᴏᴜʀ ʙᴏᴛ.
-
-ⓘ /unauthorize[CHAT_ID] - Dɪsᴀʟʟᴏᴡ ᴀ ᴄʜᴀᴛ ғʀᴏᴍ ᴜsɪɴɢ ʏᴏᴜʀ ʙᴏᴛ.
-
-ⓘ /authorized - Cʜᴇᴄᴋ ᴀʟʟ ᴀʟʟᴏᴡᴇᴅ ᴄʜᴀᴛs ᴏғ ʏᴏᴜʀ ʙᴏᴛ.
+/ud [give any word] Type the word or expression you want to search.
 """
 buttons_bt = [
     [
@@ -1793,10 +1771,12 @@ async def abot_cb_handvippler(bot, query):
 
 
 text_mog = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴏɴɢᴏᴅʙ:
+**Quotly**
 
-ᴍᴏɴɢᴏᴅʙ ᴄʜᴇᴄᴋᴇʀ:
-々 /mongochk [mongo_url]: Cʜᴇᴄᴋs ᴛʜᴇ ᴠᴀʟɪᴅɪᴛʏ ᴏғ ᴀ ᴍᴏɴɢᴏᴅʙ URL ᴀɴᴅ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴏɴɢᴏᴅʙ ɪɴsᴛᴀɴᴄᴇ.
+I will help create a quote from a post.
+Bot can work both in private messages and in groups.
+
+/q — make a quote from the message [reply to the message]
 """
 buttons_mog = [
     [
@@ -1806,7 +1786,7 @@ buttons_mog = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^mog$"))
+@Bot.on_callback_query(filters.regex("^q$"))
 async def abot_cb_hajjvvindler(bot, query):
     await query.message.edit(
         text=text_mog,
@@ -1816,18 +1796,25 @@ async def abot_cb_hajjvvindler(bot, query):
 
 
 text_not = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Nᴏᴛᴇs:
+**Here is the help for Notes:**
 
-ɴᴏᴛᴇꜱ:
-々 /save [NOTE_NAME] [CONTENT]: Sᴀᴠᴇs ᴀ ɴᴏᴛᴇ ᴡɪᴛʜ ᴛʜᴇ ɢɪᴠᴇɴ ɴᴀᴍᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ.
-々 /notes: Sʜᴏᴡs ᴀʟʟ sᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
-々 /get [NOTE_NAME]: Gᴇᴛs ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴏғ ᴀ sᴀᴠᴇᴅ ɴᴏᴛᴇ.
-々 /delete [NOTE_NAME]: Dᴇʟᴇᴛᴇs ᴀ sᴀᴠᴇᴅ ɴᴏᴛᴇ.
-々 /deleteall: Dᴇʟᴇᴛᴇs ᴀʟʟ sᴀᴠᴇᴅ ɴᴏᴛᴇꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+/notes To Get All The Notes In The Chat.
+
+/save [NOTE_NAME] or /addnote [NOTE_NAME] To Save A Note.
+
+Supported note types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+
+To change caption of any files use.
+/save [NOTE_NAME] or /addnote [NOTE_NAME] [NEW_CAPTION].
+
+#NOTE_NAME To Get A Note.
+
+/delete [NOTE_NAME] or delnote [NOTE_NAME] To Delete A Note.
+/deleteall To delete all the notes in a chat (permanently).
 """
 buttons_not = [
     [
-        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("⬅️", callback_data="group"),
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
@@ -1843,18 +1830,9 @@ async def abot_cb_hanbkodler(bot, query):
 
 
 text_ps = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pᴀᴜsᴇ:
+**PyPi**
 
-Pause Music
-
-This module allows administrators to pause the music playback in the group.
-
-Commands:
-- /pause: Pause the music playback in groups.
-- /cpause: Pause the music playback in channels.
-
-Note:
-- Only administrators can use these commands.
+add query after command. Ex: /pypi pyrogram
 """
 buttons_ps = [
     [
@@ -1864,7 +1842,7 @@ buttons_ps = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^ps$"))
+@Bot.on_callback_query(filters.regex("^pyi$"))
 async def abot_cb_handguugler(bot, query):
     await query.message.edit(
         text=text_ps,
@@ -1907,10 +1885,10 @@ async def abot_cb_haydyriindler(bot, query):
 
 
 text_sg = """
-Hᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ SᴀɴɢMᴀᴛᴀ:
+**SangMata**
 
-Tʜɪs ғᴇᴀᴛᴜʀᴇ ɪɴsᴘɪʀᴇᴅ ғʀᴏᴍ SᴀɴɢMᴀᴛᴀ Bᴏᴛ. I'ᴍ ᴄʀᴇᴀᴛᴇᴅ sɪᴍᴘʟᴇ ᴅᴇᴛᴇᴄᴛɪᴏɴ ᴛᴏ ᴄʜᴇᴄᴋ ᴜsᴇʀ ᴅᴀᴛᴀ ɪɴᴄʟᴜᴅᴇ ᴜsᴇʀɴᴀᴍᴇ, ғɪʀsᴛ_ɴᴀᴍᴇ, ᴀɴᴅ ʟᴀsᴛ_ɴᴀᴍᴇ.
-々 /sangmata_set [ᴏɴ/ᴏғғ] - Eɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ sᴀɴɢᴍᴀᴛᴀ ɪɴ ɢʀᴏᴜᴘs.
+This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
+/sangmata_set [on/off] - Enable/disable sangmata in groups.
 """
 buttons_sg = [
     [
@@ -2035,7 +2013,7 @@ async def abot_cb_hanbibondler(bot, query):
 
 
 # ==============CLOSE===================
-@Bot.on_callback_query(filters.regex("^close2$"))
+@Bot.on_callback_query(filters.regex("^close$"))
 async def close_cb(bot, callback):
     await callback.answer("❌Closed the Module❌")
     await callback.message.delete()
