@@ -868,7 +868,7 @@ BUTTONS_HP3 = [
     ],
     [
         InlineKeyboardButton("Quotly", callback_data="q"),
-        InlineKeyboardButton(".", callback_data="not"),
+        InlineKeyboardButton("Quiz", callback_data="qz"),
         InlineKeyboardButton("PyPi Search", callback_data="pyi"),
     ],
     [
@@ -993,15 +993,9 @@ async def help_cb_handler5(bot, query):
 # =============================EXTRA_CMD================================
 
 text_act = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Acᴛɪᴠᴇ:
+**Quiz**
 
-々 /ac - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴏɴ ʙᴏᴛ.
-
-々 /activevoice - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴀɴᴅ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴏɴ ʙᴏᴛ.
-
-々 /activevideo - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴏɴ ʙᴏᴛ.
-
-々 /stats - Cʜᴇᴄᴋ Bᴏᴛs Sᴛᴀᴛs
+/quiz To get an random quizs
 """
 buttons_act = [
     [
@@ -1011,7 +1005,7 @@ buttons_act = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^act$"))
+@Bot.on_callback_query(filters.regex("^qz$"))
 async def abot_cb_handler6(bot, query):
     await query.message.edit(
         text=text_act,
