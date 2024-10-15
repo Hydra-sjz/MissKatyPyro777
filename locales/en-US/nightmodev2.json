@@ -9,9 +9,9 @@
     "nmd_off_not_admin": "#NIGHTMODE_FAIL\nFailed to turn off nightmode at `{chat_id}`, since {bname} is not an admin in chat `{chat_id}`",
     "nmd_off_not_present": "#NIGHTMODE_FAIL\nFailed to turn off nightmode at `{chat_id}`, since {bname} is not present in chat `{chat_id}`. Removed group from list.",
     "nmd_off_err": "#NIGHTMODE_FAIL\nFailed to turn off nightmode at `{chat_id}`\nERROR: `{e}`",
-    "nmd_off_success": "#NIGHTMODE_HANDLER\n📆 {dt}\n\n☀️ Group is Opening.\nWill be closed at {close_at}",
+    "nmd_off_success": "#NIGHTMODE\n📆 {dt}\n\n☀️🌇 Group is Opening.\nWe Will be closed at {close_at}",
     "nmd_on_not_admin": "#NIGHTMODE_FAIL\nFailed to enable nightmode at `{chat_id}`, since {bname} is not an admin in chat `{chat_id}`",
     "nmd_on_not_present": "#NIGHTMODE_FAIL\nFailed to enable nightmode at `{chat_id}`, since {bname} is not present in chat `{chat_id}`. Removed group from list.",
     "nmd_on_err": "#NIGHTMODE_FAIL\nFailed to enable nightmode at `{chat_id}`\nERROR: `{e}`",
-    "nmd_on_success": "#NIGHTMODE_HANDLER\n📆 {dt}\n\n🌗 Group is closing.\nWill be opened at {open_at}"
+    "nmd_on_success": "#NIGHTMODE\n📆 {dt}\n\n🌗🌃 Group is closing.\nWill be opened at {open_at}"
 }
