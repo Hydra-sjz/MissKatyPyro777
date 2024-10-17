@@ -772,50 +772,25 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP = [
     [
-        InlineKeyboardButton(".", callback_data="act"),
+        InlineKeyboardButton("SangMata", callback_data="sg"),
         InlineKeyboardButton("Ai", callback_data="ai"),
         InlineKeyboardButton(".", callback_data="aut"),
     ],
     [
-        InlineKeyboardButton(".", callback_data="adv"),
-        InlineKeyboardButton(".", callback_data="apr"),
-        InlineKeyboardButton(".", callback_data="blt"),
+        InlineKeyboardButton("Quotly", callback_data="q"),
+        InlineKeyboardButton("Quiz", callback_data="qz"),
+        InlineKeyboardButton("PyPi Search", callback_data="pyi"),
     ],
     [
         InlineKeyboardButton("Bypass", callback_data="byp"),
         InlineKeyboardButton(".", callback_data="bn"),
-        InlineKeyboardButton(".", callback_data="bts"),
+        InlineKeyboardButton("SessionGen", callback_data="sng"),
     ],
     [
         InlineKeyboardButton("Currency", callback_data="crc"),
         InlineKeyboardButton("CodeTester", callback_data="ct"),
         InlineKeyboardButton("UrbanDictionary", callback_data="bt"),
     ],
-    [
-        InlineKeyboardButton("❮", callback_data="settings5"),
-        InlineKeyboardButton("Back", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
-        InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings2"),
-    ],
-] 
-
-@Bot.on_callback_query(filters.regex("^settings$"))
-async def help_cb_handler1(bot, query):
-    await query.message.edit(
-        text=TEXT_HP.format(query.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
-        disable_web_page_preview=True,
-    )
-
-
-TEXT_HP2 = """
-Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
-
-Send command /privacy if you want know data collected by this bot
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
-"""
-BUTTONS_HP2 = [
     [
         InlineKeyboardButton("Fun", callback_data="fn"),
         InlineKeyboardButton("MediaExtract", callback_data="mdx"),
@@ -837,157 +812,21 @@ BUTTONS_HP2 = [
         InlineKeyboardButton("Nulis", callback_data="nui"),
     ],
     [
-        InlineKeyboardButton("❮", callback_data="settings"),
+        #InlineKeyboardButton("❮", callback_data="settings5"),
+        InlineKeyboardButton("Back", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings3"),
+        #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
-]
+] 
 
-
-@Bot.on_callback_query(filters.regex("^settings2$"))
-async def help_cb_handler2(bot, query):
+@Bot.on_callback_query(filters.regex("^settings$"))
+async def help_cb_handler1(bot, query):
     await query.message.edit(
-        text=TEXT_HP2.format(query.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP2),
+        text=TEXT_HP.format(query.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         disable_web_page_preview=True,
     )
-
-
-TEXT_HP3 = """
-Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
-
-Send command /privacy if you want know data collected by this bot
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
-"""
-BUTTONS_HP3 = [
-    [
-        InlineKeyboardButton(".", callback_data="hg"),
-        InlineKeyboardButton(".", callback_data="lv"),
-        InlineKeyboardButton(".", callback_data="mt"),
-    ],
-    [
-        InlineKeyboardButton("Quotly", callback_data="q"),
-        InlineKeyboardButton("Quiz", callback_data="qz"),
-        InlineKeyboardButton("PyPi Search", callback_data="pyi"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="ply"),
-        InlineKeyboardButton("SangMata", callback_data="sg"),
-        InlineKeyboardButton(".", callback_data="pyp"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="pay"),
-        InlineKeyboardButton(".", callback_data="qr"),
-        InlineKeyboardButton(".", callback_data="dv"),
-    ],
-    [
-        InlineKeyboardButton("❮", callback_data="settings2"),
-        InlineKeyboardButton("❌", callback_data="close"),
-        InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings4"),
-    ],
-]
-
-
-@Bot.on_callback_query(filters.regex("^settings3$"))
-async def help_cb_handler3(bot, query):
-    await query.message.edit(
-        text=TEXT_HP3.format(query.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP3),
-        disable_web_page_preview=True,
-    )
-
-
-TEXT_HP4 = """
-Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
-
-Send command /privacy if you want know data collected by this bot
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
-"""
-BUTTONS_HP4 = [
-    [
-        InlineKeyboardButton(".", callback_data="quo"),
-        InlineKeyboardButton(".", callback_data="rd"),
-        InlineKeyboardButton(".", callback_data="rsm"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="rep"),
-        InlineKeyboardButton("SessionGen", callback_data="sng"),
-        InlineKeyboardButton(".", callback_data="tag"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="sl"),
-        InlineKeyboardButton(".", callback_data="stk"),
-        InlineKeyboardButton(".", callback_data="trt"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="tgl"),
-        InlineKeyboardButton(".", callback_data="tgr"),
-        InlineKeyboardButton(".", callback_data="tt"),
-    ],
-    [
-        InlineKeyboardButton("❮", callback_data="settings3"),
-        InlineKeyboardButton("❌", callback_data="close"),
-        InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings5"),
-    ],
-]
-
-
-@Bot.on_callback_query(filters.regex("^settings4$"))
-async def help_cb_handler4(bot, query):
-    await query.message.edit(
-        text=TEXT_HP4.format(query.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP4),
-        disable_web_page_preview=True,
-    )
-
-
-TEXT_HP5 = """
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
-
-Send command /privacy if you want know data collected by this bot
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
-"""
-BUTTONS_HP5 = [
-    [
-        InlineKeyboardButton(".", callback_data="ui"),
-        InlineKeyboardButton(".", callback_data="ud"),
-        InlineKeyboardButton(".", callback_data="wr"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="wh"),
-        InlineKeyboardButton(".", callback_data="wl"),
-        InlineKeyboardButton(".", callback_data="wd"),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="yh"),
-        InlineKeyboardButton(".", callback_data="zm"),
-        InlineKeyboardButton(".", callback_data=""),
-    ],
-    [
-        InlineKeyboardButton(".", callback_data="f"),
-        InlineKeyboardButton(".", callback_data="d"),
-        InlineKeyboardButton(".", callback_data="d"),
-    ],
-    [
-        InlineKeyboardButton("❮", callback_data="settings4"),
-        InlineKeyboardButton("❌", callback_data="close"),
-        InlineKeyboardButton("🏠", callback_data="home"),
-        InlineKeyboardButton("❯", callback_data="settings"),
-    ],
-]
-
-
-@Bot.on_callback_query(filters.regex("^settings5$"))
-async def help_cb_handler5(bot, query):
-    await query.message.edit(
-        text=TEXT_HP5.format(query.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(BUTTONS_HP5),
-        disable_web_page_preview=True,
-    )
-
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
@@ -2008,7 +1847,7 @@ async def abot_cb_hanbibondler(bot, query):
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
-async def close_cb(bot, callback):
+async def close_gojoxsatoru(bot, callback):
     await callback.answer("❌Closed the Module❌")
     await callback.message.delete()
     await callback.message.reply_to_message.delete()
