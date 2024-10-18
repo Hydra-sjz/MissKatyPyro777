@@ -364,7 +364,7 @@ Presenting reports; if someone in your group thinks someone needs reporting, the
 - /report: Reply to a message to report it for admins to review.
 - admin: Same as /report
 
-Note that the report commands do not work when admins use them; or when used to report an admin. Rose assumes that admins don't need to report, or be reported!
+Note that the report commands do not work when admins use them; or when used to report an admin. 𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 assumes that admins don't need to report, or be reported!
 """
 buttons_rpt = [
     [
