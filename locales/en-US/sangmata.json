@@ -1,9 +1,9 @@
 {
     "no_uname": "<code>No Username</code>",
     "no_last_name": "<code>No Last Name</code>",
-    "uname_change_msg": "✨ Changed username from {bef} ➡️ {aft}.\n",
-    "lastname_change_msg": "✨ Changed last name from {bef} ➡️ {aft}.\n",
-    "firstname_change_msg": "✨ Changed first name from {bef} ➡️ {aft}.\n",
+    "uname_change_msg": "✨ Changed username from {bef} To {aft}.\n",
+    "lastname_change_msg": "✨ Changed last name from {bef} To {aft}.\n",
+    "firstname_change_msg": "✨ Changed first name from {bef} To {aft}.\n",
     "set_sangmata_help": "Use <code>/{cmd} on</code>, to enable sangmata. If you want disable, you can use off parameter.",
     "sangmata_already_on": "𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 already enabled in your groups.",
     "sangmata_enabled": "𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 enabled in your groups.",
