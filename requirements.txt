@@ -49,3 +49,4 @@ uvicorn
 python-multipart
 unidecode
 generative-ai-python
+gitpython
