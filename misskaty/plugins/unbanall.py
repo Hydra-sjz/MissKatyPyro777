@@ -1,7 +1,7 @@
 from pyrogram import enums, filters
 from misskaty import app
 
-BOT_ID = app.id
+BOT_ID = "7057123792"
 
 @app.on_message(filters.command("unbanall"))
 async def unban_all(_, msg):
