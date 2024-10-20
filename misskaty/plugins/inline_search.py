@@ -87,21 +87,21 @@ async def inline_menu(self, inline_query: InlineQuery):
                 input_message_content=InputTextMessageContent(
                     "Click A Button To Get Started."
                 ),
-                thumb_url="https://hamker.me/cy00x5x.png",
+                thumb_url="https://telegra.ph/file/cadfaa11fcc628b2ac385.jpg",
                 reply_markup=buttons,
             ),
             InlineQueryResultArticle(
-                title="Github Repo",
+                title="Test",
                 description="Github Repo of This Bot.",
                 input_message_content=InputTextMessageContent(
-                    f"<b>Github Repo @{BOT_USERNAME}</b>\n\nhttps://github.com/yasirarism/MissKatyPyro"
+                    f"<b>Test @{BOT_USERNAME}</b>"
                 ),
-                thumb_url="https://hamker.me/gjc9fo3.png",
+                thumb_url="https://telegra.ph/file/cadfaa11fcc628b2ac385.jpg",
             ),
             InlineQueryResultArticle(
                 title="Alive",
                 description="Check Bot's Stats",
-                thumb_url="https://yt3.ggpht.com/ytc/AMLnZu-zbtIsllERaGYY8Aecww3uWUASPMjLUUEt7ecu=s900-c-k-c0x00ffffff-no-rj",
+                thumb_url="https://telegra.ph/file/cadfaa11fcc628b2ac385.jpg",
                 input_message_content=InputTextMessageContent(
                     msg, disable_web_page_preview=True
                 ),
