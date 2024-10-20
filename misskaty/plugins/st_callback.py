@@ -1302,6 +1302,7 @@ text_fn = """
 (/tr, /trans, /translate) [lang code] - Translate text using Google Translate.
 /tts - Convert Text to Voice.
 /imdb [query] - Find Movie Details From IMDB.com (Available in English and Indonesia version).
+/tmdb [query] - Find Movie Details From TMDB.com
 /readqr [reply to photo] - Read QR Code From Photo.
 /createqr [text] - Convert Text to QR Code.
 /anime [query] - Search title in myanimelist.
