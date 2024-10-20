@@ -796,7 +796,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Fun", callback_data="fn"),
         InlineKeyboardButton("MediaExtract", callback_data="mdx"),
-        InlineKeyboardButton("MediaTool", callback_data="med"),
+        InlineKeyboardButton("MediaTool", callback_data="gen"),
     ],
     [
         InlineKeyboardButton("Inline", callback_data="ini"),
@@ -1257,8 +1257,8 @@ buttons_fk = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^mde$"))
-async def abot_cb_handbiler(bot, query):
+@Bot.on_callback_query(filters.regex("^gen$"))
+async def abot_cb_hangenlr(bot, query):
     await query.message.edit(
         text=text_fk,
         reply_markup=InlineKeyboardMarkup(buttons_fk),
