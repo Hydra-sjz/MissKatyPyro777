@@ -788,7 +788,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Bypass", callback_data="byp"),
-        InlineKeyboardButton(".", callback_data="bn"),
+        InlineKeyboardButton("Couples", callback_data="cop"),
         InlineKeyboardButton("SessionGen", callback_data="sng"),
     ],
     [
@@ -1366,7 +1366,7 @@ buttons_gl = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^cd"))
+@Bot.on_callback_query(filters.regex("^cd$"))
 async def abot_cb_handllnver(bot, query):
     await query.message.edit(
         text=text_gl,
@@ -1376,18 +1376,9 @@ async def abot_cb_handllnver(bot, query):
 
 
 text_gli = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gᴀʟɪ:
+**Here is the information about Couples**
 
-Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʏ ғᴏʀ Pʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇ, Gᴏ Tᴏ Bᴏᴛ Pʀɪᴠᴀᴛᴇ Mᴇssᴀɢᴇ Aɴᴅ Tʏᴘᴇ /gai Cᴏᴍᴍᴀɴᴅ.
-
-Fᴇᴀᴛᴜʀᴇs:
-- Pʀᴏᴠɪᴅᴇs ʀᴀɴᴅᴏᴍ ᴀʙᴜsɪᴠᴇ ᴀɴɢᴜᴀɢᴇ (ɢᴀɪ) ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ DMs.
-- Dɪsᴘᴀʏs ᴀ ᴍᴇssᴀɢᴇ ɪɴᴅɪᴄᴀᴛɪɴɢ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʏ ғᴏʀ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇs ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ ɢʀᴏᴜᴘs.
-
-Cᴏᴍᴍᴀɴᴅ:
- /gai : Sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴀʙᴜsɪᴠᴇ ᴀɴɢᴜᴀɢᴇ (ɢᴀɪ) ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ DMs.
-
-Nᴏᴛᴇ: Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ʀᴇsᴛʀɪᴄᴛᴇᴅ ᴛᴏ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇs ᴏɴʏ ᴛᴏ ᴍᴀɪɴᴛᴀɪɴ ᴅᴇᴄᴏʀᴜᴍ ɪɴ ɢʀᴏᴜᴘ ᴄʜᴀᴛs.
+/couples - Get Todays Couples Of The Group In Interactive View
 """
 buttons_gli = [
     [
@@ -1397,7 +1388,7 @@ buttons_gli = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^gli$"))
+@Bot.on_callback_query(filters.regex("^cop$"))
 async def abot_cb_handviler(bot, query):
     await query.message.edit(
         text=text_gli,
