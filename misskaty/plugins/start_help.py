@@ -219,9 +219,10 @@ async def help_parser(name, keyb=None):
         keyb = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
         """Hey there👋 {first_name}, I am {bot_name}.
-🍃I'm a bot with some useful features. You can change language bot using /setlang command, but it's still in beta stage.
+        
+<blockquote>🍃I'm a bot with some useful features. You can change language bot using /setlang command, but it's still in beta stage.
 You can choose an option below, by clicking a button.
-Use /help to find out more about how to use me to my full potential.
+Use /help to find out more about how to use me to my full potential.</blockquote>
 
 Send command /privacy if you want know data collected by this bot.
 """.format(
