@@ -32,7 +32,7 @@ Here is the help for DevCommand:
 BUTTON_SUDO = [
     [
         InlineKeyboardButton("❮", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -60,7 +60,7 @@ BUTTONS_ST = [
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data="close")],
+    [InlineKeyboardButton("❌", callback_data="close_cb")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -75,7 +75,7 @@ async def st_cb_handler(bot, query):
 # =======================f=======MAIN_HELP_CMD====================
 TEXT_GE = """
 Hey {} 👋
-Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. 
+<blockquote>Click on the Buttons below for more information.</blockquote>
 """
 BUTTONS_GE = [
     [
@@ -87,7 +87,7 @@ BUTTONS_GE = [
     ],
     [
         InlineKeyboardButton("❮", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -108,10 +108,10 @@ async def hp_hagndlery(bot, message):
 TEXT_GP = """
 Hey 👋{}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
-Send command /privacy if you want know data collected by this bot.
+<blockquote>Send command /privacy if you want know data collected by this bot.
 General command are:
  - /start: Start the bot
- - /help: Give this message
+ - /help: Give this message</blockquote>
 """
 BUTTONS_GP = [
     [
@@ -152,10 +152,11 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("📌Pin", callback_data="pn"),
+        InlineKeyboardButton("🎂Birthday", callback_data="brt"),
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -170,7 +171,7 @@ async def abvigjdv(bot, query):
 text_admi = """
 **Here is the help for Admin**
 
-Make it easy to promote and demote users with the admin module!
+<blockquote>Make it easy to promote and demote users with the admin module!</blockquote>
 
 Admin commands:
 - /adminlist: List the admins in the current chat.
@@ -183,13 +184,13 @@ Admin commands:
 /set_chat_photo - Change The PFP Of A Group/Channel.
 /set_user_title - Change The Administrator Title Of An Admin.
 
-Sometimes, you promote or demote an admin manually, and gojo doesn't realise it immediately.
-This is because to avoid spamming telegram servers, admin status is cached locally.
+<blockquote>Sometimes, you promote or demote an admin manually, and gojo doesn't realise it immediately.
+This is because to avoid spamming telegram servers, admin status is cached locally.</blockquote>
 """
 buttons_admi = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -209,12 +210,12 @@ text_afk = """
 /afk [reply to media] - AFK with media.
 /afkdel - Enable auto delete AFK message in group (Only for group admin). Default is Enable.
 
-Just type something in group to remove AFK Status.
+<blockquote>Just type something in group to remove AFK Status.</blockquote>
 """
 buttons_afk = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -229,8 +230,8 @@ async def abviv(bot, query):
 text_ban = """
 **Here is the help for Bans**
 
-Some people need to be publicly banned; spammers, annoyances, or just trolls.
-This module allows you to do that easily, by exposing some common actions, so everyone will see!
+<blockquote>Some people need to be publicly banned; spammers, annoyances, or just trolls.
+This module allows you to do that easily, by exposing some common actions, so everyone will see!</blockquote>
 
 User commands:
 - /kickme: Users that use this, kick themselves.
@@ -260,7 +261,7 @@ User commands:
 buttons_ban = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -276,17 +277,20 @@ async def abanv(bot, query):
 text_war = """
 **Here is the help for Warnings**
 
-Keep your members in check with warnings; stop them getting out of control!
+<blockquote>Keep your members in check with warnings; stop them getting out of control!</blockquote>
 
 /warn <reason>: - Warn A User
 /dwarn <reason>: - Delete the replied message warning its sender
 /rmwarns - Remove All Warning of A User
 /warns - Show Warning Of A User.
+
+<blockquote>Keep your members in check with warnings; stop them getting out of control!
+If you're looking for automated warnings, go read about the blocklist module.</blockquote>
 """
 buttons_war = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -307,15 +311,15 @@ Need to delete lots of messages? That's what purges are for!
 /purge - Delete all messages from the replied to message, to the current message.
 /purge [n] - Purge "n" number of messages from replied message
 /del - Delete Replied Message
-
+<blockquote>
 **Examples:**
 - Delete all messages from the replied to message, until now.
----> /purge
+---> /purge</blockquote>
 """
 buttons_prg = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -334,13 +338,13 @@ text_gst = """
 /instatus - View member status in group
 /ban_ghosts Remove deleted Ghosts accounts from group 
 
-note:
-- ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ʙᴇsᴛ ᴇғғᴇᴄᴛ. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.
+<blockquote>note:
+- ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ʙᴇsᴛ ᴇғғᴇᴄᴛ. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.</blockquote>
 """
 buttons_gst = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -356,20 +360,19 @@ async def abvgstiv(bot, query):
 text_rpt = """
 **Here is the help for Reports**
 
-We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
-
-Presenting reports; if someone in your group thinks someone needs reporting, they now have an easy way to call all admins.
+<blockquote>We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
+Presenting reports; if someone in your group thinks someone needs reporting, they now have an easy way to call all admins.</blockquote>
 
 /report | @admins | @admin - Report A Message To Admins.
 - /report: Reply to a message to report it for admins to review.
 - admin: Same as /report
 
-Note that the report commands do not work when admins use them; or when used to report an admin. 𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 assumes that admins don't need to report, or be reported!
+<blockquote>Note that the report commands do not work when admins use them; or when used to report an admin. 𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 assumes that admins don't need to report, or be reported!</blockquote>
 """
 buttons_rpt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -390,7 +393,7 @@ text_mal = """
 buttons_mal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -408,12 +411,12 @@ text_aap = """
 
 - /autoapprove just type in group.
 
-This module helps to automatically accept chat join request send by a user through invitation link of your group
+<blockquote>This module helps to automatically accept chat join request send by a user through invitation link of your group.</blockquote>
 """
 buttons_aap = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -429,8 +432,8 @@ async def aaapbviv(bot, query):
 text_bal = """
 **Here is the help for Blacklist:**
 
-Want to stop people asking stupid questions? or ban anyone saying censored words? Blocklists is the module for you!
-From blocking rude words, filenames/extensions, to specific emoji, everything is possible.
+<blockquote>Want to stop people asking stupid questions? or ban anyone saying censored words? Blocklists is the module for you!
+From blocking rude words, filenames/extensions, to specific emoji, everything is possible.</blockquote>
 
 /blacklisted - Get All The Blacklisted Words In The Chat.
 /blacklist [WORD|SENTENCE] - Blacklist A Word Or A Sentence.
@@ -439,7 +442,7 @@ From blocking rude words, filenames/extensions, to specific emoji, everything is
 buttons_bal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -456,12 +459,12 @@ async def abvbaliv(bot, query):
 text_fed = """
 **Here is the help for Federation:**
 
-Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
+<blockquote>Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
 But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?
 
 No longer! With Federation, you can make a ban in one chat overlap with all other chats.
 
-You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.
+You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.</blockquote>
 """
 buttons_fed = [
     [
@@ -473,7 +476,7 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
@@ -486,7 +489,7 @@ async def abfdviv(bot, query):
 text_fdo = """
 👑 **Fed Owner Only:**
 
-These are the list of available fed owner commands. To run these, you have to own the current federation. 
+<blockquote>These are the list of available fed owner commands. To run these, you have to own the current federation.</blockquote>
 
 **Owner Commands:**
  • /newfed <fed_name>: Creates a Federation, One allowed per user
@@ -503,7 +506,7 @@ These are the list of available fed owner commands. To run these, you have to ow
 buttons_fdo = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -519,7 +522,7 @@ async def afdobviv(bot, query):
 text_fdm = """
 🔱 **Fed Admins:**
 
-The following is the list of all fed admin commands. To run these, you have to be a federation admin in the current federation.
+<blockquote>The following is the list of all fed admin commands. To run these, you have to be a federation admin in the current federation.</blockquote>
 
  • /fban <user> <reason>: Fed bans a user
  • /sfban: Fban a user without sending notification to chats
@@ -532,7 +535,7 @@ The following is the list of all fed admin commands. To run these, you have to b
 buttons_fdm = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -548,7 +551,7 @@ async def abvifdmv(bot, query):
 text_fdu = """
 **User Commands:**
 
-These commands do not require you to be admin of a federation. These commands are for general commands, such as looking up information on a fed, or checking a user's fbans.
+<blockquote>These commands do not require you to be admin of a federation. These commands are for general commands, such as looking up information on a fed, or checking a user's fbans.</blockquote>
 
 • /fedinfo <FedID>: Information about a federation.
 • /fedadmins <FedID>: List the admins in a federation.
@@ -561,7 +564,7 @@ These commands do not require you to be admin of a federation. These commands ar
 buttons_fdu = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -577,9 +580,9 @@ async def ajbvfduiv(bot, query):
 text_flt = """
 **Here is the help for Filters:**
 
-Make your chat more lively with filters; The bot will reply to certain words!
+<blockquote>Make your chat more lively with filters; The bot will reply to certain words!
 
-Filters are case insensitive; every time someone says your trigger words, Rose will reply something else! can be used to create your own commands, if desired.
+Filters are case insensitive; every time someone says your trigger words, Rose will reply something else! can be used to create your own commands, if desired.</blockquote>
 
 /filters To Get All The Filters In The Chat.
 /filter [FILTER_NAME] or /addfilter [FILTER_NAME] To Save A Filter(reply to a message).
@@ -596,7 +599,7 @@ You can use markdown or html to save text too.
 buttons_flt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -612,9 +615,8 @@ async def afilbviv(bot, query):
 text_lok = """
 **Here is the help for Locks:**
 
-Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!
-
-The locks module allows you to lock away some common items in the Telegram world; the bot will automatically delete them!
+<blockquote>Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!
+The locks module allows you to lock away some common items in the Telegram world; the bot will automatically delete them!</blockquote>
 
 - /lock | /unlock | /locks [No Parameters Required]
 
@@ -633,7 +635,7 @@ Example:
 buttons_lok = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -649,8 +651,8 @@ async def lokkabviv(bot, query):
 text_not = """
 **Here is the help for Notes:**
 
-Save data for future users with notes!
-Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!
+<blockquote>Save data for future users with notes!
+Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!</blockquote>
 
 /notes To Get All The Notes In The Chat.
 
@@ -669,7 +671,7 @@ To change caption of any files use.
 buttons_not = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -685,11 +687,11 @@ async def notabviv(bot, query):
 text_nm = """
 **Here is the help for NightMode:**
 
-Enable or disable nightmode (locks the chat at specified intervals everyday)
+<blockquote>Enable or disable nightmode (locks the chat at specified intervals everyday)
 Flags:
-'-s': "Specify starting time in 24hr format."
-'-e': "Specify duration in hours / minute"
-'-d': "Disable nightmode for chat."
+'-s': "Specify starting time in 24hr format.
+'-e': "Specify duration in hours / minute
+'-d': "Disable nightmode for chat.</blockquote>
 
 Examples:
 /nightmode -s=23:53 -e=6h
@@ -699,7 +701,7 @@ Examples:
 buttons_nm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -715,13 +717,13 @@ async def abvnmmiv(bot, query):
 text_sm = """
 **Here is the help for SangMata:**
 
-This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
+<blockquote>This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.</blockquote>
 /sangmata_set [on/off] - Enable/disable sangmata in groups.
 """
 buttons_sm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -737,7 +739,7 @@ async def abvivmfg(bot, query):
 text_pn = """
 **Here is the help for Pin**
 
-All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!
+<blockquote>All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!</blockquote>
 
 Admin commands:
 - /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
@@ -748,7 +750,7 @@ Admin commands:
 buttons_pn = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 
@@ -765,16 +767,16 @@ async def abvivpn(bot, query):
 #===================
 
 TEXT_HP = """
-Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+<blockquote>Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
 Send command /privacy if you want know data collected by this bot.
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
+Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /</blockquote>
 """
 BUTTONS_HP = [
     [
         InlineKeyboardButton("SangMata", callback_data="sg"),
         InlineKeyboardButton("Ai", callback_data="ai"),
-        InlineKeyboardButton("Birthday", callback_data="brt"),
+        InlineKeyboardButton(".", callback_data="bdj"),
     ],
     [
         InlineKeyboardButton("Quotly", callback_data="q"),
@@ -814,7 +816,7 @@ BUTTONS_HP = [
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("Back", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
         InlineKeyboardButton("🏠", callback_data="home"),
         #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
@@ -1841,15 +1843,10 @@ async def abot_cb_hanbibondler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_qz),
         disable_web_page_preview=True,
     )
-
-
 # =============================================================
-# =============================================================
-
-
 # ==============CLOSE===================
-@Bot.on_callback_query(filters.regex("^close$"))
-async def close_gojoxsatoru(bot, callback):
+@Bot.on_callback_query(filters.regex("close_cb"))
+async def close_cb_gojo(bot, callback):
     await callback.answer("❌Closed the Module❌")
     await callback.message.delete()
     await callback.message.reply_to_message.delete()
