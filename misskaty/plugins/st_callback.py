@@ -744,7 +744,7 @@ text_pn = """
 Admin commands:
 - /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
 - /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
-- /unpinall: Unpins all pinned messages.
+- /unpinall: Unpins all the pinned message in the current chat..
 """
 
 buttons_pn = [
