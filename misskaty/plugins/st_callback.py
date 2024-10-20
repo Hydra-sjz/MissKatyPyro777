@@ -178,6 +178,9 @@ Admin commands:
 - /promote <reply/username/mention/userid>: Promote a user.
 - /demote <reply/username/mention/userid>: Demote a user.
 - /fullpromote Promote A Member With All Rights.
+- /groupdata To get Group Data.
+- /groupinfo To get Group info.
+- /link To get Group link.
 
 **To Admins.**
 /set_chat_title - Change The Name Of A Group/Channel.
