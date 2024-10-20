@@ -47,17 +47,17 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
 # =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡</blockquote>
 TEXT_ST = (
     "👋__Hello there {},__\n\n"
-    "Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.\n\n"
+    "<blockquote>Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.</blockquote>\n\n"
     "**__Click /help to find out more about how to use me to me full potential!__**"
 )
 BUTTONS_ST = [
     [
-        InlineKeyboardButton("➕Add Me To Your Group➕", url=f"http://t.me/{BOT_USERNAME}?startgroup=new",),
+        InlineKeyboardButton("➕Add Me To Your Group Chats➕", url=f"http://t.me/{BOT_USERNAME}?startgroup=new",),
         ],[
         InlineKeyboardButton("📚 Commands ", callback_data="set_ge"),
-        InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
-        ],[
         InlineKeyboardButton("📊 Status", callback_data="stats_callback"),
+        ],[
+        InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
     [InlineKeyboardButton("❌", callback_data="close")],
@@ -115,46 +115,46 @@ General command are:
 """
 BUTTONS_GP = [
     [
-        InlineKeyboardButton("Admin", callback_data="admi"),
-        InlineKeyboardButton("Afk", callback_data="afk"),
+        InlineKeyboardButton("👮Admin", callback_data="admi"),
+        InlineKeyboardButton("💤Afk", callback_data="afk"),
     ],
     [
-        InlineKeyboardButton("Bans", callback_data="ban"),
-        InlineKeyboardButton("Warns", callback_data="war"),
+        InlineKeyboardButton("🚯Bans", callback_data="ban"),
+        InlineKeyboardButton("❗Warns", callback_data="war"),
     ],
     [
-        InlineKeyboardButton("Purges", callback_data="prg"),
-        InlineKeyboardButton("Ghost", callback_data="gst"),
+        InlineKeyboardButton("🚮Purges", callback_data="prg"),
+        InlineKeyboardButton("🧟Ghost", callback_data="gst"),
     ],
     [
-        InlineKeyboardButton("Reports", callback_data="rpt"),
-        InlineKeyboardButton("Mention all", callback_data="mall"),
+        InlineKeyboardButton("🗳️Reports", callback_data="rpt"),
+        InlineKeyboardButton("📣Mention all", callback_data="mall"),
         
     ],
     [
-        InlineKeyboardButton("Auto Approve", callback_data="aap"),
-        InlineKeyboardButton("Blacklist", callback_data="bal"),
+        InlineKeyboardButton("🚪Auto Approve", callback_data="aap"),
+        InlineKeyboardButton("⚖️Blacklist", callback_data="bal"),
         
     ],
     [
-        InlineKeyboardButton("Federation", callback_data="fed"),
-        InlineKeyboardButton("Filters", callback_data="filt"),
+        InlineKeyboardButton("🚨Federation", callback_data="fed"),
+        InlineKeyboardButton("📄Filters", callback_data="filt"),
         
     ],
     [
-        InlineKeyboardButton("Locks", callback_data="lok"),
-        InlineKeyboardButton("Notes", callback_data="not"),
+        InlineKeyboardButton("🔐Locks", callback_data="lok"),
+        InlineKeyboardButton("📝Notes", callback_data="not"),
         
     ],
     [
-        InlineKeyboardButton("Night Mod", callback_data="nm"),
-        InlineKeyboardButton("SangMata", callback_data="sm"),
+        InlineKeyboardButton("🌃Night Mod", callback_data="nm"),
+        InlineKeyboardButton("🪬SangMata", callback_data="sm"),
     ],
     [
-        InlineKeyboardButton("Pin", callback_data="pn"),
+        InlineKeyboardButton("📌Pin", callback_data="pn"),
     ],
     [
-        InlineKeyboardButton("❮", callback_data="set_ge"),
+        InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
