@@ -6,7 +6,7 @@ import requests
 import sys
 from logging import getLogger
 from os import environ
-
+import pytz
 import dotenv
 
 LOGGER = getLogger("MissKaty")
@@ -98,3 +98,8 @@ BLOCKED_EXTENSIONS = list(
 )
 MINIMUM_FILE_SIZE = environ.get("MINIMUM_FILE_SIZE")
 CURRENCY_API = environ.get("CURRENCY_API")
+
+
+#time zone
+TIME_ZONE = pytz.timezone(Config.TIME_ZONE)
+TIME_ZONE = 'Asia/Kolkata'
