@@ -24,7 +24,7 @@ Here is the help for DevCommand:
 /unbanuser [chat id] - Unban user and make their can use bot again
 /gban - To Ban A User Globally.
 /ungban - To remove ban user globbaly.
-
+/copy | /forward To send message to groups.
 **For Public Use**
 /stats - Check statistic bot
 /json - Send structure message Telegram in JSON using Pyrogram Style.
