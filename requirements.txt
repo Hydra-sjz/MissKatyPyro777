@@ -12,6 +12,7 @@ async_pymongo
 pymongo
 requests
 beautifulsoup4
+motor
 
 chevron
 cv-3
