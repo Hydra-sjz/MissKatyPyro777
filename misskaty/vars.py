@@ -101,5 +101,4 @@ CURRENCY_API = environ.get("CURRENCY_API")
 
 
 #time zone
-TIME_ZONE = pytz.timezone(Config.TIME_ZONE)
-TIME_ZONE = 'Asia/Kolkata'
+TIME_ZONE = pytz.timezone('Asia/Kolkata')
