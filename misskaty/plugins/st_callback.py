@@ -776,7 +776,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("SangMata", callback_data="sg"),
         InlineKeyboardButton("Ai", callback_data="ai"),
-        InlineKeyboardButton(".", callback_data="bdj"),
+        InlineKeyboardButton("Cat & Dog", callback_data="cd"),
     ],
     [
         InlineKeyboardButton("Quotly", callback_data="q"),
@@ -1351,10 +1351,9 @@ async def abot_cb_handlpnner(bot, query):
 
 
 text_gl = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gʀᴏᴜᴘ Lɪɴᴋ:
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Cat and Dog:
 
-々 /ɢᴇɪɴᴋ: Gᴇᴛ ᴛʜᴇ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ.
-々 /ɪɴᴋ ɢʀᴏᴜᴘ_ɪᴅ: Gᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀɴᴅ ɢᴇɴᴇʀᴀᴛᴇ ᴀɴ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ɢʀᴏᴜᴘ ID.
+/Cat | /dog - To get random cat and dog photos.
 """
 buttons_gl = [
     [
@@ -1364,7 +1363,7 @@ buttons_gl = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^gl$"))
+@Bot.on_callback_query(filters.regex("^cd"))
 async def abot_cb_handllnver(bot, query):
     await query.message.edit(
         text=text_gl,
