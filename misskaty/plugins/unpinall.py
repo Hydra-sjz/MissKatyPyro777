@@ -58,7 +58,7 @@ async def unpin_callbacc(client, CallbackQuery):
         "unpinned!!", 
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="Delete", callback_data="delete_btn=admin")]
+                [InlineKeyboardButton(text="Delete", callback_data="close_cb")]
             ]
         )
     )
