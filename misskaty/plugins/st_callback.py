@@ -788,7 +788,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Bypass", callback_data="byp"),
-        InlineKeyboardButton("Couples", callback_data="cop"),
+        InlineKeyboardButton(".", callback_data="cop"),
         InlineKeyboardButton("SessionGen", callback_data="sng"),
     ],
     [
