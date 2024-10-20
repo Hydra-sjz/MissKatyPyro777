@@ -774,7 +774,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("SangMata", callback_data="sg"),
         InlineKeyboardButton("Ai", callback_data="ai"),
-        InlineKeyboardButton(".", callback_data="aut"),
+        InlineKeyboardButton("Birthday", callback_data="brt"),
     ],
     [
         InlineKeyboardButton("Quotly", callback_data="q"),
@@ -877,15 +877,16 @@ async def abot_cb_handler7(bot, query):
 
 
 text_aut = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Auᴛʜ:
+**Here is the help for Birthday**
 
-Aᴜᴛʜ Usᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.
+× /remember [reply to user] [DAT] : To registers user date of birth in my database. If not replied to user then the DOB givien will be treated as yours
+× /nextbdays (/nbdays,/brithdays,/bdays) : Return upcoming birthdays of 10 users
+× /removebday (/rmbday) : To remove birthday from database (One can only remove their data from database not of others)
+× /settingbday (/sbday) : To configure the settings for wishing and all for the chat
+× /getbday (/gbday,/mybirthday,/mybday) [reply to user] : If replied to user get the replied user's birthday else returns your birthday
 
-々 /auth [Usᴇʀɴᴀᴍᴇ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-
-々 /unauth [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-
-々 /authusers - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
+DAT should be in format of dd/mm/yyyy
+Year is optional it is not necessary to pass it
 """
 buttons_aut = [
     [
@@ -895,7 +896,7 @@ buttons_aut = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^aut$"))
+@Bot.on_callback_query(filters.regex("^brt$"))
 async def abot_cb_handler8(bot, query):
     await query.message.edit(
         text=text_aut,
