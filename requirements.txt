@@ -30,6 +30,7 @@ httpx[http2]
 git+https://github.com/yasirarism/vcsi
 git+https://github.com/yasirarism/iytdl
 git+https://github.com/yasirarism/pyrofork
+git+https://github.com/ytdl-org/youtube-dl.git
 
 deep-translator
 pyrate_limiter
