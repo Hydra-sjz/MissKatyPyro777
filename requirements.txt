@@ -12,6 +12,7 @@ async_pymongo
 pymongo
 requests
 beautifulsoup4
+
 motor
 
 chevron
@@ -30,7 +31,7 @@ httpx[http2]
 git+https://github.com/yasirarism/vcsi
 git+https://github.com/yasirarism/iytdl
 git+https://github.com/yasirarism/pyrofork
-git+https://github.com/ytdl-org/youtube-dl.git
+youtube_dl
 
 deep-translator
 pyrate_limiter
