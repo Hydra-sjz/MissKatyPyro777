@@ -54,3 +54,5 @@ generative-ai-python
 gitpython
 bs4
 google-generativeai
+ffmpeg-python
+ffmpeg==1.4
