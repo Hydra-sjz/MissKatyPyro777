@@ -36,7 +36,7 @@ MS = """
 👾**Username** : @{}
 💾**DC** : {}
 ♐**ID** : `{}`
-🤖**BOT** : @Musicx_dlbot
+🤖**BOT** : @GojoSatoru_Xbot
 
 #SoundCloud #SoundCloudDownload 
 """
