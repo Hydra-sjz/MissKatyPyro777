@@ -22,7 +22,7 @@ from misskaty.vars import (
     ANILIST_CLIENT,
     ANILIST_REDIRECT_URL,
     ANILIST_SECRET,
-    SUDO as OWNER,
+    OWNER_ID as OWNER,
     TRIGGERS as trg,
     BOT_NAME,
 )
