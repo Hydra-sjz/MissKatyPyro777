@@ -17,6 +17,7 @@ from pyrogram.types import (
 from pyrogram.errors import UserNotParticipant, WebpageCurlFailed, WebpageMediaEmpty
 
 #=========
+from misskaty import app as anibot
 from misskaty.vars import (
     ANILIST_CLIENT,
     ANILIST_REDIRECT_URL,
@@ -24,7 +25,6 @@ from misskaty.vars import (
     SUDO as OWNER,
     TRIGGERS as trg,
     BOT_NAME,
-    app as anibot
 )
 from misskaty.ultis_ex.anilis_ulti.data_parser import (
     get_all_genres,
