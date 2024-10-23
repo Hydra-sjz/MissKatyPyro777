@@ -6,9 +6,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from datetime import datetime
 
 
-from .db import get_collection
-from .google_trans_new import google_translator
-from .helper import (
+from misskaty.ultis_ex.anilis_ulti.db import get_collection
+from misskaty.ultis_ex.anilis_ulti.google_trans_new import google_translator
+from misskaty.ultis_ex.anilis_ulti.helper import (
     cflag,
     make_it_rw,
     pos_no,
