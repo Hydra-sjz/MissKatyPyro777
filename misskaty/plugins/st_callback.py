@@ -138,7 +138,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("🚨Federation", callback_data="fed"),
-        InlineKeyboardButton("📄Filters", callback_data="filt"),
+        InlineKeyboardButton("📄Filters", callback_data="filter"),
         
     ],
     [
@@ -607,8 +607,8 @@ buttons_flt = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^filt$"))
-async def afilbviv(bot, query):
+@Bot.on_callback_query(filters.regex("^filter$"))
+async def afddviv(bot, query):
     await query.message.edit(
         text=text_flt,
         reply_markup=InlineKeyboardMarkup(buttons_flt),
@@ -884,14 +884,14 @@ async def abot_cb_handler7(bot, query):
 text_aut = """
 **Here is the help for Birthday**
 
-× /remember [reply to user] [DAT] : To registers user date of birth in my database. If not replied to user then the DOB givien will be treated as yours
+× /remember [reply to user] [DAT] : To registers user date of birth in my database. If not replied to user then the DAT givien will be treated as yours
 × /nextbdays (/nbdays,/brithdays,/bdays) : Return upcoming birthdays of 10 users
 × /removebday (/rmbday) : To remove birthday from database (One can only remove their data from database not of others)
 × /settingbday (/sbday) : To configure the settings for wishing and all for the chat
 × /getbday (/gbday,/mybirthday,/mybday) [reply to user] : If replied to user get the replied user's birthday else returns your birthday
 
-DAT should be in format of dd/mm/yyyy
-Year is optional it is not necessary to pass it
+<blockquote>DAT should be in format of dd/mm/yyyy
+Year is optional it is not necessary to pass it.</blockquote>
 """
 buttons_aut = [
     [
