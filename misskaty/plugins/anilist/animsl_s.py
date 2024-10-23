@@ -62,7 +62,7 @@ from misskaty.ultis_ex.anilis_ulti.helper import (
     PIC_LS,
     AUTH_USERS
 )
-from misskaty.ultis_ex.anilis_ulti.utils.db import get_collection
+from misskaty.ultis_ex.anilis_ulti.db import get_collection
 #===============
 
 
