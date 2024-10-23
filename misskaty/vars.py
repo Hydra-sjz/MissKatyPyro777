@@ -8,6 +8,7 @@ from logging import getLogger
 from os import environ
 import pytz
 import dotenv
+import os
 
 LOGGER = getLogger("MissKaty")
 
