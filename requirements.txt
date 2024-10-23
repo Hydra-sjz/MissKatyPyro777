@@ -13,8 +13,6 @@ pymongo
 requests
 beautifulsoup4
 
-motor
-
 chevron
 cv-3
 gTTS
@@ -63,3 +61,4 @@ lottie
 natsort
 lxml
 html5lib
+motor
