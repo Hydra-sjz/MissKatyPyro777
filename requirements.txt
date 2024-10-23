@@ -9,6 +9,7 @@ python-dateutil
 
 emoji
 async_pymongo
+motor==3.0.0
 pymongo
 requests
 beautifulsoup4
@@ -61,4 +62,3 @@ lottie
 natsort
 lxml
 html5lib
-motor
