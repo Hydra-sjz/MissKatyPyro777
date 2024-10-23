@@ -580,7 +580,7 @@ async def ajbvfduiv(bot, query):
         disable_web_page_preview=True,
     )
 
-text_flt = """
+text_filt = """
 **Here is the help for Filters:**
 
 <blockquote>Make your chat more lively with filters; The bot will reply to certain words!
@@ -599,7 +599,7 @@ To use more words in a filter use.
 
 You can use markdown or html to save text too.
 """
-buttons_flt = [
+buttons_filt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
         InlineKeyboardButton("❌", callback_data="close_cb"),
@@ -610,8 +610,8 @@ buttons_flt = [
 @Bot.on_callback_query(filters.regex("^filter$"))
 async def afddviv(bot, query):
     await query.message.edit(
-        text=text_flt,
-        reply_markup=InlineKeyboardMarkup(buttons_flt),
+        text=text_filt,
+        reply_markup=InlineKeyboardMarkup(buttons_filt),
         disable_web_page_preview=True,
     )
 
