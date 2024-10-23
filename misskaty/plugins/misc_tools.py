@@ -374,7 +374,7 @@ async def translate(_, message):
     if message.reply_to_message and (
         message.reply_to_message.text or message.reply_to_message.caption
     ):
-        target_lang = "id" if len(message.command) == 1 else message.text.split()[1]
+        target_lang = "ml" if len(message.command) == 1 else message.text.split()[1]
         text = message.reply_to_message.text or message.reply_to_message.caption
     else:
         if len(message.command) < 3:
