@@ -32,7 +32,7 @@ Here is the help for DevCommand:
 BUTTON_SUDO = [
     [
         InlineKeyboardButton("❮", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -60,7 +60,7 @@ BUTTONS_ST = [
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data="close_cb")],
+    [InlineKeyboardButton("❌", callback_data="close")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -87,7 +87,7 @@ BUTTONS_GE = [
     ],
     [
         InlineKeyboardButton("❮", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -156,7 +156,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -193,7 +193,7 @@ This is because to avoid spamming telegram servers, admin status is cached local
 buttons_admi = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -218,7 +218,7 @@ text_afk = """
 buttons_afk = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -264,7 +264,7 @@ User commands:
 buttons_ban = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -293,7 +293,7 @@ If you're looking for automated warnings, go read about the blocklist module.</b
 buttons_war = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -322,7 +322,7 @@ Need to delete lots of messages? That's what purges are for!
 buttons_prg = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -347,7 +347,7 @@ text_gst = """
 buttons_gst = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -375,7 +375,7 @@ Presenting reports; if someone in your group thinks someone needs reporting, the
 buttons_rpt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -396,7 +396,7 @@ text_mal = """
 buttons_mal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -419,7 +419,7 @@ text_aap = """
 buttons_aap = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -445,7 +445,7 @@ From blocking rude words, filenames/extensions, to specific emoji, everything is
 buttons_bal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -479,7 +479,7 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
@@ -509,7 +509,7 @@ text_fdo = """
 buttons_fdo = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -538,7 +538,7 @@ text_fdm = """
 buttons_fdm = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -567,7 +567,7 @@ text_fdu = """
 buttons_fdu = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -602,7 +602,7 @@ You can use markdown or html to save text too.
 buttons_filt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -624,11 +624,11 @@ The locks module allows you to lock away some common items in the Telegram world
 - /lock | /unlock | /locks [No Parameters Required]
 
 Parameters:
-    messages | sticker | gif | media | games | polls
+<blockquote>messages | sticker | gif | media | games | polls
 
-    inline  | url | group_info | user_add | pin | photo
+inline  | url | group_info | user_add | pin | photo
 
-    voice | video | audio | docs | plain
+voice | video | audio | docs | plain</blockquote>
 
 You can only pass the "all" parameter with /lock, not with /unlock
 
@@ -638,7 +638,7 @@ Example:
 buttons_lok = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -674,7 +674,7 @@ To change caption of any files use.
 buttons_not = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -704,7 +704,7 @@ Examples:
 buttons_nm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -726,7 +726,7 @@ text_sm = """
 buttons_sm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -753,7 +753,7 @@ Admin commands:
 buttons_pn = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -819,7 +819,7 @@ BUTTONS_HP = [
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("Back", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
         #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
@@ -1837,9 +1837,3 @@ async def abot_cb_hanbibondler(bot, query):
         disable_web_page_preview=True,
     )
 # =============================================================
-# ==============CLOSE===================
-@Bot.on_callback_query(filters.regex("close_cb"))
-async def close_cb_gojo(bot, callback):
-    await callback.answer("❌Closed the Module❌")
-    await callback.message.delete()
-    await callback.message.reply_to_message.delete()
