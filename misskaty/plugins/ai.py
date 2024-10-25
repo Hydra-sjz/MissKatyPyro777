@@ -86,12 +86,12 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
     return answer
 
 
-@app.on_message(filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10))
+@app.on_message(filters.command("aie", COMMAND_HANDLER) & pyro_cooldown.wait(10))
 @app.on_bot_business_message(
     filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10)
 )
 @use_chat_lang()
-async def gemini_chatbot(_, ctx: Message, strings):
+async def gemini_chatgbot(_, ctx: Message, strings):
     if len(ctx.command) == 1:
         return await ctx.reply_msg(
             strings("no_question").format(cmd=ctx.command[0]), quote=True, del_in=5
@@ -112,9 +112,9 @@ async def gemini_chatbot(_, ctx: Message, strings):
         return
     gemini_conversations[uid].append({"role": "assistant", "content": ai_response})
 
-@app.on_message(filters.command("ask", COMMAND_HANDLER) & pyro_cooldown.wait(10))
+@app.on_message(filters.command("askk", COMMAND_HANDLER) & pyro_cooldown.wait(10))
 @use_chat_lang()
-async def openai_chatbot(self, ctx: Message, strings):
+async def openai_chhatbot(self, ctx: Message, strings):
     if len(ctx.command) == 1:
         return await ctx.reply_msg(
             strings("no_question").format(cmd=ctx.command[0]), quote=True, del_in=5
