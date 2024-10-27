@@ -64,3 +64,4 @@ lxml
 html5lib
 
 jikanpy
+nekos.py
