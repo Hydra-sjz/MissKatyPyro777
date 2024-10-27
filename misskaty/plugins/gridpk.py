@@ -5,12 +5,12 @@ import random
 import asyncio
 from PIL import Image
 from pyrogram import raw
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.errors import FloodWait
 
 from misskaty.ultis_ex.stcr_funcs import create_sticker, upload_document
 
-
+from misskaty import app
 #function to crop the image and divide it
 async def crop_and_divide(img):
     (width, height) = img.size
@@ -42,7 +42,7 @@ async def crop_and_divide(img):
         new_height += scale_height
     return media
 
-@Client.on_message(filters.command(["gridpack"]))
+@app.on_message(filters.command(["gridpack"]))
 async def make_grid(client, message):
     gp = await message.reply_text("`Making gridpack 🔪`")
     if not message.reply_to_message:
