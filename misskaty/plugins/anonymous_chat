@@ -1,0 +1,14 @@
+# Author: Harshit-shrivastav (https://github.com/Harshit-shrivastav) 
+import os
+from pyrogram import Client, filters
+from misskaty import app
+
+
+CHAT_ID = int(os.environ.get("CHAT_ID", 0))
+USER_ID = int(os.environ.get("USER_ID", 0))
+
+
+
+@app.on_message(filters.private & filters.all & filters.user(USER_ID))
+async def msg_handlhhher(bot, update):
+    await bot.send_message(CHAT_ID, update.text)
