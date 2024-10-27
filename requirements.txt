@@ -45,7 +45,6 @@ lxml_html_clean
 #=====api===
 fastapi
 PrivateBinAPI
-jikanpy
 
 #==========
 uvicorn
@@ -63,3 +62,5 @@ lottie
 natsort
 lxml
 html5lib
+
+jikanpy
