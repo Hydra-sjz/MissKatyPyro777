@@ -31,7 +31,7 @@ async def draw_image(client, message):
                 # Delete the wait message
                 await wait_message.delete()
                 # Send the generated image
-                await message.reply_photo(photo=image_url, caption=f"**Generated Image for: {user_query}** 🖼️")
+                await message.reply_photo(photo=image_url, caption=f"🖼️**Generated Image for:** __{user_query}__\n\n📨**Requested by: {message.from_user.mention}**")
             else:
                 await wait_message.edit_text("Failed to retrieve image URL. Please try again. ❌")
         else:
