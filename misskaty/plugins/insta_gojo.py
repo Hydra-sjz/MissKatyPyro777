@@ -7,7 +7,7 @@ async def igdowngojoload(client, message):
     if len(message.command) < 2:
         return await message.reply_text("**Please Provide a Instagram Url 🤦‍♂️**")
     url = message.text.split(None, 1)[1]
-    msg = await message.reply_text("**Downloading 📤**")
+    msg = await message.reply_text("📤")
     response = requests.get(f"https://horridapi.onrender.com/instadl?url={url}")
     data = response.json()
 
