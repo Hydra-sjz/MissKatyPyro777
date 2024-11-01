@@ -26,5 +26,5 @@ async def igdowngojoload(client, message):
                 media.append(InputMediaVideo(media=s["url"]))
             
         await message.reply_media_group(media=media) 
-        await message.reply_photo(media=media) 
+        await message.reply_photo(photo=media) 
         await msg.delete()
