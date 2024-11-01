@@ -22,7 +22,6 @@ async def igdowngojoload(client, message):
         for s in result:                
             if s["media"] == "image":
                 media.append(InputMediaPhoto(media=s["url"]))
-            else:
-                media.append(InputMediaVideo(media=s["url"]))
-        await message.reply_media_group(media=media) 
+            
+        await message.reply_photo_group(media=media) 
         await msg.delete()
