@@ -859,10 +859,17 @@ async def abot_cb_handler6(bot, query):
 
 
 text_adm = """
-**Here is the help for ChatBot:**
+**Here is the help for Ai ChatBot Assistant:**
 
 /ai - Generate text response from AI using Gemini AI By Google.
-/ask - Generate text response from AI using OpenAI.
+/ask | /ask2 - Generate text response from AI using OpenAI.
+/gpt - Ask me anything with GPT-4o! 💡
+/gemini - Dive deep into questions with Gemini-Pro! 
+/llama - Experience creativity with Llama-3.1-405b! 🦙
+/blackbox - Curious about BlackBoxAI-Pro? Just ask! 📦
+/claude - to get ai message from 𝙲𝙻𝙾𝚄𝙳 𝚂𝙾𝙽𝙽𝙴𝚃 3.5.
+
+/draw - drow your prompt to get photos 
 """
 buttons_adm = [
     [
