@@ -46,7 +46,7 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
                     disable_web_page_preview=True,
                 )
             else:
-                await bmsg.edit_msg(f"{html.escape(answer)}\n<b>Powered by:</b> <code>Gemini 1.5 Flash</code>")
+                await bmsg.edit_msg(f"{html.escape(answer)}\n<b>Powered by:</b> <code>⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪 | Gemini 1.5 Flash</code>")
         else:
             async for chunk in response:
                 if not chunk.choices or not chunk.choices[0].delta.content:
@@ -64,7 +64,7 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
                     disable_web_page_preview=True,
                 )
             else:
-                await bmsg.edit_msg(f"{html.escape(answer)}\n\n<b>Powered by:</b> <code>GPT 4o</code>")
+                await bmsg.edit_msg(f"{html.escape(answer)}\n\n<b>Powered by:</b> <code>⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪 | GPT 4o</code>")
     except APIConnectionError as e:
         await bmsg.edit_msg(f"The server could not be reached because {e.__cause__}")
         return None
