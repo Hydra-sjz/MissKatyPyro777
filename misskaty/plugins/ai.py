@@ -86,7 +86,7 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
     return answer
 
 
-@app.on_message(filters.command("aie", COMMAND_HANDLER) & pyro_cooldown.wait(10))
+@app.on_message(filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10))
 @app.on_bot_business_message(
     filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10)
 )
