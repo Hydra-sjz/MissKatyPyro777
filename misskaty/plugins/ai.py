@@ -91,7 +91,7 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
     filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10)
 )
 @use_chat_lang()
-async def gemini_chatgbot(_, ctx: Message, strings):
+async def gemini_chaiet(_, ctx: Message, strings):
     if len(ctx.command) == 1:
         return await ctx.reply_msg(
             strings("no_question").format(cmd=ctx.command[0]), quote=True, del_in=5
@@ -114,7 +114,7 @@ async def gemini_chatgbot(_, ctx: Message, strings):
 
 @app.on_message(filters.command("askk", COMMAND_HANDLER) & pyro_cooldown.wait(10))
 @use_chat_lang()
-async def openai_chhatbot(self, ctx: Message, strings):
+async def openai_chasksksbot(self, ctx: Message, strings):
     if len(ctx.command) == 1:
         return await ctx.reply_msg(
             strings("no_question").format(cmd=ctx.command[0]), quote=True, del_in=5
