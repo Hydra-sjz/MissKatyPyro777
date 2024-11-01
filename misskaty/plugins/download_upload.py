@@ -194,7 +194,7 @@ async def instadl(_, message):
             "Referer": "https://saveig.app/id",
         }
         post = create_scraper().post(
-            "https://saveig.app/api/ajaxSearch",
+            "https://horridapi.onrender.com/instadl?url=",
             data={"q": link, "t": "media", "lang": "id"},
             headers=headers,
         )
