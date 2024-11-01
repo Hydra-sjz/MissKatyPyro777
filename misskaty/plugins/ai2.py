@@ -36,8 +36,8 @@ def get_model_from_db(group_id):
     return 'claude-sonnet-3.5'  # Replace this with actual database retrieval logic
 
 # Handler for the "/ask" command
-@app.on_message(filters.command("ask"))
-async def handle_querasoy(client, message):
+@app.on_message(filters.command("ask2"))
+async def handle_querasasoy(client, message):
     if len(message.command) < 2:
         await message.reply_text("<b>Please provide a query to ask.</b>")
         return
