@@ -26,7 +26,7 @@ import pickle
 from string import ascii_lowercase
 from typing import Dict, List, Union
 
-from wbb import db
+from misskaty.ultis_ex.database.willam_bd import db
 
 # SOME THINGS ARE FUCKED UP HERE, LIKE TOGGLEABLES HAVE THEIR OWN COLLECTION
 # (SHOULD FIX IT WITH SOMETHING LIKE TOGGLEDB), MOST OF THE CODE IS BAD AF
@@ -35,7 +35,6 @@ from wbb import db
 
 
 blacklist_chatdb = db.blacklistChat
-
 rssdb = db.rss
 
 
