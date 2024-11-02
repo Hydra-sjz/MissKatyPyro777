@@ -87,9 +87,6 @@ async def get_openai_stream_response(is_stream, key, base_url, model, messages, 
 
 
 @app.on_message(filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10))
-@app.on_bot_business_message(
-    filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10)
-)
 @use_chat_lang()
 async def gemini_chaiet(_, ctx: Message, strings):
     if len(ctx.command) == 1:
