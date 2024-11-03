@@ -23,9 +23,11 @@ SOFTWARE.
 """
 from functools import wraps
 from traceback import format_exc as err
+from time import time
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
+from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 
 from misskaty import app
 from misskaty.vars import SUDO as SUDOERS
@@ -58,6 +60,24 @@ async def member_permissions(chat_id: int, user_id: int):
     return perms
 
 
+async def list_admins(chat_id: int):
+    global admins_in_chat
+    if chat_id in admins_in_chat:
+        interval = time() - admins_in_chat[chat_id]["last_updated_at"]
+        if interval < 3600:
+            return admins_in_chat[chat_id]["data"]
+
+    admins_in_chat[chat_id] = {
+        "last_updated_at": time(),
+        "data": [
+            member.user.id
+            async for member in app.get_chat_members(
+                chat_id, filter=ChatMembersFilter.ADMINISTRATORS
+            )
+        ],
+    }
+    return admins_in_chat[chat_id]["data"]
+            
 async def authorised(func, subFunc2, client, message, *args, **kwargs):
     chatID = message.chat.id
     try:
