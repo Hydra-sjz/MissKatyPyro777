@@ -15,6 +15,7 @@ from async_pymongo import AsyncClient
 from pymongo import MongoClient
 from pyrogram import Client
 from web.webserver import api
+from telethon import TelegramClient
 
 from misskaty.vars import (
     API_HASH,
@@ -53,6 +54,9 @@ misskaty_version = "v2.16.1"
 uvloop.install()
 faulthandler_enable()
 from misskaty.core import misskaty_patch
+
+#Telethon bot
+tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
 
 # Pyrogram Bot Client
 app = Client(
