@@ -34,7 +34,7 @@ from misskaty.ultis_ex.database.willam_bd import db
 # TOO MUCH TIME AND WILL BE BAD FOR ALREADY STORED DATA
 
 
-
+usersdb = db.users
 chatsdb = db.chats
 antiservicedb = db.antiservice
 blacklist_chatdb = db.blacklistChat
