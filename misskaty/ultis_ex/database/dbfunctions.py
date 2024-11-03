@@ -36,7 +36,6 @@ from misskaty.ultis_ex.database.willam_bd import db
 
 usersdb = db.users
 chatsdb = db.chats
-antiservicedb = db.antiservice
 blacklist_chatdb = db.blacklistChat
 rssdb = db.rss
 
@@ -56,24 +55,6 @@ async def add_served_user(user_id: int):
         return
     return await usersdb.insert_one({"user_id": user_id})
  
-#=========Ansrv========
- async def is_antiservice_on(chat_id: int):
-    chat = await antiservicedb.find_one({"chat_id": chat_id})
-    if not chat:
-        return True
-    return False
-
-async def antiservice_on(chat_id: int):
-    is_antiservice = await is_antiservice_on(chat_id)
-    if is_antiservice:
-        return
-    return await antiservicedb.delete_one({"chat_id": chat_id})
-
-async def antiservice_off(chat_id: int):
-    is_antiservice = await is_antiservice_on(chat_id)
-    if not is_antiservice:
-        return
-    return await antiservicedb.insert_one({"chat_id": chat_id})
  #=======B-CHAT==========
 async def blacklisted_chats() -> list:
     blacklist_chat = []
