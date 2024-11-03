@@ -60,7 +60,7 @@ cleanmode = {}
 botStartTime = time.time()
 misskaty_version = "v2.16.1"
 DEV_USERS = [2021523124, 784589736] 
-
+DOWN_PATH = "app/downloads/"
 uvloop.install()
 faulthandler_enable()
 from misskaty.core import misskaty_patch
