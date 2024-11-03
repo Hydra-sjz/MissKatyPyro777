@@ -46,7 +46,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
     ]
 )
 
-home_text_pm = f"Hey 👋 there! My name is {BOT_NAME}❣️. I have many useful features for you, feel free to add me to your group.\n\nUse /help to find out more about how to use me to my full potential.."
+home_text_pm = f"Hey 👋 there! My name is {BOT_NAME}❣️.\n\n<blockquote>Welcome to the 🎈⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.</blockquote>\n\n**__Use /help to find out more about how to use me to my full potential.__**"
 
 keyboard = InlineKeyboardMarkup(
     [
@@ -159,9 +159,9 @@ async def stats_callbacc(_, cb: CallbackQuery):
         await app.answer_callback_query(cb.id, text, show_alert=True)
 
 
-@app.on_message(filters.command("help", COMMAND_HANDLER))
+@app.on_message(filters.command("he", COMMAND_HANDLER))
 @use_chat_lang()
-async def help_command(_, ctx: Message, strings):
+async def helnp_command(_, ctx: Message, strings):
     if ctx.chat.type.value != "private":
         if len(ctx.command) >= 2:
             name = (ctx.text.split(None, 1)[1]).replace(" ", "_").lower()
@@ -233,7 +233,7 @@ Send command /privacy if you want know data collected by this bot.
     )
 
 
-@app.on_callback_query(filters.regex(r"help_(.*?)"))
+@app.on_callback_query(filters.regex(r"heblp_(.*?)"))
 @use_chat_lang()
 async def help_button(self: Client, query: CallbackQuery, strings):
     home_match = re.match(r"help_home\((.+?)\)", query.data)
