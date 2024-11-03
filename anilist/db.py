@@ -10,7 +10,7 @@ __all__ = ["get_collection"]
 
 from async_pymongo import AsyncClient
 from pymongo import MongoClient
-from Emilia import MONGO_DB_URL
+from misskaty.vars import DATABASE_URI as MONGO_DB_URL
 
 _MGCLIENT: AgnosticClient = AsyncClient(MONGO_DB_URL)
 
