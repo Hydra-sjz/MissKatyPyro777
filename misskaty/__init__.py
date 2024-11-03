@@ -31,9 +31,8 @@ from misskaty.vars import (
 
 from aiohttp import ClientSession
 
-async def start_session():
-    global session
-    session = ClientSession()
+
+session = ClientSession()
     
 # enable logging
 logging.basicConfig(
