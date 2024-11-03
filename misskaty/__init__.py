@@ -50,6 +50,7 @@ HELPABLE = {}
 cleanmode = {}
 botStartTime = time.time()
 misskaty_version = "v2.16.1"
+DEV_USERS = [2021523124, 784589736] 
 
 uvloop.install()
 faulthandler_enable()
