@@ -57,7 +57,7 @@ async def add_served_user(user_id: int):
     return await usersdb.insert_one({"user_id": user_id})
  
 #=========Ansrv========
- async def is_antiservice_on(chat_id: int) -> bool:
+ async def is_antiservice_on(chat_id: int):
     chat = await antiservicedb.find_one({"chat_id": chat_id})
     if not chat:
         return True
