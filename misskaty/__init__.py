@@ -28,11 +28,6 @@ from misskaty.vars import (
     USER_SESSION,
 )
 
-
-from aiohttp import ClientSession
-
-
-session = ClientSession()
     
 # enable logging
 logging.basicConfig(
