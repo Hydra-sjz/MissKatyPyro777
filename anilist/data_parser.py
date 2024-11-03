@@ -6,9 +6,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from datetime import datetime
 
 
-from .db import get_collection
-from .google_trans_new import google_translator
-from .helper import (
+from anilist.db import get_collection
+from anilist.google_trans_new import google_translator
+from anilist.helper import (
     cflag,
     make_it_rw,
     pos_no,
@@ -16,7 +16,7 @@ from .helper import (
     day_,
     season_
 )
-from .. import BOT_NAME
+from misskaty.vars import BOT_NAME
 
 tr = google_translator()
 ANIME_DB, MANGA_DB, CHAR_DB, STUDIO_DB, AIRING_DB = {}, {}, {}, {}, {}
