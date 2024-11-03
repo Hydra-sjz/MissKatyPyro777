@@ -7,7 +7,7 @@ import time
 from asyncio import get_event_loop
 from faulthandler import enable as faulthandler_enable
 from logging import ERROR, INFO, StreamHandler, basicConfig, getLogger, handlers
-
+import logging
 import uvloop, uvicorn
 from apscheduler.jobstores.mongodb import MongoDBJobStore
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -27,6 +27,15 @@ from misskaty.vars import (
     TZ,
     USER_SESSION,
 )
+
+# enable logging
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
+    level=logging.INFO,
+)
+
+LOGGER = logging.getLogger(__name__)
 
 basicConfig(
     level=INFO,
