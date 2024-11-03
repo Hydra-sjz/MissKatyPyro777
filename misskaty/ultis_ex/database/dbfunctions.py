@@ -34,19 +34,37 @@ from misskaty.ultis_ex.database.willam_bd import db
 # TOO MUCH TIME AND WILL BE BAD FOR ALREADY STORED DATA
 
 
+
+
+antiservicedb = db.antiservice
 blacklist_chatdb = db.blacklistChat
 rssdb = db.rss
 
 
+#=========Ansrv========
+ async def is_antiservice_on(chat_id: int) -> bool:
+    chat = await antiservicedb.find_one({"chat_id": chat_id})
+    if not chat:
+        return True
+    return False
 
-    
- 
+async def antiservice_on(chat_id: int):
+    is_antiservice = await is_antiservice_on(chat_id)
+    if is_antiservice:
+        return
+    return await antiservicedb.delete_one({"chat_id": chat_id})
+
+async def antiservice_off(chat_id: int):
+    is_antiservice = await is_antiservice_on(chat_id)
+    if not is_antiservice:
+        return
+    return await antiservicedb.insert_one({"chat_id": chat_id})
+ #=======B-CHAT==========
 async def blacklisted_chats() -> list:
     blacklist_chat = []
     async for chat in blacklist_chatdb.find({"chat_id": {"$lt": 0}}):
         blacklist_chat.append(chat["chat_id"])
     return blacklist_chat
-
 
 async def blacklist_chat(chat_id: int) -> bool:
     if not await blacklist_chatdb.find_one({"chat_id": chat_id}):
@@ -54,24 +72,22 @@ async def blacklist_chat(chat_id: int) -> bool:
         return True
     return False
 
-
 async def whitelist_chat(chat_id: int) -> bool:
     if await blacklist_chatdb.find_one({"chat_id": chat_id}):
         await blacklist_chatdb.delete_one({"chat_id": chat_id})
         return True
     return False
 
-
+#=======RSS===========
 async def add_rss_feed(chat_id: int, url: str, last_title: str):
     return await rssdb.update_one(
         {"chat_id": chat_id},
         {"$set": {"url": url, "last_title": last_title}},
         upsert=True,
     )
-
 async def remove_rss_feed(chat_id: int):
     return await rssdb.delete_one({"chat_id": chat_id})
-
+    
 async def update_rss_feed(chat_id: int, last_title: str):
     return await rssdb.update_one(
         {"chat_id": chat_id},
@@ -96,4 +112,3 @@ async def get_rss_feeds() -> list:
 
 async def get_rss_feeds_count() -> int:
     return len([i async for i in rssdb.find({"chat_id": {"$exists": 1}})])
-
