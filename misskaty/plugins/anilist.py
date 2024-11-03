@@ -32,7 +32,7 @@ from misskaty.vars import (
     BOT_NAME,
     app as anibot
 )
-from ..utils.data_parser import (
+from anilist.data_parser import (
     get_all_genres,
     get_all_tags,
     get_studio_animes,
@@ -58,7 +58,7 @@ from ..utils.data_parser import (
     STUDIO_DB,
     GUI
 )
-from ..utils.helper import (
+from anilist.helper import (
     clog,
     check_user,
     get_btns,
@@ -68,7 +68,7 @@ from ..utils.helper import (
     PIC_LS,
     AUTH_USERS
 )
-from ..utils.db import get_collection
+from anilist.db import get_collection
 
 GROUPS = get_collection("GROUPS")
 SFW_GRPS = get_collection("SFW_GROUPS")
