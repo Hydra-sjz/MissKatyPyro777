@@ -3,30 +3,20 @@
 # n update)
 
 
-__all__ = ['get_collection']
+__all__ = ["get_collection"]
 
-import asyncio
-from motor.motor_asyncio import AsyncIOMotorClient
-from motor.core import AgnosticClient, AgnosticDatabase, AgnosticCollection
-from .. import DB_URL
+#from motor.core import AgnosticClient, AgnosticCollection, AgnosticDatabase
+#from motor.motor_asyncio import AsyncIOMotorClient
 
-print("Connecting to Database ...")
+from async_pymongo import AsyncClient
+from pymongo import MongoClient
+from Emilia import MONGO_DB_URL
 
-_MGCLIENT: AgnosticClient = AsyncIOMotorClient(DB_URL)
-_RUN = asyncio.get_event_loop().run_until_complete
+_MGCLIENT: AgnosticClient = AsyncClient(MONGO_DB_URL)
 
-if "anibot" in _RUN(_MGCLIENT.list_database_names()):
-    print("anibot Database Found :) => Now Logging to it...")
-else:
-    print("anibot Database Not Found :( => Creating New Database...")
-
-_DATABASE: AgnosticDatabase = _MGCLIENT["anibot"]
+_DATABASE: MongoClient = _MGCLIENT["Emilia"]
 
 
-def get_collection(name: str) -> AgnosticCollection:
-    """ Create or Get Collection from your database """
+def get_collection(name: str):
+    """Create or Get Collection from your database"""
     return _DATABASE[name]
-
-
-def _close_db() -> None:
-    _MGCLIENT.close()
