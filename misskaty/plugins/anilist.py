@@ -22,6 +22,7 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message
 )
+from misskaty import app as anibot
 from pyrogram.errors import UserNotParticipant, WebpageCurlFailed, WebpageMediaEmpty
 from misskaty.vars import (
     ANILIST_CLIENT,
@@ -30,7 +31,6 @@ from misskaty.vars import (
     OWNER_ID as OWNER,
     COMMAND_HANDLER as trg,
     BOT_NAME,
-    app as anibot
 )
 from anilist.data_parser import (
     get_all_genres,
