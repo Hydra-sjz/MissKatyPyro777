@@ -81,10 +81,9 @@ async def ytsearch(_, ctx: Message, strings):
         img, caption=caption, reply_markup=markup, parse_mode=ParseMode.HTML, quote=True
     )
 
-
+#| filters.regex(YT_REGEX)
 @app.on_message(
     filters.command(["ytdown"], COMMAND_HANDLER)
-    | filters.regex(YT_REGEX)
     & ~filters.channel
     & ~filters.via_bot
     & pyro_cooldown.wait(60)
