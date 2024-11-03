@@ -77,7 +77,7 @@ OWO = [
 ]
 
 
-@telethn.on(events.NewMessage(pattern="(?i)Emilia$"))
+@telethn.on(events.NewMessage(pattern="(?i)Jogo$"))
 async def Emi_(m: events.NewMessage):
     if not ORIGINAL_EVENT_LOOP:
         return
