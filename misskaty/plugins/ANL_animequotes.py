@@ -6,7 +6,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup as IKM,
     InlineKeyboardButton as IKB
 )
-from misskaty.vars import BOT_NAME, TRIGGERS as trg, 
+from misskaty.vars import BOT_NAME, TRIGGERS as trg
 from anilist.helper import control_user, check_user
 from anilist.db import get_collection
 from misskaty import app as anibot
