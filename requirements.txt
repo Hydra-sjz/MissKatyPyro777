@@ -10,7 +10,8 @@ python-dateutil
 emoji
 async_pymongo
 ##motor==3.0.0
-motor~=3.6
+#motor~=3.6
+motor
 pymongo
 requests
 beautifulsoup4
