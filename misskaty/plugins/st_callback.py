@@ -19,12 +19,19 @@ Here is the help for DevCommand:
 /disablechat [chat id] - Remove blacklist group
 /enablechat [chat id] - Add Blacklist group
 /leave
+
 **BanUsers:**
 /banuser [chat id] - Ban user and block user so cannot use bot
 /unbanuser [chat id] - Unban user and make their can use bot again
 /gban - To Ban A User Globally.
 /ungban - To remove ban user globbaly.
 /copy | /forward To send message to groups.
+
+**Blacklist Groups**
+/blacklist_chat [CHAT_ID] - Blacklist a chat.
+/whitelist_chat [CHAT_ID] - Whitelist a chat.
+/blacklisted - Show blacklisted chats.
+
 **For Public Use**
 /stats - Check statistic bot
 /json - Send structure message Telegram in JSON using Pyrogram Style.
@@ -97,7 +104,7 @@ async def help_cb_handlerj1(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
         disable_web_page_preview=True,
     )
-@Bot.on_message(filters.command("help2") & filters.private)
+@Bot.on_message(filters.command("help") & filters.private)
 async def hp_hagndlery(bot, message):
     await message.reply_text(
         text=TEXT_GE.format(message.from_user.first_name),
@@ -457,6 +464,7 @@ async def abvbaliv(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_bal),
         disable_web_page_preview=True,
     )
+
 
 #============FEDERATION==============
 text_fed = """
