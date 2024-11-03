@@ -5,7 +5,7 @@ from pyrogram import filters
 
 from misskaty import app
 from misskaty.ultis_ex.decorators.permissions import adminsOnly
-from wbb.utils.dbfunctions import (
+from misskaty.ultis_ex.database.dbfunctions import (
     antiservice_off,
     antiservice_on,
     is_antiservice_on,
