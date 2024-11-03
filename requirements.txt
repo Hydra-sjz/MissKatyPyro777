@@ -67,3 +67,4 @@ html5lib
 jikanpy
 nekos.py
 lexica-api
+tracemoepy
