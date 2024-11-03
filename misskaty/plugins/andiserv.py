@@ -5,11 +5,7 @@ from pyrogram import filters
 
 from misskaty import app
 from misskaty.ultis_ex.decorators.permissions import adminsOnly
-from misskaty.ultis_ex.database.dbfunctions import (
-    antiservice_off,
-    antiservice_on,
-    is_antiservice_on,
-)
+from misskaty.ultis_ex.database.dbfunctions import antiservice_off, antiservice_on, is_antiservice_on
 
 
 @app.on_message(filters.command("antiservice") & ~filters.private)
