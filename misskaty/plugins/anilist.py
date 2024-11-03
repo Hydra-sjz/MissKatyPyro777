@@ -93,7 +93,7 @@ no_pic = [
 
 
 @anibot.on_message(
-    filters.command(["anime", f"anime{BOT_NAME}"], prefixes=trg)
+    filters.command(["anime2", f"anime2{BOT_NAME}"], prefixes=trg)
 )
 @control_user
 async def anime_cmd(client: Client, message: Message, mdata: dict):
