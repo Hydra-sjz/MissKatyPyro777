@@ -28,7 +28,7 @@ from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
 from misskaty import app
-from misskaty import SUDO as SUDOERS
+from misskaty.vars import SUDO as SUDOERS
 #from wbb.modules.admin import member_permissions
 
 
