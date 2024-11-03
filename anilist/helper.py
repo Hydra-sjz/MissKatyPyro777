@@ -20,11 +20,10 @@ from pyrogram.types import (
 
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from .. import OWNER, DOWN_PATH, anibot, LOG_CHANNEL_ID, has_user
-from ..utils.db import get_collection
+from misskaty.vars import OWNER_ID as OWNER, LOG_CHANNEL as LOG_CHANNEL_ID
+from anilist.db import get_collection
+from misskaty import app as anibot, user as has_user, DOWN_PATH
 
-if has_user:
-    from .. import user
 
 AUTH_USERS = get_collection("AUTH_USERS")
 IGNORE = get_collection("IGNORED_USERS")
