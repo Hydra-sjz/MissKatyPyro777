@@ -1,6 +1,6 @@
 {
     "sudo_join_msg": "Wow, my cool owner just joined the group!",
-    "log_bot_added": "#New Group\nGroup = {ttl}(<code>{cid}</code>)\nNumber of Members = <code>{tot}</code>\nAdded by - {r_j}",
+    "log_bot_added": "#NEW_GROUP\n\n👥 **Group**: {ttl}\n**Group Username**: @{grl}\n♒ **Group ID**: (<code>{cid}</code>)\n🖖**Number of Members**: <code>{tot}</code>\n\n➕**Added by  {r_j}**",
     "support_btn": "Support",
     "help_btn": "ℹ️ Help",
     "update_btn": "📢 Updates",
