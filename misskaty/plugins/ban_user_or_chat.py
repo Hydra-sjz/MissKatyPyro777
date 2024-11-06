@@ -36,7 +36,7 @@ async def grp_bd(self: Client, ctx: Message, strings):
         await self.send_message(
             LOG_CHANNEL,
             strings("log_bot_added", context="grup_tools").format(
-                ttl=ctx.chat.title, cid=ctx.chat.id, tot=total, r_j=r_j
+                ttl=ctx.chat.title, grl=ctx.chat.user_name, cid=ctx.chat.id, tot=total, r_j=r_j
             ),
         )
         await db.add_chat(ctx.chat.id, ctx.chat.title)
