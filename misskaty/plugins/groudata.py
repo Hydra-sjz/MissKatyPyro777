@@ -6,7 +6,7 @@ from pyrogram import enums
 
 from misskaty import app
 
-@app.on_message(~filters.private & filters.command(["groupdata"]), group=2)
+@app.on_message(~filters.private & filters.command(["gdata"]), group=2)
 async def instatus(app, message):
     start_time = time.perf_counter()
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
@@ -15,7 +15,7 @@ async def instatus(app, message):
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-        sent_message = await message.reply_text("GETTING INFORMATION...")
+        sent_message = await message.reply_text("Getting Information...")
         deleted_acc = 0
         premium_acc = 0
         banned = 0
@@ -36,17 +36,16 @@ async def instatus(app, message):
         end_time = time.perf_counter()
         timelog = "{:.2f}".format(end_time - start_time)
         await sent_message.edit(f"""
-**➖➖➖➖➖➖➖
-➲ NAME : {message.chat.title} ✅
-➲ MEMBERS : [ {count} ]🫂
+♑ **Chat Name** : `{message.chat.title}` ✅
+👥 **Members** : `[ {count} ]`🫂
 ➖➖➖➖➖➖➖
-➲ BOTS : {bot}💡
-➲ ZOMBIES : {deleted_acc}🧟
-➲ BANNED : {banned}🚫
-➲ PREMIUM USERS : {premium_acc}🎁
-➖➖➖➖➖➖➖
-TIME TAKEN : {timelog} S**""")
+🤖 **Bots** : `[{bot}]`
+🧟 **Zombies** : `[{deleted_acc}]`
+🚫 **Banned** : `[{banned}]`
+🌟 **Premium Users** : `[{premium_acc}]`🎁
+
+__Time Taken : {timelog}s__""")
     else:
-        sent_message = await message.reply_text("ONLY ADMINS CAN USE THIS !")
+        sent_message = await message.reply_text("Only Admins Can Use This !")
         await sleep(5)
         await sent_message.delete()
