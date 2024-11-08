@@ -99,7 +99,7 @@ async def privacy_policy(self: Client, ctx: Message, strings):
     await ctx.reply_msg(strings("privacy_policy").format(botname=self.me.first_name), message_effect_id=5104841245755180586 if ctx.chat.type.value == "private" else None)
 
 
-@app.on_message(filters.command(["stars"], COMMAND_HANDLER))
+@app.on_message(filters.command(["stahhrs"], COMMAND_HANDLER))
 async def star_donation(self: Client, ctx: Message):
     amount = ctx.command[1] if len(ctx.command) == 2 and ctx.command[1].isdigit() else 5
     await self.send_invoice(
@@ -126,7 +126,7 @@ async def successful_payment_handler(_: Client, message: Message):
         )
 
 
-@app.on_message(filters.command(["refund_star"], COMMAND_HANDLER))
+@app.on_message(filters.command(["refund_snntar"], COMMAND_HANDLER))
 async def refund_star_payment(client: Client, message: Message):
     if len(message.command) == 1:
         return await message.reply_msg(
@@ -184,7 +184,7 @@ async def log_file(_, ctx: Message, strings):
     else:
         await msg.edit_msg("Unsupported parameter")
 
-@app.on_message(filters.command(["payment"], COMMAND_HANDLER))
+@app.on_message(filters.command(["payhhment"], COMMAND_HANDLER))
 async def payment(client: Client, message: Message):
     api_url = 'https://api.paydisini.co.id/v1/'
     unique_id = f"VIP-{secrets.token_hex(5)}"
@@ -223,7 +223,7 @@ async def payment(client: Client, message: Message):
         msg = await message.reply_photo(qr_photo, caption=capt+payment_guide, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Payment Web", web_app=WebAppInfo(url=res["data"]["checkout_url_v2"]))]]), quote=True)
     await autopay_update(msg.id, res["data"]["note"], id_, res['data']['amount'], res['data']['status'], res['data']['unique_code'], res['data']['created_at'])
 
-@app.on_message(filters.command(["donate"], COMMAND_HANDLER))
+@app.on_message(filters.command(["donvuvate"], COMMAND_HANDLER))
 async def donate(self: Client, ctx: Message):
     try:
         await self.send_photo(
