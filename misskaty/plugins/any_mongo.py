@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 dic = {}
 
 @Client.on_message(filters.command("showdb"))
-async def show_db(client, message):
+async def gjshow_db(client, message):
     if dic.get(str(message.from_user.id)) is not None:
         await message.reply_text(
             "Welcome to My Bot! You can start interacting with the bot.", reply_markup=mongo_keyboard(message.from_user.id))
@@ -17,7 +17,7 @@ async def show_db(client, message):
             "use /adddb [mongo uri]")
 
 @Client.on_message(filters.command("adddb"))
-async def add_db(client, message):
+async def gjadd_db(client, message):
     db = message.text.split(" ")[1]
     dic[str(message.from_user.id)] = db
     await message.reply_text("Done!")
