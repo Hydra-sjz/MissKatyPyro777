@@ -7,7 +7,7 @@ from telethon import events
 from misskaty import tle as telethn
 ORIGINAL_EVENT_LOOP = True 
 OWO = [
-    "Emilia is always here for my Senpai >w<",
+    "Gojo is always here for my Senpai >w<",
     "You called for me? :p",
     "*bites*",
     "nya~ i am here!!!",
