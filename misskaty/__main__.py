@@ -37,9 +37,6 @@ LOGGER = getLogger("MissKaty")
 
 
 # Run Bot
-async def start_anibot():
-    await abot.start()
-
 async def start_bot():
     for module in ALL_MODULES:
         imported_module = importlib.import_module(f"misskaty.plugins.{module}")
