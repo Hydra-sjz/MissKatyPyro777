@@ -11,7 +11,7 @@ from misskaty.ultis_ex.chat_status import isBotCan, isUserAdmin
 from misskaty.ultis_ex.time_checker import *
 
 #from Emilia.pyro.connection.connection import connection
-#from Emilia.utils.decorators import *
+from misskaty.ultis_ex.wmilia_m.decorators import *
 
 DB = db.antiflood_chats
 collection = db.flood_msgs
@@ -40,7 +40,11 @@ async def check_flood_on(chat_id: int):
         return False
 
 
-
+@usage("/setfloodtimer [count] [duration]")
+@description(
+    "Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable."
+)
+@example("/setfloodtimer 10 10")
 @pgram.on_message(filters.group & filters.command("setfloodtimer"))
 async def setfloodtimer(client, message):
     chat_id = message.chat.id
@@ -126,7 +130,11 @@ async def flood_func(client, message: Message):
         )
 
 
-
+@usage("/antiflood [on/off/limit]")
+@description(
+    "By turning it on inside a group chat, bot will automatically mute users that send a specific amount of messages to avoid spam. Default limit is 10."
+)
+@example("/antiflood 15")
 @pgram.on_message(filters.group & filters.command(["antiflood", "setflood"]))
 async def antiflood_func(client, message: Message):
     chat_id = message.chat.id
@@ -197,7 +205,11 @@ async def antiflood_func(client, message: Message):
 
 # /floodmode <action type>: Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
 
-
+@usage("/floodmode [action type]")
+@description(
+    "Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute"
+)
+@example("/floodmode ban")
 @pgram.on_message(filters.group & filters.command(["floodmode", "setfloodmode"]))
 async def floodmode(client, message):
     chat_id = message.chat.id
@@ -268,7 +280,9 @@ async def floodmode(client, message):
 
 # clearflood <yes/no/on/off>: Whether to delete the messages that
 # triggered the flood.
-
+@usage("/clearflood [yes/no/on/off]")
+@description("Whether to delete the messages that triggered the flood.")
+@example("/clearflood yes")
 @pgram.on_message(filters.group & filters.command("clearflood"))
 async def clearflood(client, message):
     chat_id = message.chat.id
