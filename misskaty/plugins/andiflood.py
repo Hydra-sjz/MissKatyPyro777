@@ -1,4 +1,4 @@
-# DONE: Antiflood
+tu# DONE: Antiflood
 
 from asyncio import sleep
 from datetime import datetime, timedelta
@@ -41,7 +41,7 @@ async def check_flood_on(chat_id: int):
 
 
 
-@pgram.on_message(filters.group & filter.command("setfloodtimer"))
+@pgram.on_message(filters.group & filters.command("setfloodtimer"))
 async def setfloodtimer(client, message):
     chat_id = message.chat.id
     if (
