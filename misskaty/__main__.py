@@ -21,7 +21,6 @@ from misskaty import (
     BOT_USERNAME,
     HELPABLE,
     UBOT_NAME,
-    abot,
     app,
     get_event_loop,
     scheduler,
