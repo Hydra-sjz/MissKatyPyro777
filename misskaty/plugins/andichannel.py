@@ -7,7 +7,7 @@ from misskaty.ultis_ex.wmilia_m.chat_status import check_user
 from misskaty.ultis_ex.wmilia_m.decorators import *
 from misskaty.plugins.cleanlinked_checker import GetLinkedChannel
 
-# db
+# dbj
 antichanneldb = db.antichannel
 
 
