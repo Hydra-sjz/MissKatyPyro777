@@ -7,8 +7,8 @@ from pyrogram.types import ChatPermissions, Message
 
 import misskaty.strings as strings
 from misskaty import db, app as pgram
-from misskaty.ultis_ex.chat_status import isBotCan, isUserAdmin
-from misskaty.ultis_ex.time_checker import *
+from misskaty.ultis_ex.wmilia_m.chat_status import isBotCan, isUserAdmin
+from misskaty.ultis_ex.wmilia_m.time_checker import *
 
 #from Emilia.pyro.connection.connection import connection
 from misskaty.ultis_ex.wmilia_m.decorators import *
