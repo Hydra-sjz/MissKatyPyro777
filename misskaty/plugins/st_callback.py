@@ -163,7 +163,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("☣️AntiFlood", callback_data="adf"),
-        InlineKeyboardButton(".", callback_data="b"),
+        InlineKeyboardButton("🚧Anti-Channel", callback_data="adc"),
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
@@ -780,28 +780,27 @@ async def abvivpn(bot, query):
 
 text_adf = """
 **Antiflood**
-
 <blockquote>You know how sometimes, people join, send 100 messages, and ruin your chat? With antiflood, that happens no more!
 Antiflood allows you to take action on users that send more than x messages in a row. Actions are: ban/mute/kick/tban/tmute.</blockquote>
 
 **Admin commands:**
-• /flood: Get the current antiflood settings
-• /setflood : Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
-• /setfloodtimer  : Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
-• /setfloodmode : Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
-• /clearflood : Whether to delete the messages that triggered the flood.
+/flood: Get the current antiflood settings
+/setflood : Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
+/setfloodtimer  : Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
+/setfloodmode : Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
+/clearflood : Whether to delete the messages that triggered the flood.
 
-<blockquote>**Examples:**
-• Set antiflood to trigger after 7 messages:
--> /setflood 7
-• Disable antiflood:
--> /setflood off
-• Set timed antiflood to trigger after 10 messages in 30 seconds:
--> /setfloodtimer 10 30s
-• Set the antiflood action to mute:
--> /setfloodmode mute
-• Set the antiflood action to a 3 day ban:
--> /setfloodmode tban 3d</blockquote>
+**Examples:**
+Set antiflood to trigger after 7 messages:
+- /setflood 7
+Disable antiflood:
+- /setflood off
+Set timed antiflood to trigger after 10 messages in 30 seconds:
+- /setfloodtimer 10 30s
+Set the antiflood action to mute:
+- /setfloodmode mute
+Set the antiflood action to a 3 day ban:
+- /setfloodmode tban 3d
 """
 buttons_adf = [
     [
@@ -816,6 +815,35 @@ async def abfiv(bot, query):
     await query.message.edit(
         text=text_adf,
         reply_markup=InlineKeyboardMarkup(buttons_adf),
+        disable_web_page_preview=True,
+    )
+
+text_adc = """
+**Anti-Channel**
+
+<blockquote>Anti Channel Mode is a mode to prevent unwanted channel actions.</blockquote>
+
+Admin Commands:
+• /antichannelmode : Enables Anti Channel Mode to ban users who chat using channels.
+• /antichannelmode : Disables Anti Channel Mode.
+• /antichannelpin : Don't let telegram auto-pin linked channels. If no arguments are given, shows current setting.
+• /cleanlinked : Delete messages sent by the linked channel.
+
+<blockquote>Note: When using antichannel pins, make sure to use the /unpin command, instead of doing it manually. Otherwise, the old message will get re-pinned when the channel sends any messages.</blockquote>
+"""
+buttons_adc = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^adc$"))
+async def abcviv(bot, query):
+    await query.message.edit(
+        text=text_adc,
+        reply_markup=InlineKeyboardMarkup(buttons_adc),
         disable_web_page_preview=True,
     )
 
