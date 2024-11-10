@@ -1,4 +1,4 @@
-# DONE: Antiflood
+# DONE: Antifhlood
 
 from asyncio import sleep
 from datetime import datetime, timedelta
