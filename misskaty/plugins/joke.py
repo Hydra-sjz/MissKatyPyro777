@@ -5,7 +5,7 @@ from misskaty import app
 from misskaty.ultis_ex.wmilia_m.decorators import *
 
 
-@app.on_message(filters.command(["joke", "jokes", "funny"], disable=True))
+@app.on_message(filters.command(["joke", "jokes", "funny"]))
 @rate_limit(10, 60)
 async def joke(client, message):
     try:
