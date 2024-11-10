@@ -24,7 +24,7 @@ async def isOn(chat_id: int) -> bool:
 @usage("/cleanblue [on/off]")
 @example("/cleanblue on")
 @description("This will delete incoming blue texts from the chat (i.e, bot commands)")
-@app.on_message(custom_filter.command(commands="cleanblue") & filters.group)
+@app.on_message(filters.command(commands="cleanblue") & filters.group)
 @logging
 async def _cleanblue(_, message):
     if not await check_user(message, privileges="can_delete_messages"):
