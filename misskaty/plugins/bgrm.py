@@ -17,8 +17,7 @@ from pyrogram.enums import ChatAction, ParseMode
 
 
 from misskaty import app
-from lexica import AsyncClient
-
+from async_pymongo import AsyncClient
 
 
 async def UpscaleImages(image: bytes) -> str:
