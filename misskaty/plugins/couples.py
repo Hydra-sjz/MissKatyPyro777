@@ -3,7 +3,7 @@
 import random
 from datetime import datetime, timedelta
 
-from pyrogram import Client, enums
+from pyrogram import Client, enums, filters
 
 from misskaty import db, app as pgram
 
