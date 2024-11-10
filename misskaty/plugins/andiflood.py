@@ -42,7 +42,6 @@ async def check_flood_on(chat_id: int):
 
 
 @Client.on_message(filters.group & filter.command("setfloodtimer"))
-@logging
 async def setfloodtimer(client, message):
     chat_id = message.chat.id
     if (
@@ -128,8 +127,7 @@ async def flood_func(client, message: Message):
 
 
 
-@Client.on_message(filters.group& filters.command(["antiflood", "setflood"]))
-@logging
+@Client.on_message(filters.group & filters.command(["antiflood", "setflood"]))
 async def antiflood_func(client, message: Message):
     chat_id = message.chat.id
 
@@ -201,7 +199,6 @@ async def antiflood_func(client, message: Message):
 
 
 @Client.on_message(filters.group & filters.command(["floodmode", "setfloodmode"]))
-@logging
 async def floodmode(client, message):
     chat_id = message.chat.id
 
@@ -273,7 +270,6 @@ async def floodmode(client, message):
 # triggered the flood.
 
 @Client.on_message(filters.group & filters.command("clearflood"))
-@logging
 async def clearflood(client, message):
     chat_id = message.chat.id
 
