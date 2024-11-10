@@ -162,6 +162,10 @@ BUTTONS_GP = [
         InlineKeyboardButton("🎂Birthday", callback_data="brt"),
     ],
     [
+        InlineKeyboardButton("☣️AntiFlood", callback_data="adf"),
+        InlineKeyboardButton(".", callback_data="b"),
+    ],
+    [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
@@ -774,6 +778,46 @@ async def abvivpn(bot, query):
         disable_web_page_preview=True,
     )
 
+text_adf = """
+**Antiflood**
+
+<blockquote>You know how sometimes, people join, send 100 messages, and ruin your chat? With antiflood, that happens no more!
+Antiflood allows you to take action on users that send more than x messages in a row. Actions are: ban/mute/kick/tban/tmute.</blockquote>
+
+**Admin commands:**
+• /flood: Get the current antiflood settings
+• /setflood : Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
+• /setfloodtimer  : Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
+• /setfloodmode : Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
+• /clearflood : Whether to delete the messages that triggered the flood.
+
+<blockquote>**Examples:**
+• Set antiflood to trigger after 7 messages:
+-> /setflood 7
+• Disable antiflood:
+-> /setflood off
+• Set timed antiflood to trigger after 10 messages in 30 seconds:
+-> /setfloodtimer 10 30s
+• Set the antiflood action to mute:
+-> /setfloodmode mute
+• Set the antiflood action to a 3 day ban:
+-> /setfloodmode tban 3d</blockquote>
+"""
+buttons_adf = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^adf$"))
+async def abfiv(bot, query):
+    await query.message.edit(
+        text=text_adf,
+        reply_markup=InlineKeyboardMarkup(buttons_adf),
+        disable_web_page_preview=True,
+    )
 
 #===================
 
