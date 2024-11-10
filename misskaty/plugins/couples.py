@@ -60,7 +60,7 @@ async def get_couples(chat_id):
     return await collection.find_one({"chat_id": chat_id})
 
 
-@pgram.on_message(filters.command(("couples"), disable=True))
+@pgram.on_message(filters.command(("couples")))
 async def choose_couples_command(client, message):
     chat_id = message.chat.id
 
