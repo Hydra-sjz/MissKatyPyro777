@@ -166,6 +166,9 @@ BUTTONS_GP = [
         InlineKeyboardButton("🚧Anti-Channel", callback_data="adc"),
     ],
     [
+        InlineKeyboardButton("🧹Clean-CMD", callback_data="ccd"),
+    ],
+    [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close"),
         InlineKeyboardButton("🏠", callback_data="home"),
@@ -178,7 +181,29 @@ async def abvigjdv(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         disable_web_page_preview=True,
 )
-    
+
+
+text_ccd = """
+**Clean Command**
+
+/cleanblue - Enable clean Blue texts in group chats.
+"""
+buttons_ccd = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^ccd$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_ccd,
+        reply_markup=InlineKeyboardMarkup(buttons_ccd),
+        disable_web_page_preview=True,
+    )
+
 text_admi = """
 **Here is the help for Admin**
 
