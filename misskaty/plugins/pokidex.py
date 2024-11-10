@@ -8,7 +8,7 @@ from misskaty.ultis_ex.wmilia_m.decorators import *
 @description(
     "This works like a real pokedex and it will send you information regarding a specific pokemon."
 )
-@app.on_message(filters.command(commands="pokedex", disable=True))
+@app.on_message(filters.command(commands="pokedex"))
 async def PokeDex(_, message):
     if len(message.text.split()) != 2:
         await usage_string(message, PokeDex)
