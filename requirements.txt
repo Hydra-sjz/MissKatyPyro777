@@ -47,7 +47,7 @@ lxml_html_clean
 #=====api===
 fastapi
 PrivateBinAPI
-
+lexica-api
 #==========
 uvicorn
 python-multipart
