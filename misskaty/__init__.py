@@ -66,12 +66,17 @@ uvloop.install()
 faulthandler_enable()
 from misskaty.core import misskaty_patch
 
+#================≠=============
 #Telethon bot
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
+print("Telethon os started...👽👽")
 
+#==≠=====For-seperat-modul======
+plugins = dict(root="misskaty/anime")
+abot = Client("anibot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, sleep_threshold=0, plugins=plugins)
 # Pyrogram Bot Client
 app = Client(
-    "MissKatyBot",
+    "GojoSaturoBot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
@@ -82,7 +87,7 @@ app = Client(
     max_concurrent_transmissions=4,
 )
 app.db = AsyncClient(DATABASE_URI)
-app.log = getLogger("MissKaty")
+app.log = getLogger("Gojo Saturo is Started...💀")
 
 # Pyrogram UserBot Client
 user = Client(
@@ -90,7 +95,7 @@ user = Client(
     session_string=USER_SESSION,
     mongodb=dict(connection=AsyncClient(DATABASE_URI), remove_peers=False),
     sleep_threshold=180,
-    app_version="MissKaty Ubot",
+    app_version="GoJo Ubot",
 )
 
 jobstores = {
