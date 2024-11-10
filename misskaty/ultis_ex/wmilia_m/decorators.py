@@ -13,11 +13,13 @@ from pyrogram.types import (
 )
 from telethon import errors
 
-from Emilia import BOT_ID, LOGGER, db, pgram, telethn
-from Emilia.helper.chat_status import anon_admin_checker
-from Emilia.helper.get_data import GetChat
-from Emilia.mongo.connection_mongo import GetConnectedChat
-from Emilia.strings import error_messages
+from misskaty import BOT_ID, LOGGER, db, app as pgram, tle as telethn
+from misskaty.ultis_ex.wmilia_m.chat_status import anon_admin_checker
+from misskaty.ultis_ex.wmilia_m.get_data import GetChat
+
+from misskaty.ultis_ex.wmilia_m.connection_mongo import GetConnectedChat
+
+from misskaty.strings import error_messages
 
 
 async def usage_string(message, func) -> None:
