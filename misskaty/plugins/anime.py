@@ -6,7 +6,7 @@ import aiohttp
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import abot
+from misskaty import app as abot
 from misskaty.helper.human_read import get_readable_time
 from misskaty.vars import COMMAND_HANDLER
 
