@@ -77,10 +77,7 @@ db = mongo["Gojo"]
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
 print("TELETHON IS STARTED...👽👽")
 
-#==≠=====For-seperat-modul======
-plugins = dict(root="misskaty/anime")
-abot = Client("anibot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, sleep_threshold=0, plugins=plugins)
-print("PYTHON 2 IS STARTED..🤖🤖🫂")
+
 # Pyrogram Bot Client
 app = Client(
     "GojoSaturoBot",
