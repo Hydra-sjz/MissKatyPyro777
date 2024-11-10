@@ -21,6 +21,7 @@ from misskaty import (
     BOT_USERNAME,
     HELPABLE,
     UBOT_NAME,
+    abot,
     app,
     get_event_loop,
     scheduler,
@@ -34,7 +35,11 @@ from utils import auto_clean
 LOGGER = getLogger("MissKaty")
 
 
+
 # Run Bot
+async def start_anibot():
+    await abot.start()
+
 async def start_bot():
     for module in ALL_MODULES:
         imported_module = importlib.import_module(f"misskaty.plugins.{module}")
@@ -52,7 +57,7 @@ async def start_bot():
             bot_modules += "|{:<15}".format(i)
         j += 1
     LOGGER.info("+===============================================================+")
-    LOGGER.info("|                        MissKatyPyro                           |")
+    LOGGER.info("|                        GoJo-Sathro-Bot                        |")
     LOGGER.info("+===============+===============+===============+===============+")
     LOGGER.info(bot_modules)
     LOGGER.info("+===============+===============+===============+===============+")
@@ -88,6 +93,7 @@ async def start_bot():
         )
     asyncio.create_task(auto_clean())
     await idle()
+
 
 
 if __name__ == "__main__":
