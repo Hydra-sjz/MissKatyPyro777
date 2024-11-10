@@ -68,3 +68,5 @@ jikanpy
 nekos.py
 lexica-api
 tracemoepy
+emoji
+emojis
