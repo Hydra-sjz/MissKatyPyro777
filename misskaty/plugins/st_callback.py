@@ -868,7 +868,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Bypass", callback_data="byp"),
-        InlineKeyboardButton(".", callback_data="cop"),
+        InlineKeyboardButton("Couples", callback_data="cos"),
         InlineKeyboardButton("SessionGen", callback_data="sng"),
     ],
     [
@@ -1853,18 +1853,12 @@ async def abot_cb_hgugandler(bot, query):
     )
 
 
-text_pay = """
-PʟᴀʏʟɪsᴛHᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pʟᴀʏʟɪsᴛ:
+text_cos = """
+**Couples:**
 
-Pʟᴀʏʟɪsᴛ Fᴇᴀᴛᴜʀᴇ Fᴏʀ ʏᴏᴜ.
-々 /payist » sʜᴏᴡ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ
-々 /addpayist » [sᴏɴɢ ɴᴀᴍᴇ , sᴏɴɢ ʟɪɴᴋ, ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ]
-々 /drpayist » ᴅᴇʟᴇᴛᴇ ᴀɴʏ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ.
-々 /deeteapayist » ᴅᴇʟᴇᴛᴇ ᴀʟʟ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ.
-々 /paypayist » ᴘʟᴀʏ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ᴀᴜᴅɪᴏ.
-々 /vpaypayist  » ᴘʟᴀʏ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ᴠɪᴅᴇᴏ.
+/couples - To Choose Couple Of The Day in group.
 """
-buttons_pay = [
+buttons_cos = [
     [
         InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
@@ -1872,11 +1866,11 @@ buttons_pay = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^pay$"))
+@Bot.on_callback_query(filters.regex("^cos$"))
 async def abot_cb_hanibibbdler(bot, query):
     await query.message.edit(
-        text=text_pay,
-        reply_markup=InlineKeyboardMarkup(buttons_pay),
+        text=text_cos,
+        reply_markup=InlineKeyboardMarkup(buttons_cos),
         disable_web_page_preview=True,
     )
 
