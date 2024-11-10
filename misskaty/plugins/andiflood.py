@@ -41,7 +41,7 @@ async def check_flood_on(chat_id: int):
 
 
 
-@Client.on_message(filters.group & filter.command("setfloodtimer"))
+@pgram.on_message(filters.group & filter.command("setfloodtimer"))
 async def setfloodtimer(client, message):
     chat_id = message.chat.id
     if (
@@ -101,7 +101,7 @@ async def setfloodtimer(client, message):
     return "SET_TIMED_ANTIFLOOD", None, None
 
 
-@Client.on_message(filters.group & filters.command("flood"))
+@pgram.on_message(filters.group & filters.command("flood"))
 async def flood_func(client, message: Message):
     chat_id = message.chat.id
 
@@ -127,7 +127,7 @@ async def flood_func(client, message: Message):
 
 
 
-@Client.on_message(filters.group & filters.command(["antiflood", "setflood"]))
+@pgram.on_message(filters.group & filters.command(["antiflood", "setflood"]))
 async def antiflood_func(client, message: Message):
     chat_id = message.chat.id
 
@@ -198,7 +198,7 @@ async def antiflood_func(client, message: Message):
 # /floodmode <action type>: Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
 
 
-@Client.on_message(filters.group & filters.command(["floodmode", "setfloodmode"]))
+@pgram.on_message(filters.group & filters.command(["floodmode", "setfloodmode"]))
 async def floodmode(client, message):
     chat_id = message.chat.id
 
@@ -269,7 +269,7 @@ async def floodmode(client, message):
 # clearflood <yes/no/on/off>: Whether to delete the messages that
 # triggered the flood.
 
-@Client.on_message(filters.group & filters.command("clearflood"))
+@pgram.on_message(filters.group & filters.command("clearflood"))
 async def clearflood(client, message):
     chat_id = message.chat.id
 
@@ -452,7 +452,7 @@ async def handle_flood(message, user_id: int, chat_id: int):
 
 approve_collection = db["approve_d"]
 
-@Client.on_message(
+@pgram.on_message(
     filters.group
     & ~filters.new_chat_members
     & ~filters.left_chat_member
