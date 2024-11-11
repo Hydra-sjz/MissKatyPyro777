@@ -62,6 +62,7 @@ BUTTONS_ST = [
         ],[
         InlineKeyboardButton("⚙️ Help", callback_data="set_ge"),
         InlineKeyboardButton("📊 Status", callback_data="stats_callback"),
+        InlineKeyboardButton("🤖 About", callback_data="abt"),
         ],[
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
@@ -74,6 +75,39 @@ async def st_cb_handler(bot, query):
     await query.message.edit(
         text=TEXT_ST.format(query.from_user.first_name, BOT_NAME),
         reply_markup=InlineKeyboardMarkup(BUTTONS_ST),
+        disable_web_page_preview=True,
+    )
+
+text_abt = """
+**My About ;)**
+ 
+<blockquote>🤖 My Name: {}
+🆔 My ID: {}
+©️ My Username: {}</blockquote>
+
+<blockquote>📝 Language : Python3
+• Python version : 3.12.11
+📚 Library : Pyrogram
+• Pyrogram version : 2.0.73
+📡 Hosted On : Digital Ocean 🌊
+📋 License : MIT</blockquote>
+
+<blockquote>Hey {}, my name is ⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪.
+I'm a group management bot made to help you automate your group as much as possible by welcoming users, warning bad behaviour, and banning if necessary.
+Use the /privacy command to view the privacy policy, and interact with your data.</blockquote>
+"""
+button_abt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group")
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^home$"))
+async def st_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_abt.format(BOT_NAME, BOT_ID, BOT_USERNAME, query.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(button_abt),
         disable_web_page_preview=True,
     )
 
@@ -113,12 +147,17 @@ async def hp_hagndlery(bot, query):
 
 #================GROUP_CMD=================
 TEXT_GP = """
-Hey 👋{}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+**Group-CMD**
+<blockquote>Hey {}, My name is ⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪. I am a group management bot, here to help you get around and keep the order in your groups!
+I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.</blockquote>
 
-<blockquote>Send command /privacy if you want know data collected by this bot.
-General command are:
+<blockquote>
+**Helpful commands:**
  - /start: Start the bot
- - /help: Give this message</blockquote>
+ - /help: Give this message
+ - /privacy if you want know data collected by this bot.</blockquote>
+
+ All commands can be used with the following: / !
 """
 BUTTONS_GP = [
     [
@@ -126,47 +165,43 @@ BUTTONS_GP = [
         InlineKeyboardButton("💤Afk", callback_data="afk"),
     ],
     [
-        InlineKeyboardButton("🚯Bans", callback_data="ban"),
-        InlineKeyboardButton("❗Warns", callback_data="war"),
-    ],
-    [
-        InlineKeyboardButton("🚮Purges", callback_data="prg"),
-        InlineKeyboardButton("🧟Ghost", callback_data="gst"),
-    ],
-    [
-        InlineKeyboardButton("🗳️Reports", callback_data="rpt"),
-        InlineKeyboardButton("📣Mention all", callback_data="mall"),
-        
-    ],
-    [
-        InlineKeyboardButton("🚪Auto Approve", callback_data="aap"),
-        InlineKeyboardButton("⚖️Blacklist", callback_data="bal"),
-        
-    ],
-    [
-        InlineKeyboardButton("🚨Federation", callback_data="fed"),
-        InlineKeyboardButton("📄Filters", callback_data="filter"),
-        
-    ],
-    [
-        InlineKeyboardButton("🔐Locks", callback_data="lok"),
-        InlineKeyboardButton("📝Notes", callback_data="not"),
-        
-    ],
-    [
-        InlineKeyboardButton("🌃Night Mod", callback_data="nm"),
-        InlineKeyboardButton("🪬SangMata", callback_data="sm"),
-    ],
-    [
-        InlineKeyboardButton("📌Pin", callback_data="pn"),
-        InlineKeyboardButton("🎂Birthday", callback_data="brt"),
-    ],
-    [
         InlineKeyboardButton("☣️AntiFlood", callback_data="adf"),
         InlineKeyboardButton("🚧Anti-Channel", callback_data="adc"),
     ],
     [
+        InlineKeyboardButton("🚪Auto Approve", callback_data="aap"),
+        InlineKeyboardButton("🚯Bans", callback_data="ban"),
+    ],
+    [
+        InlineKeyboardButton("⚖️Blacklist", callback_data="bal"),
+        InlineKeyboardButton("🎂Birthday", callback_data="brt"),
+    ],
+    [
         InlineKeyboardButton("🧹Clean-CMD", callback_data="ccd"),
+        InlineKeyboardButton("🚨Federation", callback_data="fed"),
+    ],
+    [
+        InlineKeyboardButton("📄Filters", callback_data="filter"),
+        InlineKeyboardButton("🧟Ghost", callback_data="gst"),
+    ],
+    [
+        InlineKeyboardButton("🔐Locks", callback_data="lok"),
+        InlineKeyboardButton("📣Mention all", callback_data="mall"),
+    ],
+    [
+        InlineKeyboardButton("🌃Night Mod", callback_data="nm"),
+        InlineKeyboardButton("📝Notes", callback_data="not"),
+    ],
+    [
+        InlineKeyboardButton("🚮Purges", callback_data="prg"),
+        InlineKeyboardButton("📌Pin", callback_data="pn"),
+    ],
+    [
+        InlineKeyboardButton("🗳️Reports", callback_data="rpt"),
+        InlineKeyboardButton("🪬SangMata", callback_data="sm"),
+    ],
+    [
+        InlineKeyboardButton("❗Warns", callback_data="war"),
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
@@ -853,10 +888,11 @@ async def abcviv(bot, query):
 #===================
 
 TEXT_HP = """
-<blockquote>Hey 👋 {}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
+**Extra-CMD**
 
+<blockquote>Hey 👋 {}, 
 Send command /privacy if you want know data collected by this bot.
-Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /</blockquote>
+All Commands can be used with: /</blockquote>
 """
 BUTTONS_HP = [
     [
