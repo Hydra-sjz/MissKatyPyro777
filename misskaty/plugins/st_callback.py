@@ -117,7 +117,7 @@ async def close_cb_callbk(client: Bot, callback: CallbackQuery):
 
 # =======================f=======MAIN_HELP_CMD====================
 TEXT_GE = """
-Hey {} 👋
+Hey {} [👋](https://envs.sh/Zhl.jpg)
 <blockquote>Click on the Buttons below for more information.</blockquote>
 """
 BUTTONS_GE = [
