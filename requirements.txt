@@ -47,6 +47,7 @@ lxml_html_clean
 #=====api===
 fastapi
 PrivateBinAPI
+nekos.py
 lexica-api
 #==========
 uvicorn
@@ -65,7 +66,6 @@ lxml
 html5lib
 
 jikanpy
-nekos.py
 lexica-api
 tracemoepy
 emoji
