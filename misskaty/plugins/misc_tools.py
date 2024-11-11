@@ -448,7 +448,7 @@ async def tostick(client, message):
         await message.reply_text(str(e))
 
 
-@app.on_message(filters.command(["id"], COMMAND_HANDLER))
+@app.on_message(filters.command(["id2"], COMMAND_HANDLER))
 async def showid(_, message):
     chat_type = message.chat.type.value
     if chat_type == "private":
