@@ -931,7 +931,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Sticker", callback_data="str"),
         InlineKeyboardButton("Paste", callback_data="pst"),
-        InlineKeyboardButton(".", callback_data="src"),
+        InlineKeyboardButton("SFW", callback_data="sfw"),
     ],
     [
         InlineKeyboardButton("WebScraper", callback_data="web"),
@@ -957,6 +957,72 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_adv = """
+**SFW**
+
+This module is safe for work (for real!)
+
+<blockquote>**Commands:**
+• /neko: Sends Random SFW Neko source Images.
+• /ngif: Sends Random Neko GIFs.
+• /tickle: Sends Random Tickle GIFs.
+• /feed: Sends Random Feeding GIFs.
+• /gasm: Sends Random Orgasm Stickers.
+• /avatar: Sends Random Avatar Stickers.
+• /waifu: Sends Random Waifu Stickers.
+• /kiss: Sends Random Kissing GIFs.
+• /cuddle: Sends Random Cuddle GIFs.
+• /foxgirl: Sends Random FoxGirl source Images.
+• /smug: Sends Random Smug GIFs.
+• /gecg: IDK
+• /slap: Sends Random Slap GIFs.</blockquote>
+
+<blockquote>**Some more SFW commands:**
+• /shinobu
+• /hug
+• /megumin
+• /bully
+• /cry
+• /awoo
+• /woof
+• /lick
+• /pat
+• /bonk
+• /yeet
+• /blush
+• /smile
+• /wave
+• /highfive
+• /handhold
+• /nom
+• /bite
+• /glomp
+• /slapgif
+• /kill
+• /kicks
+• /happy
+• /wink
+• /poke
+• /dance
+• /cringe
+• /wallpaper
+• /goose</blockquote>
+"""
+buttons_adv = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^sfw$"))
+async def abvsfiv(bot, query):
+    await query.message.edit(
+        text=text_adv,
+        reply_markup=InlineKeyboardMarkup(buttons_adv),
+        disable_web_page_preview=True,
+    )
 
 text_act = """
 **Quiz**
