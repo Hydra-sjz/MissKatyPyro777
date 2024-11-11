@@ -1,7 +1,7 @@
 from pyrogram import Client
 from pyrogram.enums import MessageEntityType
 
-from misskaty import LOGGER, db app
+from misskaty import LOGGER, db, app
 
 user_ = db.users
 
