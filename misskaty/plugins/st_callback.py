@@ -5,7 +5,6 @@ from misskaty import app as Bot, BOT_USERNAME, BOT_NAME
 from misskaty.vars import SUDO as SUDO_USERS
 
 #============SUDO===≠===
-#=================
 SUDO_TEXT = """
 Hi there sudo user👮‍♂️
 Here is the help for DevCommand:
@@ -67,7 +66,7 @@ BUTTONS_ST = [
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}")],
+    [InlineKeyboardButton("❌", callback_data="close_cb")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -102,8 +101,7 @@ button_abt = [
     ]
 ]
 
-
-@Bot.on_callback_query(filters.regex("^home$"))
+@Bot.on_callback_query(filters.regex("^abt$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
         text=text_abt.format(BOT_NAME, BOT_ID, BOT_USERNAME, query.from_user.first_name),
@@ -111,6 +109,11 @@ async def st_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+@Bot.on_callback_query(filters.regex('^close_cb$'))
+async def close_cb_callbk(client: Bot, callback: CallbackQuery):
+    await callback.answer()
+    await callback.message.delete()
+    await callback.message.reply_to_message.delete()
 
 # =======================f=======MAIN_HELP_CMD====================
 TEXT_GE = """
@@ -127,7 +130,7 @@ BUTTONS_GE = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -205,7 +208,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -540,7 +543,7 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
@@ -938,7 +941,7 @@ BUTTONS_HP = [
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data="close_cb"),
         InlineKeyboardButton("🏠", callback_data="home"),
         #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
@@ -1680,51 +1683,6 @@ async def abot_cb_handlstver(bot, query):
     )
 
 
-text_mt = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴀᴛʜ:
-
-1. /ᴍᴀᴛʜ [ᴇxᴘʀᴇssɪᴏɴ]
-Dᴇsᴄʀɪᴘᴛɪᴏɴ:
-Cᴀᴄᴜᴀᴛᴇs ᴛʜᴇ ʀᴇsᴜᴛ ᴏғ ᴀ ᴍᴀᴛʜᴇᴍᴀᴛɪᴄᴀ ᴇxᴘʀᴇssɪᴏɴ.
-
-Usᴀɢᴇ:
-/ᴍᴀᴛʜ [ᴇxᴘʀᴇssɪᴏɴ]
-
-Dᴇᴛᴀɪs:
-- Sᴜᴘᴘᴏʀᴛs ʙᴀsɪᴄ ᴀʀɪᴛʜᴍᴇᴛɪᴄ ᴏᴘᴇʀᴀᴛɪᴏɴs: ᴀᴅᴅɪᴛɪᴏɴ (+), sᴜʙᴛʀᴀᴄᴛɪᴏɴ (-), ᴍᴜᴛɪᴘɪᴄᴀᴛɪᴏɴ (*), ᴀɴᴅ ᴅɪᴠɪsɪᴏɴ (/).
-- Rᴇᴛᴜʀɴs ᴛʜᴇ ʀᴇsᴜᴛ ᴏғ ᴛʜᴇ ᴇxᴘʀᴇssɪᴏɴ.
-- Dɪsᴘᴀʏs "Iɴᴠᴀɪᴅ ᴇxᴘʀᴇssɪᴏɴ" ɪғ ᴛʜᴇ ᴇxᴘʀᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀɪᴅ.
-
-Gᴏᴏɢᴇ Sᴇᴀʀᴄʜ Cᴏᴍᴍᴀɴᴅ Hᴇᴘ
-
-1. /sᴘɢ [ǫᴜᴇʀʏ]
-Dᴇsᴄʀɪᴘᴛɪᴏɴ:
-Sᴇᴀʀᴄʜᴇs Gᴏᴏɢᴇ ᴀɴᴅ ᴅɪsᴘᴀʏs sᴇᴀʀᴄʜ ʀᴇsᴜᴛs.
-
-Usᴀɢᴇ:
-/sᴘɢ [ǫᴜᴇʀʏ]
-
-Dᴇᴛᴀɪs:
-- Sᴇᴀʀᴄʜᴇs Gᴏᴏɢᴇ ғᴏʀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ǫᴜᴇʀʏ.
-- Dɪsᴘᴀʏs sᴇᴀʀᴄʜ ʀᴇsᴜᴛs ᴡɪᴛʜ ᴛɪᴛᴇs ᴀɴᴅ ɪɴᴋs.
-- Sᴜᴘᴘᴏʀᴛs ᴘᴀɢɪɴᴀᴛɪᴏɴ ᴡɪᴛʜ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴠɪᴇᴡ ᴍᴏʀᴇ ʀᴇsᴜᴛs.
-"""
-buttons_mt = [
-    [
-        InlineKeyboardButton("⬅️", callback_data="settings"),
-        InlineKeyboardButton("❌", callback_data="close"),
-    ]
-]
-
-
-@Bot.on_callback_query(filters.regex("^mt$"))
-async def abot_cb_handvippler(bot, query):
-    await query.message.edit(
-        text=text_mt,
-        reply_markup=InlineKeyboardMarkup(buttons_mt),
-        disable_web_page_preview=True,
-    )
-
 
 text_mog = """
 **Quotly**
@@ -1750,41 +1708,6 @@ async def abot_cb_hajjvvindler(bot, query):
         disable_web_page_preview=True,
     )
 
-
-text_not = """
-**Here is the help for Notes:**
-
-/notes To Get All The Notes In The Chat.
-
-/save [NOTE_NAME] or /addnote [NOTE_NAME] To Save A Note.
-
-Supported note types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
-
-To change caption of any files use.
-/save [NOTE_NAME] or /addnote [NOTE_NAME] [NEW_CAPTION].
-
-#NOTE_NAME To Get A Note.
-
-/delete [NOTE_NAME] or delnote [NOTE_NAME] To Delete A Note.
-/deleteall To delete all the notes in a chat (permanently).
-"""
-buttons_not = [
-    [
-        InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
-    ]
-]
-
-
-@Bot.on_callback_query(filters.regex("^not$"))
-async def abot_cb_hanbkodler(bot, query):
-    await query.message.edit(
-        text=text_not,
-        reply_markup=InlineKeyboardMarkup(buttons_not),
-        disable_web_page_preview=True,
-    )
-
-
 text_ps = """
 **PyPi**
 
@@ -1806,38 +1729,6 @@ async def abot_cb_handguugler(bot, query):
         disable_web_page_preview=True,
     )
 
-
-text_ply = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Plᴀʏ:
-
-★ ᴘʟᴀʏ , ᴠᴘʟᴀʏ , ᴄᴘʟᴀʏ - Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs
-★ ᴘʟᴀʏғᴏʀᴄᴇ , ᴠᴘʟᴀʏғᴏʀᴄᴇ , ᴄᴘʟᴀʏғᴏʀᴄᴇ - FᴏʀᴄᴇPʟᴀʏ Cᴏᴍᴍᴀɴᴅs
-
-- c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
-- v sᴛᴀɴᴅs ғᴏʀ ᴠɪᴅᴇᴏ ᴘʟᴀʏ.
-- force sᴛᴀɴᴅs ғᴏʀ ғᴏʀᴄᴇ ᴘʟᴀʏ.
-
-々 /play ᴏʀ /vplay ᴏʀ /cplay - Bᴏᴛ ᴡɪʟʟ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʏᴏᴜʀ ɢɪᴠᴇɴ ǫᴜᴇʀʏ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏʀ Sᴛʀᴇᴀᴍ ʟɪᴠᴇ ʟɪɴᴋs ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs.
-
-々 /playforce ᴏʀ /vplayforce ᴏʀ /cplayforce - Fᴏʀᴄᴇ Pʟᴀʏ sᴛᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴛʀᴀᴄᴋ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀɴᴅ sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴛʜᴇ sᴇᴀʀᴄʜᴇᴅ ᴛʀᴀᴄᴋ ɪɴsᴛᴀɴᴛʟʏ ᴡɪᴛʜᴏᴜᴛ ᴅɪsᴛᴜʀʙɪɴɢ/ᴄʟᴇᴀʀɪɴɢ ǫᴜᴇᴜᴇ.
-
-々 /channelplay [Cʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ] ᴏʀ [Dɪsᴀʙʟᴇ] - Cᴏɴɴᴇᴄᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴛʀᴇᴀᴍ ᴍᴜsɪᴄ ᴏɴ ᴄʜᴀɴɴᴇʟ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-"""
-buttons_ply = [
-    [
-        InlineKeyboardButton("⬅️", callback_data="settings"),
-        InlineKeyboardButton("❌", callback_data="close"),
-    ]
-]
-
-
-@Bot.on_callback_query(filters.regex("^ply$"))
-async def abot_cb_haydyriindler(bot, query):
-    await query.message.edit(
-        text=text_ply,
-        reply_markup=InlineKeyboardMarkup(buttons_ply),
-        disable_web_page_preview=True,
-    )
 
 
 text_sg = """
