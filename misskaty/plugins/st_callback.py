@@ -38,8 +38,7 @@ Here is the help for DevCommand:
 """
 BUTTON_SUDO = [
     [
-        InlineKeyboardButton("❮", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
+        InlineKeyboardButton("❮ Back ❮", callback_data="set_ge"),
     ]
 ]
 
@@ -53,21 +52,21 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
         SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
 # =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡</blockquote>
 TEXT_ST = (
-    "👋__Hello there {},__\n\n"
+    "👋😊__Hello there {},__\n\n"
     "<blockquote>Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.</blockquote>\n\n"
     "**__Click /help to find out more about how to use me to me full potential!__**"
 )
 BUTTONS_ST = [
     [
-        InlineKeyboardButton("➕Add Me To Your Group Chats➕", url=f"http://t.me/{BOT_USERNAME}?startgroup=new",),
+        InlineKeyboardButton("➕Add Me To Your Group!", url=f"http://t.me/{BOT_USERNAME}?startgroup=new",),
         ],[
-        InlineKeyboardButton("📚 Commands ", callback_data="set_ge"),
+        InlineKeyboardButton("⚙️ Help", callback_data="set_ge"),
         InlineKeyboardButton("📊 Status", callback_data="stats_callback"),
         ],[
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}")],
+    [InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -86,15 +85,15 @@ Hey {} 👋
 """
 BUTTONS_GE = [
     [
-        InlineKeyboardButton("👮‍♂️ ɢʀᴏᴜᴘ", callback_data="group"),
-        InlineKeyboardButton("➕ ᴇxᴛʀᴀ", callback_data="settings"),
+        InlineKeyboardButton("👮‍♂️ Group-CMD", callback_data="group"),
+        InlineKeyboardButton("➕ Extra-CMD", callback_data="settings"),
     ],
     [
-        InlineKeyboardButton("👥 sᴜᴅᴏ ᴜsᴇʀs", callback_data="sudo"),
+        InlineKeyboardButton("👥 Only for Sudo Users!", callback_data="sudo"),
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -105,9 +104,9 @@ async def help_cb_handlerj1(bot, query):
         disable_web_page_preview=True,
     )
 @Bot.on_message(filters.command("help") & filters.private)
-async def hp_hagndlery(bot, message):
+async def hp_hagndlery(bot, query):
     await message.reply_text(
-        text=TEXT_GE.format(message.from_user.first_name),
+        text=TEXT_GE.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
         quote=True,
     )
@@ -171,7 +170,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -191,8 +190,7 @@ text_ccd = """
 """
 buttons_ccd = [
     [
-        InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("⬅️", callback_data="group")
     ]
 ]
 
@@ -230,7 +228,6 @@ This is because to avoid spamming telegram servers, admin status is cached local
 buttons_admi = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -255,7 +252,6 @@ text_afk = """
 buttons_afk = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -301,7 +297,6 @@ User commands:
 buttons_ban = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -330,7 +325,6 @@ If you're looking for automated warnings, go read about the blocklist module.</b
 buttons_war = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -359,7 +353,6 @@ Need to delete lots of messages? That's what purges are for!
 buttons_prg = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -384,7 +377,6 @@ text_gst = """
 buttons_gst = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -412,7 +404,6 @@ Presenting reports; if someone in your group thinks someone needs reporting, the
 buttons_rpt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -433,7 +424,6 @@ text_mal = """
 buttons_mal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -456,7 +446,6 @@ text_aap = """
 buttons_aap = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -482,7 +471,6 @@ From blocking rude words, filenames/extensions, to specific emoji, everything is
 buttons_bal = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -517,7 +505,7 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
@@ -547,7 +535,6 @@ text_fdo = """
 buttons_fdo = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -576,7 +563,6 @@ text_fdm = """
 buttons_fdm = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -605,7 +591,6 @@ text_fdu = """
 buttons_fdu = [
     [
         InlineKeyboardButton("⬅️", callback_data="fed"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -640,7 +625,6 @@ You can use markdown or html to save text too.
 buttons_filt = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -676,7 +660,6 @@ Example:
 buttons_lok = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -712,7 +695,6 @@ To change caption of any files use.
 buttons_not = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -742,7 +724,6 @@ Examples:
 buttons_nm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -764,7 +745,6 @@ text_sm = """
 buttons_sm = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -791,7 +771,6 @@ Admin commands:
 buttons_pn = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -831,7 +810,6 @@ Set the antiflood action to a 3 day ban:
 buttons_adf = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -860,7 +838,6 @@ Admin Commands:
 buttons_adc = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -925,7 +902,7 @@ BUTTONS_HP = [
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
+        InlineKeyboardButton("❌", callback_data=f"close#{query.from_user.id}"),
         InlineKeyboardButton("🏠", callback_data="home"),
         #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
