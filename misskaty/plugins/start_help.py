@@ -51,18 +51,13 @@ home_text_pm = f"Hey 👋 there! My name is {BOT_NAME}❣️.\n\n<blockquote>Wel
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
-            InlineKeyboardButton(
-                text="📢 Channel",
-                url="t.me/xbots_x",
-            ),
+            InlineKeyboardButton("⚙️ Help", url=f"t.me/{BOT_USERNAME}?start=help"),
+            InlineKeyboardButton("📊 Stats", callback_data="stats_callback"),
+            InlineKeyboardButton("🤖 About", callback_data="abt"),
         ],
         [
-            InlineKeyboardButton(
-                text="📊 Stats",
-                callback_data="stats_callback",
-            ),
-            InlineKeyboardButton(text="🪅 Stickers", url="https://t.me/stickers_collections_X"),
+            InlineKeyboardButton("📢 Channel", url="t.me/xbots_x"),
+            InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
         ],
     ]
 )
