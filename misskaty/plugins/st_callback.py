@@ -39,7 +39,7 @@ Here is the help for DevCommand:
 BUTTON_SUDO = [
     [
         InlineKeyboardButton("❮", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
     ]
 ]
 
@@ -67,7 +67,7 @@ BUTTONS_ST = [
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data="close")],
+    [InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -93,8 +93,8 @@ BUTTONS_GE = [
         InlineKeyboardButton("👥 sᴜᴅᴏ ᴜsᴇʀs", callback_data="sudo"),
     ],
     [
-        InlineKeyboardButton("❮", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("⬅️", callback_data="home"),
+        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -112,11 +112,6 @@ async def hp_hagndlery(bot, message):
         quote=True,
     )
 
-@Bot.on_callback_query(filters.regex('^close$'))
-async def close_cb(client: Bot, callback: CallbackQuery):
-    await callback.answer()
-    await callback.message.delete()
-    await callback.message.reply_to_message.delete()
 #================GROUP_CMD=================
 TEXT_GP = """
 Hey 👋{}, Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
@@ -176,7 +171,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -522,7 +517,7 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
@@ -929,8 +924,8 @@ BUTTONS_HP = [
     ],
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
-        InlineKeyboardButton("Back", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("⬅️", callback_data="set_ge"),
+        InlineKeyboardButton("❌", callback_data=f"close#{message.from_user.id}"),
         InlineKeyboardButton("🏠", callback_data="home"),
         #InlineKeyboardButton("❯", callback_data="settings2"),
     ],
