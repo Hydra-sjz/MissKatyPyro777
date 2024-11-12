@@ -80,20 +80,20 @@ async def st_cb_handler(bot, query):
 text_abt = """
 **My About ;)**
  
-<blockquote>🤖 My Name: {}
-🆔 My ID: {}
-©️ My Username: {}</blockquote>
+<blockquote>🤖 **My Name:** {}
+🆔 **My ID:** {}
+©️ **My Username:** @{}</blockquote>
 
-<blockquote>📝 Language : Python3
-• Python version : 3.12.11
-📚 Library : Pyrogram
-• Pyrogram version : 2.0.73
-📡 Hosted On : Digital Ocean 🌊
-📋 License : MIT</blockquote>
+<blockquote>📝 **Language:** Python3
+• **Python version:** 3.12.11
+📚 **Library:** Pyrogram
+• **Pyrogram version:** 2.0.73
+📡 **Hosted On:** Digital Ocean 🌊
+📋 **License:** MIT</blockquote>
 
-<blockquote>Hey {}, my name is ⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪.
+<blockquote>__Hey {}, my name is ⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪.
 I'm a group management bot made to help you automate your group as much as possible by welcoming users, warning bad behaviour, and banning if necessary.
-Use the /privacy command to view the privacy policy, and interact with your data.</blockquote>
+Use the /privacy command to view the privacy policy, and interact with your data.__</blockquote>
 """
 button_abt = [
     [
@@ -931,7 +931,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Sticker", callback_data="str"),
         InlineKeyboardButton("Paste", callback_data="pst"),
-        InlineKeyboardButton("SFW", callback_data="sfw"),
+        InlineKeyboardButton("SFW", callback_data="sfwj"),
     ],
     [
         InlineKeyboardButton("WebScraper", callback_data="web"),
@@ -957,7 +957,7 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
-text_adv = """
+text_sfw = """
 **SFW**
 
 This module is safe for work (for real!)
@@ -1008,7 +1008,7 @@ This module is safe for work (for real!)
 • /wallpaper
 • /goose</blockquote>
 """
-buttons_adv = [
+buttons_sfw = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
         InlineKeyboardButton("❌", callback_data="close"),
@@ -1016,11 +1016,11 @@ buttons_adv = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^sfw$"))
+@Bot.on_callback_query(filters.regex("^sfwj$"))
 async def abvsfiv(bot, query):
     await query.message.edit(
-        text=text_adv,
-        reply_markup=InlineKeyboardMarkup(buttons_adv),
+        text=text_sfw,
+        reply_markup=InlineKeyboardMarkup(buttons_sfw),
         disable_web_page_preview=True,
     )
 
