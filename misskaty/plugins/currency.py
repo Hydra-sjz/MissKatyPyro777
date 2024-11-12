@@ -1,6 +1,6 @@
 # * @author        Yasir Aris M <yasiramunandar@gmail.com>
 # * @date          2023-06-21 22:12:27
-# * @projectName   MissKatyPyro
+# * @projectName   MissKatyPyrog
 # * Copyright ©YasirPedia All rights reserved
 import logging
 
