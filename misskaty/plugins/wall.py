@@ -2,7 +2,7 @@ from requests import get
 from pyrogram import Client, filters
 from pyrogram.types import InputMediaPhoto
 from misskaty import app
-@app.on_message(filters.command(['wall', 'wallpaper', 'wallpapers']))
+@app.on_message(filters.command(['wall']))
 async def WallbpapersCom(client, message):
     chat_id = message.chat.id
     try:
@@ -37,3 +37,49 @@ async def WallbpapersCom(client, message):
     except Exception as e:
         await msg.delete()
         return await message.reply(f"Error\n{e}")
+
+# DONE: Wallpaper
+
+import asyncio
+import random
+
+
+from misskaty import tle as telethn
+from misskaty.custom_filter import register
+from misskaty.ultis_ex.wmilia_m.decorators import *
+
+
+@usage("/wall [query]")
+@example("/wall naruto")
+@description("This will send desired wallpaper.")
+@register(pattern="wall2")
+@rate_limit(40, 60)
+async def some1(event):
+    try:
+        inpt: str = (
+            event.text.split(None, 1)[1]
+            if len(event.text) < 3
+            else event.text.split(None, 1)[1].replace(" ", "%20")
+        )
+    except IndexError:
+        return await usage_string(event, some1)
+
+    Emievent = await event.reply("Sending please wait...")
+    try:
+        r = get(
+            f"https://bakufuapi.vercel.app/api/wall/wallhaven?query={inpt}&page=1"
+        ).json()
+
+        list_id = [r["response"][i]["path"] for i in range(len(r["response"]))]
+        item = (random.sample(list_id, 1))[0]
+    except BaseException:
+        await event.reply("Try again later or enter correct query.")
+        await Emievent.delete()
+        return
+
+    await telethn.send_file(event.chat_id, item, caption="Preview", reply_to=event)
+    await telethn.send_file(
+        event.chat_id, file=item, caption="wall", reply_to=event, force_document=True
+    )
+    await Emievent.delete()
+    await asyncio.sleep(5)
