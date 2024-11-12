@@ -174,38 +174,37 @@ BUTTONS_GP = [
     [
         InlineKeyboardButton("🚪Auto-Approve", callback_data="aap"),
         InlineKeyboardButton("👾Anti-Raid", callback_data="ard"),
-        
+    ],
+    [
         InlineKeyboardButton("🚯Bans", callback_data="ban"),
-    ],
-    [
         InlineKeyboardButton("⚖️Blacklist", callback_data="bal"),
+    ],
+    [
         InlineKeyboardButton("🎂Birthday", callback_data="brt"),
-    ],
-    [
         InlineKeyboardButton("🧹Clean-CMD", callback_data="ccd"),
+    ],
+    [
         InlineKeyboardButton("🚨Federation", callback_data="fed"),
-    ],
-    [
         InlineKeyboardButton("📄Filters", callback_data="filter"),
+    ],
+    [
         InlineKeyboardButton("🧟Ghost", callback_data="gst"),
-    ],
-    [
         InlineKeyboardButton("🔐Locks", callback_data="lok"),
+    ],
+    [
         InlineKeyboardButton("📣Mention-all", callback_data="mall"),
-    ],
-    [
         InlineKeyboardButton("🌃Night-Mod", callback_data="nm"),
+    ],
+    [
         InlineKeyboardButton("📝Notes", callback_data="not"),
-    ],
-    [
         InlineKeyboardButton("🚮Purges", callback_data="prg"),
+    ],
+    [
         InlineKeyboardButton("📌Pin", callback_data="pn"),
-    ],
-    [
         InlineKeyboardButton("🗳️Reports", callback_data="rpt"),
-        InlineKeyboardButton("🪬SangMata", callback_data="sm"),
     ],
     [
+        InlineKeyboardButton("🪬SangMata", callback_data="sm"),
         InlineKeyboardButton("❗Warns", callback_data="war"),
     ],
     [
