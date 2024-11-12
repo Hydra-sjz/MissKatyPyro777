@@ -166,7 +166,7 @@ def shorten(description, info="anilist.co"):
     )
 
 
-@abot.on_message(filters.command("anime", COMMAND_HANDLER))
+@abot.on_message(filters.command("animegj", COMMAND_HANDLER))
 async def anime_search(_, mesg):
     search = mesg.text.split(None, 1)
     reply = await mesg.reply("⏳ <i>Please wait ...</i>", quote=True)
