@@ -9,7 +9,7 @@ from telethon.tl.types import (
 
 import google.generativeai as genai
 
-from misskaty import db, telethn
+from misskaty import db, tle as telethn
 from misskaty.custom_filter import register
 from misskaty.ultis_ex.wmilia_m.admins import is_admin
 from misskaty.ultis_ex.wmilia_m.decorators import *
