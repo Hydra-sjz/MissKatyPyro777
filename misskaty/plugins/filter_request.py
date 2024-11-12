@@ -44,23 +44,23 @@ async def salamregex(_, message):
 async def request_user(client, message):
     if message.sender_chat:
         return await message.reply(
-            f"{message.from_user.mention} mohon gunakan akun asli saat request."
+            f"{message.from_user.mention} Please use a real account when requesting."
         )
     is_in_gap, sleep_time = await check_time_gap(message.from_user.id)
     if is_in_gap:
         return await message.reply(
-            f"Sabar dikit napa.. Tunggu {sleep_time} detik lagi 🙄"
+            f"Please be patient for a while.. Wait {sleep_time} for another few seconds. 🙄"
         )
     markup = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="💬 Lihat Pesan", url=f"https://t.me/c/1255283935/{message.id}"
+                    text="💬 View Message", url=f"https://t.me/c/1255283935/{message.id}"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="🚫 Tolak",
+                    text="🚫 Reject",
                     callback_data=f"rejectreq_{message.id}_{message.chat.id}",
                 ),
                 InlineKeyboardButton(
@@ -70,13 +70,13 @@ async def request_user(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    text="⚠️ Tidak Tersedia",
+                    text="⚠️ Not Available",
                     callback_data=f"unavailablereq_{message.id}_{message.chat.id}",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="🔍 Sudah Ada",
+                    text="🔍 Already Exist",
                     callback_data=f"dahada_{message.id}_{message.chat.id}",
                 )
             ],
