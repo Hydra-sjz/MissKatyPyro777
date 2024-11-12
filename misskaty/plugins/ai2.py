@@ -57,7 +57,7 @@ async def handle_querasasoy(client, message):
     await message.reply_text(f"{user_mention}, <b>{response}</b>")
 
 # Handle mentions of the bot in group chats
-@app.on_message(filters.mentioned & filters.group)
+#@app.on_message(filters.mentioned & filters.group)
 async def handle_amention(client: Client, message: Message) -> None:
     group_id = message.chat.id
 
