@@ -16,14 +16,12 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import (
+from misskaty.vars import (
     ANILIST_CLIENT,
     ANILIST_REDIRECT_URL,
     ANILIST_SECRET,
-    BOT_USERNAME,
-    DEV_USERS,
-    app as anibot,
 )
+from misskaty import BOT_USERNAME, DEV_USERS, app as anibot
 
 from anilist.data_parser import (
     AIRING_DB,
