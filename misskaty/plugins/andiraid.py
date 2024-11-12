@@ -1,4 +1,4 @@
-# DONE: Antiraid
+# DONE: Antiraidt
 
 from datetime import datetime, timedelta
 
