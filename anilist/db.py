@@ -25,7 +25,7 @@ from misskaty.vars import DATABASE_URI as MONGO_DB_URL
 
 _MGCLIENT: AgnosticClient = AsyncIOMotorClient(MONGO_DB_URL)
 
-_DATABASE: AgnosticDatabase = _MGCLIENT["Emilia"]
+_DATABASE: AgnosticDatabase = _MGCLIENT["Gojo"]
 
 
 def get_collection(name: str) -> AgnosticCollection:
