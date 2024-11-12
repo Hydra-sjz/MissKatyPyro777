@@ -101,7 +101,7 @@ button_abt = [
     ]
 ]
 
-@Bot.on_callback_query(filters.regex("^abt$"))
+@Bot.on_callback_query(filters.regex("^home$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
         text=text_abt.format(BOT_NAME, BOT_ID, BOT_USERNAME, query.from_user.first_name),
@@ -168,11 +168,13 @@ BUTTONS_GP = [
         InlineKeyboardButton("💤Afk", callback_data="afk"),
     ],
     [
-        InlineKeyboardButton("☣️AntiFlood", callback_data="adf"),
+        InlineKeyboardButton("☣️Anti-Flood", callback_data="adf"),
         InlineKeyboardButton("🚧Anti-Channel", callback_data="adc"),
     ],
     [
-        InlineKeyboardButton("🚪Auto Approve", callback_data="aap"),
+        InlineKeyboardButton("🚪Auto-Approve", callback_data="aap"),
+        InlineKeyboardButton("👾Anti-Raid", callback_data="ard"),
+        
         InlineKeyboardButton("🚯Bans", callback_data="ban"),
     ],
     [
@@ -189,10 +191,10 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("🔐Locks", callback_data="lok"),
-        InlineKeyboardButton("📣Mention all", callback_data="mall"),
+        InlineKeyboardButton("📣Mention-all", callback_data="mall"),
     ],
     [
-        InlineKeyboardButton("🌃Night Mod", callback_data="nm"),
+        InlineKeyboardButton("🌃Night-Mod", callback_data="nm"),
         InlineKeyboardButton("📝Notes", callback_data="not"),
     ],
     [
@@ -219,6 +221,35 @@ async def abvigjdv(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         disable_web_page_preview=True,
 )
+
+text_ard = """
+**AntiRaid**
+
+<blockquote>Some people on telegram find it entertaining to **raid** chats. During a raid, hundreds of users join a chat to spam.
+The antiraid module allows you to quickly stop anyone from joining when such a raid is happening.
+All new joins will be temporarily banned for the next few hours, allowing you to wait out the spam attack until the trolls stop.</blockquote>
+
+**Admin commands:**
+__/antiraid Toggle antiraid. All new joins will be temporarily banned for the next few hours.
+/raidtime <time>: View or set the desired antiraid duration. Default 6h.
+/raidactiontime <time>: View or set the time for antiraid to tempban users for. Default 1h.
+/autoantiraid <number/off/no>: Set the number of joins per minute after which to enable automatic antiraid. Set to '0', 'off', or 'no' to disable.__
+"""
+buttons_ard = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^ard$"))
+async def abvrriv(bot, query):
+    await query.message.edit(
+        text=text_ard,
+        reply_markup=InlineKeyboardMarkup(buttons_ard),
+        disable_web_page_preview=True,
+    )
 
 
 text_ccd = """
@@ -1010,7 +1041,7 @@ This module is safe for work (for real!)
 """
 buttons_sfw = [
     [
-        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
@@ -1195,52 +1226,6 @@ async def abot_cb_handlersv(bot, query):
     await query.message.edit(
         text=text_bt,
         reply_markup=InlineKeyboardMarkup(buttons_bt),
-        disable_web_page_preview=True,
-    )
-
-
-text_bn = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Bᴀɴ:
-
-/ban - Ban A User
-/banall - Ban All Users
-/sban - Delete all messages of user that sended in group and ban the user
-/tban - Ban A User For Specific Time
-/unban - Unban A User
-/warn - Warn A User
-/swarn - Delete all the message sended in group and warn the user
-/rmwarns - Remove All Warning of A User
-/warns - Show Warning Of A User
-/kick - Kick A User
-/skick - Delete the replied message kicking its sender
-/purge - Purge Messages
-/purge [n] - Purge "n" number of messages from replied message
-/del - Delete Replied Message
-/promote - Promote A Member
-/fullpromote - Promote A Member With All Rights
-/demote - Demote A Member
-/pin - Pin A Message
-/unpin - unpin a message
-/unpinall - unpinall messages
-/mute - Mute A User
-/tmute - Mute A User For Specific Time
-/unmute - Unmute A User
-/zombies - Ban Deleted Accounts
-/report | @admins | @admin - Report A Message To Admins.
-"""
-buttons_bn = [
-    [
-        InlineKeyboardButton("⬅️", callback_data="settings"),
-        InlineKeyboardButton("❌", callback_data="close"),
-    ]
-]
-
-
-@Bot.on_callback_query(filters.regex("^bn$"))
-async def abot_cb_handlufer(bot, query):
-    await query.message.edit(
-        text=text_bn,
-        reply_markup=InlineKeyboardMarkup(buttons_bn),
         disable_web_page_preview=True,
     )
 
@@ -1509,6 +1494,9 @@ text_fn = """
 /anime [query] - Search title in myanimelist.
 /info - Get info user with Pic and full description if user set profile picture.
 /id - Get simple user ID.
+/bots - To see how much bots on group.
+/gdata | /groupinfo - To get Group datas.
+/link | givelink To get group link.
 """
 buttons_fn = [
     [
