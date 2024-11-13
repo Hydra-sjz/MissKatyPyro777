@@ -70,3 +70,4 @@ lexica-api
 tracemoepy
 emoji
 emojis
+pyfiglet
