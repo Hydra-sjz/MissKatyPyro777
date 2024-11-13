@@ -121,7 +121,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
                 pass
         mention = f"<a href='tg://user?id={user.id}'>{user.first_name}</a>"
         count = await c.get_chat_members_count(member.chat.id)
-        joined_date = datetime.fromtimestamp(time.time()).strftime("%Y.%m.%d - (`%H:%M:%S`)")
+        joined_date = datetime.fromtimestamp(time.time()).strftime("%Y.%m.%d - [`%H:%M:%S`]")
         first_name = (
             f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
         )
@@ -140,9 +140,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             temp.MELCOW[f"welcome-{member.chat.id}"] = await c.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
-                caption=strings("capt_welc").format(
-                    ttl=member.chat.title, umention=mention, uid=user.id, joined_date, user=user.first_name, count=count
-                ),
+                caption=strings("capt_welc").format(ttl=member.chat.title, umention=mention, uid=user.id, joined_date, user=user.first_name, count=count)
             )
         except Exception as e:
             LOGGER.info(e)
