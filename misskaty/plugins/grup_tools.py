@@ -140,7 +140,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             temp.MELCOW[f"welcome-{member.chat.id}"] = await c.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
-                caption=strings("capt_welc").format(ttl=member.chat.title, umention=mention, uid=user.id, joined_date, user=member.from_user.first_name, count=count)
+                caption=strings("capt_welc").format(ttl=member.chat.title, umention=mention, uid=user.id, join=joined_date, user=member.from_user.first_name, count=count)
             )
         except Exception as e:
             LOGGER.info(e)
