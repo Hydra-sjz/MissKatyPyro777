@@ -120,7 +120,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             except:
                 pass
         mention = f"<a href='tg://user?id={user.id}'>{user.first_name}</a>"
-        count = await Client.get_chat_members_count(member.chat.id)
+        count = await c.get_chat_members_count(member.chat.id)
         joined_date = datetime.fromtimestamp(time.time()).strftime("%Y.%m.%d - (`%H:%M:%S`)")
         first_name = (
             f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
