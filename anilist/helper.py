@@ -21,7 +21,7 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import LOG_CHANNEL as EVENT_LOGS
+from misskaty.vars import LOG_CHANNEL as EVENT_LOGS
 from misskaty import DEV_USERS, DOWN_PATH2, app as anibot
 from anilist.db import get_collection
 
