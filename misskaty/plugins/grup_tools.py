@@ -39,7 +39,6 @@ def circle(pfp, size=(215, 215)):
     pfp.putalpha(mask)
     return pfp
 
-
 def draw_multiple_line_text(image, text, font, text_start_height):
     """
     From unutbu on [python PIL draw multiline text on image](https://stackoverflow.com/a/7698300/395857)
@@ -57,7 +56,6 @@ def draw_multiple_line_text(image, text, font, text_start_height):
             ((image_width - line_width) / 2, y_text), line, font=font, fill="black"
         )
         y_text += line_height
-
 
 @asyncify
 def welcomepic(pic, user, chat, id, strings):
@@ -122,7 +120,8 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             except:
                 pass
         mention = f"<a href='tg://user?id={user.id}'>{user.first_name}</a>"
-        joined_date = datetime.fromtimestamp(time.time()).strftime("%Y.%m.%d %H:%M:%S")
+        count = await Client.get_chat_members_count(member.chat.id)
+        joined_date = datetime.fromtimestamp(time.time()).strftime("%Y.%m.%d - (`%H:%M:%S`)")
         first_name = (
             f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
         )
@@ -142,7 +141,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=strings("capt_welc").format(
-                    umention=mention, uid=user.id, ttl=member.chat.title
+                    ttl=member.chat.title, umention=mention, uid=user.id, joined_date, user=user.first_name, count=count
                 ),
             )
         except Exception as e:
