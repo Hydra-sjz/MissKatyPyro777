@@ -97,11 +97,11 @@ Use the /privacy command to view the privacy policy, and interact with your data
 """
 button_abt = [
     [
-        InlineKeyboardButton("⬅️", callback_data="group")
+        InlineKeyboardButton("⬅️", callback_data="home")
     ]
 ]
 
-@Bot.on_callback_query(filters.regex("^home$"))
+@Bot.on_callback_query(filters.regex("^abt$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
         text=text_abt.format(BOT_NAME, BOT_ID, BOT_USERNAME, query.from_user.first_name),
