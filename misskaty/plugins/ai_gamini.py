@@ -6,7 +6,7 @@ import google.generativeai as genai
 from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 
-from misskaty import anibot as app
+from misskaty import app
 from misskaty.vars import GEMINI_API, LOG_CHANNEL
 
 
