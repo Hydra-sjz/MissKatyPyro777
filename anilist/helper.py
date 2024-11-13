@@ -22,7 +22,7 @@ from pyrogram.types import (
 )
 
 from misskaty.vars import LOG_CHANNEL as EVENT_LOGS
-from misskaty import DEV_USERS, DOWN_PATH2, app as anibot
+from misskaty import DEV_USERS, DOWN_PATH2 as DOWN_PATH, app as anibot
 from anilist.db import get_collection
 
 AUTH_USERS = get_collection("AUTH_USERS")
