@@ -71,3 +71,4 @@ tracemoepy
 emoji
 emojis
 pyfiglet
+spotdl==4.2.1
