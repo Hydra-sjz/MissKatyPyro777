@@ -6,7 +6,7 @@
     "update_btn": "📢 Updates",
     "chat_not_allowed": "<b>CHAT NOT ALLOWED 🐞\n\nMy owner has banned me from working here! You can contact the owner of this bot..</b>",
     "welcome_thanks": "<b>Thank you for adding me to {ttl} ❣️\n\nIf you have any problems or suggestions, you can contact me.</b>",
-    "capt_welc": "<blockquote>🍻Welcome to my ๛ {ttl} group.<blockquote>\n\n× **Name:** {umention}\n× **UserID:** [<code>{uid}</code>]\n× **Time:** {joined_date}\n\n__๛ Hey {user} Your are here [{count}Th] member of the group! and thanks for joining here ;)__",
+    "capt_welc": "<blockquote>🍻Welcome to my ๛ {ttl} group.<blockquote>\n\n× **Name:** {umention}\n× **UserID:** [<code>{uid}</code>]\n× **Time:** {join}\n\n__๛ Hey {user} Your are here [{count}Th] member of the group! and thanks for joining here ;)__",
     "combot_msg": "<b>#CAS Federation Ban</b>\nUser {umention} [<code>{uid}</code>] has been detected as a spambot and has been banned. Powered by <a href='https://api.cas.chat/check?user_id={u.id}'>Combot AntiSpam.</a>",
     "spamwatch_msg": "<b>#SpamWatch Federation Ban</b>\nUser {umention} [<code>{uid}</code>] has been banned for <code>{reas}</code>.\n" ,
     "welcpic_msg": "Welcome {userr} [{id}]"
