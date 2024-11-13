@@ -15,7 +15,7 @@ from pyrogram.types import Message
 from misskaty import app
 from misskaty.core import pyro_cooldown
 from misskaty.helper import check_time_gap, post_to_telegraph, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, GOOGLEAI_KEY, OPENAI_KEY, OWNER_ID, SUDO
+from misskaty.vars import COMMAND_HANDLER, GEMINI_API as GOOGLEAI_KEY, OPENAI_KEY, OWNER_ID, SUDO
 
 __MODULE__ = "ChatBot"
 __HELP__ = """
