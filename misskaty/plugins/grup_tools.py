@@ -59,7 +59,7 @@ def draw_multiple_line_text(image, text, font, text_start_height):
 
 @asyncify
 def welcomepic(pic, user, chat, id, strings):
-    background = Image.open("assets/bg.png")  # <- Background Image (Should be PNG)
+    background = Image.open("assets/gojo.png")  # <- Background Image (Should be PNG)
     background = background.resize((1024, 500), Image.LANCZOS)
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
