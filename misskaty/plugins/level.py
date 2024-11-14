@@ -143,7 +143,7 @@ async def _leaderboard(event):
             lmao += (
                 f"{idx}. [{first_name1}](tg://user?id={user_id}) --> {points} points\n"
             )
-        lmao += "\nUse /register to setup your names."
+        lmao += "\nUse /register to setup your names.\nExample: `/register [You Name]`"
     else:
         lmao += (
             "No data for this chat. Try /register to register yourself in bot first!"
@@ -194,7 +194,7 @@ async def _daily(event):
     except KeyError:
         stats = None
     if not stats:
-        return await event.reply("Use /register to register yourself in bot first!")
+        return await event.reply("Use /register to register yourself in bot first!\nExample: `/register [You Name]`")
     points = stats["points"]
     x, y = await can_collect_coins(event.sender_id, event.chat_id)
     if x is True:
@@ -264,7 +264,7 @@ async def _daily(event):
     except KeyError:
         stats = None
     if not stats:
-        return await event.reply("Use /register to register yourself in bot first!")
+        return await event.reply("Use /register to register yourself in bot first!\nExample: `/register [You Name]`")
     points = stats["points"]
     x, y = await can_collect(event.sender_id, event.chat_id)
     if x is True:
@@ -309,7 +309,7 @@ async def userstats(event):
         response = f"**{stats['first_name']}'s Stats**:\n\n**Points Gained**: {stats['points']}\n**Level**: {stats['level']}\n**Rank**: {stats['rank']}"
 
     else:
-        response = "Use /register to register your name first."
+        response = "Use /register to register your name first.\n\nExample: `/register [You Name]`"
 
     await event.reply(response)
 
