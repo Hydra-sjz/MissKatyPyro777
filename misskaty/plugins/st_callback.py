@@ -969,6 +969,11 @@ BUTTONS_HP = [
         InlineKeyboardButton("Nulis", callback_data="nui"),
     ],
     [
+        InlineKeyboardButton("Extras", callback_data="ext"),
+        InlineKeyboardButton(".", callback_data="k"),
+        InlineKeyboardButton(".", callback_data="i"),
+    ],
+    [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close_cb"),
@@ -987,6 +992,41 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_ext = """
+<blockquote>__/meme cmd to get meme from meme api.
+/mormeme cmd to get more memes.
+/reddit cmd to get Random image from Reddit.
+/morddit cmd to get more images from Reddit.
+/unsplash cmd then your text to get images from unsplash.
+/pexi cmd to get images from **Pexels**
+/pexv cmd to get Videos from **Pexels**
+/tor cmd to get Torrent movies links.
+/repo the repository name to get GitHub repos.
+/google cmd to get 10 quarys from Google.
+/bingt cmd to get 10 quarys from Bing browser.
+/yandex cmd to get 10 quarys from Yandex browser.
+/ddg cmd to get 10 quarys from DuckDuckGo browser.
+/ggimg cmd to get 10 Images from Google.
+/bingimg cmd to get 10 Images from Bing.
+/yandeximg cmd to get 10 Images from Yandex.
+/ddgimg cmd to get 10 Images from DuckDuckGo.
+/pimg cmd to get 6 images from Pinterest.</blockquote>
+"""
+buttons_ext = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^ext$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_ext,
+        reply_markup=InlineKeyboardMarkup(buttons_ext),
+        disable_web_page_preview=True,
+    )
 
 text_nsf = """
 **NSFW**
