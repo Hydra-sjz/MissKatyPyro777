@@ -173,8 +173,8 @@ def download_video(url,chat_id):
 
 
 #=============°===
-@app.on_message(filters.command("ytsearch"))
-async def search_command(client, message):
+@app.on_message(filters.command("ytsearch2"))
+async def search_hhcommand(client, message):
     try:
         query = message.text.split(" ", 1)[1]
         results = search_youtube(query)
@@ -302,30 +302,10 @@ async def spotify_search(client, message):
     except Exception as e:
         await message.reply_text(f'An error occurred: {str(e)}')
 
-        
 
 
-
-@app.on_message(filters.command("anime2"))
-def anime_commands_handler(client, message):
-    
-    sfw_description = "/cat: Sends a random catgirl image.\n"
-    for command in ANIME_COMMANDS:
-        sfw_description += f"/{command}: sends a random {command} image.\n"
-    sfw_description += "\nUsage: Type any of the above commands to get a random image of that category."
-
-
-    quotes_description = "Quote Commands:\n\n"
-    quotes_description += "/quote: Sends a random anime quote.\n"
-    quotes_description += "/mquote: Sends multiple anime quotes."
-
-    text = f"{sfw_description}\n\n{quotes_description}"
-    client.send_message(text)
-
-
-
-@app.on_message(filters.command("quote"))
-def get_random_quote(client, message):
+@app.on_message(filters.command("quote2"))
+def get_rahndom_quote(client, message):
     try:
         response = requests.get("https://animechan.xyz/api/random")
         if response.status_code == 200:
@@ -354,7 +334,7 @@ def get_many_quotes(client, message):
         
 
 
-@app.on_message(filters.command(ANIME_COMMANDS))
+#@app.on_message(filters.command(ANIME_COMMANDS))
 def image_fetch_handler(client, message):
     command = message.command[0]
     image_url = fetch_image(command, "sfw") 
@@ -456,8 +436,8 @@ def handle_many_meme_command(client, message):
 
 
 @app.on_message(filters.command("reddit"))
-def handle_reddit_command(client, message):
-    message.reply_text("Downloading...")
+async def handle_reddit_command(client, message):
+    await message.reply_text("Downloading...")
     # Specify any subreddits of your choice
     subreddits = ["wholesomememes", "memes", "funny", "aww"] 
 
@@ -485,17 +465,17 @@ def handle_reddit_command(client, message):
 
             # send_message(message.chat.id, "Uploading meme...")
             if file_extension in ['png', 'jpg', 'gif']:
-                message.reply_photo(file_name, caption=title)
+                await message.reply_photo(file_name, caption=title)
             elif file_extension in ['mp4', 'gifv']:
-                message.reply_video(file_name, caption=title)
-                message.reply_text("upload finished!")
+                await message.reply_video(file_name, caption=title)
+                await message.reply_text("upload finished!")
 
             os.remove(file_name)
 
         else:
-            message.reply_text("Failed to download the meme.")
+            await message.reply_text("Failed to download the meme.")
     else:
-        message.reply_text("Failed to fetch the meme from the API.")
+        await message.reply_text("Failed to fetch the meme from the API.")
 
 @app.on_message(filters.command("morddit"))
 def handle_multiple_reddit_command(client, message):
