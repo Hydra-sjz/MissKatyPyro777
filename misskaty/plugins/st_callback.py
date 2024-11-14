@@ -1572,6 +1572,7 @@ text_fn = """
 /bots - To see how much bots on group.
 /gdata | /groupinfo - To get Group datas.
 /link | givelink To get group link.
+/figlet - To creat finglet ex:` /figlet Gojo`
 """
 buttons_fn = [
     [
