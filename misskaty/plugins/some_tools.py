@@ -478,14 +478,14 @@ async def handle_reddit_command(client, message):
         await message.reply_text("Failed to fetch the meme from the API.")
 
 @app.on_message(filters.command("morddit"))
-def handle_multiple_reddit_command(client, message):
+async def handle_multiple_reddit_command(client, message):
     # Specify any subreddits you want
     subreddits = ["wholesomememes", "memes", "funny", "aww"]  
 
     memes_to_fetch = 5 #change according to your needs
 
     all_memes = []
-    message.reply_text("Downloading...")
+    await message.reply_text("Downloading...")
     for _ in range(memes_to_fetch):
 
         selected_subreddit = random.choice(subreddits)
@@ -497,7 +497,7 @@ def handle_multiple_reddit_command(client, message):
             meme_data = response.json()
             all_memes.append(meme_data)
         else:
-            message.reply_text(f"Failed to fetch meme from {selected_subreddit}.")
+            await message.reply_text(f"Failed to fetch meme from {selected_subreddit}.")
 
     for meme_data in all_memes:
         title = meme_data['title']
@@ -514,15 +514,15 @@ def handle_multiple_reddit_command(client, message):
 
             # send_message(message.chat.id, "Uploading meme...")
             if file_extension in ['png', 'jpg', 'gif']:
-                message.reply_photo(file_name, caption=title)
+                await message.reply_photo(file_name, caption=title)
             elif file_extension in ['mp4', 'gifv']:
-                message.reply_video(file_name, caption=title)
-                message.reply_text("upload finished!")
+                await message.reply_video(file_name, caption=title)
+                await message.reply_text("upload finished!")
 
             os.remove(file_name)
 
         else:
-            message.reply_text("Failed to download the meme.")
+            await message.reply_text("Failed to download the meme.")
 
 
 
