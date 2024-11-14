@@ -929,7 +929,7 @@ All Commands can be used with: /</blockquote>
 """
 BUTTONS_HP = [
     [
-        InlineKeyboardButton("SangMata", callback_data="sg"),
+        InlineKeyboardButton("NSFW", callback_data="nsf"),
         InlineKeyboardButton("Ai", callback_data="ai"),
         InlineKeyboardButton("Cat & Dog", callback_data="cd"),
     ],
@@ -987,13 +987,49 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+
+text_nsf = """
+**NSFW**
+
+<blockquote>Sometimes a lil bit of horni-stuff is fine, check this module for fine stuff!</blockquote>
+
+**Admins Only:**
+<blockquote>• /addnsfw: To Activate NSFW commands. (for groups)
+• /rmnsfw: To Deactivate NSFW commands. (for groups)</blockquote>
+
+**Following are the NSFW commands:**
+<blockquote>• /nsfwwaifu
+• /blowjob
+• /nwaifu
+• /bj
+• /trap
+• /nsfwneko
+• /nneko
+• /spank</blockquote>
+"""
+buttons_nsf = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^nsf$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_nsf,
+        reply_markup=InlineKeyboardMarkup(buttons_nsf),
+        disable_web_page_preview=True,
+    )
+
 text_sfw = """
 **SFW**
 
 This module is safe for work (for real!)
 
-<blockquote>**Commands:**
-• /neko: Sends Random SFW Neko source Images.
+**Commands:**
+<blockquote>• /neko: Sends Random SFW Neko source Images.
 • /ngif: Sends Random Neko GIFs.
 • /tickle: Sends Random Tickle GIFs.
 • /feed: Sends Random Feeding GIFs.
@@ -1007,8 +1043,8 @@ This module is safe for work (for real!)
 • /gecg: IDK
 • /slap: Sends Random Slap GIFs.</blockquote>
 
-<blockquote>**Some more SFW commands:**
-• /shinobu
+**Some more SFW commands:**
+<blockquote>• /shinobu
 • /hug
 • /megumin
 • /bully
