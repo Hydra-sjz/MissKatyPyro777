@@ -955,7 +955,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Inline", callback_data="ini"),
-        InlineKeyboardButton("Misc", callback_data="mc"),
+        InlineKeyboardButton("Misc", callback_data="mis"),
         InlineKeyboardButton("Ocr", callback_data="oc"),
     ],
     [
@@ -1014,7 +1014,7 @@ text_ext = """
 """
 buttons_ext = [
     [
-        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
@@ -1551,7 +1551,7 @@ async def abot_cb_hanipdler(bot, query):
     )
 
 
-text_fn = """
+text_mis = """
 **Here is the help for Misc:**
 
 /carbon [text or reply to text or caption] - Make beautiful snippet code on carbon from text.
@@ -1574,7 +1574,7 @@ text_fn = """
 /link | givelink To get group link.
 /figlet - To creat finglet ex:` /figlet Gojo`
 """
-buttons_fn = [
+buttons_mis = [
     [
         InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
@@ -1582,11 +1582,11 @@ buttons_fn = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^mc$"))
+@Bot.on_callback_query(filters.regex("^mis$"))
 async def abot_cb_handlsser(bot, query):
     await query.message.edit(
-        text=text_fn,
-        reply_markup=InlineKeyboardMarkup(buttons_fn),
+        text=text_mis,
+        reply_markup=InlineKeyboardMarkup(buttons_mis),
         disable_web_page_preview=True,
     )
 
