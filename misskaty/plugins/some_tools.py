@@ -305,32 +305,32 @@ async def spotify_search(client, message):
 
 
 @app.on_message(filters.command("quote2"))
-def get_rahndom_quote(client, message):
+async def get_rahndom_quote(client, message):
     try:
         response = requests.get("https://animechan.xyz/api/random")
         if response.status_code == 200:
             quote = response.json()
             formatted_quote = f"**Anime**: `{quote['anime']}`\n**Character**: `{quote['character']}`\n**Quote**: __\"{quote['quote']}\"__"
-            message.reply_text(formatted_quote)
+            await message.reply_text(formatted_quote)
         else:
-            message.reply_text("Failed to fetch a quote. Try again later.")
+            await message.reply_text("Failed to fetch a quote. Try again later.")
     except Exception as e:
-        message.reply_text(f"An error occurred: {str(e)}")
+        await message.reply_text(f"An error occurred: {str(e)}")
 
 
 
 @app.on_message(filters.command("mquote"))
-def get_many_quotes(client, message):
+async def get_many_quotes(client, message):
     try:
         response = requests.get("https://animechan.xyz/api/quotes")
         if response.status_code == 200:
             quotes = response.json()
             formatted_quotes = "\n\n".join([f"**Anime**: `{quote['anime']}`\n**Character**: `{quote['character']}`\n**Quote**: __\"{quote['quote']}\"__" for quote in quotes])
-            message.reply_text(formatted_quotes)
+            await message.reply_text(formatted_quotes)
         else:
-            message.reply_text("Failed to fetch quotes. Try again later.")
+            await message.reply_text("Failed to fetch quotes. Try again later.")
     except Exception as e:
-        message.reply_text(f"An error occurred: {str(e)}")
+        await message.reply_text(f"An error occurred: {str(e)}")
         
 
 
@@ -358,11 +358,11 @@ async def catgirl_command(client, message):
 
 
 @app.on_message(filters.command("meme"))
-def handle_meme_command(client, message):
+async def handle_meme_command(client, message):
     api_url = "https://meme-api.com/gimme"
 
     response = requests.get(api_url)
-    message.reply_text("Downloading...")
+    await message.reply_text("Downloading...")
     if response.status_code == 200:
         meme_data = response.json()
 
@@ -380,25 +380,25 @@ def handle_meme_command(client, message):
 
             # send_message(message.chat.id, "Uploading meme...")
             if file_extension in ['png', 'jpg', 'gif']:
-                message.reply_photo(file_name, caption=title)
+                await message.reply_photo(file_name, caption=title)
             elif file_extension in ['mp4', 'gifv']:
-                message.reply_video(file_name, caption=title)
-                message.reply_text("Meme upload finished!")
+                await message.reply_video(file_name, caption=title)
+                await message.reply_text("Meme upload finished!")
 
             os.remove(file_name)
 
         else:
-            reply_text("Failed to download the meme.")
+            await reply_text("Failed to download the meme.")
     else:
-        reply_text("Failed to fetch the meme from the API.")
+        await reply_text("Failed to fetch the meme from the API.")
 
 @app.on_message(filters.command("mormeme"))
-def handle_many_meme_command(client, message):
+async def handle_many_meme_command(client, message):
 
     api_url = "https://meme-api.com/gimme/5"
 
     response = requests.get(api_url)
-    message.reply_text("Downloading...")
+    await message.reply_text("Downloading...")
     if response.status_code == 200:
         memes_data = response.json()
 
@@ -421,17 +421,17 @@ def handle_many_meme_command(client, message):
 
                 # send_message(message.chat.id, "Uploading meme...")
                 if file_extension in ['png', 'jpg', 'gif']:
-                    message.reply_photo(file_name, caption=title)
+                    await message.reply_photo(file_name, caption=title)
                 elif file_extension in ['mp4', 'gifv']:
-                    message.reply_video(file_name, caption=title)
-                    message.reply_text("Meme upload finished!")
+                    await message.reply_video(file_name, caption=title)
+                    await message.reply_text("Meme upload finished!")
                 os.remove(file_name)
 
             else:
-                message.reply_text(f"Failed to download the meme '{title}'.")
+                await message.reply_text(f"Failed to download the meme '{title}'.")
 
     else:
-        message.reply_text("Failed to fetch memes from the API.")
+        await message.reply_text("Failed to fetch memes from the API.")
 
 
 
