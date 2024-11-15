@@ -862,18 +862,6 @@ Antiflood allows you to take action on users that send more than x messages in a
 /setfloodtimer  : Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
 /setfloodmode : Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
 /clearflood : Whether to delete the messages that triggered the flood.
-
-**Examples:**
-Set antiflood to trigger after 7 messages:
-- /setflood 7
-Disable antiflood:
-- /setflood off
-Set timed antiflood to trigger after 10 messages in 30 seconds:
-- /setfloodtimer 10 30s
-Set the antiflood action to mute:
-- /setfloodmode mute
-Set the antiflood action to a 3 day ban:
-- /setfloodmode tban 3d
 """
 buttons_adf = [
     [
