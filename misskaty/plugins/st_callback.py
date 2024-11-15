@@ -6,34 +6,34 @@ from misskaty.vars import SUDO as SUDO_USERS
 
 #============SUDO===≠===
 SUDO_TEXT = """
-Hi there sudo user👮‍♂️
+**Sudo User CMD**👮‍♂️
 Here is the help for DevCommand:
 
 **For Owner Bot Only:**
-/restart - update and restart bot.
+<blockquote>/restart - update and restart bot.
 /run [args] - Run eval CMD
 /logs [int] - Check logs bot
 /shell [args] - Run Exec/Terminal CMD
 **Blacklist chat:**
 /disablechat [chat id] - Remove blacklist group
 /enablechat [chat id] - Add Blacklist group
-/leave
+/leave</blockquote>
 
 **BanUsers:**
-/banuser [chat id] - Ban user and block user so cannot use bot
+<blockquote>/banuser [chat id] - Ban user and block user so cannot use bot
 /unbanuser [chat id] - Unban user and make their can use bot again
 /gban - To Ban A User Globally.
 /ungban - To remove ban user globbaly.
-/copy | /forward To send message to groups.
+/copy | /forward To send message to groups.</blockquote>
 
 **Blacklist Groups**
-/blacklist_chat [CHAT_ID] - Blacklist a chat.
+<blockquote>/blacklist_chat [CHAT_ID] - Blacklist a chat.
 /whitelist_chat [CHAT_ID] - Whitelist a chat.
-/blacklisted - Show blacklisted chats.
+/blacklisted - Show blacklisted chats.</blockquote>
 
 **For Public Use**
-/stats - Check statistic bot
-/json - Send structure message Telegram in JSON using Pyrogram Style.
+<blockquote>/stats - Check statistic bot
+/json - Send structure message Telegram in JSON using Pyrogram Style.</blockquote>
 """
 BUTTON_SUDO = [
     [
@@ -142,7 +142,7 @@ async def help_cb_handlerj1(bot, query):
     )
 @Bot.on_message(filters.command("help") & filters.private)
 async def hp_hagndlery(bot, query):
-    await message.reply_text(
+    await query.reply_text(
         text=TEXT_GE.format(query.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
         quote=True,
@@ -154,13 +154,12 @@ TEXT_GP = """
 <blockquote>Hey {}, My name is ⏤͟͟͞͞𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡𓆪. I am a group management bot, here to help you get around and keep the order in your groups!
 I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.</blockquote>
 
-<blockquote>
 **Helpful commands:**
- - /start: Start the bot
+<blockquote> - /start: Start the bot
  - /help: Give this message
  - /privacy if you want know data collected by this bot.</blockquote>
 
- All commands can be used with the following: / !
+** All commands can be used with the following: / !**
 """
 BUTTONS_GP = [
     [
@@ -261,10 +260,10 @@ The antiraid module allows you to quickly stop anyone from joining when such a r
 All new joins will be temporarily banned for the next few hours, allowing you to wait out the spam attack until the trolls stop.</blockquote>
 
 **Admin commands:**
-__/antiraid Toggle antiraid. All new joins will be temporarily banned for the next few hours.
+<blockquote>__/antiraid Toggle antiraid. All new joins will be temporarily banned for the next few hours.
 /raidtime <time>: View or set the desired antiraid duration. Default 6h.
 /raidactiontime <time>: View or set the time for antiraid to tempban users for. Default 1h.
-/autoantiraid <number/off/no>: Set the number of joins per minute after which to enable automatic antiraid. Set to '0', 'off', or 'no' to disable.__
+/autoantiraid <number/off/no>: Set the number of joins per minute after which to enable automatic antiraid. Set to '0', 'off', or 'no' to disable.__</blockquote>
 """
 buttons_ard = [
     [
@@ -286,7 +285,7 @@ async def abvrriv(bot, query):
 text_ccd = """
 **Clean Command**
 
-/cleanblue - Enable clean Blue texts in group chats.
+<blockquote>/cleanblue - Enable clean Blue texts in group chats.</blockquote>
 """
 buttons_ccd = [
     [
@@ -305,22 +304,21 @@ async def abviv(bot, query):
 
 text_admi = """
 **Here is the help for Admin**
-
 <blockquote>Make it easy to promote and demote users with the admin module!</blockquote>
 
-Admin commands:
-- /adminlist: List the admins in the current chat.
-- /promote <reply/username/mention/userid>: Promote a user.
-- /demote <reply/username/mention/userid>: Demote a user.
-- /fullpromote Promote A Member With All Rights.
-- /groupdata To get Group Data.
-- /groupinfo To get Group info.
-- /link To get Group link.
+**Admin commands:**
+<blockquote>/adminlist: List the admins in the current chat.
+/promote <reply/username/mention/userid>: Promote a user.
+/demote <reply/username/mention/userid>: Demote a user.
+/fullpromote Promote A Member With All Rights.
+/groupdata To get Group Data.
+/groupinfo To get Group info.
+/link To get Group link.</blockquote>
 
 **To Admins.**
-/set_chat_title - Change The Name Of A Group/Channel.
+<blockquote>/set_chat_title - Change The Name Of A Group/Channel.
 /set_chat_photo - Change The PFP Of A Group/Channel.
-/set_user_title - Change The Administrator Title Of An Admin.
+/set_user_title - Change The Administrator Title Of An Admin.</blockquote>
 
 <blockquote>Sometimes, you promote or demote an admin manually, and gojo doesn't realise it immediately.
 This is because to avoid spamming telegram servers, admin status is cached locally.</blockquote>
@@ -343,9 +341,9 @@ async def abvijdv(bot, query):
 text_afk = """
 **Here is the help for AFK:**
 
-/afk [Reason > Optional] - Tell others that you are AFK (Away From Keyboard), so that your boyfriend or girlfriend won't look for you 💔.
+<blockquote>/afk [Reason > Optional] - Tell others that you are AFK (Away From Keyboard), so that your boyfriend or girlfriend won't look for you 💔.
 /afk [reply to media] - AFK with media.
-/afkdel - Enable auto delete AFK message in group (Only for group admin). Default is Enable.
+/afkdel - Enable auto delete AFK message in group (Only for group admin). Default is Enable.</blockquote>
 
 <blockquote>Just type something in group to remove AFK Status.</blockquote>
 """
@@ -370,29 +368,25 @@ text_ban = """
 This module allows you to do that easily, by exposing some common actions, so everyone will see!</blockquote>
 
 User commands:
-- /kickme: Users that use this, kick themselves.
+<blockquote>/kickme: Users that use this, kick themselves.</blockquote>
 
 **Admin commands:**
 **Ban**
-/ban - Ban A User From A Group
+<blockquote>/ban - Ban A User From A Group
 /dban - Delete the replied message banning its sender
 /tban - Ban A User For Specific Time
 /unban - Unban A User
 /listban - Ban a user from groups listed in a message
-/listunban - Unban a user from groups listed in a message
+/listunban - Unban a user from groups listed in a message</blockquote>
 
 **Mute:**
-/mute: Mute a user.
+<blockquote>/mute: Mute a user.
 /tmute: Temporarily mute a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
-/unmute: Unmute a user.
+/unmute: Unmute a user.</blockquote>
 
 **Kick**
-/kick: Kick a user.
-/dkick - Delete the replied message kicking its sender
-
-**Examples:**
-- Mute a user for two hours.
--> /tmute @username 2h
+<blockquote>/kick: Kick a user.
+/dkick - Delete the replied message kicking its sender</blockquote>
 """
 buttons_ban = [
     [
@@ -414,10 +408,10 @@ text_war = """
 
 <blockquote>Keep your members in check with warnings; stop them getting out of control!</blockquote>
 
-/warn <reason>: - Warn A User
+<blockquote>/warn <reason>: - Warn A User
 /dwarn <reason>: - Delete the replied message warning its sender
 /rmwarns - Remove All Warning of A User
-/warns - Show Warning Of A User.
+/warns - Show Warning Of A User.</blockquote>
 
 <blockquote>Keep your members in check with warnings; stop them getting out of control!
 If you're looking for automated warnings, go read about the blocklist module.</blockquote>
@@ -440,11 +434,11 @@ async def abvivwar(bot, query):
 text_prg = """
 **Here is the help for Purges**
 
-Need to delete lots of messages? That's what purges are for!
+<blockquote>Need to delete lots of messages? That's what purges are for!</blockquote>
 
-/purge - Delete all messages from the replied to message, to the current message.
+<blockquote>/purge - Delete all messages from the replied to message, to the current message.
 /purge [n] - Purge "n" number of messages from replied message
-/del - Delete Replied Message
+/del - Delete Replied Message</blockquote>
 <blockquote>
 **Examples:**
 - Delete all messages from the replied to message, until now.
@@ -468,8 +462,8 @@ async def abvprviv(bot, query):
 text_gst = """
 **Here is the help for Ghost**
 
-/instatus - View member status in group
-/ban_ghosts Remove deleted Ghosts accounts from group 
+<blockquote>/instatus - View member status in group
+/ban_ghosts Remove deleted Ghosts accounts from group</blockquote>
 
 <blockquote>note:
 - ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ʙᴇsᴛ ᴇғғᴇᴄᴛ. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.</blockquote>
