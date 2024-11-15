@@ -51,7 +51,7 @@ def upload_file(file_path):
         return False, f"Exception occurred: {str(e)}"
 
 # Handler for incoming photo messages
-@Bot.on_message(filters.private & filters.command(["telegraph", "tph"]))
+@app.on_message(filters.private & filters.command(["telegraph", "tph"]))
 async def photo_handler(_, message: Message):
     """Handles incoming photo messages by uploading to Catbox.moe."""
     replied = message.reply_to_message
