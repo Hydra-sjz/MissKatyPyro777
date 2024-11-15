@@ -54,8 +54,8 @@ def upload_file(file_path):
 @app.on_message(filters.private & filters.command(["telegraph", "tph"]))
 async def photo_handler(_, message: Message):
     """Handles incoming photo messages by uploading to Catbox.moe."""
-    replied = message.reply_to_message
-    media = replied
+    media = message.reply_to_message
+ 
     file_size = media.photo.file_size if media.photo else 0
 
     # Check if file is larger than 200MB
@@ -88,8 +88,7 @@ async def photo_handler(_, message: Message):
                         InlineKeyboardButton(text="X-BOTS-X", url="https://t.me/xbots_x"),
                     ]
                 ]
-            )
-
+                                                                   )
             # Send final message with the URL and buttons
             await text.edit_text(
                 text=final_text,
