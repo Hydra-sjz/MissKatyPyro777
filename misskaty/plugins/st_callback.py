@@ -204,7 +204,10 @@ BUTTONS_GP = [
         InlineKeyboardButton("🗳️Reports", callback_data="rpt"),
     ],
     [
+        InlineKeyboardButton("📊Ranking", callback_data="rak"),
         InlineKeyboardButton("🪬SangMata", callback_data="sm"),
+    ],
+    [
         InlineKeyboardButton("❗Warns", callback_data="war"),
     ],
     [
@@ -220,6 +223,35 @@ async def abvigjdv(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         disable_web_page_preview=True,
 )
+
+text_rak = """
+**Rankings**
+
+<blockquote>Emilia now provides a more interactive and playful environment for group chats!
+You can now enjoy our new chat levels module to increase your points and level up in a specific group chat. All you need to do is register yourself for unlocking new adventures!</blockquote>
+
+**Commands:**
+<blockquote>/register [your_name]: This is a one time command for users to register themselves to play chat levels.
+/rank: This will show your rankings and stats.
+/leaderboard: Shows current leaderboard among top players.
+/daily: Use it once in every 24 hours to get a 100 points gift.
+/weekly: Use it once in every 7 days to get a 500 points gift.
+/rankings: To know more about chat levels.</blockquote>
+"""
+buttons_rak = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^rak$"))
+async def abvivrak(bot, query):
+    await query.message.edit(
+        text=text_rak,
+        reply_markup=InlineKeyboardMarkup(buttons_rak),
+        disable_web_page_preview=True,
+    )
 
 text_ard = """
 **AntiRaid**
