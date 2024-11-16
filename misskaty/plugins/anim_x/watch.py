@@ -6,15 +6,14 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import anibot, custom_filter
-from Emilia.utils.data_parser import get_wo, get_wols
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import check_user, control_user
+from misskaty import app as anibot, custom_filter
+from anilist.data_parser import get_wo, get_wols
+from anilist.db import anilistEmilia.utils.helper import check_user, control_user
 
 DC = get_collection("DISABLED_CMDS")
 
 
-@Client.on_message(custom_filter.command(commands="watch"))
+@anibot.on_message(custom_filter.command(commands="watch"))
 @control_user
 async def get_watch_order(client: Client, message: Message, mdata: dict):
     """Get List of Scheduled Anime"""
@@ -47,7 +46,7 @@ async def get_watch_order(client: Client, message: Message, mdata: dict):
     await client.send_message(gid, msg, reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@Client.on_callback_query(filters.regex(pattern=r"watch_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"watch_(.*)"))
 @check_user
 async def watch_(client: anibot, cq: CallbackQuery, cdata: dict):
     kek, id_, qry, req, user = cdata["data"].split("_")
@@ -92,7 +91,7 @@ async def watch_(client: anibot, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(msg, reply_markup=InlineKeyboardMarkup(button))
 
 
-@Client.on_callback_query(filters.regex(pattern=r"wol_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"wol_(.*)"))
 async def wls(client: anibot, cq: CallbackQuery):
     kek, qry, user = cq.data.split("_")
     data = get_wols(qry)
