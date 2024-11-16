@@ -16,16 +16,13 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import (
+from misskaty import app as anibot, custom_filter, BOT_USERNAME, DEV_USERS
+from misskaty.vars import (
     ANILIST_CLIENT,
     ANILIST_REDIRECT_URL,
     ANILIST_SECRET,
-    BOT_USERNAME,
-    DEV_USERS,
-    anibot,
-    custom_filter,
 )
-from Emilia.utils.data_parser import (
+from anilist.data_parser import (
     AIRING_DB,
     ANIME_DB,
     CHAR_DB,
@@ -51,8 +48,8 @@ from Emilia.utils.data_parser import (
     toggle_favourites,
     update_anilist,
 )
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import (
+from anilist.db import get_collection
+from anilist.helper import (
     AUTH_USERS,
     PIC_LS,
     check_user,
@@ -60,8 +57,8 @@ from Emilia.utils.helper import (
     control_user,
     get_btns,
 )
-from Emilia.utils.helper import get_user_from_channel as gcc
-from Emilia.utils.helper import rand_key
+from anilist.helper import get_user_from_channel as gcc
+from anilist.helper import rand_key
 
 GROUPS = get_collection("GROUPS")
 SFW_GRPS = get_collection("SFW_GROUPS")
