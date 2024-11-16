@@ -23,13 +23,14 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import BOT_USERNAME, DEV_USERS, HELP_DICT
-from Emilia import TRIGGERS as trg
-from Emilia import anibot, custom_filter
-from Emilia.anime.anilist import auth_link_cmd, code_cmd, logout_cmd
-from Emilia.utils.data_parser import get_additional_info, get_anime, get_recommendations
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import AUTH_USERS, check_user, clog, control_user, get_btns
+from misskaty import BOT_USERNAME, DEV_USERS
+from misskaty.vars import TRIGGERS as trg, HELP_DICT
+from misskaty import app as anibot, custom_filter
+
+from misskaty.plugins.anim_x.anilist import auth_link_cmd, code_cmd, logout_cmd
+from anilist.data_parser import get_additional_info, get_anime, get_recommendations
+from anilist.db import get_collection
+from anilist.helper import AUTH_USERS, check_user, clog, control_user, get_btns
 
 USERS = get_collection("USERS")
 GROUPS = get_collection("GROUPS")
@@ -73,7 +74,7 @@ CMD = [
 ]
 
 
-@Client.on_message(
+@anibot.on_message(
     custom_filter.command(commands=["anienable", "anidisable"]), filters.group
 )
 @control_user
@@ -152,7 +153,7 @@ async def en_dis__able_cmd(client: Client, message: Message, mdata: dict):
             await message.reply_text("Hee, is that a command?!")
 
 
-@Client.on_message(custom_filter.command(commands="anidisabled"), filters.group)
+@anibot.on_message(custom_filter.command(commands="anidisabled"), filters.group)
 @control_user
 async def list_disabled(client: Client, message: Message, mdata: dict):
     find_gc = await DC.find_one({"_id": mdata["chat"]["id"]})
@@ -167,7 +168,7 @@ async def list_disabled(client: Client, message: Message, mdata: dict):
         )
 
 
-@Client.on_message(
+@anibot.on_message(
     filters.user(DEV_USERS)
     & filters.command(["anidbcleanup", f"anidbcleanup{BOT_USERNAME}"], prefixes=trg)
 )
@@ -244,7 +245,7 @@ async def db_cleanup(client: Client, message: Message, mdata: dict):
         await x.reply_text(entries)
     await x.edit_text(msg)
 
-@Client.on_message(custom_filter.command("anihelp"))
+@anibot.on_message(custom_filter.command("anihelp"))
 @control_user
 async def help_(client: Client, message: Message, mdata: dict):
     gid = mdata['chat']['id']
@@ -301,7 +302,7 @@ Apart from above shown cmds"""
 
 
 
-@Client.on_message(custom_filter.command(commands=["aniconnect", "anidisconnect"]))
+@anibot.on_message(custom_filter.command(commands=["aniconnect", "anidisconnect"]))
 @control_user
 async def connect_(client: Client, message: Message, mdata: dict):
     gid = mdata["chat"]["id"]
@@ -381,7 +382,7 @@ async def connect_(client: Client, message: Message, mdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"helppp_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"helppp_(.*)"))
 @check_user
 async def help_dicc_parser(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -393,7 +394,7 @@ async def help_dicc_parser(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(text=text, reply_markup=btn)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"hlplist_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"hlplist_(.*)"))
 @check_user
 async def help_list_parser(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -423,7 +424,7 @@ def help_btns(user):
     return InlineKeyboardMarkup(buttons)
 
 
-@Client.on_message(
+@anibot.on_message(
     filters.user(DEV_USERS)
     & filters.command(["anistats", f"anistats{BOT_USERNAME}"], prefixes=trg)
 )
@@ -463,7 +464,7 @@ Stats:-
     )
 
 
-@Client.on_message(
+@anibot.on_message(
     filters.private
     & filters.command(["feedback", f"feedback{BOT_USERNAME}"], prefixes=trg)
 )
@@ -480,7 +481,7 @@ async def feed_(client: Client, message: Message, mdata: dict):
 ###### credits to @NotThatMF on tg since he gave me the code for it ######
 
 
-@Client.on_message(
+@anibot.on_message(
     filters.command(["anieval", f"anieval{BOT_USERNAME}"], prefixes=trg)
     & filters.user(DEV_USERS)
 )
@@ -536,7 +537,7 @@ async def aexec(code, client, message):
     return await locals()["__aexec"](client, message)
 
 
-@Client.on_message(
+@anibot.on_message(
     filters.user(DEV_USERS)
     & filters.command(["term", f"term{BOT_USERNAME}"], prefixes=trg)
 )
