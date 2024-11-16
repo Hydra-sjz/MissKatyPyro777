@@ -6,7 +6,7 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import anibot, custom_filter
+from misskaty import app as anibot, custom_filter
 from anilist.data_parser import parse_filler, search_filler
 from anilist.db import get_collection
 from anilist.helper import check_user, control_user, rand_key
