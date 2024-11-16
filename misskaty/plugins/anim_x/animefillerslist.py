@@ -15,9 +15,9 @@ FILLERS = {}
 DC = get_collection("DISABLED_CMDS")
 
 
-@anibot.on_message(custom_filter.command(commands="fillers"))
+@anibot.on_message(custom_filter.command(commands="anfillers"))
 @control_user
-async def fillers_cmd(client: Client, message: Message, mdata: dict):
+async def fillers_gjcmd(client: Client, message: Message, mdata: dict):
     find_gc = await DC.find_one({"_id": mdata["chat"]["id"]})
     try:
         user = mdata["from_user"]["id"]
