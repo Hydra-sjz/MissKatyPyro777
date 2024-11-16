@@ -2,15 +2,15 @@
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, Message
 
-from Emilia import anibot, custom_filter
-from Emilia.utils.data_parser import get_scheduled
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import control_user, get_btns
+from misskaty import app as anibot, custom_filter
+from anilist.data_parser import get_scheduled
+from anilist.db import get_collection
+from anilist.helper import control_user, get_btns
 
 DC = get_collection("DISABLED_CMDS")
 
 
-@Client.on_message(custom_filter.command(commands="schedule"))
+@anibot.on_message(custom_filter.command(commands="schedule"))
 @control_user
 async def get_schuled(client: Client, message: Message, mdata: dict):
     """Get List of Scheduled Anime"""
@@ -28,7 +28,7 @@ async def get_schuled(client: Client, message: Message, mdata: dict):
     await x.edit_text(msg[0], reply_markup=buttons)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"sched_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"sched_(.*)"))
 async def ns_(client: anibot, cq: CallbackQuery):
     kek, day, user = cq.data.split("_")
     msg = await get_scheduled(int(day))
