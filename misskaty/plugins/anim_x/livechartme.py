@@ -10,9 +10,9 @@ from bs4 import BeautifulSoup as bs
 from pyrogram.errors import ChatAdminRequired, WebpageCurlFailed, WebpageMediaEmpty
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from Emilia import anibot
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import clog
+from misskaty import app as anibot
+from anilist.db import get_collection
+from anilist.helper import clog
 
 failed_pic = "https://telegra.ph/file/09733b49f3a9d5b147d21.png"
 
