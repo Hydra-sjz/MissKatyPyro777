@@ -15,11 +15,11 @@ from pyrogram.types import (
 )
 from tracemoepy.errors import ServerError
 
-from Emilia import anibot, custom_filter, session
-from Emilia.anime.anilist import no_pic
-from Emilia.utils.data_parser import check_if_adult
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import clog, control_user, media_to_image, rand_key
+from misskaty import app as anibot, custom_filter, session
+from misskaty.plugins.anim_x.anilist import no_pic
+from anilist.data_parser import check_if_adult
+from anilist.db import get_collection
+from anilist.helper import clog, control_user, media_to_image, rand_key
 
 SFW_GRPS = get_collection("SFW_GROUPS")
 DC = get_collection("DISABLED_CMDS")
@@ -27,7 +27,7 @@ DC = get_collection("DISABLED_CMDS")
 TRACE_MOE = {}
 
 
-@Client.on_message(custom_filter.command(commands="anireverse"), group=954)
+@anibot.on_message(custom_filter.command(commands="anireverse"), group=954)
 @control_user
 async def trace_bekkkkkk(client: anibot, message: Message, mdata: dict):
     """Reverse Search Anime Clips/Photos"""
@@ -121,7 +121,7 @@ async def trace_bekkkkkk(client: anibot, message: Message, mdata: dict):
     await x.delete()
 
 
-@Client.on_callback_query(filters.regex(pattern=r"tracech_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"tracech_(.*)"))
 async def tracemoe_btn(client: anibot, cq: CallbackQuery):
     kek, page, dls_loc, user = cq.data.split("_")
     try:
