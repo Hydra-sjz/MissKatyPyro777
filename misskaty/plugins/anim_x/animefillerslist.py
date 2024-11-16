@@ -6,16 +6,16 @@ from pyrogram.types import (
     Message,
 )
 
-from Emilia import anibot, custom_filter
-from Emilia.utils.data_parser import parse_filler, search_filler
-from Emilia.utils.db import get_collection
-from Emilia.utils.helper import check_user, control_user, rand_key
+from misskaty import anibot, custom_filter
+from anilist.data_parser import parse_filler, search_filler
+from anilist.db import get_collection
+from anilist.helper import check_user, control_user, rand_key
 
 FILLERS = {}
 DC = get_collection("DISABLED_CMDS")
 
 
-@Client.on_message(custom_filter.command(commands="fillers"))
+@anibot.on_message(custom_filter.command(commands="fillers"))
 @control_user
 async def fillers_cmd(client: Client, message: Message, mdata: dict):
     find_gc = await DC.find_one({"_id": mdata["chat"]["id"]})
@@ -61,7 +61,7 @@ example: /fillers Detective Conan"""
     )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"fill_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"fill_(.*)"))
 @check_user
 async def filler_btn(client: Client, cq: CallbackQuery, cdata: dict):
     kek, req, user = cdata["data"].split("_")
