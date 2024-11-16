@@ -82,7 +82,7 @@ no_pic = [
 ]
 
 
-@Client.on_message(custom_filter.command(commands="anime"))
+@anibot.on_message(custom_filter.command(commands="anime"))
 @control_user
 async def anime_cmd(client: Client, message: Message, mdata: dict):
     """Search Anime Info"""
@@ -141,7 +141,7 @@ example: /anime Ao Haru Ride"""
         PIC_LS.append(title_img)
 
 
-@Client.on_message(custom_filter.command(commands="manga"))
+@anibot.on_message(custom_filter.command(commands="manga"))
 @control_user
 async def manga_cmd(client: Client, message: Message, mdata: dict):
     """Search Manga Info"""
@@ -210,7 +210,7 @@ example: /manga The teasing master Takagi san"""
         PIC_LS.append(pic)
 
 
-@Client.on_message(custom_filter.command(commands="character"))
+@anibot.on_message(custom_filter.command(commands="character"))
 @control_user
 async def character_cmd(client: Client, message: Message, mdata: dict):
     """Get Info about a Character"""
@@ -258,7 +258,7 @@ async def character_cmd(client: Client, message: Message, mdata: dict):
         await client.send_photo(gid, failed_pic, caption=cap_text, reply_markup=buttons)
 
 
-@Client.on_message(custom_filter.command(commands="anilist"))
+@anibot.on_message(custom_filter.command(commands="anilist"))
 @control_user
 async def anilist_cmd(client: Client, message: Message, mdata: dict):
     text = mdata["text"].split(" ", 1)
@@ -325,7 +325,7 @@ async def anilist_cmd(client: Client, message: Message, mdata: dict):
         PIC_LS.append(pic)
 
 
-@Client.on_message(custom_filter.command(commands=["flex", "user"]))
+@anibot.on_message(custom_filter.command(commands=["flex", "user"]))
 @control_user
 async def flex_cmd(client: Client, message: Message, mdata: dict):
     query = mdata["text"].split(" ", 1)
@@ -384,7 +384,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
         await client.send_photo(gid, failed_pic, caption=msg, reply_markup=buttons)
 
 
-@Client.on_message(custom_filter.command(commands="top"))
+@anibot.on_message(custom_filter.command(commands="top"))
 @control_user
 async def top_tags_cmd(client: Client, message: Message, mdata: dict):
     query = mdata["text"].split(" ", 1)
@@ -412,7 +412,7 @@ async def top_tags_cmd(client: Client, message: Message, mdata: dict):
     )
 
 
-@Client.on_message(custom_filter.command(commands="studio"))
+@anibot.on_message(custom_filter.command(commands="studio"))
 @control_user
 async def studio_cmd(client: Client, message: Message, mdata: dict):
     text = mdata["text"].split(" ", 1)
@@ -452,7 +452,7 @@ async def studio_cmd(client: Client, message: Message, mdata: dict):
     await client.send_message(gid, msg, reply_markup=buttons if buttons != "" else None)
 
 
-@Client.on_message(custom_filter.command(commands="airing"))
+@anibot.on_message(custom_filter.command(commands="airing"))
 @control_user
 async def airing_cmd(client: Client, message: Message, mdata: dict):
     """Get Airing Detail of Anime"""
@@ -522,7 +522,7 @@ example: /airing Fumetsu no Anata e"""
         PIC_LS.append(coverImg)
 
 
-@Client.on_message(custom_filter.command(commands="auth"))
+@anibot.on_message(custom_filter.command(commands="auth"))
 @control_user
 async def auth_link_cmd(client, message: Message, mdata: dict):
     try:
@@ -583,7 +583,7 @@ Subsplease updates will toggle notifications about release of animes on subsplea
 Click Headlines button to enable headlines. You can choose from given sources"""
 
 
-@Client.on_message(custom_filter.command(commands="anisettings"))
+@anibot.on_message(custom_filter.command(commands="anisettings"))
 @control_user
 async def settings_cmd(client: Client, message: Message, mdata: dict):
     if message.chat.type == ChatType.PRIVATE:
@@ -647,7 +647,7 @@ async def settings_cmd(client: Client, message: Message, mdata: dict):
         )
 
 
-@Client.on_message(custom_filter.command(commands="code"))
+@anibot.on_message(custom_filter.command(commands="code"))
 @control_user
 async def man_code_cmd(client: Client, message: Message, _):
     text = message.text.split(" ", 1)
@@ -691,7 +691,7 @@ Something unexpected happened"""
         await AUTH_USERS.find_one_and_delete({"code": code})
 
 
-@Client.on_message(custom_filter.command(commands=["ame", "activity"]))
+@anibot.on_message(custom_filter.command(commands=["ame", "activity"]))
 @control_user
 async def activity_cmd(client: Client, message: Message, mdata: dict):
     try:
@@ -743,7 +743,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
         await client.send_photo(gid, failed_pic, caption=msg, reply_markup=btns)
 
 
-@Client.on_message(custom_filter.command(commands="favourites"))
+@anibot.on_message(custom_filter.command(commands="favourites"))
 @control_user
 async def favourites_cmd(client: Client, message: Message, mdata: dict):
     try:
@@ -804,7 +804,7 @@ Or connect your channel with /aniconnect cmd if you are anonymous""",
         )
 
 
-@Client.on_message(custom_filter.command(commands="logout"))
+@anibot.on_message(custom_filter.command(commands="logout"))
 @control_user
 async def logout_cmd(client: Client, message: Message, mdata: dict):
     try:
@@ -834,7 +834,7 @@ async def logout_cmd(client: Client, message: Message, mdata: dict):
         )
 
 
-@Client.on_message(custom_filter.command(commands="browse"))
+@anibot.on_message(custom_filter.command(commands="browse"))
 @control_user
 async def browse_cmd(client: Client, message: Message, mdata: dict):
     try:
@@ -859,7 +859,7 @@ async def browse_cmd(client: Client, message: Message, mdata: dict):
     await client.send_message(gid, msg, reply_markup=InlineKeyboardMarkup(btns))
 
 
-@Client.on_message(custom_filter.command(commands=["getgenres", "gettags"]))
+@anibot.on_message(custom_filter.command(commands=["getgenres", "gettags"]))
 @control_user
 async def list_tags_genres_cmd(client, message: Message, mdata: dict):
     gid = mdata["chat"]["id"]
@@ -883,7 +883,7 @@ async def list_tags_genres_cmd(client, message: Message, mdata: dict):
     await message.reply_text(msg)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"page_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"page_(.*)"))
 @check_user
 async def page_btn(client: Client, cq: CallbackQuery, cdata: dict):
     kek, media, query, page, auth, user = cq.data.split("_")
@@ -972,7 +972,7 @@ This material is marked 18+ and not allowed in this group""",
             PIC_LS.append(pic)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"pgstudio_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"pgstudio_(.*)"))
 @check_user
 async def studio_pg_btn(client: Client, cq: CallbackQuery, cdata: dict):
     kek, page, qry, auth, user = cdata["data"].split("_")
@@ -992,7 +992,7 @@ async def studio_pg_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(msg, reply_markup=buttons)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"stuani_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"stuani_(.*)"))
 @check_user
 async def studio_ani_btn(client: Client, cq: CallbackQuery, cdata: dict):
     kek, page, id_, rp, qry, auth, user = cdata["data"].split("_")
@@ -1008,7 +1008,7 @@ async def studio_ani_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(msg, reply_markup=buttons)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"btn_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"btn_(.*)"))
 @check_user
 async def anime_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1040,7 +1040,7 @@ async def anime_btn(client: Client, cq: CallbackQuery, cdata: dict):
         PIC_LS.append(pic)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"topanimu_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"topanimu_(.*)"))
 @check_user
 async def top_tags_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1050,7 +1050,7 @@ async def top_tags_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(msg, reply_markup=buttons)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"settogl_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"settogl_(.*)"))
 async def nsfw_toggle_btn(client: Client, cq: CallbackQuery):
     cus = cq.from_user.id
     gid = cq.data.split("_").pop()
@@ -1137,7 +1137,7 @@ async def nsfw_toggle_btn(client: Client, cq: CallbackQuery):
     await cq.edit_message_reply_markup(reply_markup=btns)
 
 
-@Client.on_callback_query(filters.regex(pattern=r"myacc_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"myacc_(.*)"))
 @check_user
 async def flex_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1160,7 +1160,7 @@ async def flex_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"myfavs_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"myfavs_(.*)"))
 @check_user
 async def list_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1205,7 +1205,7 @@ async def list_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"myfavqry_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"myfavqry_(.*)"))
 @check_user
 async def favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1228,7 +1228,7 @@ async def favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"getusrbc_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"getusrbc_(.*)"))
 @check_user
 async def get_user_back_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
@@ -1250,7 +1250,7 @@ async def get_user_back_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"fav_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"fav_(.*)"))
 @check_user
 async def toggle_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
     query = cdata["data"].split("_")
@@ -1369,7 +1369,7 @@ async def toggle_favourites_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"(lsadd|lsupdt)_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"(lsadd|lsupdt)_(.*)"))
 @check_user
 async def list_update_anilist_btn(client: Client, cq: CallbackQuery, cdata: dict):
     stts_ls = ["COMPLETED", "CURRENT", "PLANNING", "DROPPED", "PAUSED", "REPEATING"]
@@ -1401,7 +1401,7 @@ async def list_update_anilist_btn(client: Client, cq: CallbackQuery, cdata: dict
     await cq.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btns))
 
 
-@Client.on_callback_query(
+@anibot.on_callback_query(
     filters.regex(pattern=r"browse_(upcoming|trending|popular)_(.*)")
 )
 @check_user
@@ -1423,7 +1423,7 @@ async def browse_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.edit_message_text(msg, reply_markup=InlineKeyboardMarkup(btns))
 
 
-@Client.on_callback_query(filters.regex(pattern=r"(lsas|lsus|dlt)_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"(lsas|lsus|dlt)_(.*)"))
 @check_user
 async def update_anilist_btn(client: Client, cq: CallbackQuery, cdata: dict):
     query = cdata["data"].split("_")
@@ -1570,7 +1570,7 @@ async def update_anilist_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"(desc|ls|char)_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"(desc|ls|char)_(.*)"))
 @check_user
 async def additional_info_btn(client: Client, cq: CallbackQuery, cdata: dict):
     q = cdata["data"].split("_")
@@ -1660,7 +1660,7 @@ async def additional_info_btn(client: Client, cq: CallbackQuery, cdata: dict):
     await cq.answer()
 
 
-@Client.on_callback_query(filters.regex(pattern=r"lsc_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"lsc_(.*)"))
 @check_user
 async def featured_in_btn(client: Client, cq: CallbackQuery, cdata: dict):
     kek, idm, qry, pg, auth, usr = cdata["data"].split("_")
@@ -1712,7 +1712,7 @@ async def featured_in_btn(client: Client, cq: CallbackQuery, cdata: dict):
         )
 
 
-@Client.on_callback_query(filters.regex(pattern=r"lsc(a|m)_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"lsc(a|m)_(.*)"))
 @check_user
 async def featured_in_switch_btn(client: Client, cq: CallbackQuery, cdata: dict):
     req, idm, reqpg, qry, pg, auth, user = cdata["data"].split("_")
@@ -1778,7 +1778,7 @@ Auto Unpin can be customized, click on the button to see available options
 """
 
 
-@Client.on_callback_query(filters.regex(pattern=r"headlines_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"headlines_(.*)"))
 async def headlines_btn(client: Client, cq: CallbackQuery):
     cus = cq.from_user.id
     qry = cq.data.split("_")[1]
@@ -1895,7 +1895,7 @@ TIMES = {
 }
 
 
-@Client.on_callback_query(filters.regex(pattern=r"unpin_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"unpin_(.*)"))
 async def auto_unpin(client: Client, cq: CallbackQuery):
     cus = cq.from_user.id
     qry = cq.data.split("_")[1]
@@ -1981,7 +1981,7 @@ async def auto_unpin(client: Client, cq: CallbackQuery):
 BULLETS = ["➤", "•", "⚬", "▲", "▸", "△", "⋟", "»", "None"]
 
 
-@Client.on_callback_query(filters.regex(pattern=r"cui_(.*)"))
+@anibot.on_callback_query(filters.regex(pattern=r"cui_(.*)"))
 async def change_ui_btn(client: Client, cq: CallbackQuery):
     cus = cq.from_user.id
     qry = cq.data.split("_")[1]
