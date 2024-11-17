@@ -147,7 +147,7 @@ async def hp_hagndlery(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GE),
         quote=True,
     )
-
+   
 #================GROUP_CMD=================
 TEXT_GP = """
 **Group-CMD**
@@ -984,7 +984,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Extras", callback_data="ext"),
-        InlineKeyboardButton(".", callback_data="k"),
+        InlineKeyboardButton("Anilist", callback_data="anil"),
         InlineKeyboardButton(".", callback_data="i"),
     ],
     [
@@ -1169,15 +1169,14 @@ async def abot_cb_handler6(bot, query):
 text_adm = """
 **Here is the help for Ai ChatBot Assistant:**
 
-/ai - Generate text response from AI using Gemini AI By Google.
+<blockquote>/ai - Generate text response from AI using Gemini AI By Google.
 /ask | /ask2 - Generate text response from AI using OpenAI.
 /gpt - Ask me anything with GPT-4o! 💡
 /gemini - Dive deep into questions with Gemini-Pro! 
 /llama - Experience creativity with Llama-3.1-405b! 🦙
 /blackbox - Curious about BlackBoxAI-Pro? Just ask! 📦
 /claude - to get ai message from 𝙲𝙻𝙾𝚄𝙳 𝚂𝙾𝙽𝙽𝙴𝚃 3.5.
-
-/draw - drow your prompt to get photos 
+/draw - drow your prompt to get photos.</blockquote>
 """
 buttons_adm = [
     [
@@ -1199,11 +1198,11 @@ async def abot_cb_handler7(bot, query):
 text_aut = """
 **Here is the help for Birthday**
 
-× /remember [reply to user] [DAT] : To registers user date of birth in my database. If not replied to user then the DAT givien will be treated as yours
-× /nextbdays (/nbdays,/brithdays,/bdays) : Return upcoming birthdays of 10 users
-× /removebday (/rmbday) : To remove birthday from database (One can only remove their data from database not of others)
-× /settingbday (/sbday) : To configure the settings for wishing and all for the chat
-× /getbday (/gbday,/mybirthday,/mybday) [reply to user] : If replied to user get the replied user's birthday else returns your birthday
+<blockquote>/remember [reply to user] [DAT] : To registers user date of birth in my database. If not replied to user then the DAT givien will be treated as yours
+/nextbdays (/nbdays,/brithdays,/bdays) : Return upcoming birthdays of 10 users
+/removebday (/rmbday) : To remove birthday from database (One can only remove their data from database not of others)
+/settingbday (/sbday) : To configure the settings for wishing and all for the chat
+/getbday (/gbday,/mybirthday,/mybday) [reply to user] : If replied to user get the replied user's birthday else returns your birthday</blockquote>
 
 <blockquote>DAT should be in format of dd/mm/yyyy
 Year is optional it is not necessary to pass it.</blockquote>
@@ -1320,9 +1319,9 @@ async def abot_cb_handlersv(bot, query):
 
 
 text_bts = """
-Here is the help for WebScraper:
+**Here is the help for WebScraper:**
 
-/webss [URL] - Take A Screenshot Of A Webpage.
+<blockquote>/webss [URL] - Take A Screenshot Of A Webpage.
 /melongmovie [query ] - Scrape website data from MelongMovie Web.
 /lk21 [query ] - Scrape website data from LayarKaca21.
 /pahe [query ] - Scrape website data from Pahe.li.
@@ -1333,7 +1332,7 @@ Here is the help for WebScraper:
 /lendrive [query ] - Scrape website data from Lendrive
 /klikxxi [query ] - Scrape website data from Klikxxi aka GoMov.
 /samehadaku [query ] - Scrape website data from Samehadaku.
-/nodrakor [query ] - Scrape website data from NoDrakor
+/nodrakor [query ] - Scrape website data from NoDrakor</blockquote>
 """
 buttons_bts = [
     [
@@ -1769,25 +1768,38 @@ async def abot_cb_handluvjker(bot, query):
     )
 
 
-text_hg = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Hᴜɢ:
+text_anx = """
+**AniList**
+<blockquote>Since this is an anime themed bot, so anime module is a must! Emilia provides you the best anime based commands including anime news and much more!</blockquote>
 
-Tʜɪs ʙᴏᴛ ʀᴇsᴘᴏɴᴅs ᴛᴏ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ᴄᴏᴍᴍᴀɴᴅs:
-々 /hug: Sᴇɴᴅs ᴀ ʜᴜɢɢɪɴɢ ᴀɴɪᴍᴀᴛɪᴏɴ.
+**Commands:**
+<blockquote>/anihelp: Get interactive and detailed help on anime commands</blockquote>
 
-Cᴏᴍᴍᴀɴᴅs
-々 /hug: Sᴇɴᴅs ᴀ ʜᴜɢɢɪɴɢ ᴀɴɪᴍᴀᴛɪᴏɴ. Iғ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴍᴇssᴀɢᴇ, ɪᴛ ᴍᴇɴᴛɪᴏɴs ᴛʜᴇ sᴇɴᴅᴇʀ ᴀɴᴅ ʀᴇᴄɪᴘɪᴇɴᴛ ᴏғ ᴛʜᴇ ʜᴜɢ.
-
-Hᴏᴡ ᴛᴏ Usᴇ
-
-- Usᴇ /hug ᴛᴏ sᴇɴᴅ ᴀ ʜᴜɢɢɪɴɢ ᴀɴɪᴍᴀᴛɪᴏɴ.
-- Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ /ʜᴜ ᴛᴏ sᴇɴᴅ ᴀ ʜᴜɢɢɪɴɢ ᴀɴɪᴍᴀᴛɪᴏɴ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴛʜᴇ sᴇɴᴅᴇʀ ᴀɴᴅ ʀᴇᴄɪᴘɪᴇɴᴛ.
-
-Nᴏᴛᴇs
-
-- Eɴsᴜʀᴇ ʏᴏᴜʀ ᴄʜᴀᴛ sᴇᴛᴛɪɴɢs ᴀʟʟᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴛᴏ sᴇɴᴅ ᴠɪᴅᴇᴏs/sᴛɪᴄᴋᴇʀs ᴀs ʀᴇᴘʟɪᴇs ғᴏʀ ғᴜʟʟ ғᴜɴᴄᴛɪᴏɴᴀʟɪᴛʏ.
+<blockquote>/anime: Fetches info on single anime (includes buttons to look up for prequels and sequels)
+/anilist: Fetches info on multiple possible animes related to query
+/character: Fetches info on multiple possible characters related to query
+/manga: Fetches info on multiple possible mangas related to query
+/airing: Fetches info on airing data for anime
+/studio: Fetches info on multiple possible studios related to query
+/flex: Fetches anilist info of an authorised user
+/user: Fetches anilist info as per query
+/schedule: Fetches scheduled animes
+/auth: Fetches info on how to authorize anilist account
+/browse: get popular, trending or upcoming animes
+/animequotes: get random anime quotes
+/quote: Same as above
+/logout: removes authorization
+/anisettings: To toggle nsfw lock and airing notifications and other settings in groups (Anime News)
+/top: to retrieve top animes for a genre or tag
+/watch: Fetches watch order for anime series
+/activity: Get Anilist recent activity
+/fillers: To get list of anime fillers
+/favourites: Get Anilist favourites
+/gettags: Get list of available Tags
+/getgenres: Get list of available Genres
+/aniconnect: Helps connect Public channel, to use bot as Channel in group</blockquote>
 """
-buttons_hg = [
+buttons_anx = [
     [
         InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
@@ -1795,11 +1807,11 @@ buttons_hg = [
 ]
 
 
-@Bot.on_callback_query(filters.regex("^hg$"))
+@Bot.on_callback_query(filters.regex("^anil$"))
 async def abot_cb_hvivandler(bot, query):
     await query.message.edit(
-        text=text_hg,
-        reply_markup=InlineKeyboardMarkup(buttons_hg),
+        text=text_anx,
+        reply_markup=InlineKeyboardMarkup(buttons_anx),
         disable_web_page_preview=True,
     )
 
