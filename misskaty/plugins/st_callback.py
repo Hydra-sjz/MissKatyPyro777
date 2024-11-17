@@ -1757,17 +1757,14 @@ text_anx = """
 /flex: Fetches anilist info of an authorised user
 /user: Fetches anilist info as per query
 /schedule: Fetches scheduled animes
-/auth: Fetches info on how to authorize anilist account
 /browse: get popular, trending or upcoming animes
 /animequotes: get random anime quotes
 /quote: Same as above
-/logout: removes authorization
 /anisettings: To toggle nsfw lock and airing notifications and other settings in groups (Anime News)
-/top: to retrieve top animes for a genre or tag
+/top: to retrieve top animes for a genre or 
 /watch: Fetches watch order for anime series
 /activity: Get Anilist recent activity
 /fillers: To get list of anime fillers
-/favourites: Get Anilist favourites
 /gettags: Get list of available Tags
 /getgenres: Get list of available Genres
 /aniconnect: Helps connect Public channel, to use bot as Channel in group</blockquote>
