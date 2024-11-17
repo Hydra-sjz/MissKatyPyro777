@@ -16,7 +16,7 @@ from pyrogram.types import (
 from tracemoepy.errors import ServerError
 
 from misskaty import app as anibot, custom_filter, session
-from misskaty.plugins.anim_x.anilist import no_pic
+from misskaty.plugins.anilist import no_pic
 from anilist.data_parser import check_if_adult
 from anilist.db import get_collection
 from anilist.helper import clog, control_user, media_to_image, rand_key
