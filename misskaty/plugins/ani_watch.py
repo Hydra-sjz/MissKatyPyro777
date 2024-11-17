@@ -8,8 +8,8 @@ from pyrogram.types import (
 
 from misskaty import app as anibot, custom_filter
 from anilist.data_parser import get_wo, get_wols
-from anilist.db import anilistEmilia.utils.helper import check_user, control_user
-
+from anilist.db import get_collection
+from anilist.helper import check_user, control_user
 DC = get_collection("DISABLED_CMDS")
 
 
