@@ -74,10 +74,8 @@ mongo = motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 db = mongo["Gojo"]
 
 
-print("[INFO]: INITIALZING AIOHTTP SESSION")
-async def start_session():
-    global session
-    session = ClientSession()
+
+session = ClientSession()
     
 #Telethon bot
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
