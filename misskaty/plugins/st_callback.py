@@ -51,7 +51,7 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
         SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
 # =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡</blockquote>
 TEXT_ST = (
-    "👋😊__Hello there {},__\n\n"
+    "👋**__Hello there {},__**\n\n"
     "<blockquote>Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.</blockquote>\n\n"
     "**__Click /help to find out more about how to use me to me full potential!__**"
 )
@@ -367,7 +367,7 @@ text_ban = """
 <blockquote>Some people need to be publicly banned; spammers, annoyances, or just trolls.
 This module allows you to do that easily, by exposing some common actions, so everyone will see!</blockquote>
 
-User commands:
+**User commands:**
 <blockquote>/kickme: Users that use this, kick themselves.</blockquote>
 
 **Admin commands:**
@@ -489,9 +489,9 @@ text_rpt = """
 <blockquote>We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
 Presenting reports; if someone in your group thinks someone needs reporting, they now have an easy way to call all admins.</blockquote>
 
-/report | @admins | @admin - Report A Message To Admins.
+<blockquote>/report | @admins | @admin - Report A Message To Admins.
 - /report: Reply to a message to report it for admins to review.
-- admin: Same as /report
+- admin: Same as /report</blockquote>
 
 <blockquote>Note that the report commands do not work when admins use them; or when used to report an admin. 𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡 assumes that admins don't need to report, or be reported!</blockquote>
 """
@@ -513,7 +513,7 @@ async def abvivrpt(bot, query):
 text_mal = """
 **Here is the help for Mention all**
 
-/mentionall - Mention all members in a groups in one click.
+<blockquote>/mentionall - Mention all members in a groups in one click.</blockquote>
 """
 buttons_mal = [
     [
@@ -533,7 +533,7 @@ async def abvmaggliv(bot, query):
 text_aap = """
 **Here is the help for Autoapprove:**
 
-- /autoapprove just type in group.
+<blockquote>/autoapprove just type in group.</blockquote>
 
 <blockquote>This module helps to automatically accept chat join request send by a user through invitation link of your group.</blockquote>
 """
@@ -558,9 +558,9 @@ text_bal = """
 <blockquote>Want to stop people asking stupid questions? or ban anyone saying censored words? Blocklists is the module for you!
 From blocking rude words, filenames/extensions, to specific emoji, everything is possible.</blockquote>
 
-/blacklisted - Get All The Blacklisted Words In The Chat.
+<blockquote>/blacklisted - Get All The Blacklisted Words In The Chat.
 /blacklist [WORD|SENTENCE] - Blacklist A Word Or A Sentence.
-/whitelist [WORD|SENTENCE] - Whitelist A Word Or A Sentence.
+/whitelist [WORD|SENTENCE] - Whitelist A Word Or A Sentence.</blockquote>
 """
 buttons_bal = [
     [
@@ -615,16 +615,16 @@ text_fdo = """
 <blockquote>These are the list of available fed owner commands. To run these, you have to own the current federation.</blockquote>
 
 **Owner Commands:**
- • /newfed <fed_name>: Creates a Federation, One allowed per user
- • /renamefed <fed_id> <new_fed_name>: Renames the fed id to a new name
- • /delfed <fed_id>: Delete a Federation, and any information related to it. Will not cancel blocked users
- • /myfeds: To list the federations that you have created
- • /fedtransfer <new_owner> <fed_id>:To transfer fed ownership to another person
- • /fpromote <user>: Assigns the user as a federation admin. Enables all commands for the user under Fed Admins
- • /fdemote <user>: Drops the User from the admin Federation to a normal User
- • /setfedlog <fed_id>: Sets the group as a fed log report base for the federation
- • /unsetfedlog <fed_id>: Removed the group as a fed log report base for the federation
- • /fbroadcast : Broadcasts a messages to all groups that have joined your fed
+<blockquote>/newfed <fed_name>: Creates a Federation, One allowed per user
+/renamefed <fed_id> <new_fed_name>: Renames the fed id to a new name
+/delfed <fed_id>: Delete a Federation, and any information related to it. Will not cancel blocked users
+/myfeds: To list the federations that you have created
+/fedtransfer <new_owner> <fed_id>:To transfer fed ownership to another person
+/fpromote <user>: Assigns the user as a federation admin. Enables all commands for the user under Fed Admins
+/fdemote <user>: Drops the User from the admin Federation to a normal User
+/setfedlog <fed_id>: Sets the group as a fed log report base for the federation
+/unsetfedlog <fed_id>: Removed the group as a fed log report base for the federation
+/fbroadcast : Broadcasts a messages to all groups that have joined your fed</blockquote>
 """
 buttons_fdo = [
     [
@@ -646,13 +646,13 @@ text_fdm = """
 
 <blockquote>The following is the list of all fed admin commands. To run these, you have to be a federation admin in the current federation.</blockquote>
 
- • /fban <user> <reason>: Fed bans a user
- • /sfban: Fban a user without sending notification to chats
- • /unfban <user> <reason>: Removes a user from a fed ban
- • /sunfban: Unfban a user without sending a notification
- • /fedadmins: Show Federation admin
- • /fedchats <FedID>: Get all the chats that are connected in the Federation
- • /fbroadcast : Broadcasts a messages to all groups that have joined your fed
+<blockquote>/fban <user> <reason>: Fed bans a user
+/sfban: Fban a user without sending notification to chats
+/unfban <user> <reason>: Removes a user from a fed ban
+/sunfban: Unfban a user without sending a notification
+/fedadmins: Show Federation admin
+/fedchats <FedID>: Get all the chats that are connected in the Federation
+/fbroadcast : Broadcasts a messages to all groups that have joined your fed</blockquote>
 """
 buttons_fdm = [
     [
@@ -674,13 +674,13 @@ text_fdu = """
 
 <blockquote>These commands do not require you to be admin of a federation. These commands are for general commands, such as looking up information on a fed, or checking a user's fbans.</blockquote>
 
-• /fedinfo <FedID>: Information about a federation.
-• /fedadmins <FedID>: List the admins in a federation.
-• /joinfed <FedID>: Join the current chat to a federation. A chat can only join one federation. Chat owners only.
-• /leavefed: Leave the current federation. Only chat owners can do this.
-• /fedstat <FedID>: Gives information about your ban in a federation.
-• /fedstat <user ID> <FedID>: Gives information about a user's ban in a federation.
-• /chatfed: Information about the federation the current chat is in.
+<blockquote>/fedinfo <FedID>: Information about a federation.
+/fedadmins <FedID>: List the admins in a federation.
+/joinfed <FedID>: Join the current chat to a federation. A chat can only join one federation. Chat owners only.
+/leavefed: Leave the current federation. Only chat owners can do this.
+/fedstat <FedID>: Gives information about your ban in a federation.
+/fedstat <user ID> <FedID>: Gives information about a user's ban in a federation.
+/chatfed: Information about the federation the current chat is in.</blockquote>
 """
 buttons_fdu = [
     [
@@ -701,20 +701,19 @@ text_filt = """
 **Here is the help for Filters:**
 
 <blockquote>Make your chat more lively with filters; The bot will reply to certain words!
-
 Filters are case insensitive; every time someone says your trigger words, Rose will reply something else! can be used to create your own commands, if desired.</blockquote>
 
-/filters To Get All The Filters In The Chat.
-/filter [FILTER_NAME] or /addfilter [FILTER_NAME] To Save A Filter(reply to a message).
+<blockquote>/filters To Get All The Filters In The Chat.
+/filter [FILTER_NAME] or /addfilter [FILTER_NAME] To Save A Filter(reply to a message).</blockquote>
 
-Supported filter types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+<blockquote>Supported filter types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.</blockquote>
 
-To use more words in a filter use.
-/filter Hey_there or /addfilter Hey_there To filter "Hey there".
+**To use more words in a filter use:**
+<blockquote>/filter Hey_there or /addfilter Hey_there To filter "Hey there".
 /stop [FILTER_NAME] or /stopfilter [FILTER_NAME] To Stop A Filter.
-/stopall To delete all the filters in a chat (permanently).
+/stopall To delete all the filters in a chat (permanently).</blockquote>
 
-You can use markdown or html to save text too.
+**You can use markdown or html to save text too.**
 """
 buttons_filt = [
     [
@@ -737,18 +736,18 @@ text_lok = """
 <blockquote>Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!
 The locks module allows you to lock away some common items in the Telegram world; the bot will automatically delete them!</blockquote>
 
-- /lock | /unlock | /locks [No Parameters Required]
+<blockquote>- /lock | /unlock | /locks [No Parameters Required]</blockquote>
 
-Parameters:
+**Parameters:**
 <blockquote>messages | sticker | gif | media | games | polls
 
 inline  | url | group_info | user_add | pin | photo
 
-voice | video | audio | docs | plain</blockquote>
+voice | video | audio | docs | plain
 
-You can only pass the "all" parameter with /lock, not with /unlock
+You can only pass the "all" parameter with /lock, not with /unlock</blockquote>
 
-Example:
+**Example:**
     /lock all
 """
 buttons_lok = [
@@ -772,19 +771,17 @@ text_not = """
 <blockquote>Save data for future users with notes!
 Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!</blockquote>
 
-/notes To Get All The Notes In The Chat.
-
+<blockquote>/notes To Get All The Notes In The Chat.
 /save [NOTE_NAME] or /addnote [NOTE_NAME] To Save A Note.
+Supported note types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.</blockquote>
 
-Supported note types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+<blockquote>**To change caption of any files use.**
+/save [NOTE_NAME] or /addnote [NOTE_NAME] [NEW_CAPTION].</blockquote>
 
-To change caption of any files use.
-/save [NOTE_NAME] or /addnote [NOTE_NAME] [NEW_CAPTION].
+<blockquote>#NOTE_NAME To Get A Note.</blockquote>
 
-#NOTE_NAME To Get A Note.
-
-/delete [NOTE_NAME] or delnote [NOTE_NAME] To Delete A Note.
-/deleteall To delete all the notes in a chat (permanently).
+<blockquote>/delete [NOTE_NAME] or delnote [NOTE_NAME] To Delete A Note.
+/deleteall To delete all the notes in a chat (permanently).</blockquote>
 """
 buttons_not = [
     [
@@ -804,16 +801,16 @@ async def notabviv(bot, query):
 text_nm = """
 **Here is the help for NightMode:**
 
-<blockquote>Enable or disable nightmode (locks the chat at specified intervals everyday)
-Flags:
-'-s': "Specify starting time in 24hr format.
+<blockquote>Enable or disable nightmode (locks the chat at specified intervals everyday)</blockquote>
+**Flags:**
+<blockquote>'-s': "Specify starting time in 24hr format.
 '-e': "Specify duration in hours / minute
 '-d': "Disable nightmode for chat.</blockquote>
 
-Examples:
-/nightmode -s=23:53 -e=6h
+**Examples:**
+<blockquote>/nightmode -s=23:53 -e=6h
 /nightmode -s=23:50 -e=120m
-/nightmode -d
+/nightmode -d</blockquote>
 """
 buttons_nm = [
     [
@@ -833,8 +830,8 @@ async def abvnmmiv(bot, query):
 text_sm = """
 **Here is the help for SangMata:**
 
-<blockquote>This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.</blockquote>
-/sangmata_set [on/off] - Enable/disable sangmata in groups.
+<blockquote>This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
+/sangmata_set [on/off] - Enable/disable sangmata in groups.</blockquote>
 """
 buttons_sm = [
     [
@@ -856,10 +853,10 @@ text_pn = """
 
 <blockquote>All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!</blockquote>
 
-Admin commands:
-- /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
+**Admin commands:**
+<blockquote>- /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
 - /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
-- /unpinall: Unpins all the pinned message in the current chat..
+- /unpinall: Unpins all the pinned message in the current chat.</blockquote>
 """
 
 buttons_pn = [
@@ -883,11 +880,11 @@ text_adf = """
 Antiflood allows you to take action on users that send more than x messages in a row. Actions are: ban/mute/kick/tban/tmute.</blockquote>
 
 **Admin commands:**
-/flood: Get the current antiflood settings
+<blockquote>/flood: Get the current antiflood settings
 /setflood : Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
 /setfloodtimer  : Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
 /setfloodmode : Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
-/clearflood : Whether to delete the messages that triggered the flood.
+/clearflood : Whether to delete the messages that triggered the flood.</blockquote>
 """
 buttons_adf = [
     [
@@ -909,11 +906,11 @@ text_adc = """
 
 <blockquote>Anti Channel Mode is a mode to prevent unwanted channel actions.</blockquote>
 
-Admin Commands:
-• /antichannelmode : Enables Anti Channel Mode to ban users who chat using channels.
+**Admin Commands:**
+<blockquote>• /antichannelmode : Enables Anti Channel Mode to ban users who chat using channels.
 • /antichannelmode : Disables Anti Channel Mode.
 • /antichannelpin : Don't let telegram auto-pin linked channels. If no arguments are given, shows current setting.
-• /cleanlinked : Delete messages sent by the linked channel.
+• /cleanlinked : Delete messages sent by the linked channel.</blockquote>
 
 <blockquote>Note: When using antichannel pins, make sure to use the /unpin command, instead of doing it manually. Otherwise, the old message will get re-pinned when the channel sends any messages.</blockquote>
 """
@@ -1250,7 +1247,7 @@ async def abot_cb_handler9(bot, query):
 text_apr = """
 **SessionGen**
 
-/genstring - Generate string session using this bot. Only support Pyrogram v2 and Telethon.
+<blockquote>/genstring - Generate string session using this bot. Only support Pyrogram v2 and Telethon.</blockquote>
 """
 buttons_apr = [
     [
@@ -1272,10 +1269,10 @@ async def abot_cb_handler10(bot, query):
 text_blt = """
 /directurl [Link] - Bypass URL.
 
-Supported Link:
-- Pling and all aliases.
+**Supported Link:**
+<blockquote>- Pling and all aliases.
 - Wetransfer
-- Other link soon...
+- Other link soon...</blockquote>
 
 This feature is deprecated..
 """
@@ -1299,7 +1296,7 @@ async def abot_cb_handlerh(bot, query):
 text_bt = """
 **Urban Dictionary**
 
-/ud [give any word] Type the word or expression you want to search.
+<blockquote>/ud [give any word] Type the word or expression you want to search.</blockquote>
 """
 buttons_bt = [
     [
@@ -1376,10 +1373,10 @@ async def abot_cb_hangidler(bot, query):
 text_ai = """
 **Here is the help for CodeTester:**
 
-This feature allows you to run multiple programming languages through this bot via the Glot.io api.  The following is a list of supported languages, for temporary commands only support with a "!"  like the example below.
+<blockquote>This feature allows you to run multiple programming languages through this bot via the Glot.io api.  The following is a list of supported languages, for temporary commands only support with a "!"  like the example below.</blockquote>
 
-List of Supported Programming Languages:
-~> assembly
+**List of Supported Programming Languages:**
+<blockquote>~> assembly
 ~> ats
 ~> bash
 ~> c
@@ -1415,10 +1412,10 @@ List of Supported Programming Languages:
 ~> rust
 ~> scala
 ~> swift
-~> typescript
+~> typescript</blockquote>
 
-Example:
-~> !python print("Hai aku Gojo x satuto")
+**Example:**
+<blockquote>~> !python print("Hai aku Gojo x satuto")</blockquote>
 """
 buttons_ai = [
     [
@@ -1463,7 +1460,7 @@ async def abot_cb_handpcler(bot, query):
 text_flt = """
 **Here is the help for Fun:**
 
-/q [int] - Generate quotly from message
+<blockquote>/q [int] - Generate quotly from message
 /memify [text] - Reply to sticker to give text on sticker.
 /react [emoji | list of emoji] - React to any message (Sudo and Owner only)
 /beri [pesan] - Giving false hope to someone hehehe
@@ -1471,7 +1468,7 @@ text_flt = """
 /tebakgambar - Play "Tebak Gambar" in any room chat
 /tebaklontong - Play "Tebak Lontong" in any room chat
 /tebakkata - Play "Tebak Kata" in any room chat
-/tebaktebakan - Play "Tebak Tebakan" in any room chat
+/tebaktebakan - Play "Tebak Tebakan" in any room chat.</blockquote>
 """
 buttons_flt = [
     [
@@ -1493,9 +1490,9 @@ async def abot_cb_handlehcr(bot, query):
 text_fgl = """
 **Here is the help for MediaExtract:**
 
-/extractmedia [URL] - Extract subtitle or audio from video using link. (Not support TG File to reduce bandwith usage.)
+<blockquote>/extractmedia [URL] - Extract subtitle or audio from video using link. (Not support TG File to reduce bandwith usage.)
 /converttosrt [Reply to .ass or .vtt TG File] - Convert from .ass or .vtt to srt
-/converttoass [Reply to .srt or .vtt TG File] - Convert from .srt or .vtt to srt
+/converttoass [Reply to .srt or .vtt TG File] - Convert from .srt or .vtt to srt</blockquote>
 """
 buttons_fgl = [
     [
@@ -1517,8 +1514,8 @@ async def abot_cb_handhjler(bot, query):
 text_fk = """
 **Here is the help for MediaTool:**
 
-/genss [reply to video] - Generate Screenshot From Video. (Support TG Media and Direct URL)
-/mediainfo [link/reply to TG Video] - Get Mediainfo From File.
+<blockquote>/genss [reply to video] - Generate Screenshot From Video. (Support TG Media and Direct URL)
+/mediainfo [link/reply to TG Video] - Get Mediainfo From File.</blockquote>
 """
 buttons_fk = [
     [
@@ -1540,12 +1537,12 @@ async def abot_cb_hangenlr(bot, query):
 text_fon = """
 **Here is the help for InlineFeature:**
 
-To use this feature, just type bot username with following args below.
+<blockquote>To use this feature, just type bot username with following args below.
 ~ imdb [query] - Search movie details in IMDb.com.
 ~ pypi [query] - Search package from Pypi.
 ~ git [query] - Search in Git.
 ~ google [query] - Search in Google.
-~ info [user id/username] - Check info about a user.
+~ info [user id/username] - Check info about a user.</blockquote>
 """
 buttons_fon = [
     [
@@ -1567,7 +1564,7 @@ async def abot_cb_hanipdler(bot, query):
 text_mis = """
 **Here is the help for Misc:**
 
-/carbon [text or reply to text or caption] - Make beautiful snippet code on carbon from text.
+<blockquote>/carbon [text or reply to text or caption] - Make beautiful snippet code on carbon from text.
 /removebg [Reply to image] - Remove background from image.
 /calc - Simple math calculator using inline buttons.
 /kbbi [keyword] - Search definition on KBBI (For Indonesian People)
@@ -1585,7 +1582,7 @@ text_mis = """
 /bots - To see how much bots on group.
 /gdata | /groupinfo - To get Group datas.
 /link | givelink To get group link.
-/figlet - To creat finglet ex:` /figlet Gojo`
+/figlet - To creat finglet ex:` /figlet Gojo`</blockquote>
 """
 buttons_mis = [
     [
@@ -1606,7 +1603,7 @@ async def abot_cb_handlsser(bot, query):
 
 text_gt = """
 **Here is the help for OCR:**
-/ocr [reply to photo] - Read Text From Image
+<blockquote>/ocr [reply to photo] - Read Text From Image</blockquote>
 """
 buttons_gt = [
     [
@@ -1626,9 +1623,9 @@ async def abot_cb_handlpnner(bot, query):
 
 
 text_gl = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Cat and Dog:
+**Cat and Dog:**
 
-/Cat | /dog - To get random cat and dog photos.
+<blockquote>/Cat | /dog - To get random cat and dog photos.</blockquote>
 """
 buttons_gl = [
     [
@@ -1650,7 +1647,7 @@ async def abot_cb_handllnver(bot, query):
 text_gli = """
 **Here is the information about Couples**
 
-/couples - Get Todays Couples Of The Group In Interactive View
+<blockquote>/couples - Get Todays Couples Of The Group In Interactive View.</blockquote>
 """
 buttons_gli = [
     [
@@ -1668,36 +1665,13 @@ async def abot_cb_handviler(bot, query):
         disable_web_page_preview=True,
     )
 
-
-text_src = """
-Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gᴏᴏɢʟᴇ:
-々 /google [ǫᴜᴇʀʏ] - ᴛᴏ sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ɢᴇᴛ ʀᴇsᴜʟᴛs
-々 /app | /apps [ᴀᴘᴘ ɴᴀᴍᴇ] - ᴛᴏ ɢᴇᴛ ᴀᴘᴘ ɪɴғᴏ ᴛʜᴀᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴘʟᴀʏsᴛᴏʀᴇ
-"""
-buttons_src = [
-    [
-        InlineKeyboardButton("⬅️", callback_data="settings"),
-        InlineKeyboardButton("❌", callback_data="close"),
-    ]
-]
-
-
-@Bot.on_callback_query(filters.regex("^src$"))
-async def abot_cb_handlevior(bot, query):
-    await query.message.edit(
-        text=text_src,
-        reply_markup=InlineKeyboardMarkup(buttons_src),
-        disable_web_page_preview=True,
-    )
-
-
 text_gdy = """
 **Here is the help for Stickers:**
 
-/kang [Reply to sticker] - Add sticker to your pack.
+<blockquote>/kang [Reply to sticker] - Add sticker to your pack.
 /unkang [Reply to sticker] - Remove sticker from your pack (Only can remove sticker that added by this bot.).
 /getsticker - Convert sticker to png.
-/stickerid - View sticker ID
+/stickerid - View sticker ID.</blockquote>
 """
 buttons_gdy = [
     [
@@ -1719,10 +1693,9 @@ async def abot_cb_handlesnr(bot, query):
 text_hsr = """
 **Here is the help for Karma:**
 
-Give reputation to other people in group.
-
+<blockquote>Give reputation to other people in group.
 /karma_toggle [enable/disable] - Enable/Disable Karma.
-/karma - View all karma from member group.
+/karma - View all karma from member group.</blockquote>
 """
 buttons_hsr = [
     [
@@ -1744,12 +1717,12 @@ async def abot_cb_handihoer(bot, query):
 text_htg = """
 **Here is the help for Paste:**
 
-/paste [Text/Reply To Message] - Post text to My Pastebin.
+<blockquote>/paste [Text/Reply To Message] - Post text to My Pastebin.
 /sbin [Text/Reply To Message] - Post text to Spacebin.
 /neko [Text/Reply To Message] - Post text to Nekobin.
 /tgraph [Text/Reply To Message] - Post text to Telegraph.
 /imgbb [Images] - Upload image to ImgBB.
-/rentry [Text/Reply To Message] - Post text to Rentry using markdown style.
+/rentry [Text/Reply To Message] - Post text to Rentry using markdown style.</blockquote>
 """
 buttons_htg = [
     [
@@ -1843,10 +1816,10 @@ async def abot_cb_handlstver(bot, query):
 text_mog = """
 **Quotly**
 
-I will help create a quote from a post.
-Bot can work both in private messages and in groups.
+<blockquote>I will help create a quote from a post.
+Bot can work both in private messages and in groups.</blockquote>
 
-/q — make a quote from the message [reply to the message]
+<blockquote>/q — make a quote from the message [reply to the message]</blockquote>
 """
 buttons_mog = [
     [
@@ -1890,8 +1863,8 @@ async def abot_cb_handguugler(bot, query):
 text_sg = """
 **SangMata**
 
-This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
-/sangmata_set [on/off] - Enable/disable sangmata in groups.
+<blockquote>This feature inspired from SangMata Bot. I'm created simple detection to check user data include username, first_name, and last_name.
+/sangmata_set [on/off] - Enable/disable sangmata in groups.</blockquote>
 """
 buttons_sg = [
     [
