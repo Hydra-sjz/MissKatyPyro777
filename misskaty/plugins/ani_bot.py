@@ -27,7 +27,7 @@ from misskaty import BOT_USERNAME, DEV_USERS
 from misskaty.vars import TRIGGERS as trg, HELP_DICT
 from misskaty import app as anibot, custom_filter
 
-from misskaty.plugins.anilist import auth_link_cmd, code_cmd, logout_cmd
+from misskaty.plugins.ani_anilist import auth_link_cmd, code_cmd, logout_cmd
 from anilist.data_parser import get_additional_info, get_anime, get_recommendations
 from anilist.db import get_collection
 from anilist.helper import AUTH_USERS, check_user, clog, control_user, get_btns
