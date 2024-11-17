@@ -68,14 +68,10 @@ faulthandler_enable()
 from misskaty.core import misskaty_patch
 
 from motor import motor_asyncio
-from aiohttp import ClientSession
 
 mongo = motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 db = mongo["Gojo"]
 
-
-
-session = ClientSession()
     
 #Telethon bot
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
