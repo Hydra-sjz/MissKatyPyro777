@@ -120,7 +120,7 @@ async def livechart_parser():
             msgslc.append([text, clc[i][0][1]])
     except Exception:
         e = err()
-        await clog("Emilia", "```" + e + "```", "RSS")
+        await clog("GoJo", "```" + e + "```", "RSS")
     ###############################
 
     #### CrunchyRoll.com ####
@@ -187,7 +187,7 @@ async def livechart_parser():
                 )
     except Exception:
         e = err()
-        await clog("Emilia", "```" + e + "```", "RSS")
+        await clog("GoJo", "```" + e + "```", "RSS")
     #########################
 
     ##### Subsplease.org #####
@@ -225,7 +225,7 @@ async def livechart_parser():
                 )
     except Exception:
         e = err()
-        await clog("Emilia", "```" + e + "```", "RSS")
+        await clog("GoJo", "```" + e + "```", "RSS")
     ##########################
 
     #### LiveChart.me / headlines ####
@@ -262,7 +262,7 @@ async def livechart_parser():
             msgslch.append([i[3], i[0], i[1], i[2]])
     except Exception:
         e = err()
-        await clog("Emilia", "```" + e + "```", "RSS")
+        await clog("GoJo", "```" + e + "```", "RSS")
     ##################################
 
     #### MyAnimeList / headlines ####
@@ -299,7 +299,7 @@ async def livechart_parser():
             msgsmh.append([i[3], f"**{i[0]}**\n\n{i[1]}", i[2]])
     except Exception:
         e = err()
-        await clog("Emilia", "```" + e + "```", "RSS")
+        await clog("GoJo", "```" + e + "```", "RSS")
     #################################
 
     print("Notifying Livachart.me airings!!!")
@@ -314,7 +314,7 @@ async def livechart_parser():
                     await asyncio.sleep(1.5)
                 except Exception:
                     e = err()
-                    await clog("Emilia", f"Group: {id_['_id']}\n\n```{e}```", "AIRING")
+                    await clog("GoJo", f"Group: {id_['_id']}\n\n```{e}```", "AIRING")
     if len(msgslc) != 0:
         await A.drop()
         await A.insert_one(
@@ -338,7 +338,7 @@ async def livechart_parser():
                 except Exception:
                     e = err()
                     await clog(
-                        "Emilia", f"Group: {id_['_id']}\n\n```{e}```", "CRUNCHYROLL"
+                        "GoJo", f"Group: {id_['_id']}\n\n```{e}```", "CRUNCHYROLL"
                     )
     if len(msgscr) != 0:
         await B.drop()
@@ -363,7 +363,7 @@ async def livechart_parser():
                 except Exception:
                     e = err()
                     await clog(
-                        "Emilia", f"Group: {id_['_id']}\n\n```{e}```", "SUBSPLEASE"
+                        "GoJo", f"Group: {id_['_id']}\n\n```{e}```", "SUBSPLEASE"
                     )
     await asyncio.sleep(10)
 
@@ -408,7 +408,7 @@ async def livechart_parser():
                 except Exception:
                     e = err()
                     await clog(
-                        "Emilia", f"Group: {id_['_id']}\n\n```{e}```", "HEADLINES"
+                        "GoJo", f"Group: {id_['_id']}\n\n```{e}```", "HEADLINES"
                     )
     if len(msgslch) != 0:
         await D.drop()
@@ -458,7 +458,7 @@ async def livechart_parser():
                 except Exception:
                     e = err()
                     await clog(
-                        "Emilia", f"Group: {id_['_id']}\n\n```{e}```", "HEADLINES"
+                        "GoJo", f"Group: {id_['_id']}\n\n```{e}```", "HEADLINES"
                     )
     if len(msgsmh) != 0:
         await E.drop()
@@ -502,7 +502,7 @@ async def livechart_parser():
                     await anibot.send_message(i["_id"], admin_error_msg)
                 except BaseException:
                     e = err()
-                    await clog("Emilia", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
+                    await clog("GoJo", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
                 await asyncio.sleep(0.7)
         unpin_now = False
         if i["unpin"]:
@@ -522,7 +522,7 @@ async def livechart_parser():
                     await anibot.send_message(i["_id"], admin_error_msg)
                 except BaseException:
                     e = err()
-                    await clog("Emilia", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
+                    await clog("GoJo", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
         elif (len(lc_final_dict) != 0) and (i["unpin"] not in [None, 0]):
             tbud = await HD_GRPS.find_one({"_id": i["_id"]})
             await HD_GRPS.find_one_and_update(
@@ -540,7 +540,7 @@ async def livechart_parser():
                     await anibot.send_message(i["_id"], admin_error_msg)
                 except BaseException:
                     e = err()
-                    await clog("Emilia", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
+                    await clog("GoJo", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
                 await asyncio.sleep(0.7)
         unpin_now = False
         if i["unpin"]:
@@ -560,7 +560,7 @@ async def livechart_parser():
                     await anibot.send_message(i["_id"], admin_error_msg)
                 except BaseException:
                     e = err()
-                    await clog("Emilia", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
+                    await clog("GoJo", f"Group: {i['_id']}\n\n```{e}```", "UN_PIN")
         elif (len(lc_final_dict) != 0) and (i["unpin"] not in [None, 0]):
             tbud = await HD_GRPS.find_one({"_id": i["_id"]})
             await MAL_HD_GRPS.find_one_and_update(
