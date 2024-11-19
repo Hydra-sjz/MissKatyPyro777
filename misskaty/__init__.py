@@ -69,6 +69,7 @@ faulthandler_enable()
 from misskaty.core import misskaty_patch
 
 from motor import motor_asyncio
+#from motor.motor_asyncio import AsyncIOMotorClient
 
 mongo = motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 db = mongo["Gojo"]
@@ -76,7 +77,7 @@ db = mongo["Gojo"]
 #======Waifu
 application = Application.builder().token(BOT_TOKEN).build()
 
-lol = AsyncIOMotorClient(DATABASE_URI)
+lol = motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 wdb = lol['Character_catcher']
 
 collection = wdb['anime_characters_lol']
