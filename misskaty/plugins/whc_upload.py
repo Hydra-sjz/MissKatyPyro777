@@ -4,8 +4,11 @@ from pymongo import ReturnDocument
 from telegram import Update
 from telegram.ext import CommandHandler, CallbackContext
 
-from shivu import application, sudo_users, collection, db, CHARA_CHANNEL_ID, SUPPORT_CHAT
+from misskaty import application, collection, wdb
+from misskaty.vars import SUDO as sudo_users
 
+CHARA_CHANNEL_ID = "-1001997285269"
+SUPPORT_CHAT = "xbots_x"
 WRONG_FORMAT_TEXT = """Wrong ❌️ format...  eg. /upload Img_url muzan-kibutsuji Demon-slayer 3
 
 img_url character-name anime-name rarity-number
