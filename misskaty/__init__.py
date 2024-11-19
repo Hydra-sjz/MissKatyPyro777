@@ -16,6 +16,7 @@ from pymongo import MongoClient
 from pyrogram import Client
 from web.webserver import api
 from telethon import TelegramClient
+from telegram.ext import Application
 
 from misskaty.vars import (
     API_HASH,
@@ -72,7 +73,20 @@ from motor import motor_asyncio
 mongo = motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 db = mongo["Gojo"]
 
-    
+#======Waifu
+application = Application.builder().token(BOT_TOKEN).build()
+
+lol = AsyncIOMotorClient(DATABASE_URI)
+wdb = lol['Character_catcher']
+
+collection = wdb['anime_characters_lol']
+user_totals_collection = wdb['user_totals_lmaoooo']
+user_collection = wdb["user_collection_lmaoooo"]
+group_user_totals_collection = wdb['group_user_totalsssssss']
+top_global_groups_collection = wdb['top_global_groups']
+pm_users = wdb['total_pm_users']
+#========
+
 #Telethon bot
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
 print("TELETHON IS STARTED...👽👽")
