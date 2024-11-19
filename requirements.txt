@@ -1,6 +1,7 @@
 python-dotenv
 telegraph
 telethon
+python-telegram-bot==20.6
 aiofiles
 aiohttp
 tgcrypto
