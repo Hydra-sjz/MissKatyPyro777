@@ -132,7 +132,7 @@ __Note: This works best on uncropped anime pic,
 when used on cropped media, you may get result but it might not be too reliable__
 Use /schedule cmd to get scheduled animes based on weekdays
 Use /watch cmd to get watch order of searched anime
-Use /fillers cmd to get a list of fillers for an anime
+Use /anfillers cmd to get a list of fillers for an anime
 Use /quote cmd to get a random quote
 """
 
