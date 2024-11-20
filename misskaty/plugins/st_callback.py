@@ -51,7 +51,7 @@ async def botCallbacks(_, CallbackQuery: CallbackQuery):
         SUDO_TEXT, reply_markup=InlineKeyboardMarkup(BUTTON_SUDO))
 # =============START_CMD====================𝐺𝑜𝑗𝑜 𝑆𝑎𝑡𝑜𝑟𝑢 𝕏 | 𝐵𝑜𝑡</blockquote>
 TEXT_ST = (
-    "👋**__Hello there {},__**\n\n"
+    "[👋](https://telegra.ph/file/f04e33ed9774304630ab7.jpg)**__Hello there {},__**\n\n"
     "<blockquote>Welcome to the 🎈{}! This is a powerful group management bot⚡🌪️ for Telegram, I have 😌 many useful features for you, feel free to ➕add me to your group.</blockquote>\n\n"
     "**__Click /help to find out more about how to use me to me full potential!__**"
 )
@@ -109,15 +109,15 @@ async def st_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
-@Bot.on_callback_query(filters.regex('^close_cb$'))
-async def close_cb_callbk(client: Bot, callback: CallbackQuery):
+@Bot.on_callback_query(filters.regex('close_cb'))
+async def clondnd_callbk(client: Bot, callback: CallbackQuery):
     await callback.answer()
     await callback.message.delete()
     await callback.message.reply_to_message.delete()
 
 # =======================f=======MAIN_HELP_CMD====================
 TEXT_GE = """
-Hey {} [👋](https://envs.sh/Zhl.jpg)
+Hey {} [👋](https://telegra.ph/file/cadfaa11fcc628b2ac385.jpg)
 <blockquote>Click on the Buttons below for more information.</blockquote>
 """
 BUTTONS_GE = [
