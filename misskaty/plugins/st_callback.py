@@ -982,7 +982,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Extras", callback_data="ext"),
         InlineKeyboardButton("Anilist", callback_data="anil"),
-        InlineKeyboardButton(".", callback_data="i"),
+        InlineKeyboardButton("Stylish-Txt", callback_data="stx"),
     ],
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
@@ -1138,6 +1138,27 @@ async def abvsfiv(bot, query):
     await query.message.edit(
         text=text_sfw,
         reply_markup=InlineKeyboardMarkup(buttons_sfw),
+        disable_web_page_preview=True,
+    )
+
+text_stx = """
+**Stylish Text**
+
+/font [your text] - just add your paragraph to make style texts.
+"""
+buttons_stx = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^stx$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_stx,
+        reply_markup=InlineKeyboardMarkup(buttons_stx),
         disable_web_page_preview=True,
     )
 
