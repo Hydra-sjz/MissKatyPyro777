@@ -1742,29 +1742,11 @@ async def abot_cb_handluvjker(bot, query):
 
 
 text_anx = """
-**AniList**
+🥀 **AniList**
+<blockquote>Since this is an anime themed bot, so anime module is a must! Tester provides you the best anime based commands including anime news and much more!</blockquote>
 
 <blockquote>/anihelp: Get interactive and detailed help on anime commands</blockquote>
 
-**Commands:**
-<blockquote>/anime: Fetches info on single anime (includes buttons to look up for prequels and sequels)
-/anilist: Fetches info on multiple possible animes related to query
-/character: Fetches info on multiple possible characters related to query
-/manga: Fetches info on multiple possible mangas related to query
-/airing: Fetches info on airing data for anime
-/studio: Fetches info on multiple possible studios related to query
-/flex: Fetches anilist info of an authorised user
-/user: Fetches anilist info as per query
-/schedule: Fetches scheduled animes
-/browse: get popular, trending or upcoming animes
-/animequotes: get random anime quotes
-/quote: Same as above
-/anisettings: To toggle nsfw lock and airing notifications and other settings in groups (Anime News)
-/top: to retrieve top animes for a genre or 
-/watch: Fetches watch order for anime series
-/gettags: Get list of available Tags
-/getgenres: Get list of available Genres
-/aniconnect: Helps connect Public channel, to use bot as Channel in group</blockquote>
 """
 buttons_anx = [
     [
