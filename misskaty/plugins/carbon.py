@@ -7,7 +7,7 @@ from urllib.parse import quote
 import requests
 from pyrogram import Client
 from pyrogram import filters
-
+from misskaty import app
 
 def carbon(code):
     url = f"https://api.safone.dev/carbon?code={quote(code)}"
@@ -16,7 +16,7 @@ def carbon(code):
     return js
 
 
-@Client.on_message(filters.command(["carbon2"]))
+@app.on_message(filters.command(["carbon2"]))
 async def make_carsbon(bot, message):
     async def car_(bot, message):
         ok = await message.reply_text("`Making Carbon...`")
@@ -53,7 +53,7 @@ async def make_carsbon(bot, message):
         return await message.reply_text("`Timeout Exceeded. Carbonization process took too long.`")
 
 
-@Client.on_message(filters.command(["icarbon"]))
+@app.on_message(filters.command(["icarbon"]))
 async def caerbonn(bot, message):
     ok = await message.reply_text("Making Carbon...")
     code = None
