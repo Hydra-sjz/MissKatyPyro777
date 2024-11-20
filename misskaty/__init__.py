@@ -16,7 +16,7 @@ from pymongo import MongoClient
 from pyrogram import Client
 from web.webserver import api
 from telethon import TelegramClient
-from telegram.ext import Application
+#from telegram.ext import Application
 
 from misskaty.vars import (
     API_HASH,
