@@ -84,9 +84,8 @@ async def start(self, ctx: Message, strings):
     if ctx.chat.type.value != "private":
         nama = ctx.from_user.mention if ctx.from_user else ctx.sender_chat.title
         try:
-            return await ctx.reply_photo(
-                photo="https://telegra.ph/file/6fca05772ed444f1913bc.jpg",
-                caption=strings("start_msg").format(kamuh=nama),
+            return await ctx.reply_text( 
+                caption=strings("start_msg").format(kamuh=nama), #photo="https://telegra.ph/file/6fca05772ed444f1913bc.jpg",
                 reply_markup=keyboard,
             )
         except (ChatSendPhotosForbidden, ChatWriteForbidden):
