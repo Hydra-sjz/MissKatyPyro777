@@ -152,6 +152,7 @@ Below is the list of basic anilist cmds for info on anime, character, manga, etc
 '/gettags nsfw' for nsfw tags)
 /user - Use this cmd to get info on an anilist user
 /browse - Use this cmd to get updates about latest animes
+/pokedex This works like a real pokedex and it will send you information regarding a specific pokemon. 
 """
 
 HELP_DICT[
