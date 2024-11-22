@@ -1148,7 +1148,7 @@ text_stx = """
 """
 buttons_stx = [
     [
-        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("⬅️", callback_data="settings"),
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
