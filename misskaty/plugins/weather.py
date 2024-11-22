@@ -40,7 +40,7 @@ async def weather(c: Client, m: Message):
     loc_json = r.json()
 
     if not loc_json.get("location"):
-        await m.reply_text("ʟᴏᴄᴀᴛɪᴏɴ ɴᴏᴛ ғᴏᴜɴᴅ")
+        await m.reply_text("🥏 Location not found...")
     else:
         pos = f"{loc_json['location']['latitude'][0]},{loc_json['location']['longitude'][0]}"
         r = await http.get(
@@ -58,7 +58,7 @@ async def weather(c: Client, m: Message):
 
         obs_dict = res_json["v3-wx-observations-current"]
 
-        res = "<b>{location}</b>:\n\nᴛᴇᴍᴘᴇʀᴀᴛᴜʀᴇ: <code>{temperature} °C</code>\nᴛᴇᴍᴘᴇʀᴀᴛᴜʀᴇ ғᴇᴇʟs ʟɪᴋᴇ: <code>{feels_like} °C</code>\nᴀɪʀ ʜᴜᴍɪᴅɪᴛʏ: <code>{air_humidity}%</code>\nᴡɪɴᴅ sᴘᴇᴇᴅ: <code>{wind_speed} km/h</code>\n\n- <i>{overview}</i>".format(
+        res = "🗺️ <b>{location}</b>:\n\n🌡️<b>Temperature</b> : <code>{temperature} °C</code>\n🧨<b>Temperature Feels like</b> : <code>{feels_like} °C</code>\n🍃 <b>Air Humidity</b> : <code>{air_humidity}%</code>\n🌬️ <b>Wind Speed</b>: <code>{wind_speed} km/h</code>\n\n- <i>{overview}</i>".format(
             location=loc_json["location"]["address"][0],
             temperature=obs_dict["temperature"],
             feels_like=obs_dict["temperatureFeelsLike"],
