@@ -985,6 +985,11 @@ BUTTONS_HP = [
         InlineKeyboardButton("Stylish-Txt", callback_data="stx"),
     ],
     [
+        InlineKeyboardButton("Weather", callback_data="wtr"),
+        InlineKeyboardButton("Wall", callback_data="wal"),
+        InlineKeyboardButton("RM-BG", callback_data="rmb"),
+    ],
+    [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close_cb"),
@@ -1003,6 +1008,68 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_rmb = """
+**Remove Background**
+
+/rmbg Reply to image to remove background.
+"""
+buttons_rmb = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^rmb$"))
+async def armbviv(bot, query):
+    await query.message.edit(
+        text=text_rmb,
+        reply_markup=InlineKeyboardMarkup(buttons_rmb),
+        disable_web_page_preview=True,
+    )
+
+text_wtr = """
+**Weather**
+
+/weather location Or city to get weather information.
+"""
+buttons_wtr = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^wtr$"))
+async def abwwviv(bot, query):
+    await query.message.edit(
+        text=text_wtr,
+        reply_markup=InlineKeyboardMarkup(buttons_wtr),
+        disable_web_page_preview=True,
+    )
+
+text_wal = """
+**Wallpapers**
+
+/wall [wall_name] to get wallpepars.
+"""
+buttons_wal = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^wal$"))
+async def abvivll(bot, query):
+    await query.message.edit(
+        text=text_wal,
+        reply_markup=InlineKeyboardMarkup(buttons_wal),
+        disable_web_page_preview=True,
+    )
+
 text_ext = """
 <blockquote>__/meme cmd to get meme from meme api.
 /mormeme cmd to get more memes.
@@ -1195,6 +1262,12 @@ text_adm = """
 /blackbox - Curious about BlackBoxAI-Pro? Just ask! 📦
 /claude - to get ai message from 𝙲𝙻𝙾𝚄𝙳 𝚂𝙾𝙽𝙽𝙴𝚃 3.5.
 /draw - drow your prompt to get photos.</blockquote>
+
+**Ai-Gemini**
+<blockquote>/askai
+/aii [Reply to Image]
+/aiseller
+/aicook</blockquote> 
 """
 buttons_adm = [
     [
@@ -1597,7 +1670,7 @@ text_mis = """
 /tmdb [query] - Find Movie Details From TMDB.com
 /readqr [reply to photo] - Read QR Code From Photo.
 /createqr [text] - Convert Text to QR Code.
-/anime [query] - Search title in myanimelist.
+/animegj [query] - Search title in myanimelist.
 /info - Get info user with Pic and full description if user set profile picture.
 /id - Get simple user ID.
 /bots - To see how much bots on group.
