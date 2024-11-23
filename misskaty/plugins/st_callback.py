@@ -1592,8 +1592,8 @@ text_flt = """
 /tebakgambar - Play "Tebak Gambar" in any room chat
 /tebaklontong - Play "Tebak Lontong" in any room chat
 /tebakkata - Play "Tebak Kata" in any room chat
-/tebaktebakan - Play "Tebak Tebakan" in any room chat.</blockquote>
-/truth | /dare Teuth or Dare Game.
+/tebaktebakan - Play "Tebak Tebakan" in any room chat.
+/truth | /dare Teuth or Dare Game.</blockquote>
 """
 buttons_flt = [
     [
