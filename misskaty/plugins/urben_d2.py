@@ -20,8 +20,8 @@ async def get_ud_definition(text):
     return None
 
 
-@register(pattern="ud")
-async def ud_command(event):
+@register(pattern="ud2")
+async def udf_command(event):
     words = event.text.split(" ")
 
     if len(words) != 2:
