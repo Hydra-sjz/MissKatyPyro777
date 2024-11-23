@@ -4,7 +4,7 @@ from pyrogram.types import CallbackQuery, Message
 from misskaty import app
 from misskaty.helper.http import fetch
 
-
+#g
 async def getData(chat_id, message_id, GetWord, CurrentPage):
     UDJson = (
         await fetch.get(f"https://api.urbandictionary.com/v0/define?term={GetWord}")
