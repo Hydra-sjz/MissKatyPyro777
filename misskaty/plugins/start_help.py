@@ -124,8 +124,9 @@ async def start(self, ctx: Message, strings):
                 text, reply_markup=keyb, message_effect_id=5104841245755180586
             )
     else:
-        await self.send_message(
+        await self.send_photo(
             ctx.chat.id,
+            photo="https://telegra.ph/file/6fca05772ed444f1913bc.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
             reply_to_message_id=ctx.id,
