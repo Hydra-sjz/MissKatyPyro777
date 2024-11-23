@@ -15,6 +15,7 @@ from async_pymongo import AsyncClient
 from pymongo import MongoClient
 from pyrogram import Client
 from web.webserver import api
+from telegraph import Telegraph
 from telethon import TelegramClient
 #from telegram.ext import Application
 
@@ -29,7 +30,10 @@ from misskaty.vars import (
     USER_SESSION,
 )
 
-    
+telegraph = Telegraph(domain="graph.org")
+telegraph.create_account(short_name=BOT_USERNAME)
+
+
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
