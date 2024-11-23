@@ -990,6 +990,11 @@ BUTTONS_HP = [
         InlineKeyboardButton("RM-BG", callback_data="rmb"),
     ],
     [
+        InlineKeyboardButton("Chat-Bot", callback_data="ctb"),
+        InlineKeyboardButton(".", callback_data="l"),
+        InlineKeyboardButton(".", callback_data="f"),
+    ],
+    [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close_cb"),
@@ -1008,6 +1013,31 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_ctb = """
+**Chatbot**
+
+<blockquote>Chatbot makes GoJo talk like a human.
+Basically, there is chatbot inserted in Gojo, it can be used to talk in a frank way and can also be used to write essays, codes, birthday wishes, simply anything you want.</blockquote>
+
+Commands:
+<blockquote>/chatbot: Shows chatbot control panel.</blockquote>
+"""
+buttons_ctb = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^ctb$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_ctb,
+        reply_markup=InlineKeyboardMarkup(buttons_ctb),
+        disable_web_page_preview=True,
+    )
+
 text_rmb = """
 **Remove Background**
 
