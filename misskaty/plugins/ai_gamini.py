@@ -22,7 +22,7 @@ generation_config_cook = {
 }
 
 model_text = genai.GenerativeModel("gemini-1.5-flash")
-model = genai.GenerativeModel("gemini-pro-vision")
+model = genai.GenerativeModel("gemini-1.5-flash")
 model_cook = genai.GenerativeModel(model_name="gemini-pro-vision",
                               generation_config=generation_config_cook)
 #=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×
