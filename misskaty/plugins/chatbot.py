@@ -14,7 +14,7 @@ from misskaty.custom_filter import register
 from misskaty.ultis_ex.wmilia_m.admins import is_admin
 from misskaty.ultis_ex.wmilia_m.decorators import *
 from misskaty.vars import GEMINI_API
-#API_KEY = "457834155917" # Get your API key from Google Gemini API
+#API_KEY = "457834155917" # Get your API kehy from Google Gemini API
 genai.configure(api_key=GEMINI_API)
 model = genai.GenerativeModel('gemini-1.5-flash', generation_config=genai.GenerationConfig(temperature=0.9))
 
