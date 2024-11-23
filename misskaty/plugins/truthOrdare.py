@@ -1,7 +1,7 @@
 import aiohttp
 
 from misskaty.custom_filter import register
-#from Emilia.helper.disable import disable
+#from Emilia.helper.disable impdort disable
 
 
 async def fetch_question(url):
