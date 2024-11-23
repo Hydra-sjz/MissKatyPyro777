@@ -31,7 +31,7 @@ from misskaty.vars import (
 )
 
 telegraph = Telegraph(domain="graph.org")
-telegraph.create_account(short_name=BOT_USERNAME)
+#telegraph.create_account(short_name=BOT_USERNAME)
 
 
 # enable logging
