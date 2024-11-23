@@ -38,7 +38,7 @@ async def WallbpapersCom(client, message):
         await msg.delete()
         return await message.reply(f"Error\n{e}")
 
-# DONE: Wallpaper
+# DONE: Wallpaperf
 
 import asyncio
 import random
