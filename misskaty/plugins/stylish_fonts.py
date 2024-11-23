@@ -2,7 +2,7 @@ from pyrogram import  filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from misskaty import app
-
+#{{
 @app.on_message(filters.command(["font", "fonts"]))
 async def style_buttons(c, m, cb=False):
     text = m.text.split(' ',1)[1]
