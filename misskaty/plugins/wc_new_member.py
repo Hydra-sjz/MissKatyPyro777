@@ -26,9 +26,7 @@ from misskaty.ultis_ex.wmilia_m.welcome_mongo import (
     isWelcome,
 )
 
-
-from Emilia.pyro.greetings.captcha import button_captcha, text_captcha
-
+from misskaty.plugins.cp_captcha import button_captcha, text_captcha
 
 from misskaty.ultis_ex.wmilia_m.decorators import *
 from misskaty.ultis_ex.wmilia_m.decorators import logging
