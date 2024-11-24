@@ -36,7 +36,7 @@ from misskaty.ultis_ex.wmilia_m.decorators import logging
 
 ORIGINAL_EVENT_LOOP = False 
 
-@Client.on_chat_member_updated(filters.group, group=690)
+@pgram.on_chat_member_updated(filters.group, group=690)
 @leavemute
 @logging
 async def NewMemeber(client: Client, message: ChatMemberUpdated):
