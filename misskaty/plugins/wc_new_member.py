@@ -26,7 +26,7 @@ from misskaty.ultis_ex.wmilia_m.welcome_mongo import (
     isWelcome,
 )
 
-from misskaty.plugins.cp_captcha import button_captcha, text_captcha
+from misskaty.plugins import cp_button_captcha as button_captcha, cp_text_captcha as text_captcha
 
 from misskaty.ultis_ex.wmilia_m.decorators import *
 from misskaty.ultis_ex.wmilia_m.decorators import logging
