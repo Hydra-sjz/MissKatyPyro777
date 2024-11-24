@@ -23,10 +23,7 @@ GOODBYE_FALSE = ["off", "no"]
 @app.on_message(custom_filter.command(commands="goodbye"))
 @anonadmin_checker
 async def Welcome(client, message):
-    if await connection(message) is not None:
-        chat_id = await connection(message)
-    else:
-        chat_id = message.chat.id
+    chat_id = message.chat.id
 
     if (
         not str(chat_id).startswith("-100")
