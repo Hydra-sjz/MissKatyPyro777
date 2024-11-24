@@ -1,14 +1,14 @@
 from pyrogram import Client, enums
 
 import misskaty.strings as strings
-from misskaty import custom_filter
+from misskaty import custom_filter, app
 from misskaty.ultis_ex.wmilia_m.chat_status import isUserCan
 from misskaty.ultis_ex.wmilia_m.welcome_mongo import UnSetGoodbye
 
 from misskaty.ultis_ex.wmilia_m.decorators import *
 
 
-@Client.on_message(custom_filter.command(commands="resetgoodbye"))
+@app.on_message(custom_filter.command(commands="resetgoodbye"))
 @anonadmin_checker
 async def ResetGoodbye(client, message):
     chat_id = message.chat.id
