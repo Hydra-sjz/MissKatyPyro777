@@ -78,3 +78,4 @@ tpblite==0.8.0
 redgifs==1.7.2
 opencv-python-headless==4.8.0.76
 wikipedia
+lyricsgenius
