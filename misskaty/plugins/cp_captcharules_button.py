@@ -43,7 +43,7 @@ async def ruleCaptchaButton(
     )
 
 
-@app.on_callback_query(
+@pgram.on_callback_query(
     filters.create(lambda _, __, query: "captcharule_" in query.data)
 )
 async def captchaRules(client: Client, callback_query: CallbackQuery):
