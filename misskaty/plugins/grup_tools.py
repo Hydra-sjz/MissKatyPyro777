@@ -91,9 +91,9 @@ def welcomepic(pic, user, chat, id, strings):
 
 
 
-@app.on_chat_member_updated(
+#@app.on_chat_member_updated(
     filters.group, group=6
-)
+#)
 @use_chat_lang()
 async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
     if not (
@@ -168,7 +168,7 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             pass
 
 
-@app.on_cmd(["set_welcome"], self_admin=True, group_only=True)
+#@app.on_cmd(["set_welcome"], self_admin=True, group_only=True)
 @app.adminsOnly("can_change_info")
 async def welcome_toggle_handler(client, message):
     is_enabled = await toggle_welcome(message.chat.id)
