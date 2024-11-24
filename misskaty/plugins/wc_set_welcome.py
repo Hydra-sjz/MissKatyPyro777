@@ -6,7 +6,7 @@ from misskaty.ultis_ex.wmilia_m.chat_status import isUserCan
 from misskaty.ultis_ex.wmilia_m.get_welcome_message import GetWelcomeMessage
 from misskaty.ultis_ex.wmilia_m.welcome_mongo import SetWelcome
 #from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from misskaty.ultis_ex.wmilia_m.decorators import *
 
 
 @app.on_message(custom_filter.command(commands="setwelcome"))
