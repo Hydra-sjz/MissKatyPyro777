@@ -16,7 +16,7 @@ from misskaty.ultis_ex.wmilia_m.welcome_mongo import (
 from misskaty.ultis_ex.wmilia_m.decorators import *
 
 
-@Client.on_message(filters.service & filters.group, group=59)
+@pgram.on_message(filters.service & filters.group, group=59)
 async def cleannnnn(_, message: Message):
     if await GetCleanService(message.chat.id):
         try:
@@ -25,7 +25,7 @@ async def cleannnnn(_, message: Message):
             pass
 
 
-@Client.on_chat_member_updated(filters.group, group=790)
+@pgram.on_chat_member_updated(filters.group, group=790)
 @leavemute
 async def goodbye_member(client: Client, message: ChatMemberUpdated):
     if (
