@@ -8,7 +8,7 @@ from misskaty.ultis_ex.wmilia_m.chat_status import isUserCan
 from misskaty.ultis_ex.wmilia_m.get_data import GetChat
 from misskaty.ultis_ex.wmilia_m.rules_mongo import get_private_note, set_private_rule, set_rules_db, set_rule_button, get_rules, get_rules_button
 #from Emilia.pyro.connection.connection import connection
-from Emilia.utils.decorators import *
+from misskaty.ultis_ex.wmilia_m.decorators import *
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
