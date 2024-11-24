@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import ChatMemberUpdated, ChatPermissions, InlineKeyboardMarkup
 
-from misskaty import app as pgram, BOT_ID, DEV_USERS, 
+from misskaty import app as pgram, BOT_ID, DEV_USERS
 from misskaty.vars import LOG_CHANNEL, OWNER_ID, SUPPORT_CHAT as UPDATE_CHANNEL, SUPPORT_CHAT
 
 from misskaty.ultis_ex.wmilia_m.button_gen import button_markdown_parser
