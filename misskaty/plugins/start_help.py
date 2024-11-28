@@ -24,24 +24,14 @@ from misskaty.vars import COMMAND_HANDLER
 home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📚 Commands", callback_data="set_ge"),
-            InlineKeyboardButton(
-                text="📢 Channel",
-                url="t.me/xbots_x",
-            ),
+            
+            InlineKeyboardButton("⚙️ Help", url=f"t.me/{BOT_USERNAME}?start=help"),
+            InlineKeyboardButton("📊 Stats", callback_data="stats_callback"),
+            InlineKeyboardButton("🤖 About", callback_data="abt"),
         ],
         [
-            InlineKeyboardButton(
-                text="📊 Stats",
-                callback_data="stats_callback",
-            ),
-            InlineKeyboardButton(text="🪅 Stickers", url="https://t.me/stickers_collections_X"),
-        ],
-        [
-            InlineKeyboardButton(
-                text="➕Add Me To Your Group➕",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-            )
+            InlineKeyboardButton("📢 Channel", url="t.me/xbots_x"),
+            InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
         ],
     ]
 )
