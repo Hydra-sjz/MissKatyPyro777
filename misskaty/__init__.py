@@ -18,6 +18,7 @@ from web.webserver import api
 from telegraph import Telegraph
 from telethon import TelegramClient
 #from telegram.ext import Application
+from aiohttp import ClientSession
 
 from misskaty.vars import (
     API_HASH,
@@ -33,6 +34,12 @@ from misskaty.vars import (
 telegraph = Telegraph(domain="graph.org")
 #telegraph.create_account(short_name=BOT_USERNAME)
 
+# Aiohttp Async Client
+session = ClientSession()
+ARQ_API_KEY = "UGYUYZ-XUPAZN-AHPELZ-SBQMPQ-ARQ"  # GET API KEY FROM @ARQRobot
+ARQ_API_URL = "arq.hamker.dev"
+
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, session)
 
 # enable logging
 logging.basicConfig(
