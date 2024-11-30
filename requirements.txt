@@ -16,7 +16,7 @@ motor
 pymongo
 requests
 beautifulsoup4
-
+python-arq==6.0.7
 chevron
 cv-3
 gTTS
