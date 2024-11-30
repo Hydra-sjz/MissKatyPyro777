@@ -269,7 +269,7 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
             try:
                 make_quotly = await pyrogram_to_quotly(messages, is_reply=is_reply)
                 bio_sticker = BytesIO(make_quotly)
-                bio_sticker.name = "misskatyquote_sticker.webp"
+                bio_sticker.name = "gojoquote_sticker.webp"
                 return await ctx.reply_sticker(bio_sticker)
             except Exception:
                 return await ctx.reply_msg("🤷🏻‍♂️")
@@ -283,7 +283,7 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
     try:
         make_quotly = await pyrogram_to_quotly(messages, is_reply=is_reply)
         bio_sticker = BytesIO(make_quotly)
-        bio_sticker.name = "misskatyquote_sticker.webp"
+        bio_sticker.name = "gojoquote_sticker.webp"
         return await ctx.reply_sticker(bio_sticker)
     except Exception as e:
         return await ctx.reply_msg(f"ERROR: {e}")
