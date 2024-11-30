@@ -34,6 +34,8 @@ from misskaty.vars import (
 telegraph = Telegraph(domain="graph.org")
 #telegraph.create_account(short_name=BOT_USERNAME)
 
+from Python_ARQ import ARQ
+
 # Aiohttp Async Client
 session = ClientSession()
 ARQ_API_KEY = "UGYUYZ-XUPAZN-AHPELZ-SBQMPQ-ARQ"  # GET API KEY FROM @ARQRobot
