@@ -4,6 +4,7 @@ telethon
 python-telegram-bot==20.6
 aiofiles
 aiohttp==3.9.5
+asyncio==3.4.3
 tgcrypto
 pykeyboard
 python-dateutil
@@ -79,4 +80,4 @@ redgifs==1.7.2
 opencv-python-headless==4.8.0.76
 wikipedia
 lyricsgenius
-captcha
+
