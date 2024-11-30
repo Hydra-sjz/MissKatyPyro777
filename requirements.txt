@@ -3,7 +3,7 @@ telegraph
 telethon
 python-telegram-bot==20.6
 aiofiles
-aiohttp
+aiohttp==3.9.5
 tgcrypto
 pykeyboard
 python-dateutil
