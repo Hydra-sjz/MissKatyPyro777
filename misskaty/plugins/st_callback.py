@@ -109,11 +109,7 @@ async def st_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
-@Bot.on_callback_query(filters.regex('close_cb'))
-async def clondnd_callbk(client: Bot, callback: CallbackQuery):
-    await callback.answer()
-    await callback.message.delete()
-    await callback.message.reply_to_message.delete()
+
 
 # =======================f=======MAIN_HELP_CMD====================
 TEXT_GE = """
