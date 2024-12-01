@@ -21,10 +21,12 @@ beautifulsoup4
 python-arq==6.0.7
 chevron
 cv-3
-gTTS
+#gTTs
 regex
 apscheduler==3.10.4
 pytz
+pypdf2
+gtts
 
 pySmartDL
 psutil
