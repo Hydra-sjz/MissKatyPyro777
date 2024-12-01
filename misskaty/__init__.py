@@ -19,7 +19,7 @@ from telegraph import Telegraph
 from telethon import TelegramClient
 #from telegram.ext import Application
 from aiohttp import ClientSession
-
+from motor.motor_asyncio import AsyncIOMotorClient
 from misskaty.vars import (
     API_HASH,
     API_ID,
