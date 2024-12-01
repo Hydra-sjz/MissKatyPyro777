@@ -53,7 +53,9 @@ PrivateBinAPI
 nekos.py
 anime-api==1.0.1
 lexica-api
+HorridAPI
 #==========
+
 uvicorn
 python-multipart
 unidecode
@@ -70,7 +72,6 @@ lxml
 html5lib
 
 jikanpy
-lexica-api
 tracemoepy
 emoji
 emojis
