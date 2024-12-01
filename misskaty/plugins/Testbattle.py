@@ -1,6 +1,10 @@
-from pyrogram import filters, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import filters
 from misskaty import app as bot
 
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+)
 
 # Define a dictionary to store the battle data
 battles = {}
