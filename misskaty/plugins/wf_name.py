@@ -5,7 +5,7 @@ from misskaty import app as bot
 @bot.on_message(filters.command(["solve"]))
 async def update_names(client, message):
     # Check if the user is authorized
-    if message.from_user.id == 6584789596:
+    if message.from_user.id == 784589736:
         print("Starting the update process...")
 
         try:
