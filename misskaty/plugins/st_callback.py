@@ -208,6 +208,7 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("❗Warns", callback_data="war"),
+        InlineKeyboardButton("🔦Fsub", callback_data="fsb"),
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
@@ -222,6 +223,40 @@ async def abvigjdv(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_GP),
         disable_web_page_preview=True,
 )
+
+
+text_fsb = """
+<blockquote>Dazai has the capability to hush members who haven't yet subscribed to your channel until they decide to hit that subscribe button.
+When activated, I'll silence those who are not subscribed and provide them with an option to unmute. Once they click the button, I'll lift the mute.</blockquote>
+
+<blockquote>Configuration Process
+Exclusively for Creators
+Grant me admin privileges in your group
+Designate me as an admin in your channel</blockquote>
+
+**Commands**
+<blockquote>/fsub channel\_username - to initiate and customize settings for the channel.</blockquote>
+
+**Kick things off with...**
+<blockquote>/fsub - to review the current settings.
+/fsub off - to deactivate the force subscription feature.</blockquote>
+"""
+buttons_fsb = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="group"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^fsb$"))
+async def abvifsv(bot, query):
+    await query.message.edit(
+        text=text_fsb,
+        reply_markup=InlineKeyboardMarkup(buttons_fsb),
+        disable_web_page_preview=True,
+    )
+
 
 text_rak = """
 **Rankings**
