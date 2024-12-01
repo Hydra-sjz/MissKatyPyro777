@@ -89,8 +89,12 @@ db = mongo["Gojo"]
 
 #Telethon bot
 tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start(bot_token=BOT_TOKEN)
-print("TELETHON IS STARTED...👽👽")
+print("⚫⚪TELETHON IS STARTED...⚫⚪")
 
+
+from telegram.ext import Application
+application = Application.builder().token(BOT_TOKEN).build()
+print("🔵🔵Python Telegram Bot Txt IS STARTED...🔵🔵")
 
 # Pyrogram Bot Client
 app = Client(
@@ -105,7 +109,7 @@ app = Client(
     max_concurrent_transmissions=4,
 )
 app.db = AsyncClient(DATABASE_URI)
-app.log = getLogger("Gojo Saturo is Started...💀")
+app.log = getLogger("🟢🟢Gojo Saturo is Started...🟢🟢")
 
 # Pyrogram UserBot Client
 user = Client(
