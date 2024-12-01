@@ -97,7 +97,7 @@ from telegram.ext import Application
 application = Application.builder().token(BOT_TOKEN).build()
 print("🔵🔵Python Telegram Bot Txt IS STARTED...🔵🔵")
 
-lol = AsyncIOMotorClient(mongo_url)
+lol = AsyncIOMotorClient(DATABASE_URI)
 dbw = lol['Character_catcher']
 collection = dbw['anime_characters_lol']
 user_totals_collection = dbw['user_totals_lmaoooo']
