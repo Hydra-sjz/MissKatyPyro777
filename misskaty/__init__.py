@@ -96,6 +96,26 @@ from telegram.ext import Application
 application = Application.builder().token(BOT_TOKEN).build()
 print("🔵🔵Python Telegram Bot Txt IS STARTED...🔵🔵")
 
+lol = AsyncIOMotorClient(DATABASE_URI)
+db = lol['Character_catcher']
+
+set_on_data = db['set_on_data']
+refeer_collection = db['refeer_collection']
+set_off_data = db['set_off_data']
+collection = db['anime_characters_lol']
+safari_cooldown_collection = db["safari_cooldown"]
+safari_users_collection = db["safari_users_collection"]
+sudo_users_collection= db["sudo_users_collection"]
+user_totals_collection = db['user_totals_lmaoooo']
+user_collection = db["user_collection_lmaoooo"]
+global_ban_users_collection = db["global_ban_users_collection"]
+group_user_totals_collection = db['group_user_totalsssssss']
+top_global_groups_collection = db['top_global_groups']
+pm_users = db['total_pm_users']
+banned_groups_collection = db['Banned_Groups']
+BANNED_USERS = db['Banned_Users']
+registered_users = db['registered_users']
+
 # Pyrogram Bot Client
 app = Client(
     "GojoSaturoBot",
