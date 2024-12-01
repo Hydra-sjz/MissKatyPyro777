@@ -104,10 +104,10 @@ application.add_handler(CHECK_HANDLER)
 
 
 from pyrogram import Client, filters
-from shivu import user_collection
-from shivu import shivuu as app
+from misskaty import user_collection
+from misskaty import app
 
-OWNER_ID = 6584789596  # Replace with the actual owner ID
+OWNER_ID = 784589736  # Replace with the actual owner ID
 
 async def get_users_by_character(character_id):
     try:
