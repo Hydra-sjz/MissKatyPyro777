@@ -2,6 +2,7 @@ python-dotenv
 telegraph
 telethon
 python-telegram-bot==20.6
+python-telegram-bot[webhooks
 aiofiles
 aiohttp==3.9.5
 asyncio==3.4.3
