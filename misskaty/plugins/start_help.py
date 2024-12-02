@@ -67,7 +67,7 @@ FED_MARKUP = InlineKeyboardMarkup(
     ]
 )
 
-
+from misskaty.plugins.rules import rulesRedirect
 @app.on_message(filters.command("start", COMMAND_HANDLER))
 @use_chat_lang()
 async def start(self, ctx: Message, strings):
@@ -113,6 +113,9 @@ async def start(self, ctx: Message, strings):
             await ctx.reply_msg(
                 text, reply_markup=keyb, message_effect_id=5104841245755180586
             )
+        elif startCheckQuery(ctx, StartQuery="rules"):
+            await rulesRedirect(ctx)
+            
     else:
         await self.send_photo(
             ctx.chat.id,
@@ -123,6 +126,16 @@ async def start(self, ctx: Message, strings):
             message_effect_id=5046509860389126442,
         )
 
+
+
+def startCheckQuery(ctx, StartQuery=None) -> bool:
+    if (
+        StartQuery in ctx.text.split()[1].split("_")[0]
+        and ctx.text.split()[1].split("_")[0] == StartQuery
+    ):
+        return True
+    else:
+        return False
 
 @app.on_callback_query(filters.regex("bot_commands"))
 async def commands_callbacc(_, cb: CallbackQuery):
