@@ -7,7 +7,7 @@ from pyrogram import Client
 from pyrogram.enums import ChatMemberStatus as CMS
 from pyrogram.errors import UserNotParticipant
 
-
+TIME_ZONE = "Asia/Kolkata"
 from misskaty.vars import DATABASE_URI as BDB_URI
 
 if BDB_URI:
