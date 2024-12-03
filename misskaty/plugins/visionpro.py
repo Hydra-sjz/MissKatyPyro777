@@ -3,7 +3,7 @@
 from dotenv import load_dotenv
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from stickers import stickers
+#from stickers import stickers
 import google.generativeai as genai
 import os
 import PIL.Image
@@ -21,7 +21,7 @@ genai.configure(api_key=GEMINI_API)
 async def vision(bot, message: Message):
     try:
         model_name = "gemini-1.5-pro"
-        sticker_id = random.choice(stickers)
+       # sticker_id = random.choice(stickers)
         sticker = await message.reply_sticker(sticker_id)
         txt = await message.reply(f"Loading {model_name} ...")
         model = genai.GenerativeModel(model_name)
