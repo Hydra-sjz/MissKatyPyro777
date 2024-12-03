@@ -8,7 +8,7 @@ from pyrogram.enums import ChatMemberStatus as CMS
 from pyrogram.errors import UserNotParticipant
 
 
-
+from misskaty.vars import DATABASE_URI as BDB_URI
 
 if BDB_URI:
     from misskaty.ultis_ex.database.bd_info import bday_cinfo, bday_info
