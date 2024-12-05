@@ -86,3 +86,4 @@ wikipedia
 lyricsgenius
 tqdm
 webcolors
+vanitas-antispam
