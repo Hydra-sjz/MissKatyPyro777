@@ -1025,7 +1025,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Chat-Bot", callback_data="ctb"),
-        InlineKeyboardButton(".", callback_data="l"),
+        InlineKeyboardButton("Wiki", callback_data="wk"),
         InlineKeyboardButton(".", callback_data="f"),
     ],
     [
@@ -1047,6 +1047,27 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_wk = """
+**Wikipedia:**
+
+• /wiki - wikipedia your query
+"""
+buttons_wk = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^wk$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_wk,
+        reply_markup=InlineKeyboardMarkup(buttons_wk),
+        disable_web_page_preview=True,
+    )
+
 text_ctb = """
 **Chatbot**
 
