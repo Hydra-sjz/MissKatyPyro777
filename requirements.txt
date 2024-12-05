@@ -85,3 +85,4 @@ opencv-python-headless==4.8.0.76
 wikipedia
 lyricsgenius
 tqdm
+webcolors
