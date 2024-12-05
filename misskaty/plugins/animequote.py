@@ -29,8 +29,8 @@ async def anime_quote(anime):
                 return None, None, None
 
 
-@register(pattern="quote")
-async def quotes(event):
+@register(pattern="an_quote")
+async def qugugotes(event):
     try:
         anim: str = event.text.split(None, 1)[1]
         quote, character, anime = await anime_quote(anime=anim)
