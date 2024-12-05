@@ -1618,8 +1618,7 @@ async def abot_cb_handpcler(bot, query):
 text_flt = """
 **Here is the help for Fun:**
 
-<blockquote>/q [int] - Generate quotly from message
-/memify [text] - Reply to sticker to give text on sticker.
+<blockquote>/memify [text] - Reply to sticker to give text on sticker.
 /react [emoji | list of emoji] - React to any message (Sudo and Owner only)
 /beri [pesan] - Giving false hope to someone hehehe
 /dice - Randomly roll the dice
@@ -1955,6 +1954,12 @@ text_mog = """
 Bot can work both in private messages and in groups.</blockquote>
 
 <blockquote>/q — make a quote from the message [reply to the message]</blockquote>
+
+/q2 Will make a quotly sticker of replied text, you can also use /q r, /q 3 and /q white to see blek megik happening.
+/qrate to rate Quotly.
+/qtop to get Top Quotly from group.
+/qrand blah blah blah 😒
+
 """
 buttons_mog = [
     [
