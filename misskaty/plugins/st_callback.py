@@ -1020,7 +1020,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Chat-Bot", callback_data="ctb"),
         InlineKeyboardButton("Wiki", callback_data="wk"),
-        InlineKeyboardButton(".", callback_data="f"),
+        InlineKeyboardButton("Telegraph Up", callback_data="tgf"),
     ],
     [
         #InlineKeyboardButton("❮", callback_data="settings5"),
@@ -1041,6 +1041,28 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_tgf = """
+**Telegraph Upload**
+
+<blockquote>this is a Telegraph up module for images. I can upload media file on Telegra.ph. Maximum file size limit is 5Mb.</blockquote>
+
+<blockquote>Use /timg or /telegraph to Reply to photos to make telegraph links.</blockquote>
+"""
+buttons_tgf = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^tgf$"))
+async def abviv(bot, query):
+    await query.message.edit(
+        text=text_tgf,
+        reply_markup=InlineKeyboardMarkup(buttons_tgf),
+        disable_web_page_preview=True,
+    )
+
 text_wk = """
 **Wikipedia:**
 
