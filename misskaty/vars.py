@@ -134,6 +134,7 @@ Use /schedule cmd to get scheduled animes based on weekdays
 Use /watch cmd to get watch order of searched anime
 Use /anfillers cmd to get a list of fillers for an anime
 Use /quote cmd to get a random quote
+/animequotes cmd to get a random quote2
 """
 
 HELP_DICT[
