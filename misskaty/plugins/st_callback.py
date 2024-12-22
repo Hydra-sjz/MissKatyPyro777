@@ -66,7 +66,6 @@ BUTTONS_ST = [
         InlineKeyboardButton("📢 Channel", url="https://t.me/XBOTS_X"),
         InlineKeyboardButton("🪅 Stickers", url="https://t.me/stickers_collections_X"),
     ],
-    [InlineKeyboardButton("❌", callback_data="close_cb")],
 ]
 
 @Bot.on_callback_query(filters.regex("^home$"))
@@ -125,8 +124,7 @@ BUTTONS_GE = [
         InlineKeyboardButton("👥 Only for Sudo Users!", callback_data="sudo"),
     ],
     [
-        InlineKeyboardButton("⬅️", callback_data="home"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
+        InlineKeyboardButton("⬅️", callback_data="home")
     ],
 ]
 @Bot.on_callback_query(filters.regex("^set_ge$"))
@@ -208,7 +206,6 @@ BUTTONS_GP = [
     ],
     [
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
         InlineKeyboardButton("🏠", callback_data="home"),
     ],
 ]
@@ -240,7 +237,6 @@ Designate me as an admin in your channel</blockquote>
 buttons_fsb = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -299,7 +295,6 @@ All new joins will be temporarily banned for the next few hours, allowing you to
 buttons_ard = [
     [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
 
@@ -630,7 +625,6 @@ buttons_fed = [
         ],
         [
         InlineKeyboardButton("⬅️", callback_data="group"),
-        InlineKeyboardButton("❌", callback_data="close_cb"),
     ]
 ]
 @Bot.on_callback_query(filters.regex("^fed$"))
