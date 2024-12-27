@@ -92,10 +92,10 @@ tle = TelegramClient("telethn", API_ID, API_HASH, flood_sleep_threshold=0).start
 print("⚫⚪TELETHON IS STARTED...⚫⚪")
 
 from motor.motor_asyncio import AsyncIOMotorClient
-from telegram.ext import Application
+#from telegram.ext import Application
 
-application = Application.builder().token(BOT_TOKEN).build()
-print("🔵🔵Python Telegram Bot Txt IS STARTED...🔵🔵")
+#application = Application.builder().token(BOT_TOKEN).build()
+#print("🔵🔵Python Telegram Bot Txt IS STARTED...🔵🔵")
 
 
 # Pyrogram Bot Client
