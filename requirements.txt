@@ -87,3 +87,5 @@ lyricsgenius
 tqdm
 webcolors
 vanitas-antispam
+
+qrcode
