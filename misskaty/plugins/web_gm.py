@@ -3,7 +3,7 @@ import random
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from pyrogram import filters
-from misskaty import app as Mbot, CMD
+from misskaty import app as Mbot
 #from walls import ANIM_PICS, ANIMALS_PICS, LOGO_PICS, CARS_PICS, DROWIG_PICS, FUNNY_PICS, ENTERT_PICS, GAME_PICS, LOVE_PICS, MUSIC_PICS, NATURE_PICS, SAYING_PICS, SPACE_PICS, COMIC_PICS, SPORT_PICS, PATTER_PICS, TECHNO_PICS, DESIN_PICS, HOLDAY_PICS, PEOPL_PICS, OTHERS_PICS                      
 from misskaty.vars import LOG_CHANNEL
 from misskaty.core import pyro_cooldown
@@ -24,7 +24,7 @@ cap_g = """
 Choose the below bottons to play Web Games.
 """
 #==========
-@Mbot.on_message(filters.private & filters.command("webgame", CMD) & pyro_cooldown.wait(10)) 
+@Mbot.on_message(filters.private & filters.command("webgame") & pyro_cooldown.wait(10)) 
 async def w_game(client, message):
     m1 = await message.reply_animation(
         animation="https://te.legra.ph/file/ff1864a8e2266baa680f7.mp4",
