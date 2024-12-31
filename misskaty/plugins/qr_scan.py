@@ -29,19 +29,19 @@ def generate_qr_code(text):
     return img_bytes
 
 @app.on_message(filters.command("txt_qr"))
-def qr_handler(client, message: Message):
+async def qr_hajhndler(client, message: Message):
     command_text = message.command
     if len(command_text) > 1:
         input_text = " ".join(command_text[1:])
         qr_image = generate_qr_code(input_text)
-        message.reply_photo(qr_image, caption="Here's your QR Code")
+        await message.reply_photo(qr_image, caption="Here's your QR Code")
     else:
-        message.reply_text("Please provide the text for the QR code after the command. Example usage: /qr text")
+        await message.reply_text("Please provide the text for the QR code after the command. Example usage: /qr text")
 
 
 #QR_CODE TO TEXT
 @app.on_message(filters.command('qr_txt'))
-async def qr(c, m):
+async def gqr(c, m):
     if " " in m.text:
         tdl = await m.reply_text("`Please wait...`")
         text = str(m.text).split(" ", 1)[1]
