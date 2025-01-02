@@ -13,7 +13,7 @@ from misskaty.core import pyro_cooldown
 
 
 #==================BOTTON-REMOVING==============
-@Mbot.on_message(filters.command("rmv", CMD) & pyro_cooldown.wait(10)) 
+@Mbot.on_message(filters.command("rmv") & pyro_cooldown.wait(10)) 
 async def reply_rmv(client, message):
     ab = await message.reply_text(
         text="Click Down Botton to KeyboardRemove\n`Message will be delete 4s`", 
