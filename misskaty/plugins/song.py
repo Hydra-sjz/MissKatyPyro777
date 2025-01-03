@@ -12,7 +12,7 @@ def fetch_song(song_name):
         print(f"API Error: {e}")
         return None
 
-@app.on_message(filters.command("song", "s"))
+@app.on_message(filters.command(["song", "s"]))
 async def handle_song(client, message):
     song_name = message.text.split(" ", 1)[1] if len(message.text.split(" ", 1)) > 1 else None
     if not song_name:
