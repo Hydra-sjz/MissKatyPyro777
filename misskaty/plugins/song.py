@@ -31,7 +31,7 @@ async def handle_song(client, message):
             if chunk:
                 file.write(chunk)
 
-    caption = (f"""{song_info['trackName']}/{song_info['album']} Released on {song_info['releaseDate']}\n\n Uploaded by: @GojoSatoru_Xbot\n©️ XBOTS_X""")
+    caption = (f"""__{song_info['trackName']}/{song_info['album']} Released on {song_info['releaseDate']}__\n\n**Uploaded by:** @GojoSatoru_Xbot\n©️ @XBOTS_X""")
 
     # Send audio and clean up
     await message.reply_audio(audio=open(filename, "rb"), caption=caption)
