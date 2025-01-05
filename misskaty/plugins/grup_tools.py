@@ -91,9 +91,9 @@ def welcomepic(pic, user, chat, id, strings):
 
 
 
-#@app.on_chat_member_updated(
-#    filters.group, group=6
-#)
+@app.on_chat_member_updated(
+    filters.group, group=6
+)
 @use_chat_lang()
 async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
     if not (
@@ -168,8 +168,8 @@ async def member_has_joined(c: Client, member: ChatMemberUpdated, strings):
             pass
 
 
-#@app.on_cmd(["set_welcome"], self_admin=True, group_only=True)
-#@app.adminsOnly("can_change_info")
+@app.on_cmd(["set_wlc"], self_admin=True, group_only=True)
+@app.adminsOnly("can_change_info")
 async def welcome_toggle_handler(client, message):
     is_enabled = await toggle_welcome(message.chat.id)
     await message.reply_msg(
@@ -203,7 +203,7 @@ async def leave_a_chat(bot, message):
 
 
 # Not to be used
-# @app.on_message(filters.command('invite') & filters.user(OWNER_ID))
+@app.on_message(filters.command('invite') & filters.user(OWNER_ID))
 async def gen_invite(bot, message):
     if len(message.command) == 1:
         return await message.reply("Give me a chat id")
