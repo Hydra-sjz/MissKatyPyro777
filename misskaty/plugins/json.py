@@ -13,7 +13,7 @@ from misskaty import app
 
 
 # View Structure Telegram Message As JSON
-@app.on_cmd("json")
+@app.on_cmd(["json", "js", "showjson",])
 async def jsonify(_, message: Message):
     the_real_message = None
     reply_to_id = None
@@ -44,3 +44,4 @@ async def jsonify(_, message: Message):
             thumb="assets/thumb.jpg",
         )
         os.remove("json.txt")
+
