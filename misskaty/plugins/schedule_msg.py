@@ -14,8 +14,8 @@ from misskaty.ultis_ex.nightdb import nightdb,nightmode_on,nightmode_off,get_nig
 
 buttons = InlineKeyboardMarkup([[InlineKeyboardButton("On✅", callback_data="add_night"),InlineKeyboardButton("Off❌", callback_data="rm_night")]])         
 
-@app.on_message(filters.command("gm_gn_msgs") & filters.group)
-async def _nightmode(_, message):
+@app.on_message(filters.command("shdmsgs") & filters.group)
+async def _nivightmode(_, message):
     return await message.reply_photo(photo="https://envs.sh/99a.jpg", caption="__Turn on good morning / good night messages every night and morning 🏙️/🌃__",reply_markup=buttons)
               
      
