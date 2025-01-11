@@ -62,7 +62,7 @@ async def start_nightmode() :
             print(f"[bold red] Unable To send message in {add_chat} - {e}")
 
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(start_nightmode, trigger="cron", hour=20, minute=1) #hour=23, minute=59
+scheduler.add_job(start_nightmode, trigger="cron", hour=20, minute=15) #hour=23, minute=59
 scheduler.start()
 
 #good_morning
