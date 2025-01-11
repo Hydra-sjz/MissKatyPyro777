@@ -57,14 +57,12 @@ async def start_nightmode() :
                 add_chat,
                 photo="https://telegra.ph//file/06649d4d0bbf4285238ee.jpg",
                 caption=f"__Good night 🌠🌜 and sweet dreams 😪😴!__")
-            
-            await bot.send_text("🌜😴😪")
 
         except Exception as e:
             print(f"[bold red] Unable To send message in {add_chat} - {e}")
 
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(start_nightmode, trigger="cron", hour=23, minute=59)
+scheduler.add_job(start_nightmode, trigger="cron", hour=7, minute=10) #hour=23, minute=59
 scheduler.start()
 
 #good_morning
@@ -81,8 +79,6 @@ async def close_nightmode():
                 rm_chat,
                 photo="https://telegra.ph//file/14ec9c3ff42b59867040a.jpg",
                 caption=f"Good morning everyone 🌞🏙️")
-            
-            await bot.send_text("🌞🏙️🍃")
 
         except Exception as e:
             print(f"[bold red] Unable To message {rm_chat} - {e}")
