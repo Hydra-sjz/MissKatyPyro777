@@ -1024,7 +1024,7 @@ BUTTONS_HP = [
     ],
     [
         InlineKeyboardButton("Web-Games", callback_data="wg"),
-        InlineKeyboardButton("Wiki", callback_data="h"),
+        InlineKeyboardButton(".", callback_data="h"),
         InlineKeyboardButton(".", callback_data="h"),
     ],
     [
