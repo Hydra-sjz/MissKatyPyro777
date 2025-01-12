@@ -13,7 +13,7 @@ from misskaty import app
 
 close_keyboard = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton(text="Rᴇғʀᴇsʜ", callback_data="refresh_cat")],
+        [InlineKeyboardButton(text="🔄", callback_data="refresh_cat")],
     ]
 )
 
