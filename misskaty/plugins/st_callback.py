@@ -1023,6 +1023,11 @@ BUTTONS_HP = [
         InlineKeyboardButton("Telegraph Up", callback_data="tgf"),
     ],
     [
+        InlineKeyboardButton("Web-Games", callback_data="wg"),
+        InlineKeyboardButton("Wiki", callback_data="h"),
+        InlineKeyboardButton(".", callback_data="h"),
+    ],
+    [
         #InlineKeyboardButton("❮", callback_data="settings5"),
         InlineKeyboardButton("⬅️", callback_data="set_ge"),
         InlineKeyboardButton("❌", callback_data="close_cb"),
@@ -1041,6 +1046,27 @@ async def help_cb_handler1(bot, query):
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
+text_wg = """
+**Web Games:**
+
+× /webgame - To play Web Games from here, just click.
+"""
+buttons_wg = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+
+@Bot.on_callback_query(filters.regex("^wg$"))
+async def abvivg(bot, query):
+    await query.message.edit(
+        text=text_wg,
+        reply_markup=InlineKeyboardMarkup(buttons_wg),
+        disable_web_page_preview=True,
+    )
+
 text_tgf = """
 **Telegraph Upload**
 
@@ -1154,6 +1180,7 @@ text_wal = """
 **Wallpapers**
 
 /wall [wall_name] to get wallpepars.
+extra c - /wallpapers 
 """
 buttons_wal = [
     [
